@@ -1116,6 +1116,16 @@ h2 {
   color: var(--bone);
 }
 
+.selected-dossiers-intro {
+  max-width: 760px;
+  margin: 16px 0 0;
+  color: #d4c5aa;
+  font-size: clamp(0.98rem, 2vw, 1.12rem);
+  line-height: 1.74;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+}
+
 /* ─── DOSSIER GRID ───────────────────────────────────────────── */
 
 .dossier-grid {
@@ -1238,10 +1248,6 @@ h2 {
 .article-body {
   display: flex;
   flex-direction: column;
-}
-
-.article-code {
-  margin-bottom: 10px;
 }
 
 .article-tag {
@@ -1377,6 +1383,10 @@ h2 {
 }
 
 .cabinet-ref {
+  font-family: ui-monospace, 'Courier New', monospace;
+  font-size: 0.60rem;
+  letter-spacing: 0.14em;
+  color: var(--text-dim);
   margin-top: 12px;
 }
 
@@ -1718,11 +1728,6 @@ h2 {
   text-transform: uppercase;
 }
 
-.featured-registry {
-  display: inline-flex;
-  align-items: center;
-}
-
 .featured-title {
   margin: 0 0 18px;
   font-family: Georgia, 'Times New Roman', serif;
@@ -1733,11 +1738,11 @@ h2 {
 }
 
 .featured-summary {
-  margin: 0 0 28px;
+  margin: 0 0 22px;
   color: var(--text);
   font-size: 1.0rem;
-  line-height: 1.90;
-  max-width: 820px;
+  line-height: 1.82;
+  max-width: 760px;
 }
 
 .featured-editorial {
@@ -2289,6 +2294,10 @@ h2 {
   line-height: 1.80;
 }
 
+.selected-dossier-card .story-summary {
+  margin-bottom: 18px;
+}
+
 .story-excerpt {
   margin: 0 0 18px;
   padding: 14px 16px;
@@ -2307,6 +2316,13 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.selected-dossier-ref {
+  font-family: ui-monospace, 'Courier New', monospace;
+  font-size: 0.60rem;
+  letter-spacing: 0.14em;
+  color: var(--text-dim);
 }
 
 .story-classification {

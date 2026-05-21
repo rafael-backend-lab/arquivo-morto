@@ -66,10 +66,11 @@ Dark editorial. Não é terror barato nem visual de Halloween. É um arquivo cie
 
 ## Estrutura de conteúdo
 
-### Dossiês
-Casos históricos (Aldini, Ure, Gray) e ficcionais (Herbert West, Mary Shelley) tratados com linguagem documental. Cada dossiê tem ID único, status classificatório, localização histórica, tag de categoria e texto descritivo pericial.
+### Dossiê em destaque
+A peça principal do arquivo deve funcionar como abertura narrativa de um caso decisivo. No estado atual, esse papel pertence a Aldini-Forster, Londres, 1803: resumo compacto, data, localização, classificação e nota editorial, sem recontar todos os blocos dos capítulos.
 
-**Status possíveis**: LACRADO, ARQUIVADO, PROIBIDO, CATALOGADO, FRAGMENTADO, FUNDACIONAL
+### Dossiês selecionados
+Casos históricos, literários e ficcionais tratados com linguagem documental curta. A seção deve condensar os episódios que atravessam o projeto sem repetir parágrafos inteiros dos capítulos. Cada card prioriza data ou período, categoria, título, resumo breve e registro interno discreto.
 
 ### Artigos
 Ensaios curtos sobre temas tangenciais: roubo de cadáveres, vitalismo, body horror, horror sônico, cartografia medieval do corpo. Formato lista editorial numerada.
@@ -262,6 +263,16 @@ Nova seção inserida após os capítulos históricos, anatômicos e galvânicos
 ## Diretriz de datação editorial
 
 Todos os capítulos devem exibir período histórico real quando possível. Códigos de arquivo são metadados internos e não devem substituir datas em cards históricos.
+
+## Diretriz de não repetição
+
+- capítulos explicam o contexto amplo;
+- dossiês selecionados resumem casos importantes;
+- linha do tempo marca datas e viradas;
+- gabinete funciona como coleção visual e material;
+- evitar repetir o mesmo texto em múltiplas seções.
+
+Quando um caso reaparece em mais de uma área, cada reaparição deve cumprir uma função editorial diferente. O arquivo não deve duplicar parágrafos longos entre destaque, dossiês, cronologia e capítulos.
 
 ### Separação editorial obrigatória
 

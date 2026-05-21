@@ -83,12 +83,12 @@ docs/
 5. **Do corpo sagrado ao corpo estudado** — seis fichas sobre anatomia, vitalismo, ensino médico e corpo como prova
 6. **Galvanismo, medicina legal e sinais do cadáver** — oito fichas sobre eletricidade animal, sinais pós-morte e olhar pericial
 7. **A morte técnica: medicina, corpo e fronteiras atuais** — oito fichas sobre emergência, bioética, transplantes, biotecnologia e luto digital
-8. **Histórias do Arquivo** — seis registros entre história, literatura e ficção editorial
-9. **Dossiê em destaque** — Aldini-Forster, Londres, 1803
-10. **Dossiês iniciais** — seis casos históricos e ficcionais catalogados
-11. **Artigos** — cinco ensaios e investigações temáticas
-12. **Linha do tempo** — de 1730 até hoje
-13. **Gabinete de Anatomia** — itens fictícios lacrados e catalogados
+8. **Dossiê em destaque** — Aldini-Forster, Londres, 1803, como peça principal do arquivo
+9. **Dossiês selecionados** — seis casos condensados para consulta rápida, sem repetição estrutural
+10. **Artigos** — cinco ensaios e investigações temáticas
+11. **Linha do tempo** — de 1730 até hoje
+12. **Gabinete de Anatomia** — itens fictícios lacrados e catalogados
+13. **Nota de curadoria** — fechamento editorial sobre fato, literatura e ficção
 14. **Footer** — identificação editorial
 
 ## V8 — Capítulo III: Do corpo sagrado ao corpo estudado
@@ -106,6 +106,10 @@ Capítulo editorial dedicado à medicina moderna, bioética e tecnologia contemp
 ## Refinamento de datação editorial
 
 Os cards históricos agora priorizam datas, séculos e períodos reais como metadado visual principal. Códigos internos permanecem apenas como referência secundária de arquivo.
+
+## Editorial cleanup
+
+A estrutura editorial foi enxugada para reduzir repetição entre seções. O dossiê em destaque permanece como peça principal sobre Aldini/Forster, enquanto os antigos blocos de histórias e dossiês foram consolidados em uma única seção de dossiês selecionados.
 
 ## V7 — Capítulo II: Necromancia, alquimia e o desejo de retorno
 
