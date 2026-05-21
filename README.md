@@ -29,6 +29,31 @@ npm run dev
 
 Acesse: `http://localhost:5173`
 
+## Local Preview
+
+O VS Code Simple Browser não é obrigatório. Use o fluxo abaixo pelo terminal:
+
+| Comando | O que faz |
+|---|---|
+| `npm run dev:local` | Sobe Vite em `127.0.0.1:5173` (porta fixa) |
+| `npm run open` | Abre `http://127.0.0.1:5173/` no navegador padrão |
+| `npm run dev:open` | Sobe Vite + aguarda a porta + abre o navegador automaticamente |
+| `npm run build` | Gera build de produção em `dist/` |
+
+**Fluxo recomendado:**
+
+```bash
+# opção 1 — automático
+npm run dev:open
+
+# opção 2 — manual
+npm run dev:local
+# em outro terminal ou aba:
+npm run open
+```
+
+> Se preferir, use a aba **Ports** do VS Code para reencaminhar a porta 5173 e abrir no browser integrado.
+
 ## Build
 
 ```bash

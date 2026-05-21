@@ -5,9 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:local": "vite --host 127.0.0.1 --port 5173",
+    "dev:open": "bash scripts/dev-open.sh",
+    "open": "open http://127.0.0.1:5173/",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview --host 127.0.0.1 --port 4173"
   },
   "dependencies": {
     "react": "^19.2.6",
