@@ -565,6 +565,216 @@ h2 {
   letter-spacing: 0.06em;
 }
 
+/* ─── A MORTE TÉCNICA ───────────────────────────────────────── */
+
+.modern-death-section {
+  margin-top: 56px;
+}
+
+.medical-subtitle {
+  max-width: 860px;
+  margin: 16px 0 0;
+  color: #d4c5aa;
+  font-size: clamp(1rem, 2vw, 1.18rem);
+  line-height: 1.76;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+}
+
+.bioethics-note {
+  margin-bottom: 22px;
+  padding: 28px 30px;
+  border: 1px solid rgba(95, 191, 142, 0.16);
+  border-left: 3px solid rgba(95, 191, 142, 0.42);
+  border-radius: 6px;
+  background:
+    linear-gradient(135deg, rgba(14, 66, 36, 0.16) 0%, rgba(8, 8, 8, 0.72) 100%);
+  box-shadow: inset 0 0 0 1px rgba(248, 240, 224, 0.02);
+}
+
+.bioethics-title {
+  font-family: ui-monospace, 'Courier New', monospace;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #5fbf8e;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.bioethics-note p {
+  margin: 0;
+  color: var(--text);
+  font-size: 0.94rem;
+  line-height: 1.84;
+}
+
+.source-head {
+  display: block;
+  margin-top: 18px;
+  margin-bottom: 12px;
+  font-family: ui-monospace, 'Courier New', monospace;
+  font-size: 0.63rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #b89a66;
+}
+
+.source-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 18px;
+}
+
+.source-list li {
+  position: relative;
+  padding-left: 14px;
+  color: var(--text-dim);
+  font-size: 0.86rem;
+  line-height: 1.7;
+}
+
+.source-list li::before {
+  content: '+';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #5fbf8e;
+}
+
+.medical-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.medical-card {
+  position: relative;
+  min-height: 100%;
+  padding: 28px 30px 30px;
+  border: 1px solid rgba(95, 191, 142, 0.12);
+  border-radius: 6px;
+  background:
+    linear-gradient(180deg, rgba(7, 10, 9, 0.96) 0%, rgba(18, 36, 33, 0.26) 22%, rgba(8, 8, 8, 0.98) 100%);
+  box-shadow:
+    inset 0 0 0 1px rgba(248, 240, 224, 0.02),
+    0 20px 56px rgba(0, 0, 0, 0.28);
+  overflow: hidden;
+  transition: border-color 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.medical-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(95, 191, 142, 0.30), rgba(248, 240, 224, 0.08), rgba(95, 191, 142, 0.16));
+}
+
+.medical-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(
+      180deg,
+      transparent 0 23px,
+      rgba(248, 240, 224, 0.012) 23px 24px
+    ),
+    radial-gradient(circle at top right, rgba(95, 191, 142, 0.06), transparent 28%);
+  pointer-events: none;
+}
+
+.medical-card:hover {
+  border-color: rgba(95, 191, 142, 0.24);
+  transform: translateY(-3px);
+  box-shadow:
+    inset 0 0 0 1px rgba(248, 240, 224, 0.03),
+    0 28px 72px rgba(0, 0, 0, 0.38);
+}
+
+.medical-card-head {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.medical-ref {
+  font-family: ui-monospace, 'Courier New', monospace;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: var(--text-dim);
+}
+
+.medical-tag {
+  font-family: ui-monospace, 'Courier New', monospace;
+  font-size: 0.60rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #5fbf8e;
+  padding: 4px 8px;
+  border-radius: 3px;
+  border: 1px solid rgba(95, 191, 142, 0.22);
+  background: rgba(14, 66, 36, 0.20);
+}
+
+.medical-title {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 12px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.38rem;
+  line-height: 1.18;
+  color: var(--bone);
+}
+
+.medical-theme {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 14px;
+  color: #d4c5aa;
+  font-size: 0.82rem;
+  line-height: 1.72;
+  text-transform: uppercase;
+  letter-spacing: 0.10em;
+}
+
+.medical-text {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 18px;
+  color: var(--text);
+  font-size: 0.94rem;
+  line-height: 1.84;
+}
+
+.medical-warning {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  padding-top: 14px;
+  border-top: 1px solid rgba(248, 240, 224, 0.07);
+  color: var(--text-dim);
+  font-family: ui-monospace, 'Courier New', monospace;
+  font-size: 0.68rem;
+  line-height: 1.75;
+  letter-spacing: 0.06em;
+}
+
 /* ─── SECTIONS (shared) ─────────────────────────────────────── */
 
 .section {
@@ -1289,6 +1499,7 @@ h2 {
 @media (max-width: 960px) {
   .history-grid   { grid-template-columns: repeat(2, 1fr); }
   .occult-grid    { grid-template-columns: repeat(2, 1fr); }
+  .source-list    { grid-template-columns: 1fr; }
   .dossier-grid   { grid-template-columns: repeat(2, 1fr); }
   .cabinet-grid   { grid-template-columns: repeat(2, 1fr); }
   .timeline::before { left: 90px; }
@@ -1311,6 +1522,10 @@ h2 {
   .occult-grid   { grid-template-columns: 1fr; }
   .occult-card   { padding: 24px 22px 26px; }
   .occult-theme  { font-size: 0.78rem; }
+  .bioethics-note { padding: 24px 22px; }
+  .medical-grid   { grid-template-columns: 1fr; }
+  .medical-card   { padding: 24px 22px 26px; }
+  .medical-theme  { font-size: 0.78rem; }
   .manifesto-inner {
     grid-template-columns: 1fr;
     gap: 20px;

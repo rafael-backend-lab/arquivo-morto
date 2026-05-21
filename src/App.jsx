@@ -222,6 +222,82 @@ const occultReturnChapter = [
   },
 ]
 
+const medicalDeathChapter = [
+  {
+    ref: 'MED-001',
+    tag: 'MEDICINA REAL',
+    title: 'Parada cardíaca e ressuscitação clínica',
+    theme: 'RCP/CPR, emergência, circulação e tentativa de reversão clínica',
+    text: 'Na medicina de emergência, a parada cardíaca é tratada como interrupção súbita da circulação e da oxigenação eficazes. A ressuscitação clínica pertence ao campo da resposta protocolar que tenta restaurar fluxo sanguíneo e ganhar tempo para cuidados avançados. No Arquivo Morto, esse cenário surge menos como milagre e mais como linguagem de urgência, limite fisiológico e decisão técnica.',
+    warning: 'Contexto médico real. Esta ficha não ensina procedimentos nem substitui treinamento, atendimento ou orientação profissional.',
+  },
+  {
+    ref: 'MED-002',
+    tag: 'MEDICINA REAL · BIOÉTICA',
+    title: 'Morte cerebral',
+    theme: 'Critérios médicos, irreversibilidade e diferença entre morte cerebral e coma',
+    text: 'Morte cerebral designa a perda completa e irreversível das funções cerebrais, determinada por critérios médicos rigorosos. Não é sinônimo de coma, sedação profunda ou estado vegetativo. A força editorial deste tema está na precisão com que a medicina moderna redefine o fim: o corpo pode permanecer aquecido e ventilado, mas a pessoa já foi legal e clinicamente reconhecida como morta.',
+    warning: 'Campo clínico e bioético. O capítulo diferencia morte cerebral de outras condições neurológicas sem oferecer aconselhamento médico.',
+  },
+  {
+    ref: 'MED-003',
+    tag: 'BIOÉTICA CLÍNICA',
+    title: 'Suporte artificial de vida',
+    theme: 'Ventilação, UTI, máquinas e a fronteira entre manutenção orgânica e presença humana',
+    text: 'Ventiladores, drogas vasoativas, monitores e terapia intensiva deslocaram a morte para uma zona técnica em que funções corporais podem ser sustentadas por longos períodos. Essa infraestrutura salva vidas, mas também obriga famílias e equipes a pensar a diferença entre organismo mantido, prognóstico possível e ausência irreversível. O dilema deixa de ser apenas biológico e torna-se ético, jurídico e afetivo.',
+    warning: 'Medicina real em contexto filosófico e ético. O texto discute limites terapêuticos, não recomenda condutas individuais.',
+  },
+  {
+    ref: 'MED-004',
+    tag: 'ÉTICA INSTITUCIONAL',
+    title: 'Transplantes',
+    theme: 'Órgãos, tecidos, doação e continuidade corporal entre pessoas',
+    text: 'Os transplantes reorganizam a imaginação do corpo: partes de uma vida sustentam a continuidade de outra. Nesse campo, a medicina depende de critérios diagnósticos, confiança pública, sistemas de doação e regras éticas para aquisição e distribuição de órgãos e tecidos. O Arquivo Morto trata esse tema como uma fronteira em que técnica, generosidade e política institucional se encontram sob vigilância moral constante.',
+    warning: 'Medicina real e ética pública. O enfoque está em doação, critérios e responsabilidade institucional, não em elegibilidade clínica.',
+  },
+  {
+    ref: 'MED-005',
+    tag: 'ESPECULAÇÃO CULTURAL',
+    title: 'Criogenia',
+    theme: 'Preservação em baixa temperatura, promessa futura e desejo de escapar da decomposição',
+    text: 'A criogenia ocupa um território ambíguo entre tecnologia de preservação e imaginação cultural da posteridade. Embora use linguagem científica e infraestrutura real, sua promessa de eventual retorno permanece especulativa e não equivale à ressuscitação clínica aceita pela medicina contemporânea. Por isso ela interessa ao Arquivo Morto como sintoma moderno da recusa em aceitar a decadência final do corpo.',
+    warning: 'Especulação cultural com aparência técnica. O capítulo não apresenta criogenia como terapia comprovada ou reversão real da morte.',
+  },
+  {
+    ref: 'MED-006',
+    tag: 'TECNOLOGIA EMERGENTE',
+    title: 'Biotecnologia e reparo do corpo',
+    theme: 'Próteses, engenharia de tecidos, medicina regenerativa e fronteiras materiais reais',
+    text: 'Próteses avançadas, bioimpressão, engenharia de tecidos e terapias regenerativas alteraram o vocabulário do reparo corporal. Aqui a modernidade abandona o sonho de vencer a morte por completo e concentra-se em restaurar função, prolongar autonomia e substituir estruturas danificadas. Trata-se de ciência real, mas prudente: a reconstrução do corpo não elimina a mortalidade, apenas desloca alguns de seus limites.',
+    warning: 'Ciência atual e prudência editorial. O texto descreve campos de pesquisa e cuidado, sem prometer cura total ou imortalidade biológica.',
+  },
+  {
+    ref: 'MED-007',
+    tag: 'TECNOLOGIA · CULTURA',
+    title: 'IA, luto digital e simulações dos mortos',
+    theme: 'Chatbots, vozes sintéticas, avatares e presença artificial após a perda',
+    text: 'Memoriais digitais, reconstruções de voz e chatbots treinados em rastros textuais criaram uma nova forma de presença residual. Não se trata de retorno dos mortos, mas de simulações que reorganizam luto, memória e intimidade tecnológica. Esta ficha pertence ao presente sombrio do Arquivo Morto: a pessoa ausente persiste como interface, arquivo e projeção conversacional.',
+    warning: 'Tecnologia emergente e especulação cultural. O foco está no impacto ético do luto digital, não em equivaler simulação a sobrevivência real.',
+  },
+  {
+    ref: 'MED-008',
+    tag: 'BIOÉTICA E CUIDADO',
+    title: 'Diretivas antecipadas e fim de vida',
+    theme: 'Vontade do paciente, cuidado, autonomia e limites terapêuticos',
+    text: 'Diretivas antecipadas deslocam o debate sobre morte para antes da crise, permitindo que preferências sobre suporte, reanimação e representantes de saúde sejam registradas com clareza. Nesse contexto, a modernidade não tenta apenas adiar o fim; tenta governá-lo com linguagem jurídica, autonomia e cuidado. O tema pertence à bioética porque lembra que nem toda tecnologia disponível precisa ser empregada até o último limite.',
+    warning: 'Contexto humano e bioético. O capítulo aborda planejamento e autonomia, não oferece aconselhamento legal ou clínico individual.',
+  },
+]
+
+const medicalEditorialSources = [
+  'American Heart Association — CPR/ECC Guidelines',
+  'NHS — Brain death',
+  'Cleveland Clinic — Brain Death: What It Is, Stages & Criteria',
+  'WHO — Guiding Principles on Human Cell, Tissue and Organ Transplantation',
+  'MedlinePlus / NIH — Advance Directives',
+  'National Institute on Aging / NIH — Advance Care Planning',
+]
+
 const stories = [
   {
     code: 'HIS-001',
@@ -461,6 +537,45 @@ function App() {
                 <p className="occult-theme">{entry.theme}</p>
                 <p className="occult-text">{entry.text}</p>
                 <p className="occult-warning">{entry.warning}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        {/* A MORTE TÉCNICA: MEDICINA, CORPO E FRONTEIRAS ATUAIS */}
+        <section className="section modern-death-section" aria-labelledby="modern-death-heading">
+          <div className="section-header">
+            <p className="section-label">V9</p>
+            <h3 id="modern-death-heading">A morte técnica: medicina, corpo e fronteiras atuais</h3>
+            <p className="medical-subtitle">
+              Na modernidade, vencer a morte deixou de ser apenas mito ou ritual: tornou-se linguagem de emergência, UTI, transplante, protocolo, bioética e tecnologia.
+            </p>
+          </div>
+
+          <div className="bioethics-note">
+            <span className="bioethics-title">Nota médica e bioética</span>
+            <p>
+              O Arquivo Morto trata medicina moderna apenas em contexto cultural, histórico e bioético. Esta seção não substitui orientação profissional, não ensina procedimentos médicos e não recomenda tratamentos. O objetivo é examinar como a modernidade transformou a morte em protocolo, fronteira técnica e dilema humano.
+            </p>
+            <span className="source-head">Base editorial oficial</span>
+            <ul className="source-list">
+              {medicalEditorialSources.map((source) => (
+                <li key={source}>{source}</li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="medical-grid">
+            {medicalDeathChapter.map((entry) => (
+              <article className="medical-card" key={entry.ref}>
+                <div className="medical-card-head">
+                  <span className="medical-ref">{entry.ref}</span>
+                  <span className="medical-tag">{entry.tag}</span>
+                </div>
+                <h4 className="medical-title">{entry.title}</h4>
+                <p className="medical-theme">{entry.theme}</p>
+                <p className="medical-text">{entry.text}</p>
+                <p className="medical-warning">{entry.warning}</p>
               </article>
             ))}
           </div>

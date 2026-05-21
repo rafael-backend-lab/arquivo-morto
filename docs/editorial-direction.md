@@ -238,3 +238,28 @@ Nova seção posicionada logo após o Capítulo I e antes das camadas modernas d
 As seis fichas abordam Necromancia, Alquimia, John Dee, Golem, Elixir da vida e Autômatos e corpo mecânico. O tratamento deve permanecer sombrio, culto e documental, tratando cada item como história, mito, filosofia natural, simbolismo ou tradição cultural. Nenhuma crença é apresentada como fato científico.
 
 Este capítulo prepara a passagem para anatomia, galvanismo, Frankenstein e horror científico ao mostrar que, antes do laboratório moderno, já existia um vocabulário de matéria animada, sopro vital, criatura artificial e resistência à decadência do corpo.
+
+## V9 — Medicina moderna, bioética e fronteiras atuais
+
+Nova seção inserida após os capítulos históricos e ocultistas, antes das camadas mais literárias e pop do arquivo. Sua função é deslocar o tema da morte para a linguagem contemporânea da emergência, terapia intensiva, transplante, regulação institucional, tecnologia emergente e autonomia do paciente.
+
+### Separação editorial obrigatória
+
+- **Medicina real** — parada cardíaca e ressuscitação clínica, morte cerebral, suporte artificial de vida, transplantes
+- **Bioética** — critérios diagnósticos, limites terapêuticos, diretivas antecipadas, autonomia e fim de vida
+- **Tecnologia emergente** — biotecnologia, engenharia de tecidos, reparo corporal
+- **Especulação cultural** — criogenia, luto digital, simulações dos mortos
+- **Ficção científica** — permanece fora deste capítulo, concentrada nas histórias, dossiês e obras literárias do projeto
+
+### Regra de tom
+
+Tratamento médico, histórico e bioético, sem linguagem de milagre tecnológico. O capítulo não substitui aconselhamento profissional, não ensina procedimentos clínicos e não promete reversão da morte, imortalidade ou reanimação real de mortos.
+
+### Fontes editoriais recomendadas
+
+- American Heart Association — CPR/ECC Guidelines
+- NHS — Brain death
+- Cleveland Clinic — Brain Death: What It Is, Stages & Criteria
+- WHO — Guiding Principles on Human Cell, Tissue and Organ Transplantation
+- MedlinePlus / NIH — Advance Directives
+- National Institute on Aging / NIH — Advance Care Planning

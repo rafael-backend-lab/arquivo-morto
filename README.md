@@ -80,11 +80,16 @@ docs/
 2. **Manifesto** — texto frio e poético sobre morte e ciência
 3. **A humanidade contra a morte** — seis fichas históricas sobre ritos, mitos e culturas funerárias
 4. **Necromancia, alquimia e o desejo de retorno** — seis fichas sobre ocultismo, matéria animada e longevidade
-5. **Dossiês** — seis casos históricos e ficcionais catalogados
-6. **Artigos** — cinco ensaios e investigações temáticas
-7. **Linha do tempo** — de 1730 até hoje
-8. **Gabinete de Anatomia** — itens fictícios lacrados e catalogados
-9. **Footer** — identificação editorial
+5. **A morte técnica: medicina, corpo e fronteiras atuais** — oito fichas sobre emergência, bioética, transplantes, biotecnologia e luto digital
+6. **Dossiês** — seis casos históricos e ficcionais catalogados
+7. **Artigos** — cinco ensaios e investigações temáticas
+8. **Linha do tempo** — de 1730 até hoje
+9. **Gabinete de Anatomia** — itens fictícios lacrados e catalogados
+10. **Footer** — identificação editorial
+
+## V9 — A morte técnica: medicina, corpo e fronteiras atuais
+
+Capítulo editorial dedicado à medicina moderna, bioética e tecnologia contemporânea diante do fim. A parte médica usa fontes oficiais e tom editorial, sem orientação médica, sem ensino de procedimento e sem recomendação de tratamento.
 
 ## V7 — Capítulo II: Necromancia, alquimia e o desejo de retorno
 
@@ -128,7 +133,7 @@ A V2 introduz:
 
 ## Status
 
-`v7.0` — capítulo editorial ocultista e alquímico adicionado. Em desenvolvimento local. Não publicado ainda.
+`v9.0` — capítulo editorial médico e bioético adicionado. Em desenvolvimento local. Não publicado ainda.
 
 ## Nota editorial
 
