@@ -162,6 +162,69 @@ const classifications = [
   { code: 'CLF-004', label: 'Horror Científico', count: '22 arquivos' },
 ]
 
+const stories = [
+  {
+    code: 'HIS-001',
+    category: 'HISTÓRIA REAL DOCUMENTADA',
+    type: 'real',
+    title: 'A mandíbula que se abriu em Londres',
+    summary: 'Giovanni Aldini, sobrinho de Luigi Galvani, realizou em janeiro de 1803 a sessão de galvanismo público mais célebre da história. O corpo do enforcado George Forster foi submetido a correntes galvânicas diante de médicos, magistrados e público. O resultado perturbou até os presentes mais céticos.',
+    excerpt: 'A mandíbula desceu. O punho direito se fechou. O rosto contraiu em algo que os presentes descreveram como expressão de dor. Nenhum médico na sala acreditava em reanimação. Todos saíram em silêncio.',
+    status: 'VERIFICADO',
+    classification: 'CLF-002 · Galvanismo Histórico',
+  },
+  {
+    code: 'HIS-002',
+    category: 'HISTÓRIA REAL DOCUMENTADA',
+    type: 'real',
+    title: 'O cadáver que fez a plateia recuar',
+    summary: 'Em 1818, o médico escocês Andrew Ure aplicou correntes galvânicas no corpo de Matthew Clydesdale, executado em Glasgow. As correntes atingiram múltiplos pontos do sistema nervoso. A violência das contrações musculares forçou parte do público a abandonar o anfiteatro.',
+    excerpt: 'O tórax se expandiu como se tentasse inspirar. Os braços se ergueram. Ure registrou no relatório que, se o aparelho laríngeo não estivesse comprometido pela execução, a respiração teria sido reestabelecida. Ou assim ele acreditava.',
+    status: 'ARQUIVADO',
+    classification: 'CLF-002 · Galvanismo Histórico',
+  },
+  {
+    code: 'HIS-003',
+    category: 'LITERATURA',
+    type: 'literatura',
+    title: 'Frankenstein: a criatura antes do monstro',
+    summary: 'Mary Shelley tinha dezoito anos quando escreveu Frankenstein, publicado em 1818. A criatura nasce diretamente do contexto galvanista — Percy Shelley e Byron discutiam os experimentos de Aldini nas noites de verão em Genebra. O monstro mais famoso da literatura não tem nome. Só o cientista tem.',
+    excerpt: 'A criatura de Shelley não é má por natureza — é abandonada. Victor Frankenstein foge da própria obra na manhã de sua conclusão. O horror do romance não está na mesa de dissecação, mas no corredor depois dela: a porta que se fecha antes que a coisa que respira possa ser nomeada.',
+    status: 'FUNDACIONAL',
+    classification: 'CLF-001 · Literatura de Reanimação',
+  },
+  {
+    code: 'HIS-004',
+    category: 'LITERATURA DE HORROR',
+    type: 'literatura',
+    title: 'Herbert West e a medicina que perdeu a alma',
+    summary: 'Em 1921–22, H. P. Lovecraft publicou em seis partes a história de Herbert West, médico obcecado com a reanimação química do tecido morto. O reagente verde que injeta em cadáveres frescos produz resultados cada vez mais imprevisíveis. A série é considerada menor dentro da obra de Lovecraft — mas é a mais visceral.',
+    excerpt: 'West não temia a morte. Temia o que a morte fazia com seus experimentos: os cadáveres mais frescos reagiam melhor, o que o forçava a métodos de obtenção progressivamente mais urgentes. A ciência, em suas mãos, tornou-se uma corrida contra a putrefação.',
+    status: 'PROIBIDO',
+    classification: 'CLF-001 · Literatura de Reanimação',
+  },
+  {
+    code: 'HIS-005',
+    category: 'HISTÓRIA E MEDICINA',
+    type: 'real',
+    title: 'Os homens que roubavam carne',
+    summary: 'Entre o século XVIII e meados do XIX, a demanda por cadáveres para as escolas de anatomia britânicas superava amplamente a oferta legal. Os body snatchers supriram essa demanda por décadas — operavam à noite, conheciam os cemitérios melhor que os coveiros, e cobravam por peso.',
+    excerpt: 'Não faltava mercado. Faltava material. Um corpo adulto valia entre duas e dez libras — mais que o salário mensal de um operário. Os body snatchers não eram monstros: eram fornecedores numa cadeia que incluía médicos respeitáveis, universidades e cirurgiões reais.',
+    status: 'ARQUIVADO',
+    classification: 'CLF-003 · Anatomia Proibida',
+  },
+  {
+    code: 'HIS-006',
+    category: 'FICÇÃO EDITORIAL DO ARQUIVO MORTO',
+    type: 'ficcao',
+    title: 'Prontuário 334-B',
+    summary: 'Registro apócrifo catalogado sob o código PRO-334-B. Cadáver masculino, aproximadamente quarenta anos, entrada em data ilegível, causa mortis indeterminada. Três tentativas de reanimação parcial foram iniciadas. Status: inconclusivo. Este dossiê é ficção editorial do Arquivo Morto — não representa evento histórico real.',
+    excerpt: 'Na terceira sessão, a atividade elétrica nos neurônios do córtex frontal superou o limiar previsto pelo protocolo. O equipamento foi desligado. O registro foi lacrado. A localização atual do espécime é: desconhecida. — Nota interna, sem assinatura, sem data.',
+    status: 'LACRADO',
+    classification: 'CLF-004 · Horror Científico',
+  },
+]
+
 function App() {
   const [mode, setMode] = useState('arquivo')
 
@@ -292,6 +355,62 @@ function App() {
                 <span className="clf-count">{c.count}</span>
               </div>
             ))}
+          </div>
+        </section>
+
+        {/* HISTÓRIAS DO ARQUIVO */}
+        <section id="historias" className="section">
+          <div className="section-header">
+            <p className="section-label">Histórias do Arquivo</p>
+            <h3>Seis registros entre história, literatura e ficção editorial</h3>
+          </div>
+          <div className="stories-grid">
+            {stories.map((s) => (
+              <article className={`story-card story-type-${s.type}`} key={s.code}>
+                <div className="story-header">
+                  <span className="story-code">{s.code}</span>
+                  <span className={`story-status status-${s.status.toLowerCase()}`}>{s.status}</span>
+                </div>
+                <span className="story-category">{s.category}</span>
+                <h4 className="story-title">{s.title}</h4>
+                <p className="story-summary">{s.summary}</p>
+                <blockquote className="story-excerpt">{s.excerpt}</blockquote>
+                <div className="story-foot">
+                  <span className="story-classification">{s.classification}</span>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        {/* NOTA DE CURADORIA */}
+        <section className="curator-note">
+          <div className="curator-inner">
+            <div className="curator-head">
+              <span className="curator-tag">NOTA DE CURADORIA</span>
+            </div>
+            <div className="curator-body">
+              <p>
+                O Arquivo Morto é um projeto cultural que combina história documentada
+                da ciência, literatura clássica de domínio público e ficção editorial
+                própria. Os três tipos de material convivem no arquivo, mas permanecem
+                distintos — cada registro é classificado por sua natureza.
+              </p>
+              <p>
+                Os experimentos galvânicos de Aldini, Ure e Gray são episódios históricos
+                reais, tratados aqui como material de estudo e referência criativa. As obras
+                de Mary Shelley e H. P. Lovecraft são literatura, citadas com referência
+                explícita às suas fontes e autores. Os dossiês ficcionais — como o
+                Prontuário 334-B — são criações editoriais do Arquivo Morto, sinalizadas
+                como ficção em seus registros.
+              </p>
+              <p>
+                O objetivo é literário, cultural e visual: um arquivo imaginário que habita
+                a zona de fronteira entre ciência, horror e documento. Nenhuma informação
+                histórica foi inventada ou distorcida. O horror, quando aparece, vem
+                dos fatos.
+              </p>
+            </div>
           </div>
         </section>
 

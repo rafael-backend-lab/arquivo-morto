@@ -84,6 +84,13 @@ docs/
 6. **Gabinete de Anatomia** — itens fictícios lacrados e catalogados
 7. **Footer** — identificação editorial
 
+## V4 — Editorial expansion
+
+- **Histórias do Arquivo** — 6 fichas editoriais ricas com código, categoria, título, resumo, trecho narrativo e classificação
+- **Nota de curadoria** — seção explicando a separação entre história real, literatura e ficção editorial do projeto
+- Conteúdo classificado explicitamente: história real documentada, literatura, ficção editorial
+- Status `v4.0`
+
 ## V3 — Visual polish
 
 - **Selo visual do Arquivo Morto** — carimbo científico em CSS puro no hero (círculo duplo, monograma AM, linhas galvânicas)
@@ -103,7 +110,7 @@ A V2 introduz:
 
 ## Status
 
-`v3.0` — visual polish completo. Em desenvolvimento local. Não publicado ainda.
+`v4.0` — expansão editorial completa. Em desenvolvimento local. Não publicado ainda.
 
 ## Nota editorial
 

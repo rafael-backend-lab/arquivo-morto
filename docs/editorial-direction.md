@@ -146,3 +146,41 @@ Botão `mode-toggle` usa `data-mode={mode}`. `data-mode="arquivo"` → glow verd
 ### Footer editorial premium
 
 Frase de fechamento: "Todo arquivo morto ainda respira em alguma página." — Georgia, itálico, opacidade `0.24`. Posicionada antes do `footer-ref` técnico, separando tom literário de metadado operacional.
+
+## V4 — Histórias, curadoria e densidade editorial
+
+### Histórias do Arquivo
+
+Seis fichas editoriais classificadas por natureza de conteúdo. Grid 2 colunas. Cada card tem borda superior colorida por tipo, código, categoria, título, resumo, trecho narrativo em blockquote e classificação por índice.
+
+**Tipos de conteúdo e marcação visual:**
+
+| Tipo | CSS class | Cor de borda |
+|---|---|---|
+| História real documentada | `.story-type-real` | âmbar `rgba(184,154,102,0.65)` |
+| Literatura | `.story-type-literatura` | bone `rgba(235,230,221,0.35)` |
+| Ficção editorial | `.story-type-ficcao` | crimson `rgba(200,75,90,0.65)` |
+
+**Histórias incluídas:**
+
+| Código | Tipo | Título |
+|---|---|---|
+| HIS-001 | Real | A mandíbula que se abriu em Londres |
+| HIS-002 | Real | O cadáver que fez a plateia recuar |
+| HIS-003 | Literatura | Frankenstein: a criatura antes do monstro |
+| HIS-004 | Literatura | Herbert West e a medicina que perdeu a alma |
+| HIS-005 | Real | Os homens que roubavam carne |
+| HIS-006 | Ficção editorial | Prontuário 334-B |
+
+### Nota de curadoria
+
+Seção após as histórias, antes do Dossiê em Destaque. Explica a separação entre os três tipos de material do arquivo (história, literatura, ficção). Formato similar ao Manifesto: grid dois colunas com tag verde e corpo de texto. Propósito: transparência editorial — o projeto nunca confunde fato com ficção.
+
+Princípio: o horror, quando aparece, vem dos fatos. A ficção existe para completar o que os documentos não alcançam.
+
+### Decisões editoriais V4
+
+- Fatos históricos (Aldini, Ure, body snatchers) citados com localização e data — nenhum foi inventado ou distorcido
+- Obras literárias (Shelley, Lovecraft) citadas com autoria e data — tratadas como literatura, não como registro
+- Ficção editorial (Prontuário 334-B) marcada explicitamente na categoria e no resumo
+- Os excerpts narrativos das histórias reais são reconstituição editorial de tom, não transcrição de documentos primários
