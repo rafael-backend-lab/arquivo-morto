@@ -184,3 +184,43 @@ Princípio: o horror, quando aparece, vem dos fatos. A ficção existe para comp
 - Obras literárias (Shelley, Lovecraft) citadas com autoria e data — tratadas como literatura, não como registro
 - Ficção editorial (Prontuário 334-B) marcada explicitamente na categoria e no resumo
 - Os excerpts narrativos das histórias reais são reconstituição editorial de tom, não transcrição de documentos primários
+
+## V5 — Imagens, gravuras e camada visual
+
+### Componente ArchiveVisual
+
+Função React `ArchiveVisual({ type, label, code, size })` que renderiza um quadro visual editorial sem imagem externa. O `type` determina o background SVG via classe CSS `.visual-[type]`. Tamanhos: `sm` (90px), `md` (120px), `lg` (160px).
+
+**Tipos disponíveis:**
+
+| Tipo | Visual | Estética |
+|---|---|---|
+| `galvanic-wave` | ECG/osciloscopio verde | Laboratório galvânico, frequência 17Hz |
+| `anatomical-plate` | Oval + cruzeta | Prancha anatômica vitoriana |
+| `medical-file` | Pasta pautada | Prontuário médico, arquivo |
+| `reagent-vial` | Frasco HW-7 | Substância química, reagente |
+| `corpse-tag` | Etiqueta pendurada | Ficha de cadáver, número 334-B |
+| `occult-diagram` | Círculos concêntricos + cruzes | Diagrama científico/esotérico |
+
+### Onde imagens reais entrarão
+
+Quando imagens de domínio público forem adicionadas a `public/assets/archive/`, elas substituirão ou complementarão os SVG inline nos seguintes pontos:
+
+- **Hero**: `.hero-visual-system` → gravura galvânica histórica (ex: ilustrações de Aldini)
+- **Featured Dossier**: `.featured-visual-panel` → gravura do experimento Forster 1803
+- **Dossier cards**: campo `visual` → imagem tipada por dossiê
+- **Story cards**: campo `visual` → ilustração contextual por história
+- **Cabinet items**: campo `visual` → fotografia/gravura do espécime
+
+### Fontes recomendadas de imagens
+
+- **Wellcome Collection** — gravuras médicas e anatômicas históricas (CC BY)
+- **Wikimedia Commons** — ampla coleção, verificar licença por item
+- **Internet Archive** — livros e revistas históricas digitalizados
+- **Biodiversity Heritage Library** — gravuras científicas do séc. XVIII–XIX
+- **Library of Congress** — fotografias históricas (domínio público)
+- **National Library of Medicine** — história da medicina e anatomia
+
+### Princípio visual V5
+
+Os placeholders SVG são editoriais, não genéricos. Cada tipo foi desenhado para evocar o registro visual específico da temática (osciloscópio para galvanismo, prontuário para documentos, vial para reagentes). Quando imagens reais forem adicionadas, devem manter a mesma especificidade — gravuras e fotos históricas, nunca stock photos modernos.

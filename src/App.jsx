@@ -3,52 +3,40 @@ import './App.css'
 
 const dossiers = [
   {
-    id: 'DOS-001',
-    tag: 'EXPERIMENTO',
-    location: 'Londres, 1803',
+    id: 'DOS-001', tag: 'EXPERIMENTO', location: 'Londres, 1803',
     title: 'Aldini e George Forster',
     text: 'Giovanni Aldini aplica correntes galvânicas no cadáver do enforcado George Forster diante de público. O corpo se contorce, a mandíbula abre. A ciência encontra o teatro da morte.',
-    status: 'LACRADO',
+    status: 'LACRADO', visual: 'galvanic-wave',
   },
   {
-    id: 'DOS-002',
-    tag: 'CASO CLÍNICO',
-    location: 'Glasgow, 1818',
+    id: 'DOS-002', tag: 'CASO CLÍNICO', location: 'Glasgow, 1818',
     title: 'Andrew Ure e Matthew Clydesdale',
     text: 'Quinze minutos após a execução, Andrew Ure conecta Matthew Clydesdale a baterias galvânicas. Os músculos contraem com tal violência que a plateia abandona a sala em terror.',
-    status: 'ARQUIVADO',
+    status: 'ARQUIVADO', visual: 'galvanic-wave',
   },
   {
-    id: 'DOS-003',
-    tag: 'FICÇÃO CIENTÍFICA',
-    location: 'Miskatonic, 1922',
+    id: 'DOS-003', tag: 'FICÇÃO CIENTÍFICA', location: 'Miskatonic, 1922',
     title: 'Herbert West, Reanimador',
     text: 'H. P. Lovecraft escreve em seis partes o pesadelo de um cientista obcecado com a reanimação do tecido morto. O horror vem de dentro do laboratório, não de fora.',
-    status: 'PROIBIDO',
+    status: 'PROIBIDO', visual: 'reagent-vial',
   },
   {
-    id: 'DOS-004',
-    tag: 'EXPERIMENTO',
-    location: 'Londres, 1730',
+    id: 'DOS-004', tag: 'EXPERIMENTO', location: 'Londres, 1730',
     title: 'Stephen Gray e o corpo condutor',
     text: 'Stephen Gray demonstra que o corpo humano conduz eletricidade. Um jovem suspenso por cordas de seda atrai pedaços de chumbo. O corpo vivo como fio elétrico.',
-    status: 'CATALOGADO',
+    status: 'CATALOGADO', visual: 'galvanic-wave',
   },
   {
-    id: 'DOS-005',
-    tag: 'MEDICINA ANTIGA',
-    location: 'Séc. II–III d.C.',
+    id: 'DOS-005', tag: 'MEDICINA ANTIGA', location: 'Séc. II–III d.C.',
     title: 'Pseudo-Galeno e o Homem Ferido',
     text: 'O tratado atribuído a Galeno descreve os nervos como canais do espírito vital. O corpo ferido como mapa da alma. Entre cirurgia e filosofia, o limite entre vivo e morto.',
-    status: 'FRAGMENTADO',
+    status: 'FRAGMENTADO', visual: 'anatomical-plate',
   },
   {
-    id: 'DOS-006',
-    tag: 'LITERATURA',
-    location: 'Genebra, 1818',
+    id: 'DOS-006', tag: 'LITERATURA', location: 'Genebra, 1818',
     title: 'Mary Shelley e a Criatura',
     text: 'Com dezoito anos, Mary Shelley cria o arquétipo moderno da criatura reanimada pela ciência. Frankenstein não é o monstro — é o cientista que não suporta sua própria criação.',
-    status: 'FUNDACIONAL',
+    status: 'FUNDACIONAL', visual: 'medical-file',
   },
 ]
 
@@ -117,42 +105,18 @@ const timelineEvents = [
 ]
 
 const cabinet = [
-  {
-    ref: 'LÂM-042',
-    type: 'ESPÉCIME',
-    name: 'Lâmina Histológica',
-    desc: 'Tecido neural pós-galvanização. Reação desconhecida nos neurônios terminais.',
-  },
-  {
-    ref: 'MAN-019',
-    type: 'DOCUMENTO',
-    name: 'Manuscrito Aldini',
-    desc: 'Notas de campo da sessão de 1803. Três páginas ilegíveis. Tinta ferruginosa.',
-  },
-  {
-    ref: 'REA-007',
-    type: 'SUBSTÂNCIA',
-    name: 'Reagente HW-7',
-    desc: 'Composto verde-amarelado. Origem não rastreada. Efeito sobre tecido morto: indeterminado.',
-  },
-  {
-    ref: 'PRO-334',
-    type: 'REGISTRO',
-    name: 'Prontuário 334-B',
-    desc: 'Cadáver masculino, ~40 anos. Causa mortis: desconhecida. Marcas pós-morte atípicas.',
-  },
-  {
-    ref: 'OSC-002',
-    type: 'INSTRUMENTO',
-    name: 'Osciloscópio de Campo',
-    desc: 'Registrou atividade elétrica em tecido certificado como morto. Equipamento lacrado após incidente.',
-  },
-  {
-    ref: 'CAD-111',
-    type: 'ESPÉCIME',
-    name: 'Cadáver Catalogado 111',
-    desc: 'Status: reanimação parcial tentada. Resultado: inconclusivo. Localização atual: desconhecida.',
-  },
+  { ref: 'LÂM-042', type: 'ESPÉCIME',    name: 'Lâmina Histológica',    visual: 'anatomical-plate',
+    desc: 'Tecido neural pós-galvanização. Reação desconhecida nos neurônios terminais.' },
+  { ref: 'MAN-019', type: 'DOCUMENTO',   name: 'Manuscrito Aldini',      visual: 'medical-file',
+    desc: 'Notas de campo da sessão de 1803. Três páginas ilegíveis. Tinta ferruginosa.' },
+  { ref: 'REA-007', type: 'SUBSTÂNCIA',  name: 'Reagente HW-7',          visual: 'reagent-vial',
+    desc: 'Composto verde-amarelado. Origem não rastreada. Efeito sobre tecido morto: indeterminado.' },
+  { ref: 'PRO-334', type: 'REGISTRO',    name: 'Prontuário 334-B',       visual: 'medical-file',
+    desc: 'Cadáver masculino, ~40 anos. Causa mortis: desconhecida. Marcas pós-morte atípicas.' },
+  { ref: 'OSC-002', type: 'INSTRUMENTO', name: 'Osciloscópio de Campo',  visual: 'galvanic-wave',
+    desc: 'Registrou atividade elétrica em tecido certificado como morto. Equipamento lacrado após incidente.' },
+  { ref: 'CAD-111', type: 'ESPÉCIME',    name: 'Cadáver Catalogado 111', visual: 'corpse-tag',
+    desc: 'Status: reanimação parcial tentada. Resultado: inconclusivo. Localização atual: desconhecida.' },
 ]
 
 const classifications = [
@@ -170,7 +134,7 @@ const stories = [
     title: 'A mandíbula que se abriu em Londres',
     summary: 'Giovanni Aldini, sobrinho de Luigi Galvani, realizou em janeiro de 1803 a sessão de galvanismo público mais célebre da história. O corpo do enforcado George Forster foi submetido a correntes galvânicas diante de médicos, magistrados e público. O resultado perturbou até os presentes mais céticos.',
     excerpt: 'A mandíbula desceu. O punho direito se fechou. O rosto contraiu em algo que os presentes descreveram como expressão de dor. Nenhum médico na sala acreditava em reanimação. Todos saíram em silêncio.',
-    status: 'VERIFICADO',
+    status: 'VERIFICADO', visual: 'galvanic-wave',
     classification: 'CLF-002 · Galvanismo Histórico',
   },
   {
@@ -180,7 +144,7 @@ const stories = [
     title: 'O cadáver que fez a plateia recuar',
     summary: 'Em 1818, o médico escocês Andrew Ure aplicou correntes galvânicas no corpo de Matthew Clydesdale, executado em Glasgow. As correntes atingiram múltiplos pontos do sistema nervoso. A violência das contrações musculares forçou parte do público a abandonar o anfiteatro.',
     excerpt: 'O tórax se expandiu como se tentasse inspirar. Os braços se ergueram. Ure registrou no relatório que, se o aparelho laríngeo não estivesse comprometido pela execução, a respiração teria sido reestabelecida. Ou assim ele acreditava.',
-    status: 'ARQUIVADO',
+    status: 'ARQUIVADO', visual: 'galvanic-wave',
     classification: 'CLF-002 · Galvanismo Histórico',
   },
   {
@@ -190,7 +154,7 @@ const stories = [
     title: 'Frankenstein: a criatura antes do monstro',
     summary: 'Mary Shelley tinha dezoito anos quando escreveu Frankenstein, publicado em 1818. A criatura nasce diretamente do contexto galvanista — Percy Shelley e Byron discutiam os experimentos de Aldini nas noites de verão em Genebra. O monstro mais famoso da literatura não tem nome. Só o cientista tem.',
     excerpt: 'A criatura de Shelley não é má por natureza — é abandonada. Victor Frankenstein foge da própria obra na manhã de sua conclusão. O horror do romance não está na mesa de dissecação, mas no corredor depois dela: a porta que se fecha antes que a coisa que respira possa ser nomeada.',
-    status: 'FUNDACIONAL',
+    status: 'FUNDACIONAL', visual: 'medical-file',
     classification: 'CLF-001 · Literatura de Reanimação',
   },
   {
@@ -200,7 +164,7 @@ const stories = [
     title: 'Herbert West e a medicina que perdeu a alma',
     summary: 'Em 1921–22, H. P. Lovecraft publicou em seis partes a história de Herbert West, médico obcecado com a reanimação química do tecido morto. O reagente verde que injeta em cadáveres frescos produz resultados cada vez mais imprevisíveis. A série é considerada menor dentro da obra de Lovecraft — mas é a mais visceral.',
     excerpt: 'West não temia a morte. Temia o que a morte fazia com seus experimentos: os cadáveres mais frescos reagiam melhor, o que o forçava a métodos de obtenção progressivamente mais urgentes. A ciência, em suas mãos, tornou-se uma corrida contra a putrefação.',
-    status: 'PROIBIDO',
+    status: 'PROIBIDO', visual: 'reagent-vial',
     classification: 'CLF-001 · Literatura de Reanimação',
   },
   {
@@ -210,7 +174,7 @@ const stories = [
     title: 'Os homens que roubavam carne',
     summary: 'Entre o século XVIII e meados do XIX, a demanda por cadáveres para as escolas de anatomia britânicas superava amplamente a oferta legal. Os body snatchers supriram essa demanda por décadas — operavam à noite, conheciam os cemitérios melhor que os coveiros, e cobravam por peso.',
     excerpt: 'Não faltava mercado. Faltava material. Um corpo adulto valia entre duas e dez libras — mais que o salário mensal de um operário. Os body snatchers não eram monstros: eram fornecedores numa cadeia que incluía médicos respeitáveis, universidades e cirurgiões reais.',
-    status: 'ARQUIVADO',
+    status: 'ARQUIVADO', visual: 'corpse-tag',
     classification: 'CLF-003 · Anatomia Proibida',
   },
   {
@@ -220,10 +184,22 @@ const stories = [
     title: 'Prontuário 334-B',
     summary: 'Registro apócrifo catalogado sob o código PRO-334-B. Cadáver masculino, aproximadamente quarenta anos, entrada em data ilegível, causa mortis indeterminada. Três tentativas de reanimação parcial foram iniciadas. Status: inconclusivo. Este dossiê é ficção editorial do Arquivo Morto — não representa evento histórico real.',
     excerpt: 'Na terceira sessão, a atividade elétrica nos neurônios do córtex frontal superou o limiar previsto pelo protocolo. O equipamento foi desligado. O registro foi lacrado. A localização atual do espécime é: desconhecida. — Nota interna, sem assinatura, sem data.',
-    status: 'LACRADO',
+    status: 'LACRADO', visual: 'medical-file',
     classification: 'CLF-004 · Horror Científico',
   },
 ]
+
+function ArchiveVisual({ type = 'medical-file', label, code, size = 'md' }) {
+  return (
+    <div className={`archive-visual av-${size}`} aria-hidden="true">
+      <div className={`archive-visual-frame visual-${type}`} />
+      <div className="visual-meta">
+        {code && <span className="visual-code">{code}</span>}
+        {label && <span className="visual-label">{label}</span>}
+      </div>
+    </div>
+  )
+}
 
 function App() {
   const [mode, setMode] = useState('arquivo')
@@ -238,6 +214,7 @@ function App() {
         <nav className="nav">
           <span className="nav-brand">Arquivo Morto</span>
           <div className="nav-links">
+            <a href="#historias" className="nav-link">Histórias</a>
             <a href="#dossies" className="nav-link">Dossiês</a>
             <a href="#artigos" className="nav-link">Artigos</a>
             <a href="#linha" className="nav-link">Linha do Tempo</a>
@@ -259,6 +236,9 @@ function App() {
         {/* HERO */}
         <header className="hero">
           <div className="hero-overlay" aria-hidden="true" />
+          <div className="hero-visual-system" aria-hidden="true">
+            <div className="hvs-diagram" />
+          </div>
           <div className="archive-seal" aria-hidden="true">
             <div className="seal-ring" />
             <div className="seal-core">
@@ -367,6 +347,7 @@ function App() {
           <div className="stories-grid">
             {stories.map((s) => (
               <article className={`story-card story-type-${s.type}`} key={s.code}>
+                <ArchiveVisual type={s.visual} code={s.code} size="sm" />
                 <div className="story-header">
                   <span className="story-code">{s.code}</span>
                   <span className={`story-status status-${s.status.toLowerCase()}`}>{s.status}</span>
@@ -421,26 +402,35 @@ function App() {
             <h3>Aldini-Forster, Londres, 1803</h3>
           </div>
           <article className="featured-article">
-            <div className="featured-meta">
-              <span className="featured-case">DOS-001</span>
-              <span className="featured-location">Londres, 1803</span>
-              <span className="featured-class">EXPERIMENTO · GALVANISMO</span>
-            </div>
-            <h4 className="featured-title">Giovanni Aldini e George Forster</h4>
-            <p className="featured-summary">
-              No dia 17 de janeiro de 1803, diante de uma plateia de cirurgiões e curiosos
-              no Old Bailey, Giovanni Aldini aplicou correntes galvânicas no cadáver
-              recém-enforcado de George Forster. O corpo se contorceu. A mandíbula abriu.
-              Um olho entrou em movimento. A ciência encontrou o teatro da morte — e o
-              horror moderno encontrou seu ponto de origem.
-            </p>
-            <div className="featured-editorial">
-              <span className="editorial-tag">NOTA EDITORIAL</span>
-              <p>
-                Este experimento é o evento fundacional do arquivo. Forster é o ponto zero
-                da reanimação como espetáculo científico. Tudo que veio depois —
-                Frankenstein, Herbert West, a criogenia — tem sua sombra aqui.
-              </p>
+            <div className="featured-layout">
+              <div className="featured-content">
+                <div className="featured-meta">
+                  <span className="featured-case">DOS-001</span>
+                  <span className="featured-location">Londres, 1803</span>
+                  <span className="featured-class">EXPERIMENTO · GALVANISMO</span>
+                </div>
+                <h4 className="featured-title">Giovanni Aldini e George Forster</h4>
+                <p className="featured-summary">
+                  No dia 17 de janeiro de 1803, diante de uma plateia de cirurgiões e curiosos
+                  no Old Bailey, Giovanni Aldini aplicou correntes galvânicas no cadáver
+                  recém-enforcado de George Forster. O corpo se contorceu. A mandíbula abriu.
+                  Um olho entrou em movimento. A ciência encontrou o teatro da morte — e o
+                  horror moderno encontrou seu ponto de origem.
+                </p>
+                <div className="featured-editorial">
+                  <span className="editorial-tag">NOTA EDITORIAL</span>
+                  <p>
+                    Este experimento é o evento fundacional do arquivo. Forster é o ponto zero
+                    da reanimação como espetáculo científico. Tudo que veio depois —
+                    Frankenstein, Herbert West, a criogenia — tem sua sombra aqui.
+                  </p>
+                </div>
+              </div>
+              <aside className="featured-visual-panel" aria-hidden="true">
+                <span className="fvp-tag">GALVANISMO / 1803</span>
+                <ArchiveVisual type="galvanic-wave" size="lg" />
+                <span className="fvp-stamp">OBSERVAÇÃO PÓS-MORTE</span>
+              </aside>
             </div>
           </article>
         </section>
@@ -516,6 +506,7 @@ function App() {
           <div className="cabinet-grid">
             {cabinet.map((item) => (
               <div className="cabinet-item" key={item.ref}>
+                <ArchiveVisual type={item.visual} code={item.ref} size="sm" />
                 <div className="cabinet-top">
                   <span className="cabinet-ref">{item.ref}</span>
                   <span className="cabinet-type">{item.type}</span>

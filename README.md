@@ -84,6 +84,14 @@ docs/
 6. **Gabinete de Anatomia** — itens fictícios lacrados e catalogados
 7. **Footer** — identificação editorial
 
+## V5 — Visual archive layer
+
+- **Camada visual de arquivo**: componente `ArchiveVisual` renderiza 6 tipos de ilustração em CSS/SVG inline — `galvanic-wave`, `anatomical-plate`, `medical-file`, `reagent-vial`, `corpse-tag`, `occult-diagram`
+- **Hero**: sistema visual de diagrama técnico em background (`.hero-visual-system`)
+- **Dossiê em Destaque**: painel visual lateral com etiqueta GALVANISMO/1803 e carimbo OBSERVAÇÃO PÓS-MORTE
+- **Histórias e Gabinete**: cada card tem miniatura visual tipada
+- **`public/assets/archive/`**: estrutura preparada para imagens reais de domínio público
+
 ## V4 — Editorial expansion
 
 - **Histórias do Arquivo** — 6 fichas editoriais ricas com código, categoria, título, resumo, trecho narrativo e classificação
@@ -110,7 +118,7 @@ A V2 introduz:
 
 ## Status
 
-`v4.0` — expansão editorial completa. Em desenvolvimento local. Não publicado ainda.
+`v5.0` — camada visual de arquivo completa. Em desenvolvimento local. Não publicado ainda.
 
 ## Nota editorial
 
