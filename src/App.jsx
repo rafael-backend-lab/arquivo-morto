@@ -747,9 +747,20 @@ function App() {
             </p>
           </div>
 
-          <div className="soviet-dossier-lead">
-            <span className="archive-date">1890–1960</span>
+          <div className="soviet-dossier-lead with-portrait">
+            <figure className="brukhonenko-portrait">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/7/78/Sergei_Brukhonenko.png"
+                alt="Retrato de Sergei Brukhonenko em 1942"
+                loading="lazy"
+              />
+              <figcaption>
+                Sergei Brukhonenko, 1942 · Wikimedia Commons · domínio público
+              </figcaption>
+            </figure>
+
             <div>
+              <span className="archive-date">1890–1960</span>
               <h4>O pesquisador soviético</h4>
               <p>
                 Sergei Sergeevich Brukhonenko foi médico, pesquisador e inventor soviético. Sua importância não está em uma fantasia de
