@@ -565,6 +565,277 @@ h2 {
   letter-spacing: 0.06em;
 }
 
+/* ─── DO CORPO SAGRADO AO CORPO ESTUDADO ───────────────────── */
+
+.body-study-section {
+  margin-top: 56px;
+}
+
+.body-study-subtitle {
+  max-width: 820px;
+  margin: 16px 0 0;
+  color: #d4c5aa;
+  font-size: clamp(1rem, 2vw, 1.18rem);
+  line-height: 1.76;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+}
+
+.body-study-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.body-study-card {
+  position: relative;
+  min-height: 100%;
+  padding: 28px 28px 30px;
+  border: 1px solid rgba(184, 154, 102, 0.14);
+  border-radius: 6px;
+  background:
+    linear-gradient(160deg, rgba(30, 18, 15, 0.96) 0%, rgba(58, 15, 20, 0.20) 48%, rgba(8, 8, 8, 0.96) 100%);
+  box-shadow:
+    inset 0 0 0 1px rgba(248, 240, 224, 0.02),
+    0 20px 56px rgba(0, 0, 0, 0.26);
+  overflow: hidden;
+  transition: border-color 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.body-study-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(184, 154, 102, 0.48), rgba(248, 240, 224, 0.10), rgba(29, 138, 72, 0.12));
+}
+
+.body-study-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at top right, rgba(184, 154, 102, 0.07), transparent 32%),
+    repeating-linear-gradient(
+      0deg,
+      transparent 0 20px,
+      rgba(248, 240, 224, 0.012) 20px 21px
+    );
+  pointer-events: none;
+}
+
+.body-study-card:hover {
+  border-color: rgba(184, 154, 102, 0.26);
+  transform: translateY(-3px);
+  box-shadow:
+    inset 0 0 0 1px rgba(248, 240, 224, 0.03),
+    0 28px 70px rgba(0, 0, 0, 0.36);
+}
+
+.body-study-card-head {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.body-study-code {
+  font-family: ui-monospace, 'Courier New', monospace;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: var(--text-dim);
+}
+
+.anatomy-label {
+  font-family: ui-monospace, 'Courier New', monospace;
+  font-size: 0.60rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #b89a66;
+  padding: 4px 8px;
+  border-radius: 3px;
+  border: 1px solid rgba(184, 154, 102, 0.22);
+  background: rgba(184, 154, 102, 0.08);
+}
+
+.body-study-title {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 12px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.34rem;
+  line-height: 1.18;
+  color: var(--bone);
+}
+
+.body-study-theme {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 14px;
+  color: #d4c5aa;
+  font-size: 0.82rem;
+  line-height: 1.72;
+  text-transform: uppercase;
+  letter-spacing: 0.10em;
+}
+
+.body-study-text {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: var(--text);
+  font-size: 0.94rem;
+  line-height: 1.84;
+}
+
+/* ─── GALVANISMO, MEDICINA LEGAL E SINAIS DO CADÁVER ───────── */
+
+.forensic-section {
+  margin-top: 56px;
+}
+
+.forensic-subtitle {
+  max-width: 860px;
+  margin: 16px 0 0;
+  color: #d4c5aa;
+  font-size: clamp(1rem, 2vw, 1.18rem);
+  line-height: 1.76;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+}
+
+.forensic-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.forensic-card {
+  position: relative;
+  min-height: 100%;
+  padding: 26px 24px 28px;
+  border: 1px solid rgba(95, 191, 142, 0.12);
+  border-radius: 6px;
+  background:
+    linear-gradient(180deg, rgba(8, 8, 8, 0.98) 0%, rgba(18, 36, 33, 0.18) 28%, rgba(24, 16, 18, 0.96) 100%);
+  box-shadow:
+    inset 0 0 0 1px rgba(248, 240, 224, 0.02),
+    0 18px 54px rgba(0, 0, 0, 0.28);
+  overflow: hidden;
+  transition: border-color 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.forensic-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 14px;
+  right: 14px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(95, 191, 142, 0.30), rgba(248, 240, 224, 0.08), rgba(200, 75, 90, 0.16));
+}
+
+.forensic-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(
+      -45deg,
+      transparent 0 18px,
+      rgba(248, 240, 224, 0.010) 18px 19px
+    ),
+    radial-gradient(circle at bottom right, rgba(95, 191, 142, 0.05), transparent 28%);
+  pointer-events: none;
+}
+
+.forensic-card:hover {
+  border-color: rgba(95, 191, 142, 0.24);
+  transform: translateY(-3px);
+  box-shadow:
+    inset 0 0 0 1px rgba(248, 240, 224, 0.03),
+    0 26px 68px rgba(0, 0, 0, 0.38);
+}
+
+.forensic-card-head {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.forensic-code {
+  font-family: ui-monospace, 'Courier New', monospace;
+  font-size: 0.60rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: var(--text-dim);
+}
+
+.forensic-label {
+  font-family: ui-monospace, 'Courier New', monospace;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #5fbf8e;
+}
+
+.forensic-title {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 12px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.16rem;
+  line-height: 1.2;
+  color: var(--bone);
+}
+
+.forensic-theme {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 14px;
+  color: #d4c5aa;
+  font-size: 0.76rem;
+  line-height: 1.72;
+  text-transform: uppercase;
+  letter-spacing: 0.10em;
+}
+
+.forensic-text {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 16px;
+  color: var(--text);
+  font-size: 0.88rem;
+  line-height: 1.8;
+}
+
+.forensic-warning {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  padding-top: 12px;
+  border-top: 1px solid rgba(248, 240, 224, 0.07);
+  color: var(--text-dim);
+  font-family: ui-monospace, 'Courier New', monospace;
+  font-size: 0.64rem;
+  line-height: 1.72;
+  letter-spacing: 0.06em;
+}
+
 /* ─── A MORTE TÉCNICA ───────────────────────────────────────── */
 
 .modern-death-section {
@@ -1499,6 +1770,8 @@ h2 {
 @media (max-width: 960px) {
   .history-grid   { grid-template-columns: repeat(2, 1fr); }
   .occult-grid    { grid-template-columns: repeat(2, 1fr); }
+  .body-study-grid { grid-template-columns: repeat(2, 1fr); }
+  .forensic-grid  { grid-template-columns: repeat(2, 1fr); }
   .source-list    { grid-template-columns: 1fr; }
   .dossier-grid   { grid-template-columns: repeat(2, 1fr); }
   .cabinet-grid   { grid-template-columns: repeat(2, 1fr); }
@@ -1522,6 +1795,12 @@ h2 {
   .occult-grid   { grid-template-columns: 1fr; }
   .occult-card   { padding: 24px 22px 26px; }
   .occult-theme  { font-size: 0.78rem; }
+  .body-study-grid { grid-template-columns: 1fr; }
+  .body-study-card { padding: 24px 22px 26px; }
+  .body-study-theme { font-size: 0.78rem; }
+  .forensic-grid  { grid-template-columns: 1fr; }
+  .forensic-card  { padding: 24px 22px 26px; }
+  .forensic-theme { font-size: 0.74rem; }
   .bioethics-note { padding: 24px 22px; }
   .medical-grid   { grid-template-columns: 1fr; }
   .medical-card   { padding: 24px 22px 26px; }

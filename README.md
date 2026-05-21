@@ -80,12 +80,24 @@ docs/
 2. **Manifesto** — texto frio e poético sobre morte e ciência
 3. **A humanidade contra a morte** — seis fichas históricas sobre ritos, mitos e culturas funerárias
 4. **Necromancia, alquimia e o desejo de retorno** — seis fichas sobre ocultismo, matéria animada e longevidade
-5. **A morte técnica: medicina, corpo e fronteiras atuais** — oito fichas sobre emergência, bioética, transplantes, biotecnologia e luto digital
-6. **Dossiês** — seis casos históricos e ficcionais catalogados
-7. **Artigos** — cinco ensaios e investigações temáticas
-8. **Linha do tempo** — de 1730 até hoje
-9. **Gabinete de Anatomia** — itens fictícios lacrados e catalogados
-10. **Footer** — identificação editorial
+5. **Do corpo sagrado ao corpo estudado** — seis fichas sobre anatomia, vitalismo, ensino médico e corpo como prova
+6. **Galvanismo, medicina legal e sinais do cadáver** — oito fichas sobre eletricidade animal, sinais pós-morte e olhar pericial
+7. **A morte técnica: medicina, corpo e fronteiras atuais** — oito fichas sobre emergência, bioética, transplantes, biotecnologia e luto digital
+8. **Histórias do Arquivo** — seis registros entre história, literatura e ficção editorial
+9. **Dossiê em destaque** — Aldini-Forster, Londres, 1803
+10. **Dossiês iniciais** — seis casos históricos e ficcionais catalogados
+11. **Artigos** — cinco ensaios e investigações temáticas
+12. **Linha do tempo** — de 1730 até hoje
+13. **Gabinete de Anatomia** — itens fictícios lacrados e catalogados
+14. **Footer** — identificação editorial
+
+## V8 — Capítulo III: Do corpo sagrado ao corpo estudado
+
+Capítulo intermediário dedicado à passagem do cadáver ritualizado para o cadáver estudado, dissecado, ensinado e lido como documento anatômico.
+
+## V8.1 — Capítulo IV: Galvanismo, medicina legal e sinais do cadáver
+
+Capítulo de transição entre anatomia histórica e medicina moderna, com foco em galvanismo, sinais pós-morte, medo do enterro vivo e consolidação do olhar médico-legal em tom editorial, não instrutivo.
 
 ## V9 — A morte técnica: medicina, corpo e fronteiras atuais
 

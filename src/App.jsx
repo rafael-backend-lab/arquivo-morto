@@ -222,6 +222,118 @@ const occultReturnChapter = [
   },
 ]
 
+const bodyStudyChapter = [
+  {
+    code: 'ANT-001',
+    title: 'Corpo sagrado',
+    label: 'Relíquia, tabu e memória ritual',
+    theme: 'Corpo morto como templo, vestígio e objeto de respeito funerário',
+    text: 'Durante séculos, o cadáver permaneceu cercado por reverência, proibição e temor. Reliquias, sepulturas, restos santos e tabus funerários mostram que o corpo morto não era matéria neutra: era memória encarnada, sinal religioso e território de contato entre vivos, mortos e transcendência.',
+  },
+  {
+    code: 'ANT-002',
+    title: 'Dissecação e anatomia',
+    label: 'Abertura do corpo',
+    theme: 'Ruptura simbólica, observação interna e nascimento do olhar anatômico',
+    text: 'Abrir o corpo significou violar um limite antigo para produzir um conhecimento novo. A dissecação substituiu parte do mistério pela observação, mas não sem escândalo: o cadáver tornou-se superfície de leitura, e a anatomia nasceu entre fascínio científico, repulsa moral e imaginação sombria.',
+  },
+  {
+    code: 'ANT-003',
+    title: 'Escolas médicas',
+    label: 'Instituição e ensino',
+    theme: 'Necessidade de corpos para demonstração, aula e formação médica',
+    text: 'Com o crescimento do ensino médico, o cadáver deixou de ser apenas exceção e tornou-se recurso institucional. Teatros anatômicos, faculdades e hospitais passaram a depender de corpos para formar cirurgiões e médicos, transformando o morto em infraestrutura silenciosa do saber moderno.',
+  },
+  {
+    code: 'ANT-004',
+    title: 'Ressurrecionistas',
+    label: 'Mercado clandestino de corpos',
+    theme: 'Body snatchers, roubo de cadáveres e urbanização da anatomia',
+    text: 'Nos séculos XVIII e XIX, a demanda anatômica superou a oferta legal. Coveiros subornados, túmulos violados e intermediários noturnos alimentaram um circuito clandestino em que o cadáver circulava como mercadoria. O horror urbano dos ressurrecionistas pertence tanto à história social quanto à história da medicina.',
+  },
+  {
+    code: 'ANT-005',
+    title: 'Vitalismo',
+    label: 'Debate sobre o princípio de vida',
+    theme: 'O que separa matéria viva de matéria morta',
+    text: 'Vitalismo designa o conjunto de tentativas filosóficas e científicas de nomear algo que a simples matéria não explicaria por completo: sopro, força, princípio ou energia da vida. O debate não oferece resposta final, mas prepara o terreno em que anatomia, eletricidade e fisiologia passariam a interrogar o cadáver.',
+  },
+  {
+    code: 'ANT-006',
+    title: 'Cadáver como prova',
+    label: 'Olhar pericial nascente',
+    theme: 'Autópsia, causa mortis e corpo como documento',
+    text: 'À medida que a medicina legal se consolida, o cadáver deixa de ser apenas objeto de horror ou devoção e passa a ser também prova. Marcas, tecidos, feridas e alterações internas começam a compor uma gramática pericial que desloca o mistério para o relatório, a hipótese para o exame e a morte para o campo do indício.',
+  },
+]
+
+const forensicDeathChapter = [
+  {
+    code: 'FOR-001',
+    title: 'Galvani e a eletricidade animal',
+    label: 'História da ciência',
+    theme: 'Nervos, contrações e a suspeita de uma força animadora no corpo',
+    text: 'Os experimentos de Luigi Galvani com músculos e nervos sugeriram que o corpo podia responder à eletricidade de modo inquietante. A hipótese de uma eletricidade animal não ressuscitava mortos, mas reabria a pergunta sobre o que ainda persistia no tecido após o fim aparente da vida.',
+    warning: 'Leitura histórica e editorial. Não se trata de manual experimental nem de prova de reanimação.',
+  },
+  {
+    code: 'FOR-002',
+    title: 'Aldini e o teatro galvânico',
+    label: 'Espetáculo científico',
+    theme: 'George Forster, demonstração pública e horror científico em cena',
+    text: 'Giovanni Aldini transformou o cadáver em palco de demonstração. As sessões públicas com o corpo de George Forster converteram contrações musculares em espetáculo científico, num ponto em que ciência, imprensa e terror coletivo passaram a compartilhar a mesma sala.',
+    warning: 'Tratamento histórico-documental. O interesse está no espetáculo científico, não em promessa terapêutica.',
+  },
+  {
+    code: 'FOR-003',
+    title: 'Andrew Ure e o cadáver em Glasgow',
+    label: 'Relato pericial',
+    theme: 'Matthew Clydesdale, corrente galvânica e a violência das contrações',
+    text: 'Em Glasgow, Andrew Ure aplicou correntes no corpo de Matthew Clydesdale e produziu movimentos que perturbaram a plateia. O episódio exemplifica como a medicina do período oscilava entre observação rigorosa, ambição fisiológica e imaginação pública de retorno.',
+    warning: 'Contexto histórico e médico-legal. O texto não reproduz técnica nem orientação experimental.',
+  },
+  {
+    code: 'FOR-004',
+    title: 'Espasmo cadavérico',
+    label: 'Fenômeno observado',
+    theme: 'Contração muscular no contexto da morte, sem equivalência com retorno à vida',
+    text: 'O espasmo cadavérico entrou para o vocabulário médico-legal como forma específica de contração associada a certas circunstâncias de morte. Sua importância editorial está em mostrar como pequenos sinais musculares foram muitas vezes exagerados pela imaginação popular e confundidos com algo sobrenatural.',
+    warning: 'Fenômeno médico-legal tratado de modo cultural e responsável. Não é instrução diagnóstica.',
+  },
+  {
+    code: 'FOR-005',
+    title: 'Rigidez cadavérica',
+    label: 'Transformação pós-morte',
+    theme: 'Tempo, músculo e leitura do corpo após o fim da circulação',
+    text: 'A rigidez cadavérica tornou-se um dos sinais clássicos pelos quais o corpo pós-morte passou a ser lido. Ela interessa menos como técnica isolada e mais como marco da passagem do cadáver para o tempo material da decomposição, quando o músculo registra a morte em sua própria alteração.',
+    warning: 'Assunto pericial em chave editorial. O capítulo não ensina investigação forense nem estimativa prática.',
+  },
+  {
+    code: 'FOR-006',
+    title: 'Gases, ruídos e movimentos pós-morte',
+    label: 'Decomposição e medo popular',
+    theme: 'Fenômenos naturais que alimentaram lendas de assombração e retorno',
+    text: 'Ruídos, distensões, pequenas alterações de posição e outros efeitos da decomposição alimentaram por séculos a crença de que o morto ainda reagia. O que a cultura leu como inquietação do cadáver, a observação médico-legal passou a registrar como processo natural do corpo em transformação.',
+    warning: 'Fenômenos naturais descritos de forma histórica e cultural, não como guia de exame post mortem.',
+  },
+  {
+    code: 'FOR-007',
+    title: 'Catalepsia e medo do enterro vivo',
+    label: 'Pânico de diagnóstico equivocado',
+    theme: 'Estados confundidos com morte e o imaginário dos caixões de segurança',
+    text: 'A possibilidade de confundir certos estados do corpo com a morte produziu um medo social persistente: o enterro vivo. Catalepsia, inconsciência profunda e incerteza diagnóstica deram origem a mecanismos de segurança, literatura de pânico e uma cultura do alarme funerário.',
+    warning: 'Tema histórico e social. Não é material clínico para reconhecimento de estado neurológico.',
+  },
+  {
+    code: 'FOR-008',
+    title: 'Autópsia e medicina legal',
+    label: 'Corpo como laudo',
+    theme: 'Causa mortis, exame, prova e passagem do mistério para o documento',
+    text: 'A autópsia consolidou o cadáver como arquivo material da morte. Ao transformar o corpo em prova documental, a medicina legal trocou parte do imaginário do prodígio pelo vocabulário da lesão, da causa mortis e da responsabilidade. O morto passa a falar por indícios, e não por retorno.',
+    warning: 'Medicina legal tratada em contexto cultural, documental e ético. O texto não oferece instrução de autópsia.',
+  },
+]
+
 const medicalDeathChapter = [
   {
     ref: 'MED-001',
@@ -542,10 +654,59 @@ function App() {
           </div>
         </section>
 
+        {/* DO CORPO SAGRADO AO CORPO ESTUDADO */}
+        <section className="section body-study-section" aria-labelledby="body-study-heading">
+          <div className="section-header">
+            <p className="section-label">Capítulo III</p>
+            <h3 id="body-study-heading">Do corpo sagrado ao corpo estudado</h3>
+            <p className="body-study-subtitle">
+              Quando o cadáver deixou de ser apenas relíquia, pecado ou mistério, tornou-se também matéria de estudo.
+            </p>
+          </div>
+          <div className="body-study-grid">
+            {bodyStudyChapter.map((entry) => (
+              <article className="body-study-card" key={entry.code}>
+                <div className="body-study-card-head">
+                  <span className="body-study-code">{entry.code}</span>
+                  <span className="anatomy-label">{entry.label}</span>
+                </div>
+                <h4 className="body-study-title">{entry.title}</h4>
+                <p className="body-study-theme">{entry.theme}</p>
+                <p className="body-study-text">{entry.text}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        {/* GALVANISMO, MEDICINA LEGAL E SINAIS DO CADÁVER */}
+        <section className="section forensic-section" aria-labelledby="forensic-heading">
+          <div className="section-header">
+            <p className="section-label">Capítulo IV</p>
+            <h3 id="forensic-heading">Galvanismo, medicina legal e sinais do cadáver</h3>
+            <p className="forensic-subtitle">
+              Antes da morte se tornar protocolo hospitalar, ela foi lida no músculo, na pele, no rigor, no gás, no silêncio e nos movimentos que pareciam vida.
+            </p>
+          </div>
+          <div className="forensic-grid">
+            {forensicDeathChapter.map((entry) => (
+              <article className="forensic-card" key={entry.code}>
+                <div className="forensic-card-head">
+                  <span className="forensic-code">{entry.code}</span>
+                  <span className="forensic-label">{entry.label}</span>
+                </div>
+                <h4 className="forensic-title">{entry.title}</h4>
+                <p className="forensic-theme">{entry.theme}</p>
+                <p className="forensic-text">{entry.text}</p>
+                <p className="forensic-warning">{entry.warning}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
         {/* A MORTE TÉCNICA: MEDICINA, CORPO E FRONTEIRAS ATUAIS */}
         <section className="section modern-death-section" aria-labelledby="modern-death-heading">
           <div className="section-header">
-            <p className="section-label">V9</p>
+            <p className="section-label">Capítulo V</p>
             <h3 id="modern-death-heading">A morte técnica: medicina, corpo e fronteiras atuais</h3>
             <p className="medical-subtitle">
               Na modernidade, vencer a morte deixou de ser apenas mito ou ritual: tornou-se linguagem de emergência, UTI, transplante, protocolo, bioética e tecnologia.
@@ -577,23 +738,6 @@ function App() {
                 <p className="medical-text">{entry.text}</p>
                 <p className="medical-warning">{entry.warning}</p>
               </article>
-            ))}
-          </div>
-        </section>
-
-        {/* CLASSIFICAÇÃO DO ARQUIVO */}
-        <section className="classification">
-          <div className="section-header">
-            <p className="section-label">Índice de classificação</p>
-            <h3>Classificação do Arquivo</h3>
-          </div>
-          <div className="classification-grid">
-            {classifications.map((c) => (
-              <div className="clf-card" key={c.code}>
-                <span className="clf-code">{c.code}</span>
-                <h5 className="clf-label">{c.label}</h5>
-                <span className="clf-count">{c.count}</span>
-              </div>
             ))}
           </div>
         </section>
@@ -713,6 +857,23 @@ function App() {
                 <h4 className="card-title">{d.title}</h4>
                 <p className="card-text">{d.text}</p>
               </article>
+            ))}
+          </div>
+        </section>
+
+        {/* CLASSIFICAÇÃO DO ARQUIVO */}
+        <section className="classification">
+          <div className="section-header">
+            <p className="section-label">Índice de classificação</p>
+            <h3>Classificação do Arquivo</h3>
+          </div>
+          <div className="classification-grid">
+            {classifications.map((c) => (
+              <div className="clf-card" key={c.code}>
+                <span className="clf-code">{c.code}</span>
+                <h5 className="clf-label">{c.label}</h5>
+                <span className="clf-count">{c.count}</span>
+              </div>
             ))}
           </div>
         </section>

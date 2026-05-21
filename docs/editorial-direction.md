@@ -239,9 +239,25 @@ As seis fichas abordam Necromancia, Alquimia, John Dee, Golem, Elixir da vida e 
 
 Este capítulo prepara a passagem para anatomia, galvanismo, Frankenstein e horror científico ao mostrar que, antes do laboratório moderno, já existia um vocabulário de matéria animada, sopro vital, criatura artificial e resistência à decadência do corpo.
 
+## V8 — Anatomia, dissecação e corpo estudado
+
+Nova seção posicionada entre o Capítulo II e a parte moderna para corrigir a sequência histórica do Arquivo Morto. Sua função é mostrar a transformação do cadáver em matéria de estudo, infraestrutura de ensino e objeto de leitura institucional.
+
+As seis fichas abordam corpo sagrado, dissecação e anatomia, escolas médicas, ressurrecionistas, vitalismo e cadáver como prova. O tom deve permanecer histórico, sombrio, documental e institucional, evitando caricatura de terror barato.
+
+Este capítulo faz a ponte entre alquimia e ciência ao deslocar a questão da vida e da morte para o anfiteatro anatômico, a faculdade de medicina e o debate sobre o princípio vital.
+
+## V8.1 — Galvanismo, medicina legal e sinais do cadáver
+
+Nova seção colocada entre o corpo estudado e a medicina moderna. Sua função é organizar a passagem do cadáver anatômico para o cadáver observado pela fisiologia, pelo galvanismo e pelo olhar pericial.
+
+As oito fichas abordam Galvani, Aldini, Andrew Ure, espasmo cadavérico, rigidez cadavérica, gases e ruídos pós-morte, catalepsia e medo do enterro vivo, e autópsia com medicina legal. O tratamento de medicina legal é cultural, histórico e editorial, nunca instrutivo.
+
+Este capítulo deve mostrar como sinais naturais do corpo morto foram lidos pela ciência, pela lei e pelo medo popular, preparando a transição para a morte técnica hospitalar e bioética do Capítulo V.
+
 ## V9 — Medicina moderna, bioética e fronteiras atuais
 
-Nova seção inserida após os capítulos históricos e ocultistas, antes das camadas mais literárias e pop do arquivo. Sua função é deslocar o tema da morte para a linguagem contemporânea da emergência, terapia intensiva, transplante, regulação institucional, tecnologia emergente e autonomia do paciente.
+Nova seção inserida após os capítulos históricos, anatômicos e galvânicos, antes das camadas mais literárias e pop do arquivo. Sua função é deslocar o tema da morte para a linguagem contemporânea da emergência, terapia intensiva, transplante, regulação institucional, tecnologia emergente e autonomia do paciente.
 
 ### Separação editorial obrigatória
 
