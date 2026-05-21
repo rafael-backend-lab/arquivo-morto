@@ -302,3 +302,7 @@ Tratamento médico, histórico e bioético, sem linguagem de milagre tecnológic
 ## Brukhonenko, autojektor e cinema científico soviético
 
 Sergei Brukhonenko deve ser tratado como figura de história da medicina ligada à circulação extracorpórea experimental e ao autojektor. O filme *Experiments in the Revival of Organisms* deve aparecer como documento controverso de 1940: relevante para o imaginário da reanimação, mas não como prova simples de retorno real da vida. A abordagem correta é histórica, bioética e crítica.
+
+## Diretriz Brukhonenko como card
+
+O caso Sergei Brukhonenko / autojektor deve aparecer como ficha própria no capítulo de morte técnica, posicionado entre transplantes/suporte artificial e criogenia. Ele deve ser tratado como documento histórico controverso, ligado à circulação artificial e ao imaginário soviético de reanimação, sem apresentar o filme como prova literal de retorno da vida.

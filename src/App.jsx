@@ -351,6 +351,15 @@ const medicalDeathChapter = [
     warning: 'Medicina real e ética pública. O enfoque está em doação, critérios e responsabilidade institucional, não em elegibilidade clínica.',
   },
   {
+    ref: 'MED-004B',
+    displayDate: '1920s–1940',
+    tag: 'HISTÓRIA DA MEDICINA · BIOÉTICA',
+    title: 'Sergei Brukhonenko e o autojektor',
+    theme: 'circulação artificial, cinema científico soviético e a fronteira experimental da reanimação',
+    text: 'O médico soviético Sergei Brukhonenko desenvolveu o autojektor, um dos primeiros aparelhos de circulação extracorpórea. Seus experimentos com cães, divulgados no filme Experiments in the Revival of Organisms, entraram para o imaginário da reanimação moderna: órgãos mantidos por máquina, reflexos preservados e a imagem perturbadora de uma vida reduzida a circulação, tubo e aparelho.',
+    warning: 'Documento histórico controverso. O Arquivo Morto trata o caso como história da medicina, propaganda científica e bioética experimental, não como prova simples de retorno real da vida.',
+  },
+  {
     ref: 'MED-005',
     displayDate: 'séc. XX–XXI',
     tag: 'ESPECULAÇÃO CULTURAL',
@@ -395,7 +404,7 @@ const medicalEditorialSources = [
   'WHO — Guiding Principles on Human Cell, Tissue and Organ Transplantation',
   'MedlinePlus / NIH — Advance Directives',
   'National Institute on Aging / NIH — Advance Care Planning',
-  'Sergei Brukhonenko / Experiments in the Revival of Organisms — história controversa da circulação artificial',
+  'Brukhonenko / Experiments in the Revival of Organisms — circulação artificial e documento soviético controverso',
 ]
 
 const selectedDossiers = [

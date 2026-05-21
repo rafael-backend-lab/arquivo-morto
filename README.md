@@ -165,3 +165,7 @@ Projeto cultural e independente. Inspiração temática em H. P. Lovecraft, Mary
 ## Medical history refinement
 
 The modern medical chapter now includes Sergei Brukhonenko and the autojektor as a controversial historical bridge between early circulation support, Soviet scientific cinema and the cultural imagination of reanimation. The topic is treated critically, without presenting propaganda film claims as proven resurrection.
+
+## Brukhonenko card refinement
+
+Brukhonenko agora aparece como card próprio no capítulo médico moderno, não apenas como fonte editorial. O caso é tratado como história controversa da medicina, circulação artificial, cinema científico soviético e bioética experimental.
