@@ -727,12 +727,26 @@ h2 {
   border-radius: 3px;
   padding: 7px 14px;
   cursor: pointer;
-  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 0 8px rgba(29, 138, 72, 0.12);
 }
 .mode-toggle:hover {
   background: rgba(29, 138, 72, 0.20);
   border-color: rgba(29, 138, 72, 0.55);
   color: #5fbf8e;
+  box-shadow: 0 0 18px rgba(29, 138, 72, 0.28);
+}
+.mode-toggle[data-mode="terminal"] {
+  color: #c84b5a;
+  background: rgba(200, 75, 90, 0.12);
+  border-color: rgba(200, 75, 90, 0.36);
+  box-shadow: 0 0 10px rgba(200, 75, 90, 0.18);
+}
+.mode-toggle[data-mode="terminal"]:hover {
+  background: rgba(200, 75, 90, 0.22);
+  border-color: rgba(200, 75, 90, 0.58);
+  box-shadow: 0 0 20px rgba(200, 75, 90, 0.30);
+  color: #e06070;
 }
 
 /* page offset for fixed header */
@@ -1039,4 +1053,171 @@ h2 {
   .featured-article { padding: 24px 20px; }
   .nav-links { display: none; }
   .page { width: calc(100% - 32px); }
+  .archive-seal { display: none; }
+  .classification-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ─── V3 — ARCHIVE SEAL ──────────────────────────────────────── */
+
+.archive-seal {
+  position: absolute;
+  bottom: 36px;
+  right: 40px;
+  width: 148px;
+  height: 148px;
+  opacity: 0.11;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.seal-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid var(--bone);
+}
+
+.seal-ring::before {
+  content: '';
+  position: absolute;
+  inset: 7px;
+  border-radius: 50%;
+  border: 1px dashed rgba(248, 240, 224, 0.70);
+}
+
+.seal-ring::after {
+  content: '';
+  position: absolute;
+  inset: 13px;
+  border-radius: 50%;
+  border: 1px solid rgba(248, 240, 224, 0.30);
+}
+
+.seal-core {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 2px;
+}
+
+.seal-monogram {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 2.0rem;
+  font-weight: 700;
+  color: var(--bone);
+  letter-spacing: 0.06em;
+  line-height: 1;
+  display: block;
+}
+
+.seal-bolt {
+  width: 52px;
+  height: 1px;
+  background: var(--bone);
+  display: block;
+  margin: 5px 0;
+  position: relative;
+}
+
+.seal-bolt::before,
+.seal-bolt::after {
+  content: '';
+  position: absolute;
+  top: -3px;
+  height: 7px;
+  width: 1px;
+  background: var(--bone);
+}
+.seal-bolt::before { left: 10px; }
+.seal-bolt::after  { right: 10px; }
+
+.seal-label {
+  font-family: ui-monospace, 'Courier New', monospace;
+  font-size: 0.42rem;
+  letter-spacing: 0.26em;
+  color: var(--bone);
+  text-transform: uppercase;
+  display: block;
+}
+
+.seal-year {
+  font-family: ui-monospace, 'Courier New', monospace;
+  font-size: 0.40rem;
+  letter-spacing: 0.20em;
+  color: var(--bone);
+  text-transform: uppercase;
+  display: block;
+}
+
+/* ─── V3 — CLASSIFICAÇÃO DO ARQUIVO ─────────────────────────── */
+
+.classification {
+  margin-top: 64px;
+}
+
+.classification-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.clf-card {
+  padding: 22px 20px;
+  border: 1px solid var(--border);
+  border-top: 2px solid rgba(184, 154, 102, 0.42);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.018);
+  transition: border-color 0.18s ease, background 0.18s ease;
+}
+
+.clf-card:hover {
+  border-top-color: rgba(184, 154, 102, 0.70);
+  background: rgba(255, 255, 255, 0.030);
+}
+
+.clf-code {
+  font-family: ui-monospace, 'Courier New', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  color: #b89a66;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.clf-label {
+  margin: 0 0 10px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.0rem;
+  line-height: 1.3;
+  color: var(--bone);
+  font-weight: 700;
+}
+
+.clf-count {
+  font-family: ui-monospace, 'Courier New', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.10em;
+  color: var(--text-dim);
+}
+
+/* ─── V3 — FOOTER QUOTE ──────────────────────────────────────── */
+
+.footer-quote {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 0.94rem;
+  font-style: italic;
+  color: rgba(248, 240, 224, 0.24);
+  margin: 0 0 18px;
+  line-height: 1.65;
+  letter-spacing: 0.01em;
+}
+
+@media (max-width: 960px) {
+  .classification-grid { grid-template-columns: repeat(2, 1fr); }
+  .archive-seal { opacity: 0.08; width: 110px; height: 110px; }
 }

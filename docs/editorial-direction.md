@@ -121,3 +121,28 @@ Seção dedicada ao caso DOS-001 (Aldini-Forster, Londres, 1803) com:
 - Painel técnico some em mobile (≤720px) para não quebrar hero
 - Navegação nav-links some em mobile — hero ainda acessível via scroll
 - Nenhuma dependência nova adicionada
+
+## V3 — Selo, classificação e acabamento
+
+### Selo Visual (archive-seal)
+
+Carimbo científico em CSS puro, posicionado absolutamente no canto inferior direito do hero. Três camadas concêntricas: borda sólida externa, borda tracejada intermediária, borda fina interna. Centro: monograma "AM" em Georgia, separador com traço galvânico (`.seal-bolt`), "Arquivo Morto" e "Est. 1803" em ui-monospace. Opacidade `0.11` — elemento de identidade visual, não de conteúdo. Some em mobile (≤720px).
+
+### Classificação do Arquivo
+
+Quatro etiquetas de catálogo entre o Manifesto e o Dossiê em Destaque. Grid 4 colunas. Cada card: borda superior âmbar, código CLF-001..004, nome em Georgia, contagem em monospace. Visual de ficha de catálogo físico.
+
+| Código | Categoria |
+|---|---|
+| CLF-001 | Literatura de Reanimação |
+| CLF-002 | Galvanismo Histórico |
+| CLF-003 | Anatomia Proibida |
+| CLF-004 | Horror Científico |
+
+### Modo Terminal refinado
+
+Botão `mode-toggle` usa `data-mode={mode}`. `data-mode="arquivo"` → glow verde sutil (convite). `data-mode="terminal"` → crimson com glow (estado ativo). State-driven via CSS `[data-mode]` sem lógica JS extra.
+
+### Footer editorial premium
+
+Frase de fechamento: "Todo arquivo morto ainda respira em alguma página." — Georgia, itálico, opacidade `0.24`. Posicionada antes do `footer-ref` técnico, separando tom literário de metadado operacional.

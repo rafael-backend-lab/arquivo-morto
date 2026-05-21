@@ -155,6 +155,13 @@ const cabinet = [
   },
 ]
 
+const classifications = [
+  { code: 'CLF-001', label: 'Literatura de Reanimação', count: '14 dossiês' },
+  { code: 'CLF-002', label: 'Galvanismo Histórico', count: '8 registros' },
+  { code: 'CLF-003', label: 'Anatomia Proibida', count: '11 espécimes' },
+  { code: 'CLF-004', label: 'Horror Científico', count: '22 arquivos' },
+]
+
 function App() {
   const [mode, setMode] = useState('arquivo')
 
@@ -175,6 +182,7 @@ function App() {
           </div>
           <button
             className="mode-toggle"
+            data-mode={mode}
             onClick={() => setMode(m => m === 'arquivo' ? 'terminal' : 'arquivo')}
             aria-label="Alternar modo de visualização"
           >
@@ -188,6 +196,15 @@ function App() {
         {/* HERO */}
         <header className="hero">
           <div className="hero-overlay" aria-hidden="true" />
+          <div className="archive-seal" aria-hidden="true">
+            <div className="seal-ring" />
+            <div className="seal-core">
+              <span className="seal-monogram">AM</span>
+              <span className="seal-bolt" />
+              <span className="seal-label">Arquivo Morto</span>
+              <span className="seal-year">Est. 1803</span>
+            </div>
+          </div>
           <div className="hero-layout">
             <div className="hero-content">
               <div className="archive-meta">
@@ -258,6 +275,23 @@ function App() {
                 Este arquivo existe para mapeá-lo.
               </p>
             </blockquote>
+          </div>
+        </section>
+
+        {/* CLASSIFICAÇÃO DO ARQUIVO */}
+        <section className="classification">
+          <div className="section-header">
+            <p className="section-label">Índice de classificação</p>
+            <h3>Classificação do Arquivo</h3>
+          </div>
+          <div className="classification-grid">
+            {classifications.map((c) => (
+              <div className="clf-card" key={c.code}>
+                <span className="clf-code">{c.code}</span>
+                <h5 className="clf-label">{c.label}</h5>
+                <span className="clf-count">{c.count}</span>
+              </div>
+            ))}
           </div>
         </section>
 
@@ -404,6 +438,7 @@ function App() {
             </div>
           </div>
           <div className="footer-bottom">
+            <p className="footer-quote">"Todo arquivo morto ainda respira em alguma página."</p>
             <span className="footer-ref">ARQ-001 · LACRADO · VOLTAGEM: 120V DC</span>
           </div>
         </footer>

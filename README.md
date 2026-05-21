@@ -84,6 +84,13 @@ docs/
 6. **Gabinete de Anatomia** — itens fictícios lacrados e catalogados
 7. **Footer** — identificação editorial
 
+## V3 — Visual polish
+
+- **Selo visual do Arquivo Morto** — carimbo científico em CSS puro no hero (círculo duplo, monograma AM, linhas galvânicas)
+- **Classificação do Arquivo** — 4 blocos de catálogo: Literatura de Reanimação, Galvanismo Histórico, Anatomia Proibida, Horror Científico
+- **Modo Terminal refinado** — botão com estado visual via `data-mode`, brilho verde perceptível no modo padrão, crimson ativo no modo terminal
+- **Footer editorial premium** — frase de fechamento: "Todo arquivo morto ainda respira em alguma página."
+
 ## V2 — Refinamento editorial e Modo Terminal
 
 A V2 introduz:
@@ -96,7 +103,7 @@ A V2 introduz:
 
 ## Status
 
-`v2.0` — refinamento editorial completo. Em desenvolvimento local. Não publicado ainda.
+`v3.0` — visual polish completo. Em desenvolvimento local. Não publicado ainda.
 
 ## Nota editorial
 
