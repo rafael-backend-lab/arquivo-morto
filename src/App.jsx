@@ -401,19 +401,19 @@ const selectedDossiers = [
   {
     registry: 'DOS-001',
     displayDate: '1803',
-    category: 'HISTÓRIA REAL DOCUMENTADA',
+    category: 'HISTÓRIA DOCUMENTADA',
     type: 'real',
     title: 'Aldini e George Forster',
-    summary: 'Em Londres, Giovanni Aldini aplicou correntes galvânicas no corpo do enforcado George Forster. A cena transformou o cadáver em espetáculo público e fixou um marco do horror científico moderno.',
+    summary: 'Caso fundador do arquivo: eletricidade aplicada ao corpo recém-executado em Londres.',
     visual: 'galvanic-wave',
   },
   {
     registry: 'DOS-002',
     displayDate: '1818',
-    category: 'HISTÓRIA REAL DOCUMENTADA',
+    category: 'HISTÓRIA DOCUMENTADA',
     type: 'real',
     title: 'Andrew Ure e Matthew Clydesdale',
-    summary: 'Em Glasgow, Andrew Ure conectou o corpo de Matthew Clydesdale a baterias galvânicas minutos após a execução. As contrações violentas fizeram do caso um dos relatos mais perturbadores da fisiologia oitocentista.',
+    summary: 'Demonstração escocesa que intensificou o imaginário público da reanimação.',
     visual: 'galvanic-wave',
   },
   {
@@ -422,7 +422,7 @@ const selectedDossiers = [
     category: 'LITERATURA',
     type: 'literatura',
     title: 'Mary Shelley e Frankenstein',
-    summary: 'Publicado em 1818, Frankenstein condensou galvanismo, responsabilidade moral e pavor diante da criatura artificial. O romance deu forma literária definitiva ao sonho de animar a carne pela ciência.',
+    summary: 'A literatura transforma o debate científico em mito moderno.',
     visual: 'medical-file',
   },
   {
@@ -431,16 +431,16 @@ const selectedDossiers = [
     category: 'LITERATURA DE HORROR',
     type: 'literatura',
     title: 'Herbert West, reanimador',
-    summary: 'Entre 1921 e 1922, Lovecraft imaginou o médico que trata o cadáver como matéria química reativa. O laboratório torna-se aqui uma máquina de obsessão, degradação e falência ética.',
+    summary: 'Lovecraft desloca a reanimação para a obsessão química e o horror do laboratório.',
     visual: 'reagent-vial',
   },
   {
     registry: 'HIS-005',
     displayDate: 'séc. XVIII–XIX',
-    category: 'HISTÓRIA SOCIAL E MEDICINA',
+    category: 'HISTÓRIA SOCIAL',
     type: 'real',
     title: 'Ressurrecionistas',
-    summary: 'Body snatchers abasteceram escolas de anatomia quando a demanda por cadáveres superou a oferta legal. O tema resume o momento em que o corpo morto virou mercadoria, escândalo urbano e infraestrutura de ensino.',
+    summary: 'Mercado clandestino de cadáveres abastece escolas médicas.',
     visual: 'corpse-tag',
   },
   {
@@ -449,7 +449,7 @@ const selectedDossiers = [
     category: 'FICÇÃO EDITORIAL DO ARQUIVO MORTO',
     type: 'ficcao',
     title: 'Prontuário 334-B',
-    summary: 'Registro apócrifo de causa mortis indeterminada, sessões interrompidas e localização desconhecida. A peça funciona como ficção editorial condensada do arquivo, não como documento histórico real.',
+    summary: 'Ficção editorial própria do Arquivo Morto.',
     visual: 'medical-file',
   },
 ]
@@ -482,7 +482,7 @@ function App() {
           <span className="nav-brand">Arquivo Morto</span>
           <div className="nav-links">
             <a href="#destaque" className="nav-link">Destaque</a>
-            <a href="#dossies" className="nav-link">Dossiês</a>
+            <a href="#dossies" className="nav-link">Arquivo de casos</a>
             <a href="#artigos" className="nav-link">Artigos</a>
             <a href="#linha" className="nav-link">Linha do Tempo</a>
             <a href="#gabinete" className="nav-link">Gabinete</a>
@@ -535,7 +535,7 @@ function App() {
                 imaginário científico do horror.
               </p>
               <div className="actions">
-                <a href="#destaque" className="btn btn-primary">Abrir dossiês</a>
+                <a href="#destaque" className="btn btn-primary">Abrir arquivo</a>
                 <a href="#linha" className="btn btn-secondary">Linha do tempo</a>
               </div>
             </div>
@@ -737,35 +737,55 @@ function App() {
                 <div className="featured-meta">
                   <span className="featured-date archive-date">1803</span>
                   <span className="featured-location">Londres</span>
-                  <span className="featured-class">EXPERIMENTO · GALVANISMO</span>
+                  <span className="featured-class">DEMONSTRAÇÃO PÚBLICA · OLD BAILEY</span>
                 </div>
-                <h4 className="featured-title">Giovanni Aldini e George Forster</h4>
+                <h4 className="featured-title">Giovanni Aldini diante do corpo de George Forster</h4>
                 <p className="featured-summary">
-                  Em 17 de janeiro de 1803, no Old Bailey, Aldini aplicou correntes galvânicas no cadáver recém-enforcado de George Forster. Os movimentos visíveis da face e dos membros fizeram do experimento um marco da ciência como espetáculo fúnebre.
+                  Em 17 de janeiro de 1803, o sobrinho de Luigi Galvani levou ao Old Bailey uma demonstração que uniu medicina, curiosidade pública e imaginação sombria em torno do cadáver recém-executado de George Forster.
                 </p>
-                <div className="featured-editorial">
-                  <span className="editorial-tag">NOTA EDITORIAL</span>
-                  <p>
-                    Forster permanece aqui como ponto de origem: a cena em que o cadáver entrou no palco público da eletricidade.
-                  </p>
+                <div className="featured-blocks">
+                  <div className="featured-block">
+                    <span className="featured-block-label">Contexto</span>
+                    <p>
+                      Giovanni Aldini já era conhecido por ampliar os experimentos elétricos ligados ao nome de Galvani. George Forster, executado em Londres, tornou-se o corpo central dessa exibição pública diante de médicos, curiosos e autoridades.
+                    </p>
+                  </div>
+                  <div className="featured-block">
+                    <span className="featured-block-label">O experimento</span>
+                    <p>
+                      No Old Bailey, em 17 de janeiro de 1803, correntes foram aplicadas ao cadáver. Rosto, mandíbula, um olho e membros reagiram com contrações suficientes para chocar a sala, mas não houve reanimação real nem retorno da vida.
+                    </p>
+                  </div>
+                  <div className="featured-block">
+                    <span className="featured-block-label">Por que importa</span>
+                    <p>
+                      O episódio condensou um medo moderno: a possibilidade de a eletricidade fazer o morto parecer ativo outra vez. Sua sombra atravessa Frankenstein, o horror científico posterior e o vocabulário central do Arquivo Morto.
+                    </p>
+                  </div>
+                  <div className="featured-block featured-editorial">
+                    <span className="featured-block-label editorial-tag">Nota editorial</span>
+                    <p>
+                      Forster não voltou à vida. O que permaneceu foi mais perturbador para a cultura: a cena em que o cadáver entrou no teatro da ciência moderna.
+                    </p>
+                  </div>
                 </div>
               </div>
               <aside className="featured-visual-panel" aria-hidden="true">
-                <span className="fvp-tag">GALVANISMO / 1803</span>
+                <span className="fvp-tag">OLD BAILEY / 1803</span>
                 <ArchiveVisual type="galvanic-wave" size="lg" />
-                <span className="fvp-stamp">OBSERVAÇÃO PÓS-MORTE</span>
+                <span className="fvp-stamp">ELETRICIDADE PÓS-MORTE</span>
               </aside>
             </div>
           </article>
         </section>
 
-        {/* DOSSIÊS SELECIONADOS */}
+        {/* ARQUIVO DE CASOS */}
         <section id="dossies" className="section">
           <div className="section-header">
-            <p className="section-label">Dossiês selecionados</p>
-            <h3>Seis casos para atravessar o arquivo</h3>
+            <p className="section-label">Arquivo de casos</p>
+            <h3>Seis registros essenciais</h3>
             <p className="selected-dossiers-intro">
-              Casos compactos que condensam as figuras e episódios que atravessam o projeto sem repetir os capítulos históricos.
+              Seis registros essenciais para navegar pela fronteira entre morte, ciência, literatura e ficção editorial.
             </p>
           </div>
           <div className="stories-grid selected-dossiers-grid">
@@ -881,7 +901,7 @@ function App() {
             <div className="footer-col">
               <span className="footer-col-title">Categorias</span>
               <ul className="footer-list">
-                <li><a href="#dossies" className="footer-link">Dossiês</a></li>
+                <li><a href="#dossies" className="footer-link">Arquivo de casos</a></li>
                 <li><a href="#artigos" className="footer-link">Artigos</a></li>
                 <li><a href="#linha" className="footer-link">Linha do Tempo</a></li>
                 <li><a href="#gabinete" className="footer-link">Gabinete de Anatomia</a></li>

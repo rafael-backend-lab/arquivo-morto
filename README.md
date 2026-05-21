@@ -84,7 +84,7 @@ docs/
 6. **Galvanismo, medicina legal e sinais do cadáver** — oito fichas sobre eletricidade animal, sinais pós-morte e olhar pericial
 7. **A morte técnica: medicina, corpo e fronteiras atuais** — oito fichas sobre emergência, bioética, transplantes, biotecnologia e luto digital
 8. **Dossiê em destaque** — Aldini-Forster, Londres, 1803, como peça principal do arquivo
-9. **Dossiês selecionados** — seis casos condensados para consulta rápida, sem repetição estrutural
+9. **Arquivo de casos** — seis registros curtos para orientar a navegação entre ciência, literatura e ficção editorial
 10. **Artigos** — cinco ensaios e investigações temáticas
 11. **Linha do tempo** — de 1730 até hoje
 12. **Gabinete de Anatomia** — itens fictícios lacrados e catalogados
@@ -109,7 +109,9 @@ Os cards históricos agora priorizam datas, séculos e períodos reais como meta
 
 ## Editorial cleanup
 
-A estrutura editorial foi enxugada para reduzir repetição entre seções. O dossiê em destaque permanece como peça principal sobre Aldini/Forster, enquanto os antigos blocos de histórias e dossiês foram consolidados em uma única seção de dossiês selecionados.
+A estrutura editorial foi enxugada para reduzir repetição entre seções. O dossiê em destaque permanece como peça principal sobre Aldini/Forster, enquanto os antigos blocos de histórias e dossiês foram consolidados em uma única seção de Arquivo de casos.
+
+Revisão editorial do Dossiê em destaque e consolidação do Arquivo de casos.
 
 ## V7 — Capítulo II: Necromancia, alquimia e o desejo de retorno
 
