@@ -79,11 +79,16 @@ docs/
 1. **Hero** — cinematográfico, com metadados de arquivo falsos
 2. **Manifesto** — texto frio e poético sobre morte e ciência
 3. **A humanidade contra a morte** — seis fichas históricas sobre ritos, mitos e culturas funerárias
-4. **Dossiês** — seis casos históricos e ficcionais catalogados
-5. **Artigos** — cinco ensaios e investigações temáticas
-6. **Linha do tempo** — de 1730 até hoje
-7. **Gabinete de Anatomia** — itens fictícios lacrados e catalogados
-8. **Footer** — identificação editorial
+4. **Necromancia, alquimia e o desejo de retorno** — seis fichas sobre ocultismo, matéria animada e longevidade
+5. **Dossiês** — seis casos históricos e ficcionais catalogados
+6. **Artigos** — cinco ensaios e investigações temáticas
+7. **Linha do tempo** — de 1730 até hoje
+8. **Gabinete de Anatomia** — itens fictícios lacrados e catalogados
+9. **Footer** — identificação editorial
+
+## V7 — Capítulo II: Necromancia, alquimia e o desejo de retorno
+
+Novo capítulo editorial que liga rito, ocultismo, alquimia, mito de matéria animada e a imaginação pré-científica da criatura artificial.
 
 ## V6 — Capítulo I: A humanidade contra a morte
 
@@ -123,7 +128,7 @@ A V2 introduz:
 
 ## Status
 
-`v6.0` — capítulo editorial histórico adicionado. Em desenvolvimento local. Não publicado ainda.
+`v7.0` — capítulo editorial ocultista e alquímico adicionado. Em desenvolvimento local. Não publicado ainda.
 
 ## Nota editorial
 

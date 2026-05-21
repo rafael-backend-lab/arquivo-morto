@@ -230,3 +230,11 @@ Os placeholders SVG são editoriais, não genéricos. Cada tipo foi desenhado pa
 Nova seção inserida após o manifesto, em tom histórico, documental e fúnebre, dedicada às formas pelas quais diferentes culturas imaginaram a permanência, a travessia ou o retorno dos mortos antes da ciência moderna.
 
 As seis fichas cobrem Egito Antigo, Mesopotâmia, Grécia e Roma, Cristianismo, mortos inquietos no folclore e ancestrais com mediação espiritual. Cada card deve tratar crença, rito, mito ou tradição como material cultural e histórico, nunca como fato científico.
+
+## V7 — Capítulo II: ocultismo, alquimia e matéria animada
+
+Nova seção posicionada logo após o Capítulo I e antes das camadas modernas do arquivo. Sua função é construir a ponte editorial entre ritos antigos de permanência, tradições ocultistas de comunicação com mortos e a futura imaginação científica da criatura artificial.
+
+As seis fichas abordam Necromancia, Alquimia, John Dee, Golem, Elixir da vida e Autômatos e corpo mecânico. O tratamento deve permanecer sombrio, culto e documental, tratando cada item como história, mito, filosofia natural, simbolismo ou tradição cultural. Nenhuma crença é apresentada como fato científico.
+
+Este capítulo prepara a passagem para anatomia, galvanismo, Frankenstein e horror científico ao mostrar que, antes do laboratório moderno, já existia um vocabulário de matéria animada, sopro vital, criatura artificial e resistência à decadência do corpo.

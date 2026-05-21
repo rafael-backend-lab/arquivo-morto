@@ -420,6 +420,151 @@ h2 {
   line-height: 1.82;
 }
 
+/* ─── NECROMANCIA, ALQUIMIA E O DESEJO DE RETORNO ───────────── */
+
+.occult-section {
+  margin-top: 52px;
+}
+
+.occult-subtitle {
+  max-width: 800px;
+  margin: 16px 0 0;
+  color: #d4c5aa;
+  font-size: clamp(1rem, 2vw, 1.18rem);
+  line-height: 1.74;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+}
+
+.occult-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.occult-card {
+  position: relative;
+  min-height: 100%;
+  padding: 28px 28px 30px;
+  border: 1px solid rgba(248, 240, 224, 0.12);
+  border-radius: 6px;
+  background:
+    linear-gradient(155deg, rgba(18, 10, 12, 0.96) 0%, rgba(58, 15, 20, 0.22) 48%, rgba(8, 8, 8, 0.96) 100%);
+  box-shadow:
+    inset 0 0 0 1px rgba(248, 240, 224, 0.02),
+    0 20px 54px rgba(0, 0, 0, 0.28);
+  overflow: hidden;
+  transition: border-color 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.occult-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 18px;
+  right: 18px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(184, 154, 102, 0.55), rgba(248, 240, 224, 0.08), rgba(29, 138, 72, 0.15));
+}
+
+.occult-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at top right, rgba(184, 154, 102, 0.07), transparent 30%),
+    repeating-linear-gradient(
+      -45deg,
+      transparent 0 18px,
+      rgba(248, 240, 224, 0.012) 18px 19px
+    );
+  pointer-events: none;
+}
+
+.occult-card:hover {
+  border-color: rgba(248, 240, 224, 0.22);
+  transform: translateY(-3px);
+  box-shadow:
+    inset 0 0 0 1px rgba(248, 240, 224, 0.03),
+    0 26px 68px rgba(0, 0, 0, 0.38);
+}
+
+.occult-card-head {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.occult-mark {
+  font-family: ui-monospace, 'Courier New', monospace;
+  font-size: 0.61rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #b89a66;
+  padding: 5px 9px;
+  border: 1px solid rgba(184, 154, 102, 0.24);
+  border-radius: 3px;
+  background: rgba(184, 154, 102, 0.08);
+}
+
+.occult-category {
+  font-family: ui-monospace, 'Courier New', monospace;
+  font-size: 0.60rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(95, 191, 142, 0.86);
+}
+
+.occult-title {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 12px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.34rem;
+  line-height: 1.18;
+  color: var(--bone);
+}
+
+.occult-theme {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 14px;
+  color: #d4c5aa;
+  font-size: 0.82rem;
+  line-height: 1.72;
+  text-transform: uppercase;
+  letter-spacing: 0.10em;
+}
+
+.occult-text {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 18px;
+  color: var(--text);
+  font-size: 0.94rem;
+  line-height: 1.82;
+}
+
+.occult-warning {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  padding-top: 14px;
+  border-top: 1px solid rgba(248, 240, 224, 0.07);
+  color: var(--text-dim);
+  font-family: ui-monospace, 'Courier New', monospace;
+  font-size: 0.68rem;
+  line-height: 1.75;
+  letter-spacing: 0.06em;
+}
+
 /* ─── SECTIONS (shared) ─────────────────────────────────────── */
 
 .section {
@@ -1143,6 +1288,7 @@ h2 {
 
 @media (max-width: 960px) {
   .history-grid   { grid-template-columns: repeat(2, 1fr); }
+  .occult-grid    { grid-template-columns: repeat(2, 1fr); }
   .dossier-grid   { grid-template-columns: repeat(2, 1fr); }
   .cabinet-grid   { grid-template-columns: repeat(2, 1fr); }
   .timeline::before { left: 90px; }
@@ -1162,6 +1308,9 @@ h2 {
   .history-grid  { grid-template-columns: 1fr; }
   .history-card  { padding: 24px 22px 26px; }
   .history-theme { font-size: 0.78rem; }
+  .occult-grid   { grid-template-columns: 1fr; }
+  .occult-card   { padding: 24px 22px 26px; }
+  .occult-theme  { font-size: 0.78rem; }
   .manifesto-inner {
     grid-template-columns: 1fr;
     gap: 20px;

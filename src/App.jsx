@@ -171,6 +171,57 @@ const humanityAgainstDeath = [
   },
 ]
 
+const occultReturnChapter = [
+  {
+    mark: 'OCC-001',
+    title: 'Necromancia',
+    category: 'Tradição ritual e saber proibido',
+    theme: 'Comunicação com mortos como busca de conhecimento vedado',
+    text: 'Da Antiguidade tardia aos grimórios medievais e renascentistas, a necromancia aparece como prática textual e ritual voltada menos ao retorno físico dos mortos do que à consulta de vozes invisíveis. O morto, real ou invocado, torna-se fonte de saber interdito: genealogia do medo intelectual, não procedimento científico.',
+    warning: 'Registro cultural e ritual. O arquivo a trata como tradição histórica do ocultismo, não como ciência.',
+  },
+  {
+    mark: 'OCC-002',
+    title: 'Alquimia',
+    category: 'Matéria, espírito e transmutação',
+    theme: 'Anima, elixir, purificação e filosofia da transformação',
+    text: 'A alquimia articulou laboratório, metáfora e cosmologia numa mesma linguagem. Metais, vapores, sal, enxofre e mercúrio serviam tanto à observação da matéria quanto à ideia de que toda substância escondia um princípio animado. O desejo de transmutar o mundo exterior espelhava a ambição de refinar o próprio corpo e prolongar sua permanência.',
+    warning: 'Tradição histórico-filosófica. Seus símbolos pertencem à história da filosofia natural e do esoterismo.',
+  },
+  {
+    mark: 'OCC-003',
+    title: 'John Dee',
+    category: 'Ocultismo renascentista',
+    theme: 'Matemática, astrologia, linguagem angélica e comunicação espiritual',
+    text: 'Matemático, astrólogo e conselheiro da corte elisabetana, John Dee ocupou o ponto ambíguo em que cálculo, magia natural e especulação espiritual ainda não estavam separados. Seus experimentos com comunicação angélica, conduzidos com Edward Kelley, revelam menos uma vontade de reanimar cadáveres do que a tentativa renascentista de decifrar uma ordem invisível acima da matéria.',
+    warning: 'Figura histórica ligada ao ocultismo e à matemática. Não é tratada aqui como reanimador de mortos.',
+  },
+  {
+    mark: 'OCC-004',
+    title: 'Golem',
+    category: 'Mito de matéria obediente',
+    theme: 'Criação artificial pela palavra, barro e inscrição sagrada',
+    text: 'Na tradição judaica, o golem é a figura limite da matéria que recebe forma, nome e comando. Não é cadáver reanimado, mas vida fabricada por linguagem, rito e autoridade simbólica. Sua importância para o Arquivo Morto está na ideia de criatura artificial anterior à ciência moderna: corpo moldado, animado e obediente, sempre à beira de escapar do controle.',
+    warning: 'Mito e tradição cultural. O capítulo o aborda como imaginação religiosa e literária da criação artificial.',
+  },
+  {
+    mark: 'OCC-005',
+    title: 'Elixir da vida',
+    category: 'Longa duração contra a decadência',
+    theme: 'Longevidade, imortalidade e resistência ao desgaste do corpo',
+    text: 'Sob muitos nomes — pedra filosofal líquida, panaceia, quinta essência — o elixir da vida condensou a recusa humana em aceitar a corrupção da carne. Mais que promessa química literal, ele funcionou como imagem histórica da luta contra envelhecimento, doença e finitude, ligando alquimia, medicina especulativa e obsessão pela continuidade do corpo.',
+    warning: 'Símbolo histórico e alquímico. O texto evita tratá-lo como prova de eficácia material.',
+  },
+  {
+    mark: 'OCC-006',
+    title: 'Autômatos e corpo mecânico',
+    category: 'Máquina, imitação e criatura artificial',
+    theme: 'Engenhos que simulam vida e preparam a imaginação moderna do corpo',
+    text: 'Relógios animados, pássaros mecânicos, figuras hidráulicas e autômatos cortesãos ajudaram a deslocar a pergunta sobre a vida do templo para o mecanismo. Se o corpo podia ser descrito como engrenagem, então a criatura artificial deixava de ser apenas mito e passava a habitar a filosofia natural. Aqui começa a ponte para galvanismo, anatomia experimental e, mais tarde, Frankenstein.',
+    warning: 'Antecedente simbólico e técnico. O interesse está na imaginação mecânica da vida, não numa equivalência direta com consciência.',
+  },
+]
+
 const stories = [
   {
     code: 'HIS-001',
@@ -385,6 +436,31 @@ function App() {
                 <h4 className="history-title">{entry.era}</h4>
                 <p className="history-theme">{entry.theme}</p>
                 <p className="history-text">{entry.text}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        {/* NECROMANCIA, ALQUIMIA E O DESEJO DE RETORNO */}
+        <section className="section occult-section" aria-labelledby="occult-heading">
+          <div className="section-header">
+            <p className="section-label">Capítulo II</p>
+            <h3 id="occult-heading">Necromancia, alquimia e o desejo de retorno</h3>
+            <p className="occult-subtitle">
+              Entre o rito e o laboratório, a humanidade tentou falar com os mortos, prolongar a vida e imaginar matéria obedecendo ao espírito.
+            </p>
+          </div>
+          <div className="occult-grid">
+            {occultReturnChapter.map((entry) => (
+              <article className="occult-card" key={entry.mark}>
+                <div className="occult-card-head">
+                  <span className="occult-mark">{entry.mark}</span>
+                  <span className="occult-category">{entry.category}</span>
+                </div>
+                <h4 className="occult-title">{entry.title}</h4>
+                <p className="occult-theme">{entry.theme}</p>
+                <p className="occult-text">{entry.text}</p>
+                <p className="occult-warning">{entry.warning}</p>
               </article>
             ))}
           </div>
