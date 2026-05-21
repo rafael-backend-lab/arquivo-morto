@@ -750,7 +750,7 @@ function App() {
           <div className="soviet-dossier-lead with-portrait">
             <figure className="brukhonenko-portrait">
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/7/78/Sergei_Brukhonenko.png"
+                src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Sergei_Brukhonenko.png"
                 alt="Retrato de Sergei Brukhonenko em 1942"
                 loading="lazy"
               />
