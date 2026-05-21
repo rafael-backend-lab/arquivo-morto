@@ -160,3 +160,8 @@ A V2 introduz:
 ## Nota editorial
 
 Projeto cultural e independente. Inspiração temática em H. P. Lovecraft, Mary Shelley e história da ciência do século XIX. Nenhuma cópia de marca, texto ou identidade visual de obras existentes.
+
+
+## Medical history refinement
+
+The modern medical chapter now includes Sergei Brukhonenko and the autojektor as a controversial historical bridge between early circulation support, Soviet scientific cinema and the cultural imagination of reanimation. The topic is treated critically, without presenting propaganda film claims as proven resurrection.

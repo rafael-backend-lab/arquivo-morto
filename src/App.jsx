@@ -395,6 +395,7 @@ const medicalEditorialSources = [
   'WHO — Guiding Principles on Human Cell, Tissue and Organ Transplantation',
   'MedlinePlus / NIH — Advance Directives',
   'National Institute on Aging / NIH — Advance Care Planning',
+  'Sergei Brukhonenko / Experiments in the Revival of Organisms — história controversa da circulação artificial',
 ]
 
 const selectedDossiers = [

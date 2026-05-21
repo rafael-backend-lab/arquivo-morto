@@ -297,3 +297,8 @@ Tratamento médico, histórico e bioético, sem linguagem de milagre tecnológic
 - WHO — Guiding Principles on Human Cell, Tissue and Organ Transplantation
 - MedlinePlus / NIH — Advance Directives
 - National Institute on Aging / NIH — Advance Care Planning
+
+
+## Brukhonenko, autojektor e cinema científico soviético
+
+Sergei Brukhonenko deve ser tratado como figura de história da medicina ligada à circulação extracorpórea experimental e ao autojektor. O filme *Experiments in the Revival of Organisms* deve aparecer como documento controverso de 1940: relevante para o imaginário da reanimação, mas não como prova simples de retorno real da vida. A abordagem correta é histórica, bioética e crítica.
