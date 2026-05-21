@@ -78,11 +78,16 @@ docs/
 
 1. **Hero** — cinematográfico, com metadados de arquivo falsos
 2. **Manifesto** — texto frio e poético sobre morte e ciência
-3. **Dossiês** — seis casos históricos e ficcionais catalogados
-4. **Artigos** — cinco ensaios e investigações temáticas
-5. **Linha do tempo** — de 1730 até hoje
-6. **Gabinete de Anatomia** — itens fictícios lacrados e catalogados
-7. **Footer** — identificação editorial
+3. **A humanidade contra a morte** — seis fichas históricas sobre ritos, mitos e culturas funerárias
+4. **Dossiês** — seis casos históricos e ficcionais catalogados
+5. **Artigos** — cinco ensaios e investigações temáticas
+6. **Linha do tempo** — de 1730 até hoje
+7. **Gabinete de Anatomia** — itens fictícios lacrados e catalogados
+8. **Footer** — identificação editorial
+
+## V6 — Capítulo I: A humanidade contra a morte
+
+Nova seção editorial histórica com seis fichas sobre morte ritual, memória funerária e culturas antigas diante do fim.
 
 ## V5 — Visual archive layer
 
@@ -118,7 +123,7 @@ A V2 introduz:
 
 ## Status
 
-`v5.0` — camada visual de arquivo completa. Em desenvolvimento local. Não publicado ainda.
+`v6.0` — capítulo editorial histórico adicionado. Em desenvolvimento local. Não publicado ainda.
 
 ## Nota editorial
 

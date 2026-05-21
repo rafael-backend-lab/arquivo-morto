@@ -126,6 +126,51 @@ const classifications = [
   { code: 'CLF-004', label: 'Horror Científico', count: '22 arquivos' },
 ]
 
+const humanityAgainstDeath = [
+  {
+    era: 'Egito Antigo',
+    period: 'c. 2600–30 a.C.',
+    focus: 'Preservação ritual do corpo',
+    theme: 'Mumificação, travessia espiritual e permanência',
+    text: 'Na cultura funerária egípcia, a integridade do corpo participava da continuidade após a morte. Mumificação, vasos canopos, textos funerários e arquitetura tumular formavam uma tecnologia ritual de permanência: preservar a forma para garantir travessia, julgamento e memória diante dos deuses e dos vivos.',
+  },
+  {
+    era: 'Mesopotâmia',
+    period: 'c. 3500–539 a.C.',
+    focus: 'Submundo como território',
+    theme: 'Descida aos mortos, poeira, destino e soberania funerária',
+    text: 'Nos poemas sumérios e acádios, o mundo subterrâneo aparece como domínio concreto, regido por leis próprias e habitado por sombras reduzidas à poeira. A descida de Inanna e a Epopeia de Gilgamesh tratam a morte menos como espetáculo e mais como fronteira inevitável: um território a ser narrado, temido e reconhecido.',
+  },
+  {
+    era: 'Grécia e Roma',
+    period: 'c. 800 a.C.–400 d.C.',
+    focus: 'Memória ritual dos mortos',
+    theme: 'Hades, sombras, sepultamento e culto funerário',
+    text: 'Entre a nekyia grega, as moedas para Caronte, os túmulos familiares romanos e os festivais dedicados aos manes, o morto permanecia vinculado à cidade e à casa. Ritos funerários, libações e memória pública buscavam evitar o esquecimento e manter uma relação ordeira entre vivos, ancestrais e sombras.',
+  },
+  {
+    era: 'Cristianismo',
+    period: 'Antiguidade tardia em diante',
+    focus: 'Retorno como promessa escatológica',
+    theme: 'Ressurreição, milagre, corpo glorificado e esperança',
+    text: 'Na tradição cristã, a vitória sobre a morte não se descreve como procedimento humano, mas como milagre, promessa e juízo final. A ressurreição de Cristo, as narrativas de santos, o culto às relíquias e a ideia de corpo glorificado moldaram uma imaginação do retorno em que a carne pode ser restaurada por intervenção divina, não por laboratório.',
+  },
+  {
+    era: 'Mortos inquietos no folclore',
+    period: 'Idade Média à era moderna',
+    focus: 'Cadáveres que não descansam',
+    theme: 'Revenants, vampiros, assombrações e sepultamentos falhos',
+    text: 'Crônicas medievais, relatos aldeões e tradições balcânicas registram mortos que voltam quando o funeral falha, a culpa permanece ou a comunidade interpreta um mal invisível como presença póstuma. Revenants, vampiros e assombrações pertencem à história do medo social: explicam contágio, desordem moral e a ansiedade provocada pelo cadáver que resiste ao repouso.',
+  },
+  {
+    era: 'Ancestrais e mediação espiritual',
+    period: 'Múltiplas tradições',
+    focus: 'Contato simbólico e continuidade de linhagem',
+    theme: 'Ritos, xamanismo, culto ancestral e escuta ritual',
+    text: 'Em muitas cosmologias africanas, ameríndias e asiáticas, os mortos continuam presentes por memória, oferenda, consulta e obrigação ritual. Altares domésticos, xamanismos e cultos aos ancestrais não pretendem abolir a morte: procuram negociar presença, orientação e continuidade entre gerações, tratando os mortos como parte ativa da ordem simbólica da comunidade.',
+  },
+]
+
 const stories = [
   {
     code: 'HIS-001',
@@ -318,6 +363,30 @@ function App() {
                 Este arquivo existe para mapeá-lo.
               </p>
             </blockquote>
+          </div>
+        </section>
+
+        {/* A HUMANIDADE CONTRA A MORTE */}
+        <section className="section humanity-section" aria-labelledby="humanity-heading">
+          <div className="section-header">
+            <p className="section-label">Capítulo I</p>
+            <h3 id="humanity-heading">A humanidade contra a morte</h3>
+            <p className="history-subtitle">
+              Antes do laboratório, antes da eletricidade e antes do cinema, já existia a tentativa humana de negociar com o fim.
+            </p>
+          </div>
+          <div className="history-grid">
+            {humanityAgainstDeath.map((entry) => (
+              <article className="history-card" key={entry.era}>
+                <div className="history-card-head">
+                  <span className="archive-era-label">{entry.period}</span>
+                  <span className="history-focus">{entry.focus}</span>
+                </div>
+                <h4 className="history-title">{entry.era}</h4>
+                <p className="history-theme">{entry.theme}</p>
+                <p className="history-text">{entry.text}</p>
+              </article>
+            ))}
           </div>
         </section>
 

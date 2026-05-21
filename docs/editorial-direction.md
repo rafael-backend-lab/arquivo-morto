@@ -224,3 +224,9 @@ Quando imagens de domínio público forem adicionadas a `public/assets/archive/`
 ### Princípio visual V5
 
 Os placeholders SVG são editoriais, não genéricos. Cada tipo foi desenhado para evocar o registro visual específico da temática (osciloscópio para galvanismo, prontuário para documentos, vial para reagentes). Quando imagens reais forem adicionadas, devem manter a mesma especificidade — gravuras e fotos históricas, nunca stock photos modernos.
+
+## V6 — Capítulo I: morte ritual e culturas antigas
+
+Nova seção inserida após o manifesto, em tom histórico, documental e fúnebre, dedicada às formas pelas quais diferentes culturas imaginaram a permanência, a travessia ou o retorno dos mortos antes da ciência moderna.
+
+As seis fichas cobrem Egito Antigo, Mesopotâmia, Grécia e Roma, Cristianismo, mortos inquietos no folclore e ancestrais com mediação espiritual. Cada card deve tratar crença, rito, mito ou tradição como material cultural e histórico, nunca como fato científico.
