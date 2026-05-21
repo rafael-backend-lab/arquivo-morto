@@ -84,9 +84,19 @@ docs/
 6. **Gabinete de Anatomia** — itens fictícios lacrados e catalogados
 7. **Footer** — identificação editorial
 
+## V2 — Refinamento editorial e Modo Terminal
+
+A V2 introduz:
+
+- **Navegação fixa** (`site-header`) com links para todas as seções
+- **Modo Terminal** — botão que alterna o visual para paleta fosfórica verde terminal
+- **Dossiê em destaque** — Aldini-Forster, Londres, 1803, com número de caso, classificação, resumo e nota editorial
+- **Painel técnico lateral no hero** com ARQ-MORTO, frequência 17Hz, reagente HW-7 e status lacrado
+- **Footer com três colunas** — Arquivo Morto, Categorias, Registro
+
 ## Status
 
-`v1.0` — primeira versão profissional. Em desenvolvimento local. Não publicado ainda.
+`v2.0` — refinamento editorial completo. Em desenvolvimento local. Não publicado ainda.
 
 ## Nota editorial
 

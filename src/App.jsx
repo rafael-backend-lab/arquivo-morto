@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import './App.css'
 
 const dossiers = [
@@ -155,38 +156,86 @@ const cabinet = [
 ]
 
 function App() {
+  const [mode, setMode] = useState('arquivo')
+
   return (
-    <div className="root">
+    <div className={`root${mode === 'terminal' ? ' mode-terminal' : ''}`}>
       <div className="noise-overlay" aria-hidden="true" />
       <div className="scanlines" aria-hidden="true" />
+
+      {/* SITE HEADER — navegação fixa */}
+      <header className="site-header">
+        <nav className="nav">
+          <span className="nav-brand">Arquivo Morto</span>
+          <div className="nav-links">
+            <a href="#dossies" className="nav-link">Dossiês</a>
+            <a href="#artigos" className="nav-link">Artigos</a>
+            <a href="#linha" className="nav-link">Linha do Tempo</a>
+            <a href="#gabinete" className="nav-link">Gabinete</a>
+          </div>
+          <button
+            className="mode-toggle"
+            onClick={() => setMode(m => m === 'arquivo' ? 'terminal' : 'arquivo')}
+            aria-label="Alternar modo de visualização"
+          >
+            {mode === 'arquivo' ? 'Modo Terminal' : 'Modo Arquivo'}
+          </button>
+        </nav>
+      </header>
 
       <main className="page">
 
         {/* HERO */}
         <header className="hero">
           <div className="hero-overlay" aria-hidden="true" />
-          <div className="hero-content">
-            <div className="archive-meta">
-              <span className="meta-tag">ARQ-001</span>
-              <span className="meta-sep">·</span>
-              <span className="meta-tag status-lacrado">STATUS: LACRADO</span>
-              <span className="meta-sep">·</span>
-              <span className="meta-tag">VOLTAGEM: 120V DC</span>
-              <span className="meta-sep">·</span>
-              <span className="meta-tag">DATA: 1803–∞</span>
+          <div className="hero-layout">
+            <div className="hero-content">
+              <div className="archive-meta">
+                <span className="meta-tag">ARQ-001</span>
+                <span className="meta-sep">·</span>
+                <span className="meta-tag status-lacrado">STATUS: LACRADO</span>
+                <span className="meta-sep">·</span>
+                <span className="meta-tag">VOLTAGEM: 120V DC</span>
+                <span className="meta-sep">·</span>
+                <span className="meta-tag">DATA: 1803–∞</span>
+              </div>
+              <p className="eyebrow">Dossiês proibidos sobre morte, ciência e ficção</p>
+              <h1>Arquivo<br />Morto</h1>
+              <h2>Literatura, ciência e horror da reanimação</h2>
+              <p className="lead">
+                Um projeto editorial sombrio sobre os limites entre corpo, experimento,
+                mito e laboratório. De Frankenstein a Herbert West, do galvanismo ao
+                imaginário científico do horror.
+              </p>
+              <div className="actions">
+                <a href="#dossies" className="btn btn-primary">Abrir dossiês</a>
+                <a href="#linha" className="btn btn-secondary">Linha do tempo</a>
+              </div>
             </div>
-            <p className="eyebrow">Dossiês proibidos sobre morte, ciência e ficção</p>
-            <h1>Arquivo<br />Morto</h1>
-            <h2>Literatura, ciência e horror da reanimação</h2>
-            <p className="lead">
-              Um projeto editorial sombrio sobre os limites entre corpo, experimento,
-              mito e laboratório. De Frankenstein a Herbert West, do galvanismo ao
-              imaginário científico do horror.
-            </p>
-            <div className="actions">
-              <a href="#dossies" className="btn btn-primary">Abrir dossiês</a>
-              <a href="#linha" className="btn btn-secondary">Linha do tempo</a>
-            </div>
+
+            {/* PAINEL TÉCNICO LATERAL */}
+            <aside className="hero-technical-panel" aria-label="Painel técnico de arquivo">
+              <div className="panel-id">ARQ-MORTO</div>
+              <div className="panel-section">DOSSIÊ CENTRAL</div>
+              <ul className="panel-data">
+                <li>
+                  <span className="panel-key">Frequência</span>
+                  <span className="panel-val">17Hz</span>
+                </li>
+                <li>
+                  <span className="panel-key">Reagente</span>
+                  <span className="panel-val">HW-7</span>
+                </li>
+                <li>
+                  <span className="panel-key">Status</span>
+                  <span className="panel-val panel-val-alert">lacrado</span>
+                </li>
+                <li>
+                  <span className="panel-key">Registro</span>
+                  <span className="panel-val">necrociência editorial</span>
+                </li>
+              </ul>
+            </aside>
           </div>
         </header>
 
@@ -210,6 +259,37 @@ function App() {
               </p>
             </blockquote>
           </div>
+        </section>
+
+        {/* DOSSIÊ EM DESTAQUE */}
+        <section className="featured-dossier">
+          <div className="section-header">
+            <p className="section-label">Dossiê em destaque</p>
+            <h3>Aldini-Forster, Londres, 1803</h3>
+          </div>
+          <article className="featured-article">
+            <div className="featured-meta">
+              <span className="featured-case">DOS-001</span>
+              <span className="featured-location">Londres, 1803</span>
+              <span className="featured-class">EXPERIMENTO · GALVANISMO</span>
+            </div>
+            <h4 className="featured-title">Giovanni Aldini e George Forster</h4>
+            <p className="featured-summary">
+              No dia 17 de janeiro de 1803, diante de uma plateia de cirurgiões e curiosos
+              no Old Bailey, Giovanni Aldini aplicou correntes galvânicas no cadáver
+              recém-enforcado de George Forster. O corpo se contorceu. A mandíbula abriu.
+              Um olho entrou em movimento. A ciência encontrou o teatro da morte — e o
+              horror moderno encontrou seu ponto de origem.
+            </p>
+            <div className="featured-editorial">
+              <span className="editorial-tag">NOTA EDITORIAL</span>
+              <p>
+                Este experimento é o evento fundacional do arquivo. Forster é o ponto zero
+                da reanimação como espetáculo científico. Tudo que veio depois —
+                Frankenstein, Herbert West, a criogenia — tem sua sombra aqui.
+              </p>
+            </div>
+          </article>
         </section>
 
         {/* DOSSIÊS */}
@@ -294,19 +374,33 @@ function App() {
           </div>
         </section>
 
-        {/* FOOTER */}
+        {/* FOOTER — três colunas */}
         <footer className="footer">
-          <div className="footer-inner">
-            <div className="footer-brand">
+          <div className="footer-grid">
+            <div className="footer-col">
               <span className="footer-title">Arquivo Morto</span>
               <p className="footer-desc">
                 Projeto editorial sobre literatura, ciência e horror da reanimação.
               </p>
+              <p className="footer-desc">Projeto cultural e editorial independente.</p>
             </div>
-            <div className="footer-note">
-              <p>Projeto cultural e editorial independente.</p>
-              <p>Inspiração temática em H. P. Lovecraft, Mary Shelley e história da ciência do século XIX.</p>
-              <p className="footer-github">GitHub: em breve</p>
+            <div className="footer-col">
+              <span className="footer-col-title">Categorias</span>
+              <ul className="footer-list">
+                <li><a href="#dossies" className="footer-link">Dossiês</a></li>
+                <li><a href="#artigos" className="footer-link">Artigos</a></li>
+                <li><a href="#linha" className="footer-link">Linha do Tempo</a></li>
+                <li><a href="#gabinete" className="footer-link">Gabinete de Anatomia</a></li>
+              </ul>
+            </div>
+            <div className="footer-col">
+              <span className="footer-col-title">Registro</span>
+              <ul className="footer-list footer-registry">
+                <li>ARQ-001 · LACRADO</li>
+                <li>Voltagem: 120V DC</li>
+                <li>Reagente: HW-7</li>
+                <li>Data: 1803–∞</li>
+              </ul>
             </div>
           </div>
           <div className="footer-bottom">
