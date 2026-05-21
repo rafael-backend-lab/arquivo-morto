@@ -169,3 +169,8 @@ The modern medical chapter now includes Sergei Brukhonenko and the autojektor as
 ## Brukhonenko card refinement
 
 Brukhonenko agora aparece como card próprio no capítulo médico moderno, não apenas como fonte editorial. O caso é tratado como história controversa da medicina, circulação artificial, cinema científico soviético e bioética experimental.
+
+
+## Expanded Brukhonenko dossier
+
+The project now includes a deeper editorial dossier on Sergei Brukhonenko, the autojektor, the dog experiments, the 1940 Soviet film *Experiments in the Revival of Organisms*, and the boundary between real medical history, propaganda, bioethics and the cultural imagination of reanimation.

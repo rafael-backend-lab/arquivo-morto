@@ -736,7 +736,127 @@ function App() {
         </section>
 
         {/* DOSSIÊ EM DESTAQUE */}
-        <section id="destaque" className="featured-dossier">
+                <section className="soviet-dossier" aria-labelledby="soviet-dossier-heading">
+          <div className="section-heading">
+            <p className="section-label">Dossiê histórico-médico</p>
+            <h3 id="soviet-dossier-heading">Sergei Brukhonenko: o autojektor, os cães e a máquina entre a vida e a morte</h3>
+            <p>
+              Antes de a circulação extracorpórea se tornar linguagem de cirurgia cardíaca, ela apareceu ao mundo como uma cena quase impossível:
+              sangue passando por tubos, órgãos mantidos fora da ordem natural do corpo e animais sustentados por um aparelho que parecia desafiar
+              a fronteira entre morte clínica, reflexo e suporte artificial.
+            </p>
+          </div>
+
+          <div className="soviet-dossier-lead">
+            <span className="archive-date">1890–1960</span>
+            <div>
+              <h4>O pesquisador soviético</h4>
+              <p>
+                Sergei Sergeevich Brukhonenko foi médico, pesquisador e inventor soviético. Sua importância não está em uma fantasia de
+                “ressuscitar mortos”, mas em algo historicamente mais sério: a tentativa de manter funções vitais por meio de circulação
+                artificial. O Arquivo Morto o trata como figura de fronteira — entre fisiologia experimental, tecnologia médica, propaganda
+                científica e imaginação cultural da reanimação.
+              </p>
+            </div>
+          </div>
+
+          <div className="soviet-dossier-grid">
+            <article className="soviet-dossier-panel">
+              <span className="archive-date">1920s–1930s</span>
+              <h4>O autojektor</h4>
+              <p>
+                O autojektor foi um aparelho primitivo de circulação extracorpórea: uma máquina construída para retirar, impulsionar, oxigenar
+                e devolver sangue ao organismo ou a partes isoladas dele. Em linguagem simples, era um ancestral das máquinas coração-pulmão.
+                Para a história médica, seu valor está na ideia de que certas funções do corpo poderiam ser temporariamente sustentadas por
+                equipamento mecânico.
+              </p>
+              <p>
+                Para o Arquivo Morto, o autojektor é também um objeto simbólico: a máquina que substitui o ritmo interno do corpo, colocando
+                a vida sob a forma de pressão, tubos, bomba e circulação.
+              </p>
+            </article>
+
+            <article className="soviet-dossier-panel">
+              <span className="archive-date">experimentos com cães</span>
+              <h4>Os cães de laboratório</h4>
+              <p>
+                A parte mais famosa e perturbadora de sua história envolve experimentos com cães. Os relatos e o filme soviético mostram
+                coração, pulmão, circulação artificial e, sobretudo, a imagem de uma cabeça de cão conectada ao aparelho, reagindo a estímulos
+                como luz, som ou contato. Essa imagem se tornou um dos ícones mais desconfortáveis da medicina experimental do século XX.
+              </p>
+              <p>
+                O ponto editorial não é transformar sofrimento animal em espetáculo. É mostrar como a modernidade científica, ao tentar dominar
+                a morte, cruzou territórios éticos difíceis: o corpo vivo fragmentado, o reflexo separado da pessoa, o organismo reduzido a
+                função biológica.
+              </p>
+            </article>
+
+            <article className="soviet-dossier-panel">
+              <span className="archive-date">1940</span>
+              <h4><em>Experiments in the Revival of Organisms</em></h4>
+              <p>
+                O filme soviético de 1940 apresentou esses experimentos como demonstração de “revivificação” de organismos. A obra mostra órgãos
+                isolados funcionando, circulação artificial e cães submetidos a procedimentos extremos. A versão em inglês ficou conhecida por
+                sua apresentação ao público científico ocidental e por sua aura de documento impossível.
+              </p>
+              <p>
+                Esse filme pertence ao Arquivo Morto porque reúne todos os elementos centrais do projeto: laboratório, cadáver, organismo, máquina,
+                propaganda, medo, fascínio e a promessa perigosa de que a morte poderia ser tecnicamente revertida.
+              </p>
+            </article>
+
+            <article className="soviet-dossier-panel">
+              <span className="archive-date">documento controverso</span>
+              <h4>O que é história e o que exige cautela</h4>
+              <p>
+                O trabalho de Brukhonenko não deve ser descartado como simples fraude: sua contribuição para a circulação artificial e para o
+                desenvolvimento de máquinas coração-pulmão pertence à história real da medicina. Ao mesmo tempo, o filme deve ser lido com cuidado:
+                parte do material pode ter sido encenada, reorganizada ou apresentada em linguagem de propaganda científica soviética.
+              </p>
+              <p>
+                A leitura correta é dupla: há pesquisa médica real, mas há também construção de imagem pública. O Arquivo Morto não vende o caso
+                como prova literal de ressurreição; trata-o como um dos momentos em que a ciência moderna pareceu vestir a máscara antiga do
+                necromante.
+              </p>
+            </article>
+
+            <article className="soviet-dossier-panel">
+              <span className="archive-date">legado médico</span>
+              <h4>Da cena perturbadora à cirurgia cardíaca</h4>
+              <p>
+                A importância histórica de Brukhonenko está no caminho que seu trabalho ajudou a abrir: circulação extracorpórea, perfusão,
+                suporte mecânico e procedimentos que mais tarde se tornariam centrais para cirurgias cardíacas. A imagem grotesca dos primeiros
+                experimentos não deve apagar o fato de que a medicina moderna também nasceu de máquinas experimentais, erros, limites e riscos.
+              </p>
+              <p>
+                No arquivo, ele ocupa o ponto em que a reanimação deixa de ser apenas mito, ritual ou literatura e passa a tocar a engenharia real
+                do corpo.
+              </p>
+            </article>
+
+            <article className="soviet-dossier-panel">
+              <span className="archive-date">leitura do Arquivo</span>
+              <h4>Por que Brukhonenko pertence ao Arquivo Morto</h4>
+              <p>
+                Aldini fez o cadáver contrair. Ure fez a plateia recuar. Mary Shelley transformou a ambição científica em mito. Brukhonenko,
+                por sua vez, colocou a máquina no centro da pergunta: se sangue, oxigênio e circulação podem ser sustentados artificialmente,
+                onde termina o organismo e onde começa o aparelho?
+              </p>
+              <p>
+                Essa é a razão de sua presença aqui. Ele não é apenas nota de rodapé médica; é um capítulo decisivo na história cultural da
+                tentativa humana de vencer a morte por tecnologia.
+              </p>
+            </article>
+          </div>
+
+          <div className="soviet-dossier-note">
+            <strong>Nota editorial:</strong> este dossiê trata Brukhonenko com peso histórico. O autojektor é abordado como marco experimental
+            da circulação artificial; o filme de 1940, como documento científico-cultural controverso; e os experimentos com cães, como tema
+            bioético sensível, sem sensacionalismo e sem afirmar retorno literal da vida.
+          </div>
+        </section>
+
+<section id="destaque" className="featured-dossier">
           <div className="section-header">
             <p className="section-label">Dossiê em destaque</p>
             <h3>Aldini-Forster, Londres, 1803</h3>

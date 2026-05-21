@@ -2417,3 +2417,68 @@ h2 {
   border-left: 1px solid rgba(124, 31, 45, 0.55);
   padding-left: 0.85rem;
 }
+
+
+/* Deep Soviet medical dossier — Brukhonenko */
+.soviet-dossier {
+  position: relative;
+}
+
+.soviet-dossier-lead {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(235, 230, 221, 0.14);
+  background:
+    linear-gradient(135deg, rgba(58, 15, 20, 0.26), rgba(8, 8, 8, 0.94)),
+    radial-gradient(circle at top left, rgba(29, 138, 72, 0.14), transparent 36%);
+}
+
+.soviet-dossier-lead h4,
+.soviet-dossier-panel h4 {
+  margin: 0.65rem 0 0.85rem;
+  font-family: Georgia, serif;
+  color: var(--bone);
+  font-size: clamp(1.25rem, 2vw, 1.85rem);
+}
+
+.soviet-dossier-lead p,
+.soviet-dossier-panel p {
+  color: var(--muted);
+  line-height: 1.78;
+}
+
+.soviet-dossier-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.soviet-dossier-panel {
+  border: 1px solid rgba(235, 230, 221, 0.12);
+  background:
+    linear-gradient(135deg, rgba(28, 29, 31, 0.78), rgba(8, 8, 8, 0.96)),
+    radial-gradient(circle at top right, rgba(29, 138, 72, 0.11), transparent 42%);
+  padding: 1.35rem;
+  min-height: 310px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
+}
+
+.soviet-dossier-note {
+  margin-top: 1rem;
+  border-left: 2px solid rgba(29, 138, 72, 0.7);
+  background: rgba(18, 36, 33, 0.38);
+  padding: 1rem 1.2rem;
+  color: var(--bone);
+  line-height: 1.75;
+}
+
+@media (max-width: 800px) {
+  .soviet-dossier-lead,
+  .soviet-dossier-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -306,3 +306,8 @@ Sergei Brukhonenko deve ser tratado como figura de história da medicina ligada 
 ## Diretriz Brukhonenko como card
 
 O caso Sergei Brukhonenko / autojektor deve aparecer como ficha própria no capítulo de morte técnica, posicionado entre transplantes/suporte artificial e criogenia. Ele deve ser tratado como documento histórico controverso, ligado à circulação artificial e ao imaginário soviético de reanimação, sem apresentar o filme como prova literal de retorno da vida.
+
+
+## Dossiê expandido Brukhonenko
+
+Brukhonenko deve aparecer como uma seção longa, não apenas como card. A abordagem precisa valorizar sua importância histórica para a circulação artificial e a tecnologia médico-experimental, detalhar o autojektor e os experimentos com cães, e tratar o filme soviético de 1940 como documento cultural e científico controverso. O tom deve ser respeitoso, crítico e bioético.
