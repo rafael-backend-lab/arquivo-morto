@@ -103,6 +103,10 @@ Capítulo de transição entre anatomia histórica e medicina moderna, com foco 
 
 Capítulo editorial dedicado à medicina moderna, bioética e tecnologia contemporânea diante do fim. A parte médica usa fontes oficiais e tom editorial, sem orientação médica, sem ensino de procedimento e sem recomendação de tratamento.
 
+## Refinamento de datação editorial
+
+Os cards históricos agora priorizam datas, séculos e períodos reais como metadado visual principal. Códigos internos permanecem apenas como referência secundária de arquivo.
+
 ## V7 — Capítulo II: Necromancia, alquimia e o desejo de retorno
 
 Novo capítulo editorial que liga rito, ocultismo, alquimia, mito de matéria animada e a imaginação pré-científica da criatura artificial.

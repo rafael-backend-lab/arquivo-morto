@@ -3,37 +3,37 @@ import './App.css'
 
 const dossiers = [
   {
-    id: 'DOS-001', tag: 'EXPERIMENTO', location: 'Londres, 1803',
+    id: 'DOS-001', displayDate: '1803', tag: 'EXPERIMENTO', location: 'Londres',
     title: 'Aldini e George Forster',
     text: 'Giovanni Aldini aplica correntes galvânicas no cadáver do enforcado George Forster diante de público. O corpo se contorce, a mandíbula abre. A ciência encontra o teatro da morte.',
     status: 'LACRADO', visual: 'galvanic-wave',
   },
   {
-    id: 'DOS-002', tag: 'CASO CLÍNICO', location: 'Glasgow, 1818',
+    id: 'DOS-002', displayDate: '1818', tag: 'CASO CLÍNICO', location: 'Glasgow',
     title: 'Andrew Ure e Matthew Clydesdale',
     text: 'Quinze minutos após a execução, Andrew Ure conecta Matthew Clydesdale a baterias galvânicas. Os músculos contraem com tal violência que a plateia abandona a sala em terror.',
     status: 'ARQUIVADO', visual: 'galvanic-wave',
   },
   {
-    id: 'DOS-003', tag: 'FICÇÃO CIENTÍFICA', location: 'Miskatonic, 1922',
+    id: 'DOS-003', displayDate: '1921–1922', tag: 'FICÇÃO CIENTÍFICA', location: 'Miskatonic',
     title: 'Herbert West, Reanimador',
     text: 'H. P. Lovecraft escreve em seis partes o pesadelo de um cientista obcecado com a reanimação do tecido morto. O horror vem de dentro do laboratório, não de fora.',
     status: 'PROIBIDO', visual: 'reagent-vial',
   },
   {
-    id: 'DOS-004', tag: 'EXPERIMENTO', location: 'Londres, 1730',
+    id: 'DOS-004', displayDate: '1730', tag: 'EXPERIMENTO', location: 'Londres',
     title: 'Stephen Gray e o corpo condutor',
     text: 'Stephen Gray demonstra que o corpo humano conduz eletricidade. Um jovem suspenso por cordas de seda atrai pedaços de chumbo. O corpo vivo como fio elétrico.',
     status: 'CATALOGADO', visual: 'galvanic-wave',
   },
   {
-    id: 'DOS-005', tag: 'MEDICINA ANTIGA', location: 'Séc. II–III d.C.',
+    id: 'DOS-005', displayDate: 'séc. II–III d.C.', tag: 'MEDICINA ANTIGA', location: 'Tradição greco-romana',
     title: 'Pseudo-Galeno e o Homem Ferido',
     text: 'O tratado atribuído a Galeno descreve os nervos como canais do espírito vital. O corpo ferido como mapa da alma. Entre cirurgia e filosofia, o limite entre vivo e morto.',
     status: 'FRAGMENTADO', visual: 'anatomical-plate',
   },
   {
-    id: 'DOS-006', tag: 'LITERATURA', location: 'Genebra, 1818',
+    id: 'DOS-006', displayDate: '1818', tag: 'LITERATURA', location: 'Genebra',
     title: 'Mary Shelley e a Criatura',
     text: 'Com dezoito anos, Mary Shelley cria o arquétipo moderno da criatura reanimada pela ciência. Frankenstein não é o monstro — é o cientista que não suporta sua própria criação.',
     status: 'FUNDACIONAL', visual: 'medical-file',
@@ -43,30 +43,35 @@ const dossiers = [
 const articles = [
   {
     index: '01',
+    period: 'séc. XVIII–XIX',
     tag: 'ENSAIO',
     title: 'O Roubo de Carne',
     text: 'A economia dos cadáveres no século XIX: anatomistas, body snatchers e o mercado negro de tecido humano.',
   },
   {
     index: '02',
+    period: 'séc. XVIII–XIX',
     tag: 'HISTÓRIA DA CIÊNCIA',
     title: 'A Disputa Vitalista',
     text: 'Animismo contra mecanicismo. O debate sobre o que separa o vivo do morto atravessa dois séculos de ciência europeia.',
   },
   {
     index: '03',
+    period: 'séc. XX–XXI',
     tag: 'BODY HORROR',
     title: 'A Carne Fragmentada',
     text: 'Da peça anatômica ao cinema cult. Como o corpo recortado tornou-se objeto estético, científico e narrativo.',
   },
   {
     index: '04',
+    period: 'séc. XX–XXI',
     tag: 'SONIC HORROR',
     title: 'Frequência Fúnebre',
     text: 'Frequências que perturbam. Sons que afetam o organismo sem que a mente saiba. A fronteira entre ruído e colapso.',
   },
   {
     index: '05',
+    period: 'Idade Média',
     tag: 'HISTÓRIA MEDIEVAL',
     title: 'O Mapa Medieval da Dor',
     text: 'Cartografias anatômicas medievais onde nervos são rios e órgãos são províncias. O corpo como território desconhecido.',
@@ -105,25 +110,25 @@ const timelineEvents = [
 ]
 
 const cabinet = [
-  { ref: 'LÂM-042', type: 'ESPÉCIME',    name: 'Lâmina Histológica',    visual: 'anatomical-plate',
+  { ref: 'LÂM-042', displayDate: 'arquivo interno', type: 'ESPÉCIME',    name: 'Lâmina Histológica',    visual: 'anatomical-plate',
     desc: 'Tecido neural pós-galvanização. Reação desconhecida nos neurônios terminais.' },
-  { ref: 'MAN-019', type: 'DOCUMENTO',   name: 'Manuscrito Aldini',      visual: 'medical-file',
+  { ref: 'MAN-019', displayDate: '1803', type: 'DOCUMENTO',   name: 'Manuscrito Aldini',      visual: 'medical-file',
     desc: 'Notas de campo da sessão de 1803. Três páginas ilegíveis. Tinta ferruginosa.' },
-  { ref: 'REA-007', type: 'SUBSTÂNCIA',  name: 'Reagente HW-7',          visual: 'reagent-vial',
+  { ref: 'REA-007', displayDate: 'registro apócrifo', type: 'SUBSTÂNCIA',  name: 'Reagente HW-7',          visual: 'reagent-vial',
     desc: 'Composto verde-amarelado. Origem não rastreada. Efeito sobre tecido morto: indeterminado.' },
-  { ref: 'PRO-334', type: 'REGISTRO',    name: 'Prontuário 334-B',       visual: 'medical-file',
+  { ref: 'PRO-334', displayDate: 'data lacrada', type: 'REGISTRO',    name: 'Prontuário 334-B',       visual: 'medical-file',
     desc: 'Cadáver masculino, ~40 anos. Causa mortis: desconhecida. Marcas pós-morte atípicas.' },
-  { ref: 'OSC-002', type: 'INSTRUMENTO', name: 'Osciloscópio de Campo',  visual: 'galvanic-wave',
+  { ref: 'OSC-002', displayDate: 'arquivo interno', type: 'INSTRUMENTO', name: 'Osciloscópio de Campo',  visual: 'galvanic-wave',
     desc: 'Registrou atividade elétrica em tecido certificado como morto. Equipamento lacrado após incidente.' },
-  { ref: 'CAD-111', type: 'ESPÉCIME',    name: 'Cadáver Catalogado 111', visual: 'corpse-tag',
+  { ref: 'CAD-111', displayDate: 'registro apócrifo', type: 'ESPÉCIME',    name: 'Cadáver Catalogado 111', visual: 'corpse-tag',
     desc: 'Status: reanimação parcial tentada. Resultado: inconclusivo. Localização atual: desconhecida.' },
 ]
 
 const classifications = [
-  { code: 'CLF-001', label: 'Literatura de Reanimação', count: '14 dossiês' },
-  { code: 'CLF-002', label: 'Galvanismo Histórico', count: '8 registros' },
-  { code: 'CLF-003', label: 'Anatomia Proibida', count: '11 espécimes' },
-  { code: 'CLF-004', label: 'Horror Científico', count: '22 arquivos' },
+  { code: 'CLF-001', displayDate: '1818–1922', label: 'Literatura de Reanimação', count: '14 dossiês' },
+  { code: 'CLF-002', displayDate: '1730–1818', label: 'Galvanismo Histórico', count: '8 registros' },
+  { code: 'CLF-003', displayDate: 'séc. XVIII–XIX', label: 'Anatomia Proibida', count: '11 espécimes' },
+  { code: 'CLF-004', displayDate: '1803–1985', label: 'Horror Científico', count: '22 arquivos' },
 ]
 
 const humanityAgainstDeath = [
@@ -157,7 +162,7 @@ const humanityAgainstDeath = [
   },
   {
     era: 'Mortos inquietos no folclore',
-    period: 'Idade Média à era moderna',
+    period: 'Idade Média–Era Moderna',
     focus: 'Cadáveres que não descansam',
     theme: 'Revenants, vampiros, assombrações e sepultamentos falhos',
     text: 'Crônicas medievais, relatos aldeões e tradições balcânicas registram mortos que voltam quando o funeral falha, a culpa permanece ou a comunidade interpreta um mal invisível como presença póstuma. Revenants, vampiros e assombrações pertencem à história do medo social: explicam contágio, desordem moral e a ansiedade provocada pelo cadáver que resiste ao repouso.',
@@ -174,6 +179,7 @@ const humanityAgainstDeath = [
 const occultReturnChapter = [
   {
     mark: 'OCC-001',
+    displayDate: 'Antiguidade–Renascimento',
     title: 'Necromancia',
     category: 'Tradição ritual e saber proibido',
     theme: 'Comunicação com mortos como busca de conhecimento vedado',
@@ -182,6 +188,7 @@ const occultReturnChapter = [
   },
   {
     mark: 'OCC-002',
+    displayDate: 'Antiguidade tardia–séc. XVII',
     title: 'Alquimia',
     category: 'Matéria, espírito e transmutação',
     theme: 'Anima, elixir, purificação e filosofia da transformação',
@@ -190,6 +197,7 @@ const occultReturnChapter = [
   },
   {
     mark: 'OCC-003',
+    displayDate: '1527–1608',
     title: 'John Dee',
     category: 'Ocultismo renascentista',
     theme: 'Matemática, astrologia, linguagem angélica e comunicação espiritual',
@@ -198,6 +206,7 @@ const occultReturnChapter = [
   },
   {
     mark: 'OCC-004',
+    displayDate: 'tradição medieval judaica',
     title: 'Golem',
     category: 'Mito de matéria obediente',
     theme: 'Criação artificial pela palavra, barro e inscrição sagrada',
@@ -206,6 +215,7 @@ const occultReturnChapter = [
   },
   {
     mark: 'OCC-005',
+    displayDate: 'tradição alquímica',
     title: 'Elixir da vida',
     category: 'Longa duração contra a decadência',
     theme: 'Longevidade, imortalidade e resistência ao desgaste do corpo',
@@ -214,6 +224,7 @@ const occultReturnChapter = [
   },
   {
     mark: 'OCC-006',
+    displayDate: 'séc. XVIII',
     title: 'Autômatos e corpo mecânico',
     category: 'Máquina, imitação e criatura artificial',
     theme: 'Engenhos que simulam vida e preparam a imaginação moderna do corpo',
@@ -225,6 +236,7 @@ const occultReturnChapter = [
 const bodyStudyChapter = [
   {
     code: 'ANT-001',
+    displayDate: 'Antiguidade–Idade Média',
     title: 'Corpo sagrado',
     label: 'Relíquia, tabu e memória ritual',
     theme: 'Corpo morto como templo, vestígio e objeto de respeito funerário',
@@ -232,6 +244,7 @@ const bodyStudyChapter = [
   },
   {
     code: 'ANT-002',
+    displayDate: 'séc. XIII–XVI',
     title: 'Dissecação e anatomia',
     label: 'Abertura do corpo',
     theme: 'Ruptura simbólica, observação interna e nascimento do olhar anatômico',
@@ -239,6 +252,7 @@ const bodyStudyChapter = [
   },
   {
     code: 'ANT-003',
+    displayDate: 'séc. XVIII–XIX',
     title: 'Escolas médicas',
     label: 'Instituição e ensino',
     theme: 'Necessidade de corpos para demonstração, aula e formação médica',
@@ -246,6 +260,7 @@ const bodyStudyChapter = [
   },
   {
     code: 'ANT-004',
+    displayDate: 'séc. XVIII–XIX',
     title: 'Ressurrecionistas',
     label: 'Mercado clandestino de corpos',
     theme: 'Body snatchers, roubo de cadáveres e urbanização da anatomia',
@@ -253,6 +268,7 @@ const bodyStudyChapter = [
   },
   {
     code: 'ANT-005',
+    displayDate: 'séc. XVIII',
     title: 'Vitalismo',
     label: 'Debate sobre o princípio de vida',
     theme: 'O que separa matéria viva de matéria morta',
@@ -260,6 +276,7 @@ const bodyStudyChapter = [
   },
   {
     code: 'ANT-006',
+    displayDate: 'séc. XVIII–XIX',
     title: 'Cadáver como prova',
     label: 'Olhar pericial nascente',
     theme: 'Autópsia, causa mortis e corpo como documento',
@@ -270,6 +287,7 @@ const bodyStudyChapter = [
 const forensicDeathChapter = [
   {
     code: 'FOR-001',
+    displayDate: '1780s–1791',
     title: 'Galvani e a eletricidade animal',
     label: 'História da ciência',
     theme: 'Nervos, contrações e a suspeita de uma força animadora no corpo',
@@ -278,6 +296,7 @@ const forensicDeathChapter = [
   },
   {
     code: 'FOR-002',
+    displayDate: '1803',
     title: 'Aldini e o teatro galvânico',
     label: 'Espetáculo científico',
     theme: 'George Forster, demonstração pública e horror científico em cena',
@@ -286,6 +305,7 @@ const forensicDeathChapter = [
   },
   {
     code: 'FOR-003',
+    displayDate: '1818',
     title: 'Andrew Ure e o cadáver em Glasgow',
     label: 'Relato pericial',
     theme: 'Matthew Clydesdale, corrente galvânica e a violência das contrações',
@@ -294,6 +314,7 @@ const forensicDeathChapter = [
   },
   {
     code: 'FOR-004',
+    displayDate: 'séc. XIX',
     title: 'Espasmo cadavérico',
     label: 'Fenômeno observado',
     theme: 'Contração muscular no contexto da morte, sem equivalência com retorno à vida',
@@ -302,6 +323,7 @@ const forensicDeathChapter = [
   },
   {
     code: 'FOR-005',
+    displayDate: 'séc. XIX',
     title: 'Rigidez cadavérica',
     label: 'Transformação pós-morte',
     theme: 'Tempo, músculo e leitura do corpo após o fim da circulação',
@@ -310,6 +332,7 @@ const forensicDeathChapter = [
   },
   {
     code: 'FOR-006',
+    displayDate: 'observação médico-legal histórica',
     title: 'Gases, ruídos e movimentos pós-morte',
     label: 'Decomposição e medo popular',
     theme: 'Fenômenos naturais que alimentaram lendas de assombração e retorno',
@@ -318,6 +341,7 @@ const forensicDeathChapter = [
   },
   {
     code: 'FOR-007',
+    displayDate: 'séc. XVIII–XIX',
     title: 'Catalepsia e medo do enterro vivo',
     label: 'Pânico de diagnóstico equivocado',
     theme: 'Estados confundidos com morte e o imaginário dos caixões de segurança',
@@ -326,6 +350,7 @@ const forensicDeathChapter = [
   },
   {
     code: 'FOR-008',
+    displayDate: 'séc. XVIII–XIX',
     title: 'Autópsia e medicina legal',
     label: 'Corpo como laudo',
     theme: 'Causa mortis, exame, prova e passagem do mistério para o documento',
@@ -337,6 +362,7 @@ const forensicDeathChapter = [
 const medicalDeathChapter = [
   {
     ref: 'MED-001',
+    displayDate: 'séc. XX–XXI',
     tag: 'MEDICINA REAL',
     title: 'Parada cardíaca e ressuscitação clínica',
     theme: 'RCP/CPR, emergência, circulação e tentativa de reversão clínica',
@@ -345,6 +371,7 @@ const medicalDeathChapter = [
   },
   {
     ref: 'MED-002',
+    displayDate: 'séc. XX',
     tag: 'MEDICINA REAL · BIOÉTICA',
     title: 'Morte cerebral',
     theme: 'Critérios médicos, irreversibilidade e diferença entre morte cerebral e coma',
@@ -353,6 +380,7 @@ const medicalDeathChapter = [
   },
   {
     ref: 'MED-003',
+    displayDate: 'séc. XX–XXI',
     tag: 'BIOÉTICA CLÍNICA',
     title: 'Suporte artificial de vida',
     theme: 'Ventilação, UTI, máquinas e a fronteira entre manutenção orgânica e presença humana',
@@ -361,6 +389,7 @@ const medicalDeathChapter = [
   },
   {
     ref: 'MED-004',
+    displayDate: 'séc. XX–XXI',
     tag: 'ÉTICA INSTITUCIONAL',
     title: 'Transplantes',
     theme: 'Órgãos, tecidos, doação e continuidade corporal entre pessoas',
@@ -369,6 +398,7 @@ const medicalDeathChapter = [
   },
   {
     ref: 'MED-005',
+    displayDate: 'séc. XX–XXI',
     tag: 'ESPECULAÇÃO CULTURAL',
     title: 'Criogenia',
     theme: 'Preservação em baixa temperatura, promessa futura e desejo de escapar da decomposição',
@@ -377,6 +407,7 @@ const medicalDeathChapter = [
   },
   {
     ref: 'MED-006',
+    displayDate: 'séc. XXI',
     tag: 'TECNOLOGIA EMERGENTE',
     title: 'Biotecnologia e reparo do corpo',
     theme: 'Próteses, engenharia de tecidos, medicina regenerativa e fronteiras materiais reais',
@@ -385,6 +416,7 @@ const medicalDeathChapter = [
   },
   {
     ref: 'MED-007',
+    displayDate: 'séc. XXI',
     tag: 'TECNOLOGIA · CULTURA',
     title: 'IA, luto digital e simulações dos mortos',
     theme: 'Chatbots, vozes sintéticas, avatares e presença artificial após a perda',
@@ -393,6 +425,7 @@ const medicalDeathChapter = [
   },
   {
     ref: 'MED-008',
+    displayDate: 'bioética contemporânea',
     tag: 'BIOÉTICA E CUIDADO',
     title: 'Diretivas antecipadas e fim de vida',
     theme: 'Vontade do paciente, cuidado, autonomia e limites terapêuticos',
@@ -413,6 +446,7 @@ const medicalEditorialSources = [
 const stories = [
   {
     code: 'HIS-001',
+    displayDate: '1803',
     category: 'HISTÓRIA REAL DOCUMENTADA',
     type: 'real',
     title: 'A mandíbula que se abriu em Londres',
@@ -423,6 +457,7 @@ const stories = [
   },
   {
     code: 'HIS-002',
+    displayDate: '1818',
     category: 'HISTÓRIA REAL DOCUMENTADA',
     type: 'real',
     title: 'O cadáver que fez a plateia recuar',
@@ -433,6 +468,7 @@ const stories = [
   },
   {
     code: 'HIS-003',
+    displayDate: '1818',
     category: 'LITERATURA',
     type: 'literatura',
     title: 'Frankenstein: a criatura antes do monstro',
@@ -443,6 +479,7 @@ const stories = [
   },
   {
     code: 'HIS-004',
+    displayDate: '1921–1922',
     category: 'LITERATURA DE HORROR',
     type: 'literatura',
     title: 'Herbert West e a medicina que perdeu a alma',
@@ -453,6 +490,7 @@ const stories = [
   },
   {
     code: 'HIS-005',
+    displayDate: 'séc. XVIII–XIX',
     category: 'HISTÓRIA E MEDICINA',
     type: 'real',
     title: 'Os homens que roubavam carne',
@@ -463,6 +501,7 @@ const stories = [
   },
   {
     code: 'HIS-006',
+    displayDate: 'data lacrada',
     category: 'FICÇÃO EDITORIAL DO ARQUIVO MORTO',
     type: 'ficcao',
     title: 'Prontuário 334-B',
@@ -477,10 +516,12 @@ function ArchiveVisual({ type = 'medical-file', label, code, size = 'md' }) {
   return (
     <div className={`archive-visual av-${size}`} aria-hidden="true">
       <div className={`archive-visual-frame visual-${type}`} />
-      <div className="visual-meta">
-        {code && <span className="visual-code">{code}</span>}
-        {label && <span className="visual-label">{label}</span>}
-      </div>
+      {(label || code) && (
+        <div className="visual-meta">
+          {label && <span className="visual-label archive-date">{label}</span>}
+          {code && <span className="visual-code">{code}</span>}
+        </div>
+      )}
     </div>
   )
 }
@@ -618,7 +659,7 @@ function App() {
             {humanityAgainstDeath.map((entry) => (
               <article className="history-card" key={entry.era}>
                 <div className="history-card-head">
-                  <span className="archive-era-label">{entry.period}</span>
+                  <span className="archive-era-label history-period">{entry.period}</span>
                   <span className="history-focus">{entry.focus}</span>
                 </div>
                 <h4 className="history-title">{entry.era}</h4>
@@ -642,13 +683,16 @@ function App() {
             {occultReturnChapter.map((entry) => (
               <article className="occult-card" key={entry.mark}>
                 <div className="occult-card-head">
-                  <span className="occult-mark">{entry.mark}</span>
+                  <span className="occult-period archive-date">{entry.displayDate}</span>
                   <span className="occult-category">{entry.category}</span>
                 </div>
                 <h4 className="occult-title">{entry.title}</h4>
                 <p className="occult-theme">{entry.theme}</p>
                 <p className="occult-text">{entry.text}</p>
-                <p className="occult-warning">{entry.warning}</p>
+                <div className="archive-card-footer">
+                  <span className="archive-registry">Registro: {entry.mark}</span>
+                  <p className="occult-warning">{entry.warning}</p>
+                </div>
               </article>
             ))}
           </div>
@@ -667,12 +711,15 @@ function App() {
             {bodyStudyChapter.map((entry) => (
               <article className="body-study-card" key={entry.code}>
                 <div className="body-study-card-head">
-                  <span className="body-study-code">{entry.code}</span>
+                  <span className="body-study-period archive-date">{entry.displayDate}</span>
                   <span className="anatomy-label">{entry.label}</span>
                 </div>
                 <h4 className="body-study-title">{entry.title}</h4>
                 <p className="body-study-theme">{entry.theme}</p>
                 <p className="body-study-text">{entry.text}</p>
+                <div className="archive-card-footer">
+                  <span className="archive-registry">Arquivo: {entry.code}</span>
+                </div>
               </article>
             ))}
           </div>
@@ -691,13 +738,16 @@ function App() {
             {forensicDeathChapter.map((entry) => (
               <article className="forensic-card" key={entry.code}>
                 <div className="forensic-card-head">
-                  <span className="forensic-code">{entry.code}</span>
+                  <span className="forensic-period archive-date">{entry.displayDate}</span>
                   <span className="forensic-label">{entry.label}</span>
                 </div>
                 <h4 className="forensic-title">{entry.title}</h4>
                 <p className="forensic-theme">{entry.theme}</p>
                 <p className="forensic-text">{entry.text}</p>
-                <p className="forensic-warning">{entry.warning}</p>
+                <div className="archive-card-footer">
+                  <span className="archive-registry">Arquivo: {entry.code}</span>
+                  <p className="forensic-warning">{entry.warning}</p>
+                </div>
               </article>
             ))}
           </div>
@@ -730,13 +780,16 @@ function App() {
             {medicalDeathChapter.map((entry) => (
               <article className="medical-card" key={entry.ref}>
                 <div className="medical-card-head">
-                  <span className="medical-ref">{entry.ref}</span>
+                  <span className="medical-period archive-date">{entry.displayDate}</span>
                   <span className="medical-tag">{entry.tag}</span>
                 </div>
                 <h4 className="medical-title">{entry.title}</h4>
                 <p className="medical-theme">{entry.theme}</p>
                 <p className="medical-text">{entry.text}</p>
-                <p className="medical-warning">{entry.warning}</p>
+                <div className="archive-card-footer">
+                  <span className="archive-registry">Código: {entry.ref}</span>
+                  <p className="medical-warning">{entry.warning}</p>
+                </div>
               </article>
             ))}
           </div>
@@ -751,9 +804,9 @@ function App() {
           <div className="stories-grid">
             {stories.map((s) => (
               <article className={`story-card story-type-${s.type}`} key={s.code}>
-                <ArchiveVisual type={s.visual} code={s.code} size="sm" />
+                <ArchiveVisual type={s.visual} size="sm" />
                 <div className="story-header">
-                  <span className="story-code">{s.code}</span>
+                  <span className="story-period archive-date">{s.displayDate}</span>
                   <span className={`story-status status-${s.status.toLowerCase()}`}>{s.status}</span>
                 </div>
                 <span className="story-category">{s.category}</span>
@@ -761,6 +814,7 @@ function App() {
                 <p className="story-summary">{s.summary}</p>
                 <blockquote className="story-excerpt">{s.excerpt}</blockquote>
                 <div className="story-foot">
+                  <span className="archive-registry">Arquivo: {s.code}</span>
                   <span className="story-classification">{s.classification}</span>
                 </div>
               </article>
@@ -809,9 +863,10 @@ function App() {
             <div className="featured-layout">
               <div className="featured-content">
                 <div className="featured-meta">
-                  <span className="featured-case">DOS-001</span>
-                  <span className="featured-location">Londres, 1803</span>
+                  <span className="featured-date archive-date">1803</span>
+                  <span className="featured-location">Londres</span>
                   <span className="featured-class">EXPERIMENTO · GALVANISMO</span>
+                  <span className="archive-registry featured-registry">Arquivo: DOS-001</span>
                 </div>
                 <h4 className="featured-title">Giovanni Aldini e George Forster</h4>
                 <p className="featured-summary">
@@ -849,11 +904,12 @@ function App() {
             {dossiers.map((d) => (
               <article className="dossier-card" key={d.id}>
                 <div className="card-header">
-                  <span className="card-id">{d.id}</span>
+                  <span className="card-period archive-date">{d.displayDate}</span>
                   <span className={`card-status status-${d.status.toLowerCase()}`}>{d.status}</span>
                 </div>
                 <div className="card-tag">{d.tag}</div>
                 <p className="card-location">{d.location}</p>
+                <span className="archive-registry">Arquivo: {d.id}</span>
                 <h4 className="card-title">{d.title}</h4>
                 <p className="card-text">{d.text}</p>
               </article>
@@ -870,9 +926,10 @@ function App() {
           <div className="classification-grid">
             {classifications.map((c) => (
               <div className="clf-card" key={c.code}>
-                <span className="clf-code">{c.code}</span>
+                <span className="archive-date">{c.displayDate}</span>
                 <h5 className="clf-label">{c.label}</h5>
                 <span className="clf-count">{c.count}</span>
+                <span className="archive-registry clf-registry">Código: {c.code}</span>
               </div>
             ))}
           </div>
@@ -887,9 +944,10 @@ function App() {
           <div className="articles-list">
             {articles.map((a) => (
               <article className="article-row" key={a.title}>
-                <span className="article-index">{a.index}</span>
+                <span className="article-index archive-date">{a.period}</span>
                 <div className="article-body">
                   <span className="article-tag">{a.tag}</span>
+                  <span className="archive-registry article-code">Arquivo: ART-{a.index}</span>
                   <h4 className="article-title">{a.title}</h4>
                   <p className="article-text">{a.text}</p>
                 </div>
@@ -927,13 +985,14 @@ function App() {
           <div className="cabinet-grid">
             {cabinet.map((item) => (
               <div className="cabinet-item" key={item.ref}>
-                <ArchiveVisual type={item.visual} code={item.ref} size="sm" />
+                <ArchiveVisual type={item.visual} size="sm" />
                 <div className="cabinet-top">
-                  <span className="cabinet-ref">{item.ref}</span>
+                  <span className="archive-date">{item.displayDate}</span>
                   <span className="cabinet-type">{item.type}</span>
                 </div>
                 <h5 className="cabinet-name">{item.name}</h5>
                 <p className="cabinet-desc">{item.desc}</p>
+                <span className="archive-registry cabinet-ref">Registro: {item.ref}</span>
               </div>
             ))}
           </div>

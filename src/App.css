@@ -368,17 +368,66 @@ h2 {
   margin-bottom: 18px;
 }
 
-.archive-era-label {
+.archive-date,
+.archive-era-label,
+.card-period,
+.history-period,
+.occult-period,
+.body-study-period,
+.forensic-period,
+.medical-period,
+.story-period {
   font-family: ui-monospace, 'Courier New', monospace;
-  font-size: 0.61rem;
+  font-size: 0.60rem;
   font-weight: 700;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: #c84b5a;
+  color: #b89a66;
   padding: 5px 9px;
-  border: 1px solid rgba(200, 75, 90, 0.24);
+  border: 1px solid rgba(184, 154, 102, 0.24);
   border-radius: 3px;
+  background: rgba(184, 154, 102, 0.08);
+  line-height: 1.45;
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+  white-space: normal;
+}
+
+.archive-era-label,
+.history-period,
+.card-period,
+.featured-date {
+  color: #c84b5a;
+  border-color: rgba(200, 75, 90, 0.24);
   background: rgba(58, 15, 20, 0.26);
+}
+
+.forensic-period,
+.medical-period {
+  color: #5fbf8e;
+  border-color: rgba(95, 191, 142, 0.24);
+  background: rgba(14, 66, 36, 0.22);
+}
+
+.archive-card-footer {
+  position: relative;
+  z-index: 1;
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(248, 240, 224, 0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.archive-registry {
+  font-family: ui-monospace, 'Courier New', monospace;
+  font-size: 0.60rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  display: block;
 }
 
 .history-focus {
@@ -556,8 +605,6 @@ h2 {
   position: relative;
   z-index: 1;
   margin: 0;
-  padding-top: 14px;
-  border-top: 1px solid rgba(248, 240, 224, 0.07);
   color: var(--text-dim);
   font-family: ui-monospace, 'Courier New', monospace;
   font-size: 0.68rem;
@@ -827,8 +874,6 @@ h2 {
   position: relative;
   z-index: 1;
   margin: 0;
-  padding-top: 12px;
-  border-top: 1px solid rgba(248, 240, 224, 0.07);
   color: var(--text-dim);
   font-family: ui-monospace, 'Courier New', monospace;
   font-size: 0.64rem;
@@ -1037,8 +1082,6 @@ h2 {
   position: relative;
   z-index: 1;
   margin: 0;
-  padding-top: 14px;
-  border-top: 1px solid rgba(248, 240, 224, 0.07);
   color: var(--text-dim);
   font-family: ui-monospace, 'Courier New', monospace;
   font-size: 0.68rem;
@@ -1108,15 +1151,10 @@ h2 {
 .card-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  gap: 12px;
+  flex-wrap: wrap;
   margin-bottom: 16px;
-}
-
-.card-id {
-  font-family: ui-monospace, 'Courier New', monospace;
-  font-size: 0.67rem;
-  letter-spacing: 0.15em;
-  color: var(--text-dim);
 }
 
 .card-status {
@@ -1148,8 +1186,12 @@ h2 {
 .card-location {
   font-size: 0.80rem;
   color: var(--text-dim);
-  margin: 0 0 14px;
+  margin: 0 0 8px;
   font-style: italic;
+}
+
+.dossier-card .archive-registry {
+  margin-bottom: 14px;
 }
 
 .card-title {
@@ -1177,7 +1219,7 @@ h2 {
 
 .article-row {
   display: grid;
-  grid-template-columns: 64px 1fr 36px;
+  grid-template-columns: 150px 1fr 36px;
   gap: 24px;
   align-items: center;
   padding: 28px 32px;
@@ -1189,11 +1231,17 @@ h2 {
 .article-row:hover { background: rgba(255,255,255,0.026); }
 
 .article-index {
-  font-family: ui-monospace, 'Courier New', monospace;
-  font-size: 1.75rem;
-  font-weight: 700;
-  color: rgba(248, 240, 224, 0.07);
-  line-height: 1;
+  justify-self: start;
+  align-self: start;
+}
+
+.article-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.article-code {
+  margin-bottom: 10px;
 }
 
 .article-tag {
@@ -1322,15 +1370,14 @@ h2 {
 .cabinet-top {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  gap: 12px;
+  flex-wrap: wrap;
   margin-bottom: 12px;
 }
 
 .cabinet-ref {
-  font-family: ui-monospace, 'Courier New', monospace;
-  font-size: 0.67rem;
-  letter-spacing: 0.14em;
-  color: var(--text-dim);
+  margin-top: 12px;
 }
 
 .cabinet-type {
@@ -1651,11 +1698,7 @@ h2 {
 }
 
 .featured-case {
-  font-family: ui-monospace, 'Courier New', monospace;
-  font-size: 0.68rem;
-  letter-spacing: 0.16em;
-  color: #c84b5a;
-  font-weight: 700;
+  display: none;
 }
 
 .featured-location {
@@ -1673,6 +1716,11 @@ h2 {
   color: var(--chem-green);
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.featured-registry {
+  display: inline-flex;
+  align-items: center;
 }
 
 .featured-title {
@@ -1813,11 +1861,10 @@ h2 {
   .dossier-grid  { grid-template-columns: 1fr; }
   .cabinet-grid  { grid-template-columns: 1fr; }
   .article-row {
-    grid-template-columns: 40px 1fr 24px;
+    grid-template-columns: 112px 1fr 24px;
     padding: 20px 18px;
     gap: 14px;
   }
-  .article-index { font-size: 1.2rem; }
   .timeline::before { left: 72px; }
   .timeline-event { grid-template-columns: 72px 1fr; }
   .timeline-desc { padding-left: 20px; }
@@ -1941,6 +1988,9 @@ h2 {
 }
 
 .clf-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   padding: 22px 20px;
   border: 1px solid var(--border);
   border-top: 2px solid rgba(184, 154, 102, 0.42);
@@ -1954,18 +2004,8 @@ h2 {
   background: rgba(255, 255, 255, 0.030);
 }
 
-.clf-code {
-  font-family: ui-monospace, 'Courier New', monospace;
-  font-size: 0.62rem;
-  letter-spacing: 0.18em;
-  color: #b89a66;
-  font-weight: 700;
-  display: block;
-  margin-bottom: 10px;
-}
-
 .clf-label {
-  margin: 0 0 10px;
+  margin: 0;
   font-family: Georgia, 'Times New Roman', serif;
   font-size: 1.0rem;
   line-height: 1.3;
@@ -1978,6 +2018,10 @@ h2 {
   font-size: 0.65rem;
   letter-spacing: 0.10em;
   color: var(--text-dim);
+}
+
+.clf-registry {
+  margin-top: 2px;
 }
 
 /* ─── V3 — FOOTER QUOTE ──────────────────────────────────────── */
@@ -2026,6 +2070,7 @@ h2 {
   justify-content: space-between;
   align-items: center;
   gap: 8px;
+  flex-wrap: wrap;
 }
 
 .visual-code {
@@ -2041,6 +2086,10 @@ h2 {
   letter-spacing: 0.12em;
   color: var(--text-dim);
   font-style: italic;
+}
+
+.visual-label.archive-date {
+  font-style: normal;
 }
 
 /* — visual type backgrounds (inline SVG data URLs) — */
@@ -2189,15 +2238,10 @@ h2 {
 .story-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  gap: 12px;
+  flex-wrap: wrap;
   margin-bottom: 12px;
-}
-
-.story-code {
-  font-family: ui-monospace, 'Courier New', monospace;
-  font-size: 0.67rem;
-  letter-spacing: 0.15em;
-  color: var(--text-dim);
 }
 
 .story-status {
@@ -2260,6 +2304,9 @@ h2 {
 .story-foot {
   border-top: 1px solid rgba(248, 240, 224, 0.06);
   padding-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .story-classification {

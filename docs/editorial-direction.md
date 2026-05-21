@@ -259,6 +259,10 @@ Este capítulo deve mostrar como sinais naturais do corpo morto foram lidos pela
 
 Nova seção inserida após os capítulos históricos, anatômicos e galvânicos, antes das camadas mais literárias e pop do arquivo. Sua função é deslocar o tema da morte para a linguagem contemporânea da emergência, terapia intensiva, transplante, regulação institucional, tecnologia emergente e autonomia do paciente.
 
+## Diretriz de datação editorial
+
+Todos os capítulos devem exibir período histórico real quando possível. Códigos de arquivo são metadados internos e não devem substituir datas em cards históricos.
+
 ### Separação editorial obrigatória
 
 - **Medicina real** — parada cardíaca e ressuscitação clínica, morte cerebral, suporte artificial de vida, transplantes
