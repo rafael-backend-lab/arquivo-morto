@@ -1,94 +1,63 @@
 import { useState, useEffect, useRef } from 'react'
 import './App.css'
 
-const INTRO_LINES = [
-  'ABRINDO GABINETE VITORIANO...',
-  'VERIFICANDO LACRES DE NECROTÉRIO...',
-  'CONSULTANDO REGISTROS DE GALVANISMO...',
-  'CARREGANDO DOSSIÊS DE REANIMAÇÃO...',
-  'AUTORIZAÇÃO CONCEDIDA.',
-]
-
 function ArchiveIntro({ onEnter }) {
-  const [visibleLines, setVisibleLines] = useState(0)
-  const [done, setDone] = useState(false)
   const [leaving, setLeaving] = useState(false)
-  const timerRef = useRef(null)
+  const [ready, setReady] = useState(false)
 
   useEffect(() => {
-    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    if (prefersReduced) {
-      setVisibleLines(INTRO_LINES.length)
-      setDone(true)
-      return
-    }
-    let i = 0
-    timerRef.current = setInterval(() => {
-      i++
-      setVisibleLines(i)
-      if (i >= INTRO_LINES.length) {
-        clearInterval(timerRef.current)
-        setTimeout(() => setDone(true), 400)
-      }
-    }, 520)
-    return () => clearInterval(timerRef.current)
+    const t = setTimeout(() => setReady(true), 800)
+    return () => clearTimeout(t)
   }, [])
 
   function dismiss() {
     setLeaving(true)
-    setTimeout(onEnter, 600)
+    setTimeout(onEnter, 700)
   }
 
   return (
-    <div className={`archive-intro${leaving ? ' archive-intro--leaving' : ''}`} role="dialog" aria-label="Abertura do Arquivo Morto" aria-modal="true">
-      <div className="ai-paper-texture" aria-hidden="true" />
-      <div className="ai-vignette" aria-hidden="true" />
-
-      <div className="ai-frame">
-        <div className="ai-seal" aria-hidden="true">
-          <div className="ai-seal-ring" />
-          <span className="ai-seal-glyph">†</span>
+    <div
+      className={`archive-intro${leaving ? ' archive-intro--leaving' : ''}`}
+      role="dialog"
+      aria-label="Abertura do Arquivo Morto"
+      aria-modal="true"
+    >
+      {/* Creature background */}
+      <div className="archive-intro-bg" aria-hidden="true">
+        <img
+          className="archive-intro-face"
+          src="/assets/cinema/capa-arquivo.png"
+          alt=""
+          aria-hidden="true"
+        />
+        <div className="archive-intro-eyes">
+          <div className="archive-intro-eye archive-intro-eye--left" />
+          <div className="archive-intro-eye archive-intro-eye--right" />
         </div>
+      </div>
 
-        <div className="ai-header">
-          <p className="ai-eyebrow">DOSSIÊ INTERDITO · CLASSIFICAÇÃO: LACRADO</p>
-          <h1 className="ai-title">ARQUIVO<br />MORTO</h1>
-          <p className="ai-subtitle">Dossiê interdito sobre ciência, morte e reanimação</p>
-        </div>
+      {/* Atmosphere */}
+      <div className="archive-intro-fog" aria-hidden="true" />
+      <div className="archive-intro-fog archive-intro-fog--b" aria-hidden="true" />
+      <div className="archive-intro-grain" aria-hidden="true" />
+      <div className="archive-intro-vignette" aria-hidden="true" />
 
-        <div className="ai-divider" aria-hidden="true" />
-
-        <p className="ai-body">
-          Entre registros anatômicos, galvanismo, literatura gótica e experimentos reais de reanimação, este arquivo preserva a obsessão humana de vencer a morte.
-        </p>
-
-        <div className="ai-log" aria-live="polite">
-          {INTRO_LINES.slice(0, visibleLines).map((line, i) => (
-            <p key={i} className={`ai-log-line${i === visibleLines - 1 ? ' ai-log-line--active' : ''}`}>
-              {line}
-            </p>
-          ))}
-        </div>
-
-        {done && (
-          <div className="ai-actions">
-            <button className="ai-btn ai-btn--primary" onClick={dismiss} autoFocus>
+      {/* Content */}
+      {ready && (
+        <div className="archive-intro-content">
+          <h1 className="archive-intro-title">ARQUIVO<br />MORTO</h1>
+          <p className="archive-intro-subtitle">A morte está olhando de volta.</p>
+          <p className="archive-intro-text">O dossiê foi aberto. Algo dentro dele ainda respira.</p>
+          <div className="archive-intro-actions">
+            <button className="archive-intro-primary" onClick={dismiss} autoFocus>
               Abrir o Dossiê
             </button>
-            <button className="ai-btn ai-btn--ghost" onClick={dismiss}>
+            <button className="archive-intro-secondary" onClick={dismiss}>
               Pular introdução
             </button>
           </div>
-        )}
-
-        <div className="ai-footer" aria-hidden="true">
-          <span>ARQ-001</span>
-          <span>·</span>
-          <span>GABINETE DE ANATOMIA</span>
-          <span>·</span>
-          <span>EST. 1803</span>
         </div>
-      </div>
+      )}
     </div>
   )
 }
