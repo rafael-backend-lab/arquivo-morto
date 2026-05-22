@@ -598,6 +598,86 @@ function App() {
           </div>
         </section>
 
+        {/* ICONOGRAFIA HISTÓRICA */}
+        <section className="archive-gallery" aria-labelledby="gallery-heading">
+          <div className="gallery-header">
+            <p className="section-label">Iconografia</p>
+            <h3 id="gallery-heading">Registro visual do arquivo</h3>
+            <p className="gallery-subtitle">Gravuras, retratos e documentos históricos de domínio público — Wikimedia Commons.</p>
+          </div>
+          <div className="gallery-grid">
+            <figure className="gallery-item">
+              <div className="gallery-image-wrap">
+                <img
+                  src="/assets/archive/galvanism-corpse.jpg"
+                  alt="Experimento galvânico num cadáver, gravura do século XIX"
+                  loading="lazy"
+                />
+              </div>
+              <figcaption>
+                <span className="gallery-item-title">A Galvanised Corpse</span>
+                <span className="gallery-item-meta">Gravura, séc. XIX — Wellcome Collection / Domínio público</span>
+              </figcaption>
+            </figure>
+
+            <figure className="gallery-item">
+              <div className="gallery-image-wrap">
+                <img
+                  src="/assets/archive/aldini-portrait.jpg"
+                  alt="Retrato de Giovanni Aldini, galvanista e sobrinho de Luigi Galvani"
+                  loading="lazy"
+                />
+              </div>
+              <figcaption>
+                <span className="gallery-item-title">Giovanni Aldini</span>
+                <span className="gallery-item-meta">Retrato — Wikimedia Commons / Domínio público</span>
+              </figcaption>
+            </figure>
+
+            <figure className="gallery-item">
+              <div className="gallery-image-wrap">
+                <img
+                  src="/assets/archive/frankenstein-title.jpg"
+                  alt="Página de título da edição original de Frankenstein, 1818"
+                  loading="lazy"
+                />
+              </div>
+              <figcaption>
+                <span className="gallery-item-title">Frankenstein — 1ª edição, 1818</span>
+                <span className="gallery-item-meta">Página de título — Wikimedia Commons / Domínio público</span>
+              </figcaption>
+            </figure>
+
+            <figure className="gallery-item">
+              <div className="gallery-image-wrap">
+                <img
+                  src="/assets/archive/mary-shelley.jpg"
+                  alt="Retrato de Mary Wollstonecraft Shelley por Richard Rothwell, 1840"
+                  loading="lazy"
+                />
+              </div>
+              <figcaption>
+                <span className="gallery-item-title">Mary Shelley</span>
+                <span className="gallery-item-meta">Richard Rothwell, c. 1840 — Wikimedia Commons / Domínio público</span>
+              </figcaption>
+            </figure>
+
+            <figure className="gallery-item">
+              <div className="gallery-image-wrap">
+                <img
+                  src="/assets/archive/vesalius-anatomy.jpg"
+                  alt="Prancha anatômica de De Humani Corporis Fabrica, Andreas Vesalius, 1543"
+                  loading="lazy"
+                />
+              </div>
+              <figcaption>
+                <span className="gallery-item-title">Vesalius — De Humani Corporis Fabrica</span>
+                <span className="gallery-item-meta">Andreas Vesalius, 1543 — Wikimedia Commons / Domínio público</span>
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
         {/* A HUMANIDADE CONTRA A MORTE */}
         <section className="section humanity-section" aria-labelledby="humanity-heading">
           <div className="section-header">

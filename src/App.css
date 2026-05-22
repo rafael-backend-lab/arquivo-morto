@@ -293,6 +293,86 @@ h2 {
 }
 .manifesto-text p:last-child { margin-bottom: 0; }
 
+/* ─── ICONOGRAFIA HISTÓRICA ──────────────────────────────────── */
+
+.archive-gallery {
+  margin: 48px 0 0;
+  padding: 40px 0;
+  border-top: 1px solid var(--border);
+}
+
+.gallery-header {
+  margin-bottom: 32px;
+}
+
+.gallery-subtitle {
+  color: #8a8078;
+  font-size: 0.88rem;
+  margin: 8px 0 0;
+  font-family: ui-monospace, 'Courier New', monospace;
+  letter-spacing: 0.04em;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.gallery-item {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery-image-wrap {
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  background: #0d0d0d;
+  flex-shrink: 0;
+}
+
+.gallery-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  filter: sepia(0.18) contrast(1.05);
+  transition: filter 0.3s ease;
+}
+
+.gallery-item:hover .gallery-image-wrap img {
+  filter: sepia(0) contrast(1.02);
+}
+
+.gallery-item figcaption {
+  padding: 10px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.gallery-item-title {
+  font-family: ui-monospace, 'Courier New', monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #b89a66;
+}
+
+.gallery-item-meta {
+  font-family: ui-monospace, 'Courier New', monospace;
+  font-size: 0.62rem;
+  color: #56604e;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+}
+
 /* ─── HUMANIDADE CONTRA A MORTE ─────────────────────────────── */
 
 .humanity-section {
@@ -4211,6 +4291,20 @@ h2 {
   /* Bioethics note */
   .bioethics-note {
     padding: 20px 16px;
+  }
+
+  /* Gallery: single column on mobile */
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  .gallery-image-wrap {
+    height: 200px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 960px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
