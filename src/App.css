@@ -4847,8 +4847,8 @@ h2 {
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
-  opacity: 0.18;
-  filter: brightness(0.55) contrast(1.1);
+  opacity: 0.26;
+  filter: brightness(0.62) contrast(1.1);
   transform: scale(1.03);
 }
 
@@ -4861,7 +4861,7 @@ h2 {
 
 @media (max-width: 720px) {
   .site-haunting-bg {
-    opacity: 0.13;
+    opacity: 0.17;
   }
 }
 
