@@ -684,13 +684,16 @@ function App() {
 
   return (
     <div className={`root${mode === 'terminal' ? ' mode-terminal' : ''}${archiveLive ? ' archive-live' : ''}`}>
-      <div className="living-archive-bg" aria-hidden="true">
-        <div className="living-archive-face" />
-        <div className="living-archive-eye living-archive-eye--left" />
-        <div className="living-archive-eye living-archive-eye--right" />
-        <div className="living-archive-fog living-archive-fog--a" />
-        <div className="living-archive-fog living-archive-fog--b" />
-        <div className="living-archive-grain" />
+      <div className="global-creature-bg" aria-hidden="true">
+        <div className="global-creature-image" />
+        <div className="global-creature-eyes">
+          <span className="global-creature-eye global-creature-eye--left" />
+          <span className="global-creature-eye global-creature-eye--right" />
+        </div>
+        <div className="global-creature-fog" />
+        <div className="global-creature-fog global-creature-fog--b" />
+        <div className="global-creature-vignette" />
+        <div className="global-creature-grain" />
       </div>
       <div className="noise-overlay" aria-hidden="true" />
       <div className="scanlines" aria-hidden="true" />
