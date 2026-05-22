@@ -4915,7 +4915,7 @@ h2 {
   row-gap: 6px;
 }
 
-/* ─── LIVING ARCHIVE BACKGROUND ─────────────────────────────── */
+/* ─── GLOBAL CREATURE BACKGROUND ───────────────────────────── */
 
 .global-creature-bg {
   position: fixed;
@@ -4923,27 +4923,25 @@ h2 {
   z-index: 0;
   pointer-events: none;
   overflow: hidden;
-  background:
-    radial-gradient(circle at 50% 18%, rgba(90, 0, 0, 0.10), transparent 34%),
-    radial-gradient(circle at 18% 48%, rgba(80, 0, 0, 0.07), transparent 45%);
+  background: transparent;
 }
 
 .global-creature-image {
   position: absolute;
-  inset: -5vh -5vw;
+  inset: 0;
   background-image: url('/assets/cinema/capa-arquivo.png');
   background-size: cover;
   background-position: center 18%;
   background-repeat: no-repeat;
-  opacity: 0.28;
-  filter: grayscale(0.14) brightness(0.55) contrast(1.14) saturate(0.9);
+  opacity: 0.18;
+  filter: brightness(0.55) contrast(1.08) saturate(0.85);
   transform: scale(1.04);
   animation: globalCreatureBreath 28s ease-in-out infinite;
 }
 
 .root.archive-live .global-creature-image {
-  opacity: 0.42;
-  filter: grayscale(0.08) brightness(0.63) contrast(1.18) saturate(1.05);
+  opacity: 0.26;
+  filter: brightness(0.62) contrast(1.1) saturate(0.95);
 }
 
 /* ── Eyes wrapper + glows ────────────────────────────────────── */
@@ -4983,58 +4981,7 @@ h2 {
 }
 
 .root.archive-live .global-creature-eye {
-  opacity: 0.60;
-  filter: blur(4px);
-}
-
-/* ── Vignette ────────────────────────────────────────────────── */
-
-.global-creature-vignette {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background:
-    radial-gradient(ellipse 75% 65% at 50% 36%, transparent 22%, rgba(0,0,0,0.68) 62%, rgba(0,0,0,0.96) 100%),
-    linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, transparent 18%, transparent 68%, rgba(0,0,0,0.82) 100%);
-}
-
-/* ── Fog layers ──────────────────────────────────────────────── */
-
-.global-creature-fog {
-  position: absolute;
-  inset: -20%;
-  opacity: 0.12;
-  filter: blur(38px);
-  background:
-    radial-gradient(circle at 20% 30%, rgba(120, 18, 18, 0.18), transparent 35%),
-    radial-gradient(circle at 70% 65%, rgba(40, 90, 55, 0.12), transparent 42%);
-  animation: globalFogDrift 55s linear infinite;
-}
-
-.global-creature-fog--b {
-  opacity: 0.08;
-  animation-duration: 72s;
-  animation-direction: reverse;
-}
-
-.root.archive-live .global-creature-fog {
-  opacity: 0.20;
-}
-
-/* ── Grain ───────────────────────────────────────────────────── */
-
-.global-creature-grain {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  opacity: 0.032;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='320'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='320' height='320' filter='url(%23g)'/%3E%3C/svg%3E");
-  background-size: 320px 320px;
-  animation: globalCreatureGrain 0.22s steps(1) infinite;
-}
-
-.root.archive-live .global-creature-grain {
-  opacity: 0.055;
+  opacity: 0.42;
 }
 
 /* ── Keyframes ───────────────────────────────────────────────── */
@@ -5066,31 +5013,22 @@ h2 {
   }
 }
 
-@keyframes globalFogDrift {
-  0%   { transform: translate(0,   0)   scale(1.00); }
-  25%  { transform: translate(2%,  3%)  scale(1.03); }
-  50%  { transform: translate(-3%, 1%)  scale(0.98); }
-  75%  { transform: translate(1%, -2%)  scale(1.02); }
-  100% { transform: translate(0,   0)   scale(1.00); }
-}
+/* ── Content above background ────────────────────────────────── */
 
-@keyframes globalCreatureGrain {
-  0%  { background-position:   0px   0px; }
-  20% { background-position: -80px  40px; }
-  40% { background-position:  60px -30px; }
-  60% { background-position: -40px  70px; }
-  80% { background-position:  30px -60px; }
+.site-header,
+.page,
+.hero,
+.mobile-nav-bar {
+  position: relative;
+  z-index: 2;
 }
 
 /* ── Mobile ──────────────────────────────────────────────────── */
 
-@media (max-width: 720px) {
+@media (max-width: 700px) {
   .global-creature-image {
-    opacity: 0.18;
+    opacity: 0.12;
     background-position: center top;
-  }
-  .global-creature-eye {
-    opacity: 0.14;
   }
 }
 
@@ -5098,12 +5036,11 @@ h2 {
 
 @media (prefers-reduced-motion: reduce) {
   .global-creature-image,
-  .global-creature-eye,
-  .global-creature-fog,
-  .global-creature-grain {
+  .global-creature-eye {
     animation: none !important;
   }
 }
+
 /* ─── CAPTION LEGIBILITY OVERRIDE ───────────────────────────── */
 /* Force readable solid labels on all image captions             */
 

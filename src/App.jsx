@@ -690,10 +690,6 @@ function App() {
           <span className="global-creature-eye global-creature-eye--left" />
           <span className="global-creature-eye global-creature-eye--right" />
         </div>
-        <div className="global-creature-fog" />
-        <div className="global-creature-fog global-creature-fog--b" />
-        <div className="global-creature-vignette" />
-        <div className="global-creature-grain" />
       </div>
       <div className="noise-overlay" aria-hidden="true" />
       <div className="scanlines" aria-hidden="true" />
