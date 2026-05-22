@@ -683,6 +683,7 @@ function App() {
 
   return (
     <div className={`root${mode === 'terminal' ? ' mode-terminal' : ''}`}>
+      <div className="site-haunting-bg" aria-hidden="true" />
       <div className="noise-overlay" aria-hidden="true" />
       <div className="scanlines" aria-hidden="true" />
 
@@ -723,7 +724,6 @@ function App() {
 
         {/* HERO */}
         <header className="hero">
-          <div className="site-haunting-bg" aria-hidden="true" />
           <div className="hero-overlay" aria-hidden="true" />
           <div className="hero-visual-system" aria-hidden="true">
             <div className="hvs-diagram" />

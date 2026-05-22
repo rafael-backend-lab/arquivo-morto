@@ -47,6 +47,8 @@
 
 /* ROOT BACKGROUND */
 .root {
+  position: relative;
+  z-index: 1;
   min-height: 100vh;
   background:
     radial-gradient(ellipse at 12% 0%,  rgba(58, 15, 20, 0.55)  0%, transparent 40%),
@@ -4837,28 +4839,29 @@ h2 {
 /* ─── SITE HAUNTING BACKGROUND ─────────────────────────────── */
 
 .site-haunting-bg {
-  position: absolute;
+  position: fixed;
   inset: 0;
-  z-index: 0;
+  z-index: -1;
   pointer-events: none;
   background-image: url("/assets/cinema/capa-arquivo.png");
   background-size: cover;
   background-position: center top;
-  opacity: 0.28;
-  filter: brightness(0.40) contrast(1.12) saturate(0.72);
-  animation: hauntingBreath 11s ease-in-out infinite;
-  transform-origin: center 40%;
+  background-repeat: no-repeat;
+  opacity: 0.18;
+  filter: brightness(0.55) contrast(1.1);
+  transform: scale(1.03);
 }
 
-@keyframes hauntingBreath {
-  0%, 100% {
-    transform: scale(1.025) translate3d(0, 0, 0);
-  }
-  35% {
-    transform: scale(1.055) translate3d(-0.3%, 0.2%, 0);
-  }
-  70% {
-    transform: scale(1.04) translate3d(0.2%, -0.15%, 0);
+.site-haunting-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, transparent 20%, rgba(0,0,0,0.55) 100%);
+}
+
+@media (max-width: 720px) {
+  .site-haunting-bg {
+    opacity: 0.13;
   }
 }
 
