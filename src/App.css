@@ -319,8 +319,13 @@ h2 {
   font-size: 0.60rem;
   letter-spacing: 0.09em;
   text-transform: uppercase;
-  color: rgba(235, 230, 221, 0.42);
+  color: rgba(238, 226, 205, 0.76);
   line-height: 1.6;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.92);
+  padding: 6px 10px;
+  background: linear-gradient(90deg, rgba(4, 3, 3, 0.70), rgba(4, 3, 3, 0.24), transparent);
+  border-left: 1px solid rgba(166, 126, 86, 0.20);
+  border-radius: 0 6px 6px 0;
 }
 
 /* Anatomy visual board — editorial composition before body-study grid */
@@ -372,8 +377,13 @@ h2 {
   font-size: 0.60rem;
   letter-spacing: 0.09em;
   text-transform: uppercase;
-  color: rgba(235, 230, 221, 0.40);
+  color: rgba(238, 226, 205, 0.76);
   line-height: 1.6;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.92);
+  padding: 6px 10px;
+  background: linear-gradient(90deg, rgba(4, 3, 3, 0.70), rgba(4, 3, 3, 0.24), transparent);
+  border-left: 1px solid rgba(166, 126, 86, 0.20);
+  border-radius: 0 6px 6px 0;
 }
 
 /* Literature strip — Frankenstein + Mary Shelley, 2-col, after timeline */
@@ -501,12 +511,13 @@ h2 {
 
 .cinema-dossier-caption {
   margin: 8px 0 0;
-  color: rgba(184, 154, 102, 0.78);
+  color: rgba(200, 168, 112, 0.90);
   font-family: ui-monospace, 'Courier New', monospace;
   font-size: 0.60rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   line-height: 1.62;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.88);
 }
 
 /* ─── Cinema image frame ────────────────────────────────────── */
@@ -697,12 +708,14 @@ h2 {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   font-family: ui-monospace, 'Courier New', monospace;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.90);
 }
 
 .occult-visual-caption span {
-  color: rgba(248, 240, 230, 0.65);
+  color: rgba(238, 226, 205, 0.80);
   font-size: 0.80rem;
   line-height: 1.55;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.88);
 }
 
 @media (max-width: 960px) {
@@ -2732,6 +2745,7 @@ h2 {
   font-size: 0.58rem;
   letter-spacing: 0.15em;
   color: var(--text-dim);
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.88);
 }
 
 .visual-label {
@@ -2740,6 +2754,7 @@ h2 {
   letter-spacing: 0.12em;
   color: var(--text-dim);
   font-style: italic;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.88);
 }
 
 .visual-label.archive-date {
