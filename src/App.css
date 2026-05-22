@@ -5536,3 +5536,130 @@ h2 {
   margin-top: 32px;
 }
 
+/* ─── CARD SURFACE STANDARDIZATION ───────────────────────────── */
+/* Override global: padrão leve e premium para todos os cards.
+   Preserva layout, grid, padding, border-radius e tipografia.
+   Altera apenas: background, border, box-shadow, backdrop-filter. */
+
+.dossier-card,
+.history-card,
+.occult-card,
+.body-study-card,
+.forensic-card,
+.medical-card,
+.cinema-dossier-card,
+.cabinet-card,
+.story-card,
+.clf-card,
+.article-row,
+.hero-technical-panel,
+.soviet-dossier-lead,
+.soviet-dossier-panel,
+.cornish-dossier-lead,
+.cornish-dossier-panel,
+.cornish-source-panel,
+.cornish-gallery-card,
+.cornish-portrait-card,
+.cornish-video-panel,
+.cornish-real-photo,
+.cornish-real-experiment,
+.brukhonenko-media-panel,
+.brukhonenko-gallery-card,
+.brukhonenko-film-card,
+.aldini-visual-card {
+  background: rgba(8, 7, 7, 0.64) !important;
+  border: 1px solid rgba(238, 226, 205, 0.075) !important;
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.22) !important;
+  backdrop-filter: blur(1.5px);
+}
+
+/* clf-card: restaura borda-top dourada distintiva */
+.clf-card {
+  border-top: 2px solid rgba(184, 154, 102, 0.42) !important;
+}
+
+/* Variações sutis de borda por seção — apenas bordas, não fundo */
+.occult-card {
+  border-color: rgba(184, 154, 102, 0.10) !important;
+}
+
+.body-study-card,
+.forensic-card,
+.medical-card {
+  border-color: rgba(180, 195, 208, 0.09) !important;
+}
+
+.cinema-dossier-card {
+  border-color: rgba(200, 75, 90, 0.09) !important;
+}
+
+.cabinet-card {
+  border-color: rgba(196, 166, 88, 0.10) !important;
+}
+
+/* Hover padrão: leve elevação, acento vinho quase imperceptível */
+.dossier-card:hover,
+.history-card:hover,
+.occult-card:hover,
+.body-study-card:hover,
+.forensic-card:hover,
+.medical-card:hover,
+.cinema-dossier-card:hover,
+.cabinet-card:hover,
+.story-card:hover,
+.clf-card:hover,
+.cornish-dossier-panel:hover,
+.cornish-gallery-card:hover,
+.cornish-portrait-card:hover,
+.brukhonenko-gallery-card:hover,
+.brukhonenko-film-card:hover,
+.aldini-visual-card:hover {
+  background: rgba(12, 9, 9, 0.70) !important;
+  border-color: rgba(224, 218, 205, 0.14) !important;
+  box-shadow:
+    0 22px 52px rgba(0, 0, 0, 0.30),
+    inset 0 0 22px rgba(120, 30, 36, 0.045) !important;
+}
+
+/* Article row: hover com acento lateral esquerdo preservado */
+.article-row:hover {
+  background: rgba(12, 9, 9, 0.70) !important;
+  border-color: rgba(224, 218, 205, 0.14) !important;
+  box-shadow:
+    inset 3px 0 0 rgba(200, 75, 90, 0.50),
+    0 14px 30px rgba(0, 0, 0, 0.26) !important;
+}
+
+/* Mobile: fundo ligeiramente mais opaco para legibilidade em tela pequena */
+@media (max-width: 700px) {
+  .dossier-card,
+  .history-card,
+  .occult-card,
+  .body-study-card,
+  .forensic-card,
+  .medical-card,
+  .cinema-dossier-card,
+  .cabinet-card,
+  .story-card,
+  .clf-card,
+  .article-row,
+  .hero-technical-panel,
+  .soviet-dossier-lead,
+  .soviet-dossier-panel,
+  .cornish-dossier-lead,
+  .cornish-dossier-panel,
+  .cornish-source-panel,
+  .cornish-gallery-card,
+  .cornish-portrait-card,
+  .cornish-video-panel,
+  .cornish-real-photo,
+  .cornish-real-experiment,
+  .brukhonenko-media-panel,
+  .brukhonenko-gallery-card,
+  .brukhonenko-film-card,
+  .aldini-visual-card {
+    background: rgba(8, 7, 7, 0.70) !important;
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.22) !important;
+  }
+}
+
