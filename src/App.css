@@ -515,6 +515,13 @@ h2 {
 .cinema-dossier-card {
   margin: 0;
   min-width: 0;
+  border: 1px solid rgba(238, 226, 205, 0.07);
+  border-radius: 4px;
+  overflow: hidden;
+  background: rgba(8, 7, 7, 0.68);
+  backdrop-filter: blur(2px);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.28);
+  transition: border-color 0.22s ease, box-shadow 0.22s ease;
 }
 
 .cinema-dossier-caption {
@@ -791,13 +798,14 @@ h2 {
   position: relative;
   min-height: 100%;
   padding: 28px 28px 30px;
-  border: 1px solid var(--border);
+  border: 1px solid rgba(238, 226, 205, 0.08);
   border-radius: 6px;
   background:
-    linear-gradient(160deg, rgba(58, 15, 20, 0.15) 0%, rgba(8, 8, 8, 0.92) 68%, rgba(14, 66, 36, 0.10) 100%);
+    linear-gradient(160deg, rgba(58, 15, 20, 0.12) 0%, rgba(8, 8, 8, 0.72) 68%, rgba(14, 66, 36, 0.08) 100%);
+  backdrop-filter: blur(2px);
   box-shadow:
     inset 0 0 0 1px rgba(248, 240, 224, 0.02),
-    0 18px 48px rgba(0, 0, 0, 0.24);
+    0 18px 48px rgba(0, 0, 0, 0.28);
   overflow: hidden;
   transition: border-color 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease;
 }
@@ -823,11 +831,11 @@ h2 {
 }
 
 .history-card:hover {
-  border-color: var(--border-hi);
-  transform: translateY(-3px);
+  border-color: rgba(224, 218, 205, 0.18);
+  transform: translateY(-2px);
   box-shadow:
-    inset 0 0 0 1px rgba(248, 240, 224, 0.03),
-    0 24px 60px rgba(0, 0, 0, 0.34);
+    0 24px 62px rgba(0, 0, 0, 0.42),
+    inset 0 0 28px rgba(120, 30, 36, 0.08);
 }
 
 .history-card-head {
@@ -968,13 +976,14 @@ h2 {
   position: relative;
   min-height: 100%;
   padding: 28px 28px 30px;
-  border: 1px solid rgba(248, 240, 224, 0.12);
+  border: 1px solid rgba(238, 226, 205, 0.08);
   border-radius: 6px;
   background:
-    linear-gradient(155deg, rgba(18, 10, 12, 0.96) 0%, rgba(58, 15, 20, 0.22) 48%, rgba(8, 8, 8, 0.96) 100%);
+    linear-gradient(155deg, rgba(18, 10, 12, 0.74) 0%, rgba(58, 15, 20, 0.18) 48%, rgba(8, 8, 8, 0.74) 100%);
+  backdrop-filter: blur(2px);
   box-shadow:
     inset 0 0 0 1px rgba(248, 240, 224, 0.02),
-    0 20px 54px rgba(0, 0, 0, 0.28);
+    0 18px 48px rgba(0, 0, 0, 0.28);
   overflow: hidden;
   transition: border-color 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease;
 }
@@ -1111,13 +1120,14 @@ h2 {
   position: relative;
   min-height: 100%;
   padding: 28px 28px 30px;
-  border: 1px solid rgba(184, 154, 102, 0.14);
+  border: 1px solid rgba(238, 226, 205, 0.08);
   border-radius: 6px;
   background:
-    linear-gradient(160deg, rgba(30, 18, 15, 0.96) 0%, rgba(58, 15, 20, 0.20) 48%, rgba(8, 8, 8, 0.96) 100%);
+    linear-gradient(160deg, rgba(30, 18, 15, 0.74) 0%, rgba(58, 15, 20, 0.16) 48%, rgba(8, 8, 8, 0.74) 100%);
+  backdrop-filter: blur(2px);
   box-shadow:
     inset 0 0 0 1px rgba(248, 240, 224, 0.02),
-    0 20px 56px rgba(0, 0, 0, 0.26);
+    0 18px 48px rgba(0, 0, 0, 0.28);
   overflow: hidden;
   transition: border-color 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease;
 }
@@ -1616,11 +1626,13 @@ h2 {
 .dossier-card {
   position: relative;
   padding: 28px;
-  border: 1px solid var(--border);
+  border: 1px solid rgba(238, 226, 205, 0.08);
   border-radius: 5px;
   background:
-    linear-gradient(160deg, rgba(255,255,255,0.038) 0%, rgba(255,255,255,0.010) 100%),
-    rgba(8, 7, 7, 0.78);
+    linear-gradient(160deg, rgba(255,255,255,0.032) 0%, rgba(255,255,255,0.008) 100%),
+    rgba(8, 7, 7, 0.68);
+  backdrop-filter: blur(2px);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.28);
   transition: border-color 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease;
   overflow: hidden;
 }
@@ -1634,9 +1646,9 @@ h2 {
 }
 
 .dossier-card:hover {
-  border-color: var(--border-hi);
-  transform: translateY(-3px);
-  box-shadow: 0 18px 50px rgba(0,0,0,0.42);
+  border-color: rgba(224, 218, 205, 0.16);
+  transform: translateY(-2px);
+  box-shadow: 0 22px 56px rgba(0, 0, 0, 0.38);
 }
 
 .card-header {
@@ -1715,8 +1727,9 @@ h2 {
   align-items: center;
   padding: 28px 32px;
   border-bottom: 1px solid var(--border);
-  background: rgba(8, 7, 7, 0.72);
-  transition: background 0.18s ease;
+  background: rgba(8, 7, 7, 0.62);
+  backdrop-filter: blur(2px);
+  transition: background 0.18s ease, box-shadow 0.18s ease;
   cursor: default;
 }
 .article-row:last-child { border-bottom: none; }
@@ -4966,15 +4979,16 @@ h2 {
   background-size: cover;
   background-position: center 18%;
   background-repeat: no-repeat;
-  opacity: 0.24;
-  filter: grayscale(0.14) brightness(0.52) contrast(1.12) saturate(0.86);
+  opacity: 0.34;
+  filter: grayscale(0.08) brightness(0.60) contrast(1.18) saturate(0.98);
   transform: scale(1.04);
   animation: globalCreatureBreath 28s ease-in-out infinite;
 }
 
 .root.archive-live .global-creature-image {
-  opacity: 0.36;
-  filter: grayscale(0.10) brightness(0.58) contrast(1.16) saturate(0.98);
+  opacity: 0.50;
+  filter: grayscale(0.04) brightness(0.70) contrast(1.22) saturate(1.10);
+  animation-duration: 42s;
 }
 
 /* ── Eyes wrapper + glows ────────────────────────────────────── */
@@ -4987,8 +5001,8 @@ h2 {
 
 .global-creature-eye {
   position: absolute;
-  width: 46px;
-  height: 22px;
+  width: 56px;
+  height: 26px;
   border-radius: 999px;
   transform: translate(-50%, -50%);
   background:
@@ -4998,9 +5012,9 @@ h2 {
       rgba(80, 0, 0, 0.12) 62%,
       transparent 78%);
   filter: blur(5px);
-  opacity: 0.30;
+  opacity: 0.38;
   mix-blend-mode: screen;
-  animation: globalEyePulse 8s ease-in-out infinite;
+  animation: globalEyePulse 12s ease-in-out infinite;
 }
 
 .global-creature-eye--left {
@@ -5014,7 +5028,11 @@ h2 {
 }
 
 .root.archive-live .global-creature-eye {
-  opacity: 0.46;
+  opacity: 0.64;
+  filter: blur(4px);
+  width: 64px;
+  height: 30px;
+  animation-duration: 14s;
 }
 
 /* ── Keyframes ───────────────────────────────────────────────── */
@@ -5060,7 +5078,7 @@ h2 {
 
 @media (max-width: 700px) {
   .global-creature-image {
-    opacity: 0.12;
+    opacity: 0.24;
     background-position: center top;
   }
 }
@@ -5161,7 +5179,7 @@ h2 {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(8, 7, 7, 0.32);
+  background: rgba(8, 7, 7, 0.14);
   pointer-events: none;
   z-index: 0;
 }
@@ -5175,9 +5193,20 @@ h2 {
   z-index: 1;
 }
 
-/* Mobile: reduzir a criatura um pouco mais atrás de muito texto */
+/* Mobile: criatura visível, mas sem dominar texto em coluna */
 @media (max-width: 700px) {
-  .global-creature-image { opacity: 0.14 !important; }
+  .global-creature-image {
+    opacity: 0.24 !important;
+  }
+  .root.archive-live .global-creature-image {
+    opacity: 0.38 !important;
+  }
+  .global-creature-eye {
+    opacity: 0.24 !important;
+  }
+  .root.archive-live .global-creature-eye {
+    opacity: 0.44 !important;
+  }
 }
 
 /* ═══════════════════════════════════════════════════════════════
@@ -5204,18 +5233,7 @@ h2 {
   );
 }
 
-/* Respiração mais lenta no modo ativo */
-.root.archive-live .global-creature-image {
-  animation-duration: 38s;
-}
-
-/* Olhos pulsam mais devagar e mais intensos */
-.root.archive-live .global-creature-eye {
-  animation-duration: 11s;
-  width: 54px;
-  height: 26px;
-  filter: blur(4px);
-}
+/* archive-live creature and eyes handled in base block above */
 
 /* Botão ativo: borda sangrando levemente */
 .archive-live-toggle.active {
@@ -5243,11 +5261,11 @@ h2 {
 
 /* Dossier card — hover como análise */
 .dossier-card:hover {
-  border-color: rgba(248, 240, 224, 0.22) !important;
+  border-color: rgba(224, 218, 205, 0.18) !important;
+  transform: translateY(-2px);
   box-shadow:
-    0 24px 64px rgba(0, 0, 0, 0.52),
-    0 0 0 1px rgba(248, 240, 224, 0.06),
-    inset 0 0 32px rgba(58, 15, 20, 0.08) !important;
+    0 24px 62px rgba(0, 0, 0, 0.42),
+    inset 0 0 28px rgba(120, 30, 36, 0.08) !important;
 }
 .dossier-card:hover .card-title {
   color: var(--amber);
@@ -5260,11 +5278,11 @@ h2 {
 
 /* Occult card — hover âmbar quente */
 .occult-card:hover {
-  border-color: rgba(184, 154, 102, 0.30) !important;
+  border-color: rgba(224, 218, 205, 0.18) !important;
+  transform: translateY(-2px);
   box-shadow:
-    0 26px 68px rgba(0, 0, 0, 0.40),
-    0 0 0 1px rgba(184, 154, 102, 0.08),
-    inset 0 0 40px rgba(58, 15, 20, 0.10) !important;
+    0 24px 62px rgba(0, 0, 0, 0.42),
+    inset 0 0 28px rgba(120, 30, 36, 0.08) !important;
 }
 .occult-card:hover .occult-card-title {
   color: #d4b882;
@@ -5272,6 +5290,11 @@ h2 {
 }
 
 /* Body-study card — hover laboratorial */
+.body-study-card:hover {
+  border-color: rgba(224, 218, 205, 0.18) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 24px 62px rgba(0, 0, 0, 0.42), inset 0 0 28px rgba(120, 30, 36, 0.08) !important;
+}
 .body-study-card:hover .body-study-title {
   color: var(--amber);
   transition: color 0.22s ease;
@@ -5282,9 +5305,20 @@ h2 {
   transition: color 0.22s ease, text-shadow 0.22s ease;
 }
 
+/* Cinema dossier card — hover */
+.cinema-dossier-card:hover {
+  border-color: rgba(224, 218, 205, 0.14) !important;
+  box-shadow: 0 24px 62px rgba(0, 0, 0, 0.42), inset 0 0 28px rgba(120, 30, 36, 0.06) !important;
+}
+.cinema-dossier-card:hover .cinema-image-frame img {
+  filter: grayscale(0.08) sepia(0.08) contrast(1.06);
+  opacity: 1;
+  transition: filter 0.22s ease, opacity 0.22s ease;
+}
+
 /* Article row — hover com acento lateral */
 .article-row:hover {
-  background: rgba(22, 12, 14, 0.82) !important;
+  background: rgba(14, 9, 10, 0.82) !important;
   box-shadow: inset 3px 0 0 rgba(200, 75, 90, 0.50);
 }
 .article-row:hover .article-period {
@@ -5299,9 +5333,9 @@ h2 {
   transition: background 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
 }
 .cabinet-card:hover {
-  background: rgba(16, 10, 12, 0.99) !important;
-  border-color: rgba(248, 240, 224, 0.12) !important;
-  box-shadow: inset 0 0 0 1px rgba(248, 240, 224, 0.04), 0 12px 36px rgba(0,0,0,0.42);
+  background: rgba(14, 9, 10, 0.88) !important;
+  border-color: rgba(238, 226, 205, 0.14) !important;
+  box-shadow: inset 0 0 0 1px rgba(248, 240, 224, 0.04), 0 14px 40px rgba(0,0,0,0.36);
 }
 .cabinet-card:hover .cabinet-type {
   color: rgba(95, 191, 142, 0.95);
