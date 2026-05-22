@@ -752,6 +752,41 @@ function App() {
                 <p className="featured-summary">
                   Em 17 de janeiro de 1803, o sobrinho de Luigi Galvani levou ao Old Bailey uma demonstração que uniu medicina, curiosidade pública e imaginação sombria em torno do cadáver recém-executado de George Forster.
                 </p>
+        <div className="aldini-visual-gallery" aria-label="Imagens históricas de Giovanni Aldini e galvanismo">
+          <figure className="aldini-visual-card aldini-visual-main">
+            <img
+              src="https://commons.wikimedia.org/wiki/Special:Redirect/file/A%20Galvanised%20Corpse.jpg"
+              alt="Gravura histórica de um cadáver galvanizado"
+              loading="lazy"
+            />
+            <figcaption>
+              A Galvanised Corpse · gravura satírica do século XIX que imagina o cadáver reagindo à eletricidade. A cena mistura humor macabro, medo público e fascínio científico: o morto sai do caixão como se a corrente tivesse rompido a fronteira entre corpo, espetáculo e retorno impossível.
+            </figcaption>
+          </figure>
+
+          <figure className="aldini-visual-card">
+            <img
+              src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Giovanni%20Aldini%20Wellcome%20M0017313.jpg"
+              alt="Retrato histórico de Giovanni Aldini"
+              loading="lazy"
+            />
+            <figcaption>
+              Giovanni Aldini · físico italiano, sobrinho de Luigi Galvani e divulgador teatral do galvanismo.
+            </figcaption>
+          </figure>
+
+          <figure className="aldini-visual-card">
+            <img
+              src="https://commons.wikimedia.org/wiki/Special:Redirect/file/J.%20Aldini%2C%20galvanism%20Wellcome%20L0001964.jpg"
+              alt="Ilustração histórica de galvanismo associada a Aldini"
+              loading="lazy"
+            />
+            <figcaption>
+              Galvanismo em imagem técnica · ilustração ligada à cultura visual dos experimentos de Aldini.
+            </figcaption>
+          </figure>
+        </div>
+
                 <div className="featured-blocks">
                   <div className="featured-block">
                     <span className="featured-block-label">Contexto</span>
