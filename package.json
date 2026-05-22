@@ -11,7 +11,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview --host 127.0.0.1 --port 4173",
-    "deploy": "vercel --prod"
+    "public:preview": "bash scripts/public-preview.sh"
   },
   "dependencies": {
     "react": "^19.2.6",

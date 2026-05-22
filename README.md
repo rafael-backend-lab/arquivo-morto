@@ -61,6 +61,28 @@ npm run build
 npm run preview
 ```
 
+## Preview público sem Vercel
+
+Para gerar um link temporário compartilhável com qualquer pessoa, use o fluxo via Cloudflare Tunnel:
+
+```bash
+npm run public:preview
+```
+
+O script:
+1. Roda `npm run build` automaticamente
+2. Instala `cloudflared` via Homebrew se não estiver disponível
+3. Sobe o servidor de preview local em `http://127.0.0.1:4173`
+4. Abre um túnel Cloudflare e exibe a URL pública no formato `https://xxxx.trycloudflare.com`
+
+**Como usar:**
+- Copie a URL `trycloudflare.com` que aparece no terminal
+- Envie para qualquer pessoa avaliar o site no navegador
+- Mantenha o terminal aberto — o link fica ativo enquanto o processo estiver rodando
+- Feche o terminal ou pressione `Ctrl+C` para encerrar
+
+> Para uma URL permanente, use Netlify (arrastar a pasta `dist/`) ou Cloudflare Pages.
+
 ## Estrutura
 
 ```
