@@ -598,86 +598,6 @@ function App() {
           </div>
         </section>
 
-        {/* ICONOGRAFIA HISTÓRICA */}
-        <section className="archive-gallery" aria-labelledby="gallery-heading">
-          <div className="gallery-header">
-            <p className="section-label">Iconografia</p>
-            <h3 id="gallery-heading">Registro visual do arquivo</h3>
-            <p className="gallery-subtitle">Gravuras, retratos e documentos históricos de domínio público — Wikimedia Commons.</p>
-          </div>
-          <div className="gallery-grid">
-            <figure className="gallery-item">
-              <div className="gallery-image-wrap">
-                <img
-                  src="/assets/archive/galvanism-corpse.jpg"
-                  alt="Experimento galvânico num cadáver, gravura do século XIX"
-                  loading="lazy"
-                />
-              </div>
-              <figcaption>
-                <span className="gallery-item-title">A Galvanised Corpse</span>
-                <span className="gallery-item-meta">Gravura, séc. XIX — Wellcome Collection / Domínio público</span>
-              </figcaption>
-            </figure>
-
-            <figure className="gallery-item">
-              <div className="gallery-image-wrap">
-                <img
-                  src="/assets/archive/aldini-portrait.jpg"
-                  alt="Retrato de Giovanni Aldini, galvanista e sobrinho de Luigi Galvani"
-                  loading="lazy"
-                />
-              </div>
-              <figcaption>
-                <span className="gallery-item-title">Giovanni Aldini</span>
-                <span className="gallery-item-meta">Retrato — Wikimedia Commons / Domínio público</span>
-              </figcaption>
-            </figure>
-
-            <figure className="gallery-item">
-              <div className="gallery-image-wrap">
-                <img
-                  src="/assets/archive/frankenstein-title.jpg"
-                  alt="Página de título da edição original de Frankenstein, 1818"
-                  loading="lazy"
-                />
-              </div>
-              <figcaption>
-                <span className="gallery-item-title">Frankenstein — 1ª edição, 1818</span>
-                <span className="gallery-item-meta">Página de título — Wikimedia Commons / Domínio público</span>
-              </figcaption>
-            </figure>
-
-            <figure className="gallery-item">
-              <div className="gallery-image-wrap">
-                <img
-                  src="/assets/archive/mary-shelley.jpg"
-                  alt="Retrato de Mary Wollstonecraft Shelley por Richard Rothwell, 1840"
-                  loading="lazy"
-                />
-              </div>
-              <figcaption>
-                <span className="gallery-item-title">Mary Shelley</span>
-                <span className="gallery-item-meta">Richard Rothwell, c. 1840 — Wikimedia Commons / Domínio público</span>
-              </figcaption>
-            </figure>
-
-            <figure className="gallery-item">
-              <div className="gallery-image-wrap">
-                <img
-                  src="/assets/archive/vesalius-anatomy.jpg"
-                  alt="Prancha anatômica de De Humani Corporis Fabrica, Andreas Vesalius, 1543"
-                  loading="lazy"
-                />
-              </div>
-              <figcaption>
-                <span className="gallery-item-title">Vesalius — De Humani Corporis Fabrica</span>
-                <span className="gallery-item-meta">Andreas Vesalius, 1543 — Wikimedia Commons / Domínio público</span>
-              </figcaption>
-            </figure>
-          </div>
-        </section>
-
         {/* A HUMANIDADE CONTRA A MORTE */}
         <section className="section humanity-section" aria-labelledby="humanity-heading">
           <div className="section-header">
@@ -736,6 +656,19 @@ function App() {
               Quando o cadáver deixou de ser apenas relíquia, pecado ou mistério, tornou-se também matéria de estudo.
             </p>
           </div>
+          <figure className="anatomy-visual-note">
+            <div className="contextual-figure-frame">
+              <img
+                src="/assets/archive/vesalius-anatomy.jpg"
+                alt="Prancha anatômica de De Humani Corporis Fabrica, Andreas Vesalius, 1543"
+                loading="lazy"
+              />
+            </div>
+            <figcaption className="contextual-figure-caption">
+              Vesalius · De Humani Corporis Fabrica, 1543 — Wikimedia Commons / Domínio público
+            </figcaption>
+          </figure>
+
           <div className="body-study-grid">
             {bodyStudyChapter.map((entry) => (
               <article className="body-study-card" key={entry.code}>
@@ -835,8 +768,8 @@ function App() {
         <div className="aldini-visual-gallery" aria-label="Imagens históricas de Giovanni Aldini e galvanismo">
           <figure className="aldini-visual-card aldini-visual-main">
             <img
-              src="https://commons.wikimedia.org/wiki/Special:Redirect/file/A%20Galvanised%20Corpse.jpg"
-              alt="Gravura histórica de um cadáver galvanizado"
+              src="/assets/archive/galvanism-corpse.jpg"
+              alt="Gravura histórica de um cadáver galvanizado, séc. XIX"
               loading="lazy"
             />
             <figcaption>
@@ -846,8 +779,8 @@ function App() {
 
           <figure className="aldini-visual-card">
             <img
-              src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Giovanni%20Aldini%20Wellcome%20M0017313.jpg"
-              alt="Retrato histórico de Giovanni Aldini"
+              src="/assets/archive/aldini-portrait.jpg"
+              alt="Retrato histórico de Giovanni Aldini, físico italiano"
               loading="lazy"
             />
             <figcaption>
@@ -1378,6 +1311,34 @@ function App() {
             ))}
           </div>
         </section>
+
+        {/* ICONOGRAFIA LITERÁRIA */}
+        <div className="literature-visual-strip" aria-label="Documentos visuais — Mary Shelley e Frankenstein">
+          <figure>
+            <div className="contextual-figure-frame">
+              <img
+                src="/assets/archive/frankenstein-title.jpg"
+                alt="Página de título da edição original de Frankenstein, Mary Shelley, 1818"
+                loading="lazy"
+              />
+            </div>
+            <figcaption className="contextual-figure-caption">
+              Frankenstein; or, The Modern Prometheus · Mary Shelley, 1818 — Wikimedia Commons / Domínio público
+            </figcaption>
+          </figure>
+          <figure>
+            <div className="contextual-figure-frame">
+              <img
+                src="/assets/archive/mary-shelley.jpg"
+                alt="Retrato de Mary Wollstonecraft Shelley por Richard Rothwell, c. 1840"
+                loading="lazy"
+              />
+            </div>
+            <figcaption className="contextual-figure-caption">
+              Mary Wollstonecraft Shelley · Richard Rothwell, c. 1840 — Wikimedia Commons / Domínio público
+            </figcaption>
+          </figure>
+        </div>
 
         {/* GABINETE */}
         <section id="gabinete" className="section">
