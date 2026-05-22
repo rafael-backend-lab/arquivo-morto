@@ -1879,10 +1879,18 @@ h2 {
   .footer-grid    { grid-template-columns: 1fr 1fr; gap: 32px; }
 }
 
+/* Hide hero technical panel below 800px — stacks awkwardly below hero content */
+@media (max-width: 800px) {
+  .hero-technical-panel { display: none; }
+  /* Cornish dossier grid: collapse to 1 col at tablet to avoid compressed panels */
+  .cornish-dossier-grid { grid-template-columns: 1fr; }
+  .cornish-dossier-panel { min-height: auto; }
+}
+
 @media (max-width: 720px) {
   .hero {
     padding: 38px 26px;
-    min-height: 520px;
+    min-height: auto;
     border-radius: 16px;
   }
   .manifesto { padding: 32px 24px; }
