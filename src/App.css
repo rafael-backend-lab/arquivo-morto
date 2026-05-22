@@ -5104,3 +5104,64 @@ h2 {
     animation: none !important;
   }
 }
+/* ─── CAPTION LEGIBILITY OVERRIDE ───────────────────────────── */
+/* Force readable solid labels on all image captions             */
+
+.contextual-figure-caption,
+.anatomy-visual-caption,
+.occult-visual-caption,
+.cinema-dossier-caption,
+.visual-code,
+.visual-label {
+  color: #efe3c8 !important;
+  opacity: 1 !important;
+  background: rgba(2, 2, 2, 0.92) !important;
+  border: 1px solid rgba(190, 145, 92, 0.36) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.55) !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 1) !important;
+  padding: 10px 12px !important;
+  border-radius: 8px !important;
+  display: inline-block !important;
+  max-width: 100% !important;
+  line-height: 1.55 !important;
+  font-size: 0.72rem !important;
+  letter-spacing: 0.08em !important;
+  margin-top: 10px !important;
+  position: relative !important;
+  z-index: 3 !important;
+}
+
+.occult-visual-caption {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+}
+
+.occult-visual-caption strong,
+.occult-visual-caption span {
+  color: #efe3c8 !important;
+  opacity: 1 !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 1) !important;
+}
+
+.occult-visual-caption strong {
+  font-size: 0.74rem !important;
+}
+
+.occult-visual-caption span {
+  font-size: 0.78rem !important;
+  line-height: 1.55 !important;
+}
+
+@media (max-width: 700px) {
+  .contextual-figure-caption,
+  .anatomy-visual-caption,
+  .occult-visual-caption,
+  .cinema-dossier-caption,
+  .visual-code,
+  .visual-label {
+    font-size: 0.66rem !important;
+    line-height: 1.45 !important;
+    padding: 8px 10px !important;
+  }
+}
