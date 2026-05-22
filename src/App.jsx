@@ -1,5 +1,97 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import './App.css'
+
+const INTRO_LINES = [
+  'ABRINDO GABINETE VITORIANO...',
+  'VERIFICANDO LACRES DE NECROTÉRIO...',
+  'CONSULTANDO REGISTROS DE GALVANISMO...',
+  'CARREGANDO DOSSIÊS DE REANIMAÇÃO...',
+  'AUTORIZAÇÃO CONCEDIDA.',
+]
+
+function ArchiveIntro({ onEnter }) {
+  const [visibleLines, setVisibleLines] = useState(0)
+  const [done, setDone] = useState(false)
+  const [leaving, setLeaving] = useState(false)
+  const timerRef = useRef(null)
+
+  useEffect(() => {
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    if (prefersReduced) {
+      setVisibleLines(INTRO_LINES.length)
+      setDone(true)
+      return
+    }
+    let i = 0
+    timerRef.current = setInterval(() => {
+      i++
+      setVisibleLines(i)
+      if (i >= INTRO_LINES.length) {
+        clearInterval(timerRef.current)
+        setTimeout(() => setDone(true), 400)
+      }
+    }, 520)
+    return () => clearInterval(timerRef.current)
+  }, [])
+
+  function dismiss() {
+    setLeaving(true)
+    setTimeout(onEnter, 600)
+  }
+
+  return (
+    <div className={`archive-intro${leaving ? ' archive-intro--leaving' : ''}`} role="dialog" aria-label="Abertura do Arquivo Morto" aria-modal="true">
+      <div className="ai-paper-texture" aria-hidden="true" />
+      <div className="ai-vignette" aria-hidden="true" />
+
+      <div className="ai-frame">
+        <div className="ai-seal" aria-hidden="true">
+          <div className="ai-seal-ring" />
+          <span className="ai-seal-glyph">†</span>
+        </div>
+
+        <div className="ai-header">
+          <p className="ai-eyebrow">DOSSIÊ INTERDITO · CLASSIFICAÇÃO: LACRADO</p>
+          <h1 className="ai-title">ARQUIVO<br />MORTO</h1>
+          <p className="ai-subtitle">Dossiê interdito sobre ciência, morte e reanimação</p>
+        </div>
+
+        <div className="ai-divider" aria-hidden="true" />
+
+        <p className="ai-body">
+          Entre registros anatômicos, galvanismo, literatura gótica e experimentos reais de reanimação, este arquivo preserva a obsessão humana de vencer a morte.
+        </p>
+
+        <div className="ai-log" aria-live="polite">
+          {INTRO_LINES.slice(0, visibleLines).map((line, i) => (
+            <p key={i} className={`ai-log-line${i === visibleLines - 1 ? ' ai-log-line--active' : ''}`}>
+              {line}
+            </p>
+          ))}
+        </div>
+
+        {done && (
+          <div className="ai-actions">
+            <button className="ai-btn ai-btn--primary" onClick={dismiss} autoFocus>
+              Abrir o Dossiê
+            </button>
+            <button className="ai-btn ai-btn--ghost" onClick={dismiss}>
+              Pular introdução
+            </button>
+          </div>
+        )}
+
+        <div className="ai-footer" aria-hidden="true">
+          <span>ARQ-001</span>
+          <span>·</span>
+          <span>GABINETE DE ANATOMIA</span>
+          <span>·</span>
+          <span>EST. 1803</span>
+        </div>
+      </div>
+    </div>
+  )
+}
 
 const articles = [
   {
@@ -680,9 +772,18 @@ function ArchiveVisual({ type = 'medical-file', label, code, size = 'md' }) {
 
 function App() {
   const [mode, setMode] = useState('arquivo')
+  const [introSeen, setIntroSeen] = useState(
+    () => sessionStorage.getItem('archive-intro-seen') === '1'
+  )
+
+  function handleIntroEnter() {
+    sessionStorage.setItem('archive-intro-seen', '1')
+    setIntroSeen(true)
+  }
 
   return (
     <div className={`root${mode === 'terminal' ? ' mode-terminal' : ''}`}>
+      {!introSeen && <ArchiveIntro onEnter={handleIntroEnter} />}
       <div className="noise-overlay" aria-hidden="true" />
       <div className="scanlines" aria-hidden="true" />
 
