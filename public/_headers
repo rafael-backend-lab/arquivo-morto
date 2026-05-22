@@ -1,0 +1,10 @@
+/arquivo-morto-share-v4.jpg
+  Content-Type: image/jpeg
+  Cache-Control: public, max-age=604800, immutable
+
+/og-arquivo-morto.png
+  Content-Type: image/png
+  Cache-Control: public, max-age=604800
+
+/*.svg
+  Cache-Control: public, max-age=86400
