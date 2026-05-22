@@ -1,0 +1,7 @@
+node_modules
+dist
+.git
+.DS_Store
+claude_arquivo_morto_v2.md
+src/assets
+reports

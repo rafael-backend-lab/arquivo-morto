@@ -10,7 +10,8 @@
     "open": "open http://127.0.0.1:5173/",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview --host 127.0.0.1 --port 4173"
+    "preview": "vite preview --host 127.0.0.1 --port 4173",
+    "deploy": "vercel --prod"
   },
   "dependencies": {
     "react": "^19.2.6",
