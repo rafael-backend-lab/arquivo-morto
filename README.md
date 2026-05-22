@@ -155,7 +155,7 @@ A V2 introduz:
 
 ## Status
 
-`v9.0` — capítulo editorial médico e bioético adicionado. Em desenvolvimento local. Não publicado ainda.
+`v9.1` — entrega final polida. Build de produção validado. Pronto para preview e deploy público via `npm run build && npm run preview` ou qualquer host estático (Netlify, Vercel, GitHub Pages).
 
 ## Nota editorial
 

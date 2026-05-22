@@ -16,6 +16,7 @@
   --text:        #C8BDAE;
   --text-dim:    #8A7E72;
   --text-head:   #EBE6DD;
+  --muted:       #8A7E72;
 }
 
 /* NOISE OVERLAY — inline SVG turbulence at low opacity */
