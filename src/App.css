@@ -314,21 +314,22 @@ h2 {
 
 .contextual-figure-caption {
   display: inline-block;
+  width: fit-content;
   max-width: 100%;
   margin-top: 10px;
   font-family: ui-monospace, 'Courier New', monospace;
   font-size: 0.66rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(218, 211, 199, 0.9);
-  line-height: 1.5;
+  color: rgba(224, 218, 205, 0.88);
+  line-height: 1.55;
   opacity: 1;
-  text-shadow: 0 1px 9px rgba(0, 0, 0, 0.92);
-  padding: 8px 10px;
-  background: rgba(6, 6, 6, 0.78);
-  border: 1px solid rgba(150, 140, 124, 0.22);
-  border-left: 3px solid rgba(170, 158, 136, 0.34);
-  border-radius: 7px;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.92);
+  padding: 9px 11px;
+  background: rgba(5, 5, 5, 0.74);
+  border: 1px solid rgba(198, 184, 158, 0.12);
+  border-left: 1px solid rgba(198, 184, 158, 0.24);
+  border-radius: 8px;
 }
 
 /* Anatomy visual board — editorial composition before body-study grid */
@@ -336,7 +337,7 @@ h2 {
   display: grid;
   grid-template-columns: 1.45fr 1fr;
   gap: 16px;
-  margin: 0 0 44px;
+  margin: 0 0 clamp(34px, 5vw, 72px);
   align-items: start;
 }
 
@@ -375,21 +376,22 @@ h2 {
 
 .anatomy-visual-caption {
   display: inline-block;
+  width: fit-content;
   max-width: 100%;
   margin-top: 10px;
   font-family: ui-monospace, 'Courier New', monospace;
   font-size: 0.66rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(218, 211, 199, 0.9);
-  line-height: 1.5;
+  color: rgba(224, 218, 205, 0.88);
+  line-height: 1.55;
   opacity: 1;
-  text-shadow: 0 1px 9px rgba(0, 0, 0, 0.92);
-  padding: 8px 10px;
-  background: rgba(6, 6, 6, 0.78);
-  border: 1px solid rgba(150, 140, 124, 0.22);
-  border-left: 3px solid rgba(170, 158, 136, 0.34);
-  border-radius: 7px;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.92);
+  padding: 9px 11px;
+  background: rgba(5, 5, 5, 0.74);
+  border: 1px solid rgba(198, 184, 158, 0.12);
+  border-left: 1px solid rgba(198, 184, 158, 0.24);
+  border-radius: 8px;
 }
 
 /* Literature strip — Frankenstein + Mary Shelley, 2-col, after timeline */
@@ -517,19 +519,20 @@ h2 {
 
 .cinema-dossier-caption {
   display: inline-block;
-  margin: 8px 0 0;
-  color: rgba(218, 211, 199, 0.9);
+  margin: 10px 0 0;
+  color: rgba(224, 218, 205, 0.88);
   font-family: ui-monospace, 'Courier New', monospace;
   font-size: 0.66rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  line-height: 1.5;
-  text-shadow: 0 1px 9px rgba(0, 0, 0, 0.92);
-  padding: 8px 10px;
-  background: rgba(6, 6, 6, 0.78);
-  border: 1px solid rgba(150, 140, 124, 0.22);
-  border-left: 3px solid rgba(170, 158, 136, 0.34);
-  border-radius: 7px;
+  line-height: 1.55;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.92);
+  padding: 9px 11px;
+  background: rgba(5, 5, 5, 0.74);
+  border: 1px solid rgba(198, 184, 158, 0.12);
+  border-left: 1px solid rgba(198, 184, 158, 0.24);
+  border-radius: 8px;
+  width: fit-content;
   max-width: 100%;
 }
 
@@ -635,7 +638,7 @@ h2 {
 /* ─── CAPÍTULO II — OCCULT VISUAL BOARD ─────────────────────── */
 
 .occult-visual-board {
-  margin: 42px 0 48px;
+  margin: clamp(34px, 5vw, 64px) 0 clamp(34px, 5vw, 72px);
   padding: 28px;
   border: 1px solid rgba(114, 214, 164, 0.18);
   background: transparent;
@@ -711,28 +714,30 @@ h2 {
   flex-direction: column;
   gap: 4px;
   margin-top: 10px;
-  padding: 8px 10px;
-  background: rgba(6, 6, 6, 0.78);
-  border: 1px solid rgba(150, 140, 124, 0.22);
-  border-left: 3px solid rgba(170, 158, 136, 0.34);
-  border-radius: 7px;
+  padding: 9px 11px;
+  background: rgba(5, 5, 5, 0.74);
+  border: 1px solid rgba(198, 184, 158, 0.12);
+  border-left: 1px solid rgba(198, 184, 158, 0.24);
+  border-radius: 8px;
+  width: fit-content;
+  max-width: 100%;
 }
 
 .occult-visual-caption strong {
-  color: rgba(232, 224, 209, 0.94);
+  color: rgba(224, 218, 205, 0.92);
   font-size: 0.66rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   font-family: ui-monospace, 'Courier New', monospace;
-  text-shadow: 0 1px 9px rgba(0, 0, 0, 0.92);
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.92);
 }
 
 .occult-visual-caption span {
-  color: rgba(188, 181, 169, 0.84);
+  color: rgba(190, 184, 172, 0.82);
   font-size: 0.66rem;
-  line-height: 1.5;
+  line-height: 1.55;
   letter-spacing: 0.08em;
-  text-shadow: 0 1px 9px rgba(0, 0, 0, 0.92);
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.92);
 }
 
 @media (max-width: 960px) {
@@ -1613,7 +1618,9 @@ h2 {
   padding: 28px;
   border: 1px solid var(--border);
   border-radius: 5px;
-  background: linear-gradient(160deg, rgba(255,255,255,0.038) 0%, rgba(255,255,255,0.010) 100%);
+  background:
+    linear-gradient(160deg, rgba(255,255,255,0.038) 0%, rgba(255,255,255,0.010) 100%),
+    rgba(8, 7, 7, 0.78);
   transition: border-color 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease;
   overflow: hidden;
 }
@@ -1708,6 +1715,7 @@ h2 {
   align-items: center;
   padding: 28px 32px;
   border-bottom: 1px solid var(--border);
+  background: rgba(8, 7, 7, 0.72);
   transition: background 0.18s ease;
   cursor: default;
 }
@@ -1851,7 +1859,7 @@ h2 {
 }
 
 .timeline-figure {
-  margin: 0;
+  margin: 0 0 clamp(16px, 3vw, 36px);
   max-width: 260px;
   padding-left: 26px;
 }
@@ -2731,7 +2739,7 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  margin-bottom: 14px;
+  margin-bottom: clamp(14px, 2.5vw, 28px);
 }
 
 .archive-visual-frame {
@@ -4905,13 +4913,13 @@ h2 {
   .anatomy-visual-caption,
   .cinema-dossier-caption,
   .occult-visual-caption {
-    font-size: 0.62rem;
-    padding: 7px 8px;
+    font-size: 0.64rem;
+    padding: 8px 9px;
     line-height: 1.45;
     letter-spacing: 0.08em;
   }
   .occult-visual-caption span {
-    font-size: 0.62rem;
+    font-size: 0.64rem;
   }
 }
 
@@ -4958,15 +4966,15 @@ h2 {
   background-size: cover;
   background-position: center 18%;
   background-repeat: no-repeat;
-  opacity: 0.18;
-  filter: brightness(0.55) contrast(1.08) saturate(0.85);
+  opacity: 0.24;
+  filter: grayscale(0.14) brightness(0.52) contrast(1.12) saturate(0.86);
   transform: scale(1.04);
   animation: globalCreatureBreath 28s ease-in-out infinite;
 }
 
 .root.archive-live .global-creature-image {
-  opacity: 0.26;
-  filter: brightness(0.62) contrast(1.1) saturate(0.95);
+  opacity: 0.36;
+  filter: grayscale(0.10) brightness(0.58) contrast(1.16) saturate(0.98);
 }
 
 /* ── Eyes wrapper + glows ────────────────────────────────────── */
@@ -4990,7 +4998,7 @@ h2 {
       rgba(80, 0, 0, 0.12) 62%,
       transparent 78%);
   filter: blur(5px);
-  opacity: 0.38;
+  opacity: 0.30;
   mix-blend-mode: screen;
   animation: globalEyePulse 8s ease-in-out infinite;
 }
@@ -5006,7 +5014,7 @@ h2 {
 }
 
 .root.archive-live .global-creature-eye {
-  opacity: 0.42;
+  opacity: 0.46;
 }
 
 /* ── Keyframes ───────────────────────────────────────────────── */
@@ -5074,21 +5082,21 @@ h2 {
 .cinema-dossier-caption,
 .visual-code,
 .visual-label {
-  color: rgba(218, 211, 199, 0.9) !important;
+  color: rgba(224, 218, 205, 0.88) !important;
   opacity: 1 !important;
-  background: rgba(6, 6, 6, 0.78) !important;
-  border: 1px solid rgba(150, 140, 124, 0.22) !important;
-  border-left: 3px solid rgba(170, 158, 136, 0.34) !important;
-  text-shadow: 0 1px 9px rgba(0, 0, 0, 0.92) !important;
-  padding: 8px 10px !important;
-  border-radius: 7px !important;
+  background: rgba(5, 5, 5, 0.74) !important;
+  border: 1px solid rgba(198, 184, 158, 0.12) !important;
+  border-left: 1px solid rgba(198, 184, 158, 0.24) !important;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.92) !important;
+  padding: 9px 11px !important;
+  border-radius: 8px !important;
   display: inline-block !important;
+  width: fit-content !important;
   max-width: 100% !important;
-  width: auto !important;
-  line-height: 1.5 !important;
+  line-height: 1.55 !important;
   font-size: 0.66rem !important;
   letter-spacing: 0.12em !important;
-  margin-top: 8px !important;
+  margin-top: 10px !important;
   position: relative !important;
   z-index: 3 !important;
 }
@@ -5100,17 +5108,17 @@ h2 {
 }
 
 .occult-visual-caption strong {
-  color: rgba(232, 224, 209, 0.94) !important;
+  color: rgba(224, 218, 205, 0.92) !important;
   font-size: 0.66rem !important;
-  text-shadow: 0 1px 9px rgba(0, 0, 0, 0.92) !important;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.92) !important;
 }
 
 .occult-visual-caption span {
-  color: rgba(188, 181, 169, 0.84) !important;
+  color: rgba(190, 184, 172, 0.82) !important;
   font-size: 0.66rem !important;
-  line-height: 1.5 !important;
+  line-height: 1.55 !important;
   letter-spacing: 0.08em !important;
-  text-shadow: 0 1px 9px rgba(0, 0, 0, 0.92) !important;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.92) !important;
 }
 
 @media (max-width: 600px) {
@@ -5120,9 +5128,11 @@ h2 {
   .cinema-dossier-caption,
   .visual-code,
   .visual-label {
-    font-size: 0.62rem !important;
+    font-size: 0.64rem !important;
     line-height: 1.45 !important;
     letter-spacing: 0.08em !important;
-    padding: 7px 8px !important;
+    padding: 8px 9px !important;
+    max-width: 100% !important;
+    overflow-wrap: break-word !important;
   }
 }
