@@ -4892,24 +4892,45 @@ h2 {
 
 .archive-intro-eye {
   position: absolute;
-  width: 32px;
-  height: 14px;
-  border-radius: 50%;
-  background: radial-gradient(ellipse at center, rgba(220, 20, 20, 0.95) 0%, rgba(160, 0, 0, 0.6) 45%, transparent 75%);
-  box-shadow:
-    0 0 18px 8px  rgba(200, 10, 10, 0.55),
-    0 0 40px 16px rgba(160, 0,  0,  0.30),
-    0 0 70px 28px rgba(120, 0,  0,  0.15);
-  animation: archiveEyePulse 2.8s ease-in-out infinite;
+  width: 24px;
+  height: 10px;
+  border-radius: 999px;
+  background:
+    radial-gradient(ellipse at center,
+      rgba(255, 68, 48, 0.95) 0%,
+      rgba(185, 12, 10, 0.62) 32%,
+      rgba(92, 0, 0, 0.22) 58%,
+      transparent 76%);
+  border: 0;
+  filter: blur(1.6px);
+  opacity: 0.82;
   mix-blend-mode: screen;
+  box-shadow:
+    0 0 10px rgba(255, 28, 18, 0.52),
+    0 0 28px rgba(190, 0, 0, 0.42),
+    0 0 56px rgba(110, 0, 0, 0.28);
+  transform: translate(-50%, -50%);
+  animation: archiveEyePulse 2.9s ease-in-out infinite;
 }
-.archive-intro-eye--left  { left: 41%; top: 29%; }
-.archive-intro-eye--right { right: 41%; top: 29%; }
+.archive-intro-eye--left  { left: 40.8%; top: 26.8%; }
+.archive-intro-eye--right { right: 40.8%; top: 26.8%; }
 
 @keyframes archiveEyePulse {
-  0%, 100% { opacity: 0.75; transform: scale(1.00); }
-  40%      { opacity: 1.00; transform: scale(1.18); }
-  70%      { opacity: 0.85; transform: scale(0.95); }
+  0%, 100% {
+    opacity: 0.68;
+    filter: blur(1.8px);
+    transform: translate(-50%, -50%) scale(0.94);
+  }
+  45% {
+    opacity: 0.95;
+    filter: blur(1.2px);
+    transform: translate(-50%, -50%) scale(1.08);
+  }
+  68% {
+    opacity: 0.78;
+    filter: blur(2px);
+    transform: translate(-50%, -50%) scale(1.01);
+  }
 }
 
 /* ── Vignette — very heavy ───────────────────────────────────── */
@@ -5066,9 +5087,9 @@ h2 {
 /* ── Mobile ──────────────────────────────────────────────────── */
 
 @media (max-width: 500px) {
-  .archive-intro-eye { width: 22px; height: 10px; }
-  .archive-intro-eye--left  { left:  38%; top: 28%; }
-  .archive-intro-eye--right { right: 38%; top: 28%; }
+  .archive-intro-eye { width: 18px; height: 8px; }
+  .archive-intro-eye--left  { left: 39%; top: 26.5%; }
+  .archive-intro-eye--right { right: 39%; top: 26.5%; }
   .archive-intro-actions {
     flex-direction: column;
     align-items: center;
