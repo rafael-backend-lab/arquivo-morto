@@ -298,9 +298,9 @@ h2 {
 /* ─── CONTEXTUAL FIGURES ─────────────────────────────────────── */
 
 .contextual-figure-frame {
-  background: #080808;
-  padding: 8px;
-  border: 1px solid rgba(235, 230, 221, 0.10);
+  background: transparent;
+  padding: 0;
+  border: none;
 }
 
 .contextual-figure-frame img {
@@ -309,7 +309,7 @@ h2 {
   max-height: 420px;
   object-fit: contain;
   display: block;
-  filter: grayscale(0.65) sepia(0.20) contrast(1.06);
+  filter: grayscale(0.55) sepia(0.15) contrast(1.04) brightness(0.92);
 }
 
 .contextual-figure-caption {
@@ -351,9 +351,9 @@ h2 {
 }
 
 .anatomy-visual-frame {
-  background: #080808;
-  border: 1px solid rgba(235, 230, 221, 0.10);
-  padding: 10px;
+  background: transparent;
+  border: none;
+  padding: 0;
 }
 
 .anatomy-visual-frame img {
@@ -361,7 +361,7 @@ h2 {
   height: auto;
   object-fit: contain;
   display: block;
-  filter: grayscale(0.60) sepia(0.18) contrast(1.06);
+  filter: grayscale(0.50) sepia(0.14) contrast(1.04) brightness(0.92);
 }
 
 .anatomy-visual-main .anatomy-visual-frame img {
@@ -629,9 +629,7 @@ h2 {
   margin: 42px 0 48px;
   padding: 28px;
   border: 1px solid rgba(114, 214, 164, 0.18);
-  background:
-    linear-gradient(135deg, rgba(58, 15, 20, 0.34), rgba(3, 22, 13, 0.42)),
-    rgba(8, 8, 8, 0.78);
+  background: transparent;
 }
 
 .occult-visual-intro {
@@ -677,9 +675,9 @@ h2 {
 }
 
 .occult-visual-frame {
-  background: rgba(8, 8, 8, 0.72);
-  border: 1px solid rgba(248, 240, 230, 0.10);
-  padding: 10px;
+  background: transparent;
+  border: none;
+  padding: 0;
 }
 
 .occult-visual-frame img {
@@ -688,7 +686,7 @@ h2 {
   max-height: 400px;
   object-fit: contain;
   display: block;
-  filter: sepia(0.30) contrast(1.04) brightness(0.93);
+  filter: sepia(0.22) contrast(1.04) brightness(0.92);
 }
 
 .occult-visual-card-large .occult-visual-frame img {
@@ -5054,16 +5052,17 @@ h2 {
   opacity: 1 !important;
   background: rgba(2, 2, 2, 0.92) !important;
   border: 1px solid rgba(190, 145, 92, 0.36) !important;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.55) !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.50) !important;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 1) !important;
-  padding: 10px 12px !important;
-  border-radius: 8px !important;
+  padding: 8px 12px !important;
+  border-radius: 6px !important;
   display: inline-block !important;
-  max-width: 100% !important;
-  line-height: 1.55 !important;
-  font-size: 0.72rem !important;
+  max-width: max-content !important;
+  width: auto !important;
+  line-height: 1.5 !important;
+  font-size: 0.70rem !important;
   letter-spacing: 0.08em !important;
-  margin-top: 10px !important;
+  margin-top: 8px !important;
   position: relative !important;
   z-index: 3 !important;
 }
