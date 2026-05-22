@@ -317,16 +317,16 @@ h2 {
   max-width: 100%;
   margin-top: 10px;
   font-family: ui-monospace, 'Courier New', monospace;
-  font-size: 0.68rem;
-  letter-spacing: 0.13em;
+  font-size: 0.70rem;
+  letter-spacing: 0.11em;
   text-transform: uppercase;
-  color: rgba(242, 231, 211, 0.86);
+  color: rgba(245, 236, 218, 0.92);
   line-height: 1.55;
   opacity: 1;
-  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.95);
-  padding: 9px 11px;
-  background: linear-gradient(90deg, rgba(5, 4, 4, 0.86), rgba(5, 4, 4, 0.58), rgba(5, 4, 4, 0.18));
-  border-left: 1px solid rgba(188, 137, 88, 0.38);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.98);
+  padding: 9px 12px;
+  background: rgba(3, 3, 3, 0.82);
+  border: 1px solid rgba(188, 137, 88, 0.24);
   border-radius: 8px;
 }
 
@@ -377,16 +377,16 @@ h2 {
   max-width: 100%;
   margin-top: 10px;
   font-family: ui-monospace, 'Courier New', monospace;
-  font-size: 0.68rem;
-  letter-spacing: 0.13em;
+  font-size: 0.70rem;
+  letter-spacing: 0.11em;
   text-transform: uppercase;
-  color: rgba(242, 231, 211, 0.86);
+  color: rgba(245, 236, 218, 0.92);
   line-height: 1.55;
   opacity: 1;
-  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.95);
-  padding: 9px 11px;
-  background: linear-gradient(90deg, rgba(5, 4, 4, 0.86), rgba(5, 4, 4, 0.58), rgba(5, 4, 4, 0.18));
-  border-left: 1px solid rgba(188, 137, 88, 0.38);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.98);
+  padding: 9px 12px;
+  background: rgba(3, 3, 3, 0.82);
+  border: 1px solid rgba(188, 137, 88, 0.24);
   border-radius: 8px;
 }
 
@@ -704,9 +704,9 @@ h2 {
   flex-direction: column;
   gap: 4px;
   margin-top: 10px;
-  padding: 9px 11px;
-  background: linear-gradient(90deg, rgba(5, 4, 4, 0.86), rgba(5, 4, 4, 0.58), rgba(5, 4, 4, 0.18));
-  border-left: 1px solid rgba(188, 137, 88, 0.38);
+  padding: 9px 12px;
+  background: rgba(3, 3, 3, 0.82);
+  border: 1px solid rgba(188, 137, 88, 0.24);
   border-radius: 8px;
 }
 
@@ -4878,12 +4878,12 @@ h2 {
 @media (max-width: 600px) {
   .contextual-figure-caption,
   .anatomy-visual-caption {
-    font-size: 0.64rem;
-    padding: 8px 9px;
+    font-size: 0.66rem;
+    padding: 8px 10px;
     line-height: 1.45;
   }
   .occult-visual-caption {
-    padding: 8px 9px;
+    padding: 8px 10px;
   }
   .occult-visual-caption span {
     font-size: 0.76rem;
