@@ -1497,7 +1497,7 @@ function App() {
             <p className="section-label">Capítulo VI</p>
             <h3 id="cinema-heading">Do gótico ao horror contemporâneo</h3>
             <p className="cinema-subtitle">
-              De Frankenstein ao cinema de mortos-vivos, a reanimação deixou o laboratório literário e entrou na cultura pop: monstros trágicos, corpos reconstruídos, zumbis modernos e a ciência como pesadelo visual.
+              De Mary Shelley ao horror contemporâneo, a reanimação atravessa literatura, cinema clássico, zumbis modernos, horror cult e releituras atuais: monstros trágicos, corpos reconstruídos, mortos-vivos, ciência profanada e cultura pop.
             </p>
           </div>
 
