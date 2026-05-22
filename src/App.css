@@ -2070,6 +2070,47 @@ h2 {
   color: #e06070;
 }
 
+/* ── Header actions group ────────────────────────────────────── */
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.archive-live-toggle {
+  flex-shrink: 0;
+  font-family: ui-monospace, 'Courier New', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(200, 80, 70, 0.72);
+  background: rgba(80, 8, 8, 0.12);
+  border: 1px solid rgba(160, 30, 30, 0.28);
+  border-radius: 3px;
+  padding: 7px 12px;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.archive-live-toggle:hover {
+  background: rgba(100, 12, 12, 0.22);
+  border-color: rgba(200, 40, 40, 0.50);
+  color: rgba(230, 110, 100, 0.90);
+}
+
+.archive-live-toggle.active {
+  color: rgba(240, 120, 100, 0.95);
+  background: rgba(110, 10, 10, 0.26);
+  border-color: rgba(210, 50, 40, 0.55);
+  box-shadow: 0 0 12px rgba(180, 20, 20, 0.22), inset 0 0 6px rgba(140, 10, 10, 0.18);
+}
+
+.archive-live-toggle.active:hover {
+  box-shadow: 0 0 20px rgba(200, 30, 20, 0.32), inset 0 0 8px rgba(150, 12, 12, 0.22);
+}
+
 /* page offset for fixed header */
 .page {
   padding-top: 80px;
@@ -4836,37 +4877,175 @@ h2 {
   row-gap: 6px;
 }
 
-/* ─── SITE HAUNTING BACKGROUND ─────────────────────────────── */
+/* ─── LIVING ARCHIVE BACKGROUND ─────────────────────────────── */
 
-.site-haunting-bg {
+.living-archive-bg {
   position: fixed;
   inset: 0;
-  z-index: -1;
+  z-index: 0;
   pointer-events: none;
-  background-image: url("/assets/cinema/capa-arquivo.png");
-  background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
-  opacity: 0.26;
-  filter: brightness(0.62) contrast(1.1);
-  transform: scale(1.03);
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 18%, rgba(90, 0, 0, 0.10), transparent 34%),
+    radial-gradient(circle at 18% 48%, rgba(80, 0, 0, 0.07), transparent 45%);
 }
 
-.site-haunting-bg::after {
-  content: "";
+.living-archive-face {
+  position: absolute;
+  inset: -5vh -5vw;
+  background-image: url('/assets/cinema/capa-arquivo.png');
+  background-size: cover;
+  background-position: center 18%;
+  background-repeat: no-repeat;
+  opacity: 0.28;
+  filter: grayscale(0.14) brightness(0.55) contrast(1.14) saturate(0.9);
+  transform: scale(1.04);
+  animation: livingArchiveBreath 28s ease-in-out infinite;
+}
+
+.root.archive-live .living-archive-face {
+  opacity: 0.42;
+  filter: grayscale(0.08) brightness(0.63) contrast(1.18) saturate(1.05);
+}
+
+/* ── Eye glows ───────────────────────────────────────────────── */
+
+.living-archive-eye {
+  position: absolute;
+  width: 110px;
+  height: 48px;
+  border-radius: 999px;
+  transform: translate(-50%, -50%);
+  background:
+    radial-gradient(ellipse at center,
+      rgba(255, 42, 28, 0.34) 0%,
+      rgba(170, 0, 0, 0.22) 30%,
+      rgba(85, 0, 0, 0.12) 58%,
+      transparent 78%);
+  filter: blur(16px);
+  opacity: 0.22;
+  mix-blend-mode: screen;
+  animation: livingEyePulse 16s ease-in-out infinite;
+}
+
+.living-archive-eye--left {
+  left: 39.5%;
+  top: 35%;
+}
+
+.living-archive-eye--right {
+  left: 60.5%;
+  top: 35%;
+}
+
+.root.archive-live .living-archive-eye {
+  opacity: 0.44;
+  filter: blur(13px);
+}
+
+/* ── Fog layers ──────────────────────────────────────────────── */
+
+.living-archive-fog {
+  position: absolute;
+  inset: -20%;
+  opacity: 0.12;
+  filter: blur(38px);
+  background:
+    radial-gradient(circle at 20% 30%, rgba(120, 18, 18, 0.18), transparent 35%),
+    radial-gradient(circle at 70% 65%, rgba(40, 90, 55, 0.12), transparent 42%);
+  animation: livingFogDrift 55s linear infinite;
+}
+
+.living-archive-fog--b {
+  opacity: 0.08;
+  animation-duration: 72s;
+  animation-direction: reverse;
+}
+
+.root.archive-live .living-archive-fog {
+  opacity: 0.20;
+}
+
+/* ── Grain ───────────────────────────────────────────────────── */
+
+.living-archive-grain {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at center, transparent 20%, rgba(0,0,0,0.55) 100%);
+  pointer-events: none;
+  opacity: 0.032;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='320'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='320' height='320' filter='url(%23g)'/%3E%3C/svg%3E");
+  background-size: 320px 320px;
+  animation: livingGrain 0.22s steps(1) infinite;
 }
 
-@media (max-width: 720px) {
-  .site-haunting-bg {
-    opacity: 0.17;
+.root.archive-live .living-archive-grain {
+  opacity: 0.055;
+}
+
+/* ── Keyframes ───────────────────────────────────────────────── */
+
+@keyframes livingArchiveBreath {
+  0%, 100% {
+    transform: scale(1.035) translate3d(0, 0, 0);
+  }
+  45% {
+    transform: scale(1.075) translate3d(-0.8vw, 0.7vh, 0);
+  }
+  70% {
+    transform: scale(1.055) translate3d(0.5vw, -0.4vh, 0);
   }
 }
 
+@keyframes livingEyePulse {
+  0%, 100% {
+    opacity: 0.18;
+    transform: translate(-50%, -50%) scale(0.96);
+  }
+  48% {
+    opacity: 0.36;
+    transform: translate(-50%, -50%) scale(1.08);
+  }
+  72% {
+    opacity: 0.25;
+    transform: translate(-50%, -50%) scale(1.01);
+  }
+}
+
+@keyframes livingFogDrift {
+  0%   { transform: translate(0,   0)   scale(1.00); }
+  25%  { transform: translate(2%,  3%)  scale(1.03); }
+  50%  { transform: translate(-3%, 1%)  scale(0.98); }
+  75%  { transform: translate(1%, -2%)  scale(1.02); }
+  100% { transform: translate(0,   0)   scale(1.00); }
+}
+
+@keyframes livingGrain {
+  0%  { background-position:   0px   0px; }
+  20% { background-position: -80px  40px; }
+  40% { background-position:  60px -30px; }
+  60% { background-position: -40px  70px; }
+  80% { background-position:  30px -60px; }
+}
+
+/* ── Mobile ──────────────────────────────────────────────────── */
+
+@media (max-width: 720px) {
+  .living-archive-face {
+    opacity: 0.18;
+    background-position: center top;
+  }
+  .living-archive-eye {
+    opacity: 0.14;
+  }
+}
+
+/* ── Reduced motion ──────────────────────────────────────────── */
+
 @media (prefers-reduced-motion: reduce) {
-  .site-haunting-bg {
+  .living-archive-face,
+  .living-archive-eye,
+  .living-archive-fog,
+  .living-archive-grain {
     animation: none !important;
   }
 }

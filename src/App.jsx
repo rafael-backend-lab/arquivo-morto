@@ -680,10 +680,18 @@ function ArchiveVisual({ type = 'medical-file', label, code, size = 'md' }) {
 
 function App() {
   const [mode, setMode] = useState('arquivo')
+  const [archiveLive, setArchiveLive] = useState(false)
 
   return (
-    <div className={`root${mode === 'terminal' ? ' mode-terminal' : ''}`}>
-      <div className="site-haunting-bg" aria-hidden="true" />
+    <div className={`root${mode === 'terminal' ? ' mode-terminal' : ''}${archiveLive ? ' archive-live' : ''}`}>
+      <div className="living-archive-bg" aria-hidden="true">
+        <div className="living-archive-face" />
+        <div className="living-archive-eye living-archive-eye--left" />
+        <div className="living-archive-eye living-archive-eye--right" />
+        <div className="living-archive-fog living-archive-fog--a" />
+        <div className="living-archive-fog living-archive-fog--b" />
+        <div className="living-archive-grain" />
+      </div>
       <div className="noise-overlay" aria-hidden="true" />
       <div className="scanlines" aria-hidden="true" />
 
@@ -699,14 +707,24 @@ function App() {
             <a href="#cinema" className="nav-link">Cinema</a>
             <a href="#gabinete" className="nav-link">Gabinete</a>
           </div>
-          <button
-            className="mode-toggle"
-            data-mode={mode}
-            onClick={() => setMode(m => m === 'arquivo' ? 'terminal' : 'arquivo')}
-            aria-label="Alternar modo de visualização"
-          >
-            {mode === 'arquivo' ? 'Modo Terminal' : 'Modo Arquivo'}
-          </button>
+          <div className="header-actions">
+            <button
+              className={`archive-live-toggle${archiveLive ? ' active' : ''}`}
+              onClick={() => setArchiveLive(v => !v)}
+              aria-pressed={archiveLive}
+              aria-label="Alternar modo Arquivo Vivo"
+            >
+              Arquivo Vivo
+            </button>
+            <button
+              className="mode-toggle"
+              data-mode={mode}
+              onClick={() => setMode(m => m === 'arquivo' ? 'terminal' : 'arquivo')}
+              aria-label="Alternar modo de visualização"
+            >
+              {mode === 'arquivo' ? 'Modo Terminal' : 'Modo Arquivo'}
+            </button>
+          </div>
         </nav>
       </header>
 
