@@ -467,51 +467,165 @@ const selectedDossiers = [
   },
 ]
 
-const cinemaLegacy = [
+const cinemaEntries = [
   {
+    id: 'frankenstein-1910',
+    label: 'Cinema primitivo',
     title: 'Frankenstein (1910)',
-    image: '/assets/cinema/frankenstein-1910-poster.jpg',
-    type: 'CURTA-METRAGEM',
     year: '1910',
-    direction: 'J. Searle Dawley',
-    text: 'Primeira adaptação conhecida de Frankenstein para o cinema, ainda ligada ao teatro, à alquimia visual e ao assombro primitivo da imagem em movimento.',
+    intro: 'Primeira adaptação cinematográfica conhecida de Frankenstein. J. Searle Dawley para a Edison Studios transforma o mito em experiência visual primitiva: a criatura aparece como produto de laboratório alquímico, mais visão demoníaca do que monstro trágico moderno. O corpo fabricado deixa o romance de Shelley e ganha forma pública pela primeira vez.',
+    images: [
+      {
+        src: '/assets/cinema/frankenstein-1910-poster.jpg',
+        alt: 'Pôster do Frankenstein de 1910, Edison Studios',
+        caption: 'Edison Studios, 1910 — o mito no cinema silencioso e nos efeitos primitivos',
+      },
+    ],
+    meta: ['1910', 'J. Searle Dawley', 'Edison Studios'],
+    text: 'A criatura ainda aparece como visão demoníaca, mais próxima de uma aparição do que do monstro trágico moderno. O cinema silencioso registra o mito antes de ele se tornar ícone visual — a alquimia do laboratório precede a eletricidade da Universal.',
   },
   {
-    title: 'Frankenstein (1931)',
-    image: '/assets/cinema/frankenstein-1931-poster.jpg',
-    type: 'CINEMA CLÁSSICO',
+    id: 'frankenstein-1931',
+    label: 'Universal Pictures',
+    title: 'Frankenstein (1931) — James Whale e Boris Karloff',
     year: '1931',
-    direction: 'James Whale',
-    text: 'O filme da Universal fixa no imaginário popular o monstro de Frankenstein como ícone visual: eletricidade, laboratório, corpo costurado e tragédia monstruosa.',
+    intro: 'James Whale e a Universal consolidam o ícone visual definitivo: testa marcada, corpo pesado, eletricidade, laboratório e tragédia. Boris Karloff transforma a criatura em símbolo reconhecível mundialmente, mesmo por quem nunca leu Mary Shelley. É aqui que nasce a imagem do horror moderno.',
+    images: [
+      {
+        src: '/assets/cinema/frankenstein-1931-poster.jpg',
+        alt: 'Pôster clássico de Frankenstein, Universal Pictures, 1931',
+        caption: 'Universal Pictures, 1931 — o monstro passa a existir como imagem mundial',
+      },
+      {
+        src: '/assets/cinema/frankenstein-1931-monster-scene.jpg',
+        alt: 'Boris Karloff como a criatura de Frankenstein, 1931',
+        caption: 'Boris Karloff — testa marcada, corpo costurado, tragédia sem malícia original',
+      },
+      {
+        src: '/assets/cinema/frankenstein-1931-karloff-maria.jpg',
+        alt: 'A criatura e a menina Maria, Frankenstein 1931',
+        caption: 'A criatura e Maria — inocência, brutalidade e rejeição social em uma cena',
+      },
+    ],
+    meta: ['1931', 'James Whale', 'Boris Karloff'],
+    text: 'O filme consolida a imagem popular do monstro: testa marcada, corpo pesado, eletricidade e laboratório. Karloff cria um ícone visual permanente. A cena da criatura com a menina Maria concentra a ambiguidade central do mito: o monstro não entende o mundo, não domina a própria força e se torna ameaça sem nascer moralmente maligno.',
   },
   {
-    title: 'A criatura e a inocência',
-    image: '/assets/cinema/frankenstein-1931-karloff-maria.jpg',
-    type: 'ÍCONE VISUAL',
-    year: '1931',
-    direction: 'James Whale',
-    text: 'A cena entre a criatura e Maria reforça a ambiguidade central do mito: o monstro não nasce maligno, mas deslocado, rejeitado e incapaz de compreender a violência do mundo.',
+    id: 'mary-shelley-1994',
+    label: 'Gótico romântico',
+    title: "Mary Shelley's Frankenstein (1994) — Robert De Niro como criatura",
+    year: '1994',
+    intro: 'Kenneth Branagh tenta devolver Frankenstein ao drama moral do romance: criação, abandono, culpa, revolta e desejo de reconhecimento. A criatura interpretada por Robert De Niro não é apenas monstro visual — é sujeito ferido, consciente e vingativo que cobra do criador a responsabilidade pela vida que recebeu.',
+    images: [
+      {
+        src: '/assets/cinema/mary-shelley-frankenstein-1994.jpg',
+        alt: "Cena de Mary Shelley's Frankenstein, 1994",
+        caption: 'Kenneth Branagh, 1994 — retorno ao drama moral do romance',
+      },
+      {
+        src: '/assets/cinema/Frankenstein-de-Mary-Shelley-10.jpg',
+        alt: 'O corpo reconstruído, Frankenstein 1994',
+        caption: 'Costura, carne, cicatriz — a identidade fragmentada como assinatura do abandono',
+      },
+      {
+        src: '/assets/cinema/Frankenstein-de-Mary-Shelley-13.jpg',
+        alt: 'Victor e a criatura, confronto moral, Frankenstein 1994',
+        caption: 'Criador e criatura — cobrança, espelho e condenação',
+      },
+      {
+        src: '/assets/cinema/Frankenstein-de-Mary-Shelley-20.jpg',
+        alt: 'A criatura excluída, Frankenstein 1994',
+        caption: 'Corpo rejeitado, alma em busca de reconhecimento — o horror como exclusão',
+      },
+    ],
+    meta: ['1994', 'Kenneth Branagh', 'Robert De Niro'],
+    text: 'A criatura de De Niro fala, sente, aprende e cobra do criador a responsabilidade pela vida que recebeu. O horror nasce menos do susto e mais da pergunta moral: quem cria um ser abandonado também cria sua dor. O filme acentua a dimensão corporal do mito — costura, carne e cicatriz como assinatura permanente do abandono.',
   },
   {
-    title: 'Night of the Living Dead',
-    image: '/assets/cinema/night-of-the-living-dead-1968.jpg',
-    type: 'ZUMBI MODERNO',
-    year: '1968',
-    direction: 'George A. Romero',
-    text: 'Romero desloca o morto-vivo do folclore para o colapso social moderno. O cadáver que retorna deixa de ser milagre ou experimento isolado e vira contágio coletivo, cerco e crise civilizatória.',
+    id: 'reanimator-1985',
+    label: 'Horror cult',
+    title: 'Re-Animator (1985) — Lovecraft, necrotério e ciência profanada',
+    year: '1985',
+    intro: 'Stuart Gordon leva a reanimação para outro território: sai o gótico romântico e entra o horror cult, ácido, viscoso e excessivo. Herbert West não quer compreender a alma — ele quer vencer a morte como procedimento técnico. O reagente verde transforma o laboratório universitário em necrotério de experimentos fracassados.',
+    images: [
+      {
+        src: '/assets/cinema/Re-Animator.jpg',
+        alt: 'Herbert West e o reagente verde, Re-Animator 1985',
+        caption: 'Herbert West — seringa, reagente verde, necrotério e arrogância científica',
+      },
+      {
+        src: '/assets/cinema/reanimator-1985.jpg',
+        alt: 'Re-Animator 1985, Stuart Gordon',
+        caption: 'Stuart Gordon, 1985 — reanimação como violação direta do corpo morto',
+      },
+      {
+        src: '/assets/cinema/reanimator-1985-creature.jpg',
+        alt: 'Cadáver reanimado, Re-Animator 1985',
+        caption: 'O reanimado não volta como pessoa restaurada — volta como erro biológico',
+      },
+    ],
+    meta: ['1985', 'Stuart Gordon', 'H.P. Lovecraft'],
+    text: 'O filme transforma o conto de Lovecraft em cinema físico: seringa, reagente verde, cadáver, necrotério e arrogância científica. A reanimação aqui não é milagre nem tragédia nobre; é violação direta do corpo morto. Herbert West é uma inversão moderna de Victor Frankenstein: menos romântico, mais frio, mais técnico e obcecado — ele não sofre pela criação, ele testa, repete, corrige e profana.',
   },
   {
-    title: 'Dawn of the Dead',
-    image: '/assets/cinema/dawn-of-the-dead-1978-logo.png',
-    type: 'CULTURA POP',
-    year: '1978',
-    direction: 'George A. Romero',
-    text: 'O shopping center de Dawn of the Dead transforma os mortos-vivos em crítica social: consumo, automatismo, multidão e corpos que continuam repetindo hábitos depois da morte.',
+    id: 'romero',
+    label: 'Mortos-vivos modernos',
+    title: 'George A. Romero — a trilogia social dos zumbis',
+    year: '1968–1985',
+    intro: 'Romero transforma o morto-vivo em linguagem da cultura pop moderna. Seus zumbis não são só monstros: são multidão, colapso social, consumo, guerra civil, medo coletivo e repetição automática dos hábitos humanos depois da morte. Cada filme da trilogia é um diagnóstico cultural diferente.',
+    images: [
+      {
+        src: '/assets/cinema/night-of-the-living-dead-1968.jpg',
+        alt: 'Night of the Living Dead, George A. Romero, 1968',
+        caption: 'Night of the Living Dead, 1968 — cerco doméstico, origem do zumbi moderno',
+      },
+      {
+        src: '/assets/cinema/dawn-of-the-dead-1978-zombie.jpg',
+        alt: 'Zumbi no shopping, Dawn of the Dead, George A. Romero, 1978',
+        caption: 'Dawn of the Dead, 1978 — shopping como mausoléu do consumo',
+      },
+    ],
+    meta: ['1968–1985', 'George A. Romero', 'Night · Dawn · Day'],
+    text: 'O primeiro filme funda o zumbi moderno: cadáveres cercam os vivos, a casa vira bunker, e o horror está tanto no cerco quanto na desconfiança entre sobreviventes. Em Dawn of the Dead, o shopping vira mausoléu do consumo — os mortos caminham pelas lojas porque ainda repetem os gestos de quando estavam vivos. A trilogia cresce como comentário social crescente: cerco, consumo, militarização.',
+  },
+  {
+    id: 'snyder-2004',
+    label: 'Remake moderno',
+    title: 'Madrugada dos Mortos (2004) — Zack Snyder e o zumbi veloz',
+    year: '2004',
+    intro: 'A refilmagem de 2004 pega a base de Romero e acelera tudo: o morto-vivo deixa de ser massa lenta e vira explosão física. É o apocalipse como colapso imediato, urbano e agressivo — o zumbi do século XXI não caminha, ele corre.',
+    images: [
+      {
+        src: '/assets/cinema/dawn-of-the-dead-2004.jpg',
+        alt: 'Dawn of the Dead 2004, Zack Snyder, zumbis no shopping',
+        caption: 'Madrugada dos Mortos, 2004 — colapso instantâneo e zumbi veloz',
+      },
+      {
+        src: '/assets/cinema/DawnoftheDead2004.webp',
+        alt: 'Cena de Madrugada dos Mortos, Zack Snyder, 2004',
+        caption: 'Zack Snyder, 2004 — terror de sobrevivência, estética nervosa dos anos 2000',
+      },
+    ],
+    meta: ['2004', 'Zack Snyder', 'Remake'],
+    text: 'Snyder transforma o pânico em velocidade. A ameaça não avança como multidão hipnótica; ela corre, invade, rasga e derruba a ordem social em minutos. O remake troca a sátira lenta pelo terror de sobrevivência: fugir, improvisar, desconfiar e sobreviver enquanto o mundo acaba.',
+  },
+  {
+    id: 'del-toro',
+    label: 'Gótico contemporâneo',
+    title: 'Frankenstein — Guillermo del Toro',
+    year: '2025',
+    intro: 'O Frankenstein de Guillermo del Toro pertence à linhagem dos monstros trágicos. Em vez de tratar a criatura apenas como ameaça, a leitura contemporânea recoloca beleza, dor, abandono e humanidade no centro da imagem monstruosa — conversa direta com Shelley, Karloff e De Niro.',
+    images: [
+      {
+        src: '/assets/cinema/frankenstein-guillermo-del-toro.jpg',
+        alt: 'A criatura no Frankenstein de Guillermo del Toro',
+        caption: 'Guillermo del Toro, 2025 — monstro trágico, melancolia e compaixão',
+      },
+    ],
+    meta: ['2025', 'Guillermo del Toro', 'Monstro trágico'],
+    text: 'Del Toro sempre se interessou por criaturas marginalizadas, corpos impossíveis e monstros mais humanos do que os homens que os perseguem. Frankenstein encaixa diretamente nessa poética. O novo Frankenstein não precisa substituir as versões anteriores — ele conversa com elas: Shelley, Karloff, De Niro e toda a tradição do corpo fabricado retornam como arquivo vivo.',
   },
 ]
-
-const cinemaFeature = cinemaLegacy.find((entry) => entry.title === 'Frankenstein (1931)')
-const cinemaGridItems = cinemaLegacy.filter((entry) => entry.title !== 'Frankenstein (1931)')
 
 function ArchiveVisual({ type = 'medical-file', label, code, size = 'md' }) {
   return (
@@ -1501,38 +1615,38 @@ function App() {
             </p>
           </div>
 
-          <div className="cinema-board">
-            {cinemaFeature && (
-              <article className="cinema-feature">
-                <div className="cinema-image-frame">
-                  <img src={cinemaFeature.image} alt={cinemaFeature.title} loading="lazy" />
+          <div className="cinema-dossier-list">
+            {cinemaEntries.map((entry) => (
+              <article className="cinema-dossier" key={entry.id}>
+                <div className="cinema-dossier-head">
+                  <span className="cinema-dossier-label">{entry.label}</span>
+                  <h4 className="cinema-dossier-title">{entry.title}</h4>
+                  <p className="cinema-dossier-intro">{entry.intro}</p>
                 </div>
-                <div className="cinema-meta">
-                  <span>{cinemaFeature.type}</span>
-                  <span>{cinemaFeature.year}</span>
-                  <span>{cinemaFeature.direction}</span>
-                </div>
-                <h4 className="cinema-card-title">{cinemaFeature.title}</h4>
-                <p className="cinema-card-text">{cinemaFeature.text}</p>
-              </article>
-            )}
 
-            <div className="cinema-grid">
-              {cinemaGridItems.map((entry) => (
-                <article className="cinema-card" key={entry.title}>
-                  <div className="cinema-image-frame">
-                    <img src={entry.image} alt={entry.title} loading="lazy" />
-                  </div>
+                <div className={`cinema-dossier-gallery cinema-dossier-gallery--${entry.images.length}`}>
+                  {entry.images.map((img, i) => (
+                    <figure className="cinema-dossier-card" key={i}>
+                      <div className="cinema-image-frame">
+                        <img src={img.src} alt={img.alt} loading="lazy" />
+                      </div>
+                      {img.caption && (
+                        <figcaption className="cinema-dossier-caption">{img.caption}</figcaption>
+                      )}
+                    </figure>
+                  ))}
+                </div>
+
+                <div className="cinema-dossier-text">
                   <div className="cinema-meta">
-                    <span>{entry.type}</span>
-                    <span>{entry.year}</span>
-                    <span>{entry.direction}</span>
+                    {entry.meta.map((item) => (
+                      <span key={item}>{item}</span>
+                    ))}
                   </div>
-                  <h4 className="cinema-card-title">{entry.title}</h4>
-                  <p className="cinema-card-text">{entry.text}</p>
-                </article>
-              ))}
-            </div>
+                  <p className="cinema-dossier-body">{entry.text}</p>
+                </div>
+              </article>
+            ))}
           </div>
         </section>
 

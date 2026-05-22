@@ -392,12 +392,13 @@ h2 {
 
 /* ─── CINEMA E LITERATURA CONTEMPORÂNEA ────────────────────── */
 
+
 .cinema-section {
   margin-top: 56px;
 }
 
 .cinema-subtitle {
-  max-width: 860px;
+  max-width: 920px;
   margin: 16px 0 0;
   color: #d4c5aa;
   font-size: clamp(1rem, 2vw, 1.18rem);
@@ -406,78 +407,145 @@ h2 {
   font-style: italic;
 }
 
-.cinema-board {
+/* ─── Cinema dossier list ───────────────────────────────────── */
+
+.cinema-dossier-list {
   display: grid;
-  grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr);
-  gap: 18px;
-  align-items: start;
+  gap: 48px;
+  margin-top: 42px;
 }
 
-.cinema-feature,
-.cinema-card {
-  min-width: 0;
+.cinema-dossier {
   border: 1px solid rgba(248, 240, 224, 0.12);
-  border-radius: 6px;
+  border-radius: 8px;
+  padding: clamp(20px, 3vw, 32px);
   background:
-    linear-gradient(160deg, rgba(12, 11, 12, 0.97) 0%, rgba(58, 15, 20, 0.18) 50%, rgba(8, 8, 8, 0.98) 100%);
+    radial-gradient(circle at top left, rgba(92, 18, 24, 0.22), transparent 34%),
+    linear-gradient(160deg, rgba(8, 8, 8, 0.98) 0%, rgba(18, 12, 12, 0.94) 48%, rgba(3, 18, 15, 0.92) 100%);
   box-shadow:
-    inset 0 0 0 1px rgba(248, 240, 224, 0.02),
-    0 20px 58px rgba(0, 0, 0, 0.30);
-  overflow: hidden;
+    inset 0 0 0 1px rgba(248, 240, 224, 0.025),
+    0 24px 70px rgba(0, 0, 0, 0.34);
 }
 
-.cinema-feature {
-  padding: 22px;
+.cinema-dossier-head {
+  max-width: 920px;
+  margin-bottom: 26px;
 }
 
-.cinema-grid {
+.cinema-dossier-label {
+  display: inline-flex;
+  width: fit-content;
+  margin-bottom: 10px;
+  font-family: ui-monospace, 'Courier New', monospace;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #72d6a4;
+  padding: 6px 9px;
+  border: 1px solid rgba(114, 214, 164, 0.24);
+  border-radius: 3px;
+  background: rgba(114, 214, 164, 0.07);
+}
+
+.cinema-dossier-title {
+  margin: 0 0 12px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.55rem, 3vw, 2.5rem);
+  line-height: 1.08;
+  color: var(--bone);
+}
+
+.cinema-dossier-intro {
+  margin: 0;
+  max-width: 940px;
+  color: rgba(235, 230, 221, 0.76);
+  font-size: clamp(0.95rem, 1.6vw, 1.06rem);
+  line-height: 1.82;
+}
+
+/* ─── Gallery ───────────────────────────────────────────────── */
+
+.cinema-dossier-gallery {
   display: grid;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.cinema-dossier-gallery--1 {
+  grid-template-columns: minmax(0, 500px);
+}
+
+.cinema-dossier-gallery--2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
+}
+
+.cinema-dossier-gallery--3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.cinema-dossier-gallery--4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.cinema-dossier-card {
+  margin: 0;
   min-width: 0;
 }
 
-.cinema-card {
-  padding: 18px;
+.cinema-dossier-caption {
+  margin: 8px 0 0;
+  color: rgba(184, 154, 102, 0.78);
+  font-family: ui-monospace, 'Courier New', monospace;
+  font-size: 0.60rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.62;
 }
+
+/* ─── Cinema image frame (shared) ──────────────────────────── */
 
 .cinema-image-frame {
   display: flex;
   align-items: center;
   justify-content: center;
   min-width: 0;
-  padding: 12px;
+  aspect-ratio: 16 / 10;
+  padding: 10px;
   border: 1px solid rgba(248, 240, 224, 0.10);
   background:
-    radial-gradient(circle at top, rgba(58, 15, 20, 0.18), transparent 48%),
+    radial-gradient(circle at top, rgba(58, 15, 20, 0.22), transparent 52%),
     linear-gradient(180deg, rgba(8, 8, 8, 0.98), rgba(12, 12, 12, 0.92));
+  overflow: hidden;
 }
 
 .cinema-image-frame img {
   display: block;
   width: 100%;
-  height: auto;
-  max-height: 520px;
+  height: 100%;
   object-fit: contain;
-  filter: grayscale(0.20) sepia(0.12) contrast(1.04);
+  filter: grayscale(0.12) sepia(0.10) contrast(1.05);
 }
 
-.cinema-card .cinema-image-frame img {
-  max-height: 220px;
+/* ─── Text block ────────────────────────────────────────────── */
+
+.cinema-dossier-text {
+  border-top: 1px solid rgba(248, 240, 224, 0.10);
+  padding-top: 20px;
 }
 
 .cinema-meta {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-top: 14px;
+  margin-bottom: 14px;
 }
 
 .cinema-meta span {
   font-family: ui-monospace, 'Courier New', monospace;
-  font-size: 0.60rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
   text-transform: uppercase;
   color: #b89a66;
   padding: 5px 8px;
@@ -486,43 +554,42 @@ h2 {
   background: rgba(184, 154, 102, 0.08);
 }
 
-.cinema-card-title {
-  margin: 16px 0 10px;
-  font-family: Georgia, 'Times New Roman', serif;
-  font-size: clamp(1.12rem, 2vw, 1.58rem);
-  line-height: 1.18;
-  color: var(--bone);
-}
-
-.cinema-card-text {
+.cinema-dossier-body {
   margin: 0;
-  color: var(--text);
-  font-size: 0.92rem;
+  color: rgba(235, 230, 221, 0.82);
+  font-size: clamp(0.92rem, 1.4vw, 1.02rem);
   line-height: 1.82;
+  max-width: 860px;
 }
 
-@media (max-width: 1000px) {
-  .cinema-board {
-    grid-template-columns: 1fr;
+/* ─── Responsive ────────────────────────────────────────────── */
+
+@media (max-width: 1100px) {
+  .cinema-dossier-gallery--3,
+  .cinema-dossier-gallery--4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 720px) {
-  .cinema-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .cinema-feature,
-  .cinema-card {
+  .cinema-dossier {
     padding: 16px;
   }
 
-  .cinema-image-frame {
-    padding: 10px;
+  .cinema-dossier-gallery--1,
+  .cinema-dossier-gallery--2,
+  .cinema-dossier-gallery--3,
+  .cinema-dossier-gallery--4 {
+    grid-template-columns: 1fr;
   }
 
-  .cinema-image-frame img,
-  .cinema-card .cinema-image-frame img {
+  .cinema-image-frame {
+    aspect-ratio: auto;
+    min-height: 220px;
+  }
+
+  .cinema-image-frame img {
+    height: auto;
     max-height: none;
   }
 }
