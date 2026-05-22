@@ -321,10 +321,57 @@ h2 {
   line-height: 1.6;
 }
 
-/* Vesalius — right-aligned editorial aside between header and grid */
-.anatomy-visual-note {
-  width: 240px;
-  margin: 0 0 32px auto;
+/* Anatomy visual board — editorial composition before body-study grid */
+.anatomy-visual-board {
+  display: grid;
+  grid-template-columns: 1.45fr 1fr;
+  gap: 16px;
+  margin: 0 0 44px;
+  align-items: start;
+}
+
+.anatomy-visual-main,
+.anatomy-visual-card {
+  margin: 0;
+}
+
+.anatomy-visual-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.anatomy-visual-frame {
+  background: #080808;
+  border: 1px solid rgba(235, 230, 221, 0.10);
+  padding: 10px;
+}
+
+.anatomy-visual-frame img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  filter: grayscale(0.60) sepia(0.18) contrast(1.06);
+}
+
+.anatomy-visual-main .anatomy-visual-frame img {
+  max-height: 360px;
+}
+
+.anatomy-visual-card .anatomy-visual-frame img {
+  max-height: 188px;
+}
+
+.anatomy-visual-caption {
+  display: block;
+  margin-top: 8px;
+  font-family: ui-monospace, 'Courier New', monospace;
+  font-size: 0.60rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: rgba(235, 230, 221, 0.40);
+  line-height: 1.6;
 }
 
 /* Literature strip — Frankenstein + Mary Shelley, 2-col, after timeline */
@@ -1952,6 +1999,7 @@ h2 {
   .occult-theme  { font-size: 0.78rem; }
   .body-study-grid { grid-template-columns: 1fr; }
   .body-study-card { padding: 24px 22px 26px; }
+  .anatomy-visual-board { grid-template-columns: 1fr; }
   .body-study-theme { font-size: 0.78rem; }
   .forensic-grid  { grid-template-columns: 1fr; }
   .forensic-card  { padding: 24px 22px 26px; }
@@ -4263,10 +4311,15 @@ h2 {
     padding: 20px 16px;
   }
 
-  /* Contextual figures: full width on mobile */
-  .anatomy-visual-note {
-    width: 100%;
-    margin: 0 0 28px;
+  /* Anatomy board: single column on mobile */
+  .anatomy-visual-board {
+    grid-template-columns: 1fr;
+  }
+  .anatomy-visual-main .anatomy-visual-frame img {
+    max-height: 280px;
+  }
+  .anatomy-visual-card .anatomy-visual-frame img {
+    max-height: 220px;
   }
 
   .literature-visual-strip {

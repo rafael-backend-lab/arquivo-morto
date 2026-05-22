@@ -656,18 +656,46 @@ function App() {
               Quando o cadáver deixou de ser apenas relíquia, pecado ou mistério, tornou-se também matéria de estudo.
             </p>
           </div>
-          <figure className="anatomy-visual-note">
-            <div className="contextual-figure-frame">
-              <img
-                src="/assets/archive/vesalius-anatomy.jpg"
-                alt="Prancha anatômica de De Humani Corporis Fabrica, Andreas Vesalius, 1543"
-                loading="lazy"
-              />
+          <div className="anatomy-visual-board">
+            <figure className="anatomy-visual-main">
+              <div className="anatomy-visual-frame">
+                <img
+                  src="/assets/archive/anatomy-lesson.jpg"
+                  alt="A Lição de Anatomia do Dr. Nicolaes Tulp, Rembrandt van Rijn, 1632"
+                  loading="lazy"
+                />
+              </div>
+              <figcaption className="anatomy-visual-caption">
+                A Lição de Anatomia do Dr. Nicolaes Tulp · Rembrandt, 1632 — Wikimedia Commons / Domínio público
+              </figcaption>
+            </figure>
+            <div className="anatomy-visual-stack">
+              <figure className="anatomy-visual-card">
+                <div className="anatomy-visual-frame">
+                  <img
+                    src="/assets/archive/vesalius-anatomy.jpg"
+                    alt="Prancha anatômica de De Humani Corporis Fabrica, Andreas Vesalius, 1543"
+                    loading="lazy"
+                  />
+                </div>
+                <figcaption className="anatomy-visual-caption">
+                  Vesalius · De Humani Corporis Fabrica, 1543
+                </figcaption>
+              </figure>
+              <figure className="anatomy-visual-card">
+                <div className="anatomy-visual-frame">
+                  <img
+                    src="/assets/archive/vesalius-skeleton.jpg"
+                    alt="Prancha do esqueleto de De Humani Corporis Fabrica, Andreas Vesalius, 1543"
+                    loading="lazy"
+                  />
+                </div>
+                <figcaption className="anatomy-visual-caption">
+                  Vesalius · esqueleto, De Humani Corporis Fabrica, 1543
+                </figcaption>
+              </figure>
             </div>
-            <figcaption className="contextual-figure-caption">
-              Vesalius · De Humani Corporis Fabrica, 1543 — Wikimedia Commons / Domínio público
-            </figcaption>
-          </figure>
+          </div>
 
           <div className="body-study-grid">
             {bodyStudyChapter.map((entry) => (
