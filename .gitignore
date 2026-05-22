@@ -25,3 +25,6 @@ dist-ssr
 
 # Netlify local state
 .netlify/
+
+# Claude temporary prompts
+claude_*.md
