@@ -4897,18 +4897,18 @@ h2 {
   border-radius: 999px;
   background:
     radial-gradient(ellipse at center,
-      rgba(255, 68, 48, 0.95) 0%,
-      rgba(185, 12, 10, 0.62) 32%,
-      rgba(92, 0, 0, 0.22) 58%,
-      transparent 76%);
+      rgba(255, 82, 58, 1.00) 0%,
+      rgba(220, 18, 14, 0.76) 30%,
+      rgba(120, 0,  0,  0.34) 58%,
+      transparent 78%);
   border: 0;
-  filter: blur(1.6px);
-  opacity: 0.82;
+  filter: blur(1.35px) saturate(1.25);
+  opacity: 0.9;
   mix-blend-mode: screen;
   box-shadow:
-    0 0 10px rgba(255, 28, 18, 0.52),
-    0 0 28px rgba(190, 0, 0, 0.42),
-    0 0 56px rgba(110, 0, 0, 0.28);
+    0 0 14px rgba(255, 42, 28, 0.68),
+    0 0 34px rgba(210, 0,  0,  0.52),
+    0 0 70px rgba(130, 0,  0,  0.34);
   transform: translate(-50%, -50%);
   animation: archiveEyePulse 2.9s ease-in-out infinite;
 }
@@ -4917,18 +4917,18 @@ h2 {
 
 @keyframes archiveEyePulse {
   0%, 100% {
-    opacity: 0.68;
-    filter: blur(1.8px);
+    opacity: 0.72;
+    filter: blur(1.8px) saturate(1.1);
     transform: translate(-50%, -50%) scale(0.94);
   }
   45% {
-    opacity: 0.95;
-    filter: blur(1.2px);
+    opacity: 1.00;
+    filter: blur(1.1px) saturate(1.4);
     transform: translate(-50%, -50%) scale(1.08);
   }
   68% {
-    opacity: 0.78;
-    filter: blur(2px);
+    opacity: 0.82;
+    filter: blur(1.9px) saturate(1.15);
     transform: translate(-50%, -50%) scale(1.01);
   }
 }
