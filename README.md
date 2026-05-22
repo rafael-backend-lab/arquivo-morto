@@ -61,6 +61,14 @@ npm run build
 npm run preview
 ```
 
+## Mobile polish e social preview
+
+- Hero e títulos responsivos com `clamp()` calibrado para telas de 390px
+- Grids colapsam para uma coluna em ≤ 640px (incluindo Cornish e Brukhonenko)
+- Meta tags Open Graph e Twitter Card configuradas em `index.html`
+- Imagem OG em `public/og-arquivo-morto.svg` (1200×630)
+- Link público: https://arquivo-morto.netlify.app
+
 ## Preview público sem Vercel
 
 Para gerar um link temporário compartilhável com qualquer pessoa, use o fluxo via Cloudflare Tunnel:

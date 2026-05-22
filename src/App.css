@@ -172,7 +172,7 @@
 h1 {
   margin: 0 0 22px;
   font-family: Georgia, 'Times New Roman', serif;
-  font-size: clamp(4.5rem, 12vw, 9.5rem);
+  font-size: clamp(2.2rem, 11vw, 9.5rem);
   line-height: 0.82;
   letter-spacing: -0.055em;
   text-transform: uppercase;
@@ -4010,4 +4010,81 @@ h2 {
 .featured-dossier .featured-content,
 .featured-dossier .featured-copy {
   max-width: 100% !important;
+}
+
+
+/* ─── MOBILE POLISH — 640px and below ─────────────────────────── */
+@media (max-width: 640px) {
+  /* Hero title: tighter tracking and line-height on small phones */
+  h1 {
+    letter-spacing: -0.03em;
+    line-height: 0.9;
+    margin-bottom: 16px;
+  }
+
+  h2 {
+    font-size: clamp(1rem, 4vw, 1.4rem);
+  }
+
+  /* Cornish dossier panel grid — no breakpoint existed before */
+  .cornish-dossier-grid {
+    grid-template-columns: 1fr;
+  }
+  .cornish-dossier-panel {
+    min-height: auto;
+    padding: 1rem;
+  }
+
+  /* Soviet (Brukhonenko) dossier panel min-height override */
+  .soviet-dossier-panel {
+    min-height: auto;
+    padding: 1rem;
+  }
+
+  /* Category classification grid → single column */
+  .classification-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Cornish gallery narrow cards: images with safe height */
+  .cornish-gallery-card img {
+    height: auto !important;
+    max-height: 60vw;
+  }
+  .cornish-gallery-two .cornish-gallery-card img {
+    height: auto !important;
+    max-height: 72vw;
+  }
+
+  /* Responsive iframes — aspect-ratio replaces fixed height */
+  .cornish-video-embed iframe,
+  .brukhonenko-video-frame iframe {
+    aspect-ratio: 16 / 9;
+    min-height: 0 !important;
+    height: auto !important;
+  }
+  .cornish-video-embed .cornish-video-frame,
+  .brukhonenko-video-frame {
+    min-height: 0 !important;
+  }
+
+  /* Article row: collapse to simpler stacked layout */
+  .article-row {
+    grid-template-columns: 1fr 24px;
+    gap: 10px;
+  }
+  .article-index {
+    display: none;
+  }
+
+  /* Section headers: smaller padding */
+  .section-header {
+    padding: 0 4px;
+  }
+
+  /* Cornish/Soviet dossier notes */
+  .cornish-dossier-note,
+  .soviet-dossier-note {
+    padding: 0.85rem 0.9rem;
+  }
 }

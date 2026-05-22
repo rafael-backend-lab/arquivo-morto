@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0608"/>
+      <stop offset="55%" stop-color="#080808"/>
+      <stop offset="100%" stop-color="#080a08"/>
+    </linearGradient>
+    <linearGradient id="wine-glow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3A0F14" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#080808" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="green-glow" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1D8A48" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#080808" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="blur-glow">
+      <feGaussianBlur stdDeviation="18" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="600" height="630" fill="url(#wine-glow)"/>
+  <rect x="700" width="500" height="400" fill="url(#green-glow)"/>
+
+  <!-- Subtle scan lines -->
+  <rect width="1200" height="630" fill="none" stroke="#EBE6DD" stroke-width="0.5" stroke-opacity="0.04"
+    style="background: repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(235,230,221,0.03) 3px, rgba(235,230,221,0.03) 4px)"/>
+
+  <!-- Border frame -->
+  <rect x="32" y="32" width="1136" height="566" fill="none" stroke="#EBE6DD" stroke-width="1" stroke-opacity="0.14"/>
+  <rect x="40" y="40" width="1120" height="550" fill="none" stroke="#3A0F14" stroke-width="1" stroke-opacity="0.28"/>
+
+  <!-- Corner marks -->
+  <path d="M32,32 L80,32 M32,32 L32,80" stroke="#EBE6DD" stroke-width="1.5" stroke-opacity="0.35" fill="none"/>
+  <path d="M1168,32 L1120,32 M1168,32 L1168,80" stroke="#EBE6DD" stroke-width="1.5" stroke-opacity="0.35" fill="none"/>
+  <path d="M32,598 L80,598 M32,598 L32,550" stroke="#EBE6DD" stroke-width="1.5" stroke-opacity="0.35" fill="none"/>
+  <path d="M1168,598 L1120,598 M1168,598 L1168,550" stroke="#EBE6DD" stroke-width="1.5" stroke-opacity="0.35" fill="none"/>
+
+  <!-- Top metadata bar -->
+  <text x="72" y="86" font-family="Courier New, monospace" font-size="13" letter-spacing="3" fill="#8A7E72" text-anchor="start">ARQ-001</text>
+  <text x="180" y="86" font-family="Courier New, monospace" font-size="13" letter-spacing="3" fill="#3A3030">·</text>
+  <text x="200" y="86" font-family="Courier New, monospace" font-size="13" letter-spacing="3" fill="#c84b5a">STATUS: LACRADO</text>
+  <text x="390" y="86" font-family="Courier New, monospace" font-size="13" letter-spacing="3" fill="#3A3030">·</text>
+  <text x="410" y="86" font-family="Courier New, monospace" font-size="13" letter-spacing="3" fill="#8A7E72">VOLTAGEM: 120V DC</text>
+  <text x="640" y="86" font-family="Courier New, monospace" font-size="13" letter-spacing="3" fill="#3A3030">·</text>
+  <text x="660" y="86" font-family="Courier New, monospace" font-size="13" letter-spacing="3" fill="#8A7E72">DATA: 1803–∞</text>
+
+  <!-- Eyebrow -->
+  <text x="72" y="200" font-family="Courier New, monospace" font-size="16" letter-spacing="5" fill="#b89a66" text-anchor="start">DOSSIÊS PROIBIDOS SOBRE MORTE, CIÊNCIA E FICÇÃO</text>
+
+  <!-- Main title -->
+  <text x="68" y="330" font-family="Georgia, Times New Roman, serif" font-size="136" letter-spacing="-6" fill="#EBE6DD" text-anchor="start" filter="url(#blur-glow)">ARQUIVO</text>
+  <text x="68" y="460" font-family="Georgia, Times New Roman, serif" font-size="136" letter-spacing="-6" fill="#EBE6DD" text-anchor="start">MORTO</text>
+
+  <!-- Galvanic accent line -->
+  <line x1="68" y1="488" x2="520" y2="488" stroke="#1D8A48" stroke-width="1.5" stroke-opacity="0.6"/>
+  <circle cx="520" cy="488" r="3" fill="#1D8A48" fill-opacity="0.8"/>
+
+  <!-- Subtitle -->
+  <text x="72" y="536" font-family="Georgia, Times New Roman, serif" font-size="22" letter-spacing="1" fill="#8A7E72" font-style="italic">Literatura, ciência e horror da reanimação</text>
+
+  <!-- Right panel — archive seal area -->
+  <rect x="860" y="155" width="260" height="310" rx="4" fill="none" stroke="#EBE6DD" stroke-width="1" stroke-opacity="0.1"/>
+  <rect x="875" y="170" width="230" height="280" rx="3" fill="none" stroke="#3A0F14" stroke-width="1" stroke-opacity="0.35"/>
+
+  <!-- AM monogram -->
+  <text x="990" y="265" font-family="Georgia, serif" font-size="64" letter-spacing="-3" fill="#EBE6DD" text-anchor="middle" fill-opacity="0.12">AM</text>
+  <text x="990" y="290" font-family="Georgia, serif" font-size="64" letter-spacing="-3" fill="#EBE6DD" text-anchor="middle" fill-opacity="0.12">AM</text>
+
+  <!-- Galvanic wave SVG inside the seal area -->
+  <polyline points="880,310 900,310 910,290 920,330 930,295 940,325 950,305 960,315 970,310 1000,310 1010,285 1020,335 1030,300 1040,320 1050,310 1070,310 1080,295 1090,315 1100,310 1120,310" fill="none" stroke="#1D8A48" stroke-width="1.5" stroke-opacity="0.55"/>
+
+  <text x="990" y="400" font-family="Courier New, monospace" font-size="11" letter-spacing="3" fill="#8A7E72" text-anchor="middle">Arquivo Morto</text>
+  <text x="990" y="418" font-family="Courier New, monospace" font-size="11" letter-spacing="3" fill="#3A0F14" text-anchor="middle">Est. 1803</text>
+</svg>
