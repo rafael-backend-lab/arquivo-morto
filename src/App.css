@@ -4836,30 +4836,17 @@ h2 {
 
 /* ─── HORROR ARCHIVE INTRO ──────────────────────────────────── */
 
-.archive-intro {
-  position: fixed;
-  inset: 0;
-  z-index: 9000;
+.horror-hero {
+  position: relative;
+  width: 100%;
+  min-height: 100svh;
   overflow: hidden;
   background: #000;
-  animation: archiveIntroEnter 1.8s ease both;
-}
-.archive-intro--leaving {
-  animation: archiveIntroExit 0.7s ease forwards;
-}
-
-@keyframes archiveIntroEnter {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-@keyframes archiveIntroExit {
-  from { opacity: 1; }
-  to   { opacity: 0; }
 }
 
 /* ── Background creature ─────────────────────────────────────── */
 
-.archive-intro-bg {
+.horror-hero-bg {
   position: absolute;
   inset: 0;
   animation: archiveBreath 11s ease-in-out infinite;
@@ -4877,7 +4864,7 @@ h2 {
   }
 }
 
-.archive-intro-face {
+.horror-hero-face {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -4888,13 +4875,13 @@ h2 {
 
 /* ── CSS eye glows ───────────────────────────────────────────── */
 
-.archive-intro-eyes {
+.horror-hero-eyes {
   position: absolute;
   inset: 0;
   pointer-events: none;
 }
 
-.archive-intro-eye {
+.horror-hero-eye {
   position: absolute;
   width: 46px;
   height: 21px;
@@ -4917,12 +4904,12 @@ h2 {
     0 0 92px rgba(100, 0,  0,  0.18);
   animation: archiveEyePulse 8s ease-in-out infinite;
 }
-.archive-intro-eye--left {
+.horror-hero-eye--left {
   left: 39.9%;
   top: 25.9%;
   transform: translate(-50%, -50%) rotate(-2deg);
 }
-.archive-intro-eye--right {
+.horror-hero-eye--right {
   left: 58.9%;
   top: 25.9%;
   transform: translate(-50%, -50%) rotate(2deg);
@@ -4965,7 +4952,7 @@ h2 {
 
 /* ── Vignette — very heavy ───────────────────────────────────── */
 
-.archive-intro-vignette {
+.horror-hero-vignette {
   position: absolute;
   inset: 0;
   pointer-events: none;
@@ -4976,7 +4963,7 @@ h2 {
 
 /* ── Fog layers ──────────────────────────────────────────────── */
 
-.archive-intro-fog {
+.horror-hero-fog {
   position: absolute;
   inset: -20%;
   pointer-events: none;
@@ -4986,7 +4973,7 @@ h2 {
     radial-gradient(ellipse 50% 35% at 75% 30%, rgba(6,2,1,0.85) 0%, transparent 65%);
   animation: archiveFogDrift 28s ease-in-out infinite;
 }
-.archive-intro-fog--b {
+.horror-hero-fog--b {
   opacity: 0.16;
   animation: archiveFogDrift 36s ease-in-out infinite reverse;
   animation-delay: -7s;
@@ -5000,7 +4987,7 @@ h2 {
 
 /* ── Grain ───────────────────────────────────────────────────── */
 
-.archive-intro-grain {
+.horror-hero-grain {
   position: absolute;
   inset: 0;
   pointer-events: none;
@@ -5019,7 +5006,7 @@ h2 {
 
 /* ── Content overlay ─────────────────────────────────────────── */
 
-.archive-intro-content {
+.horror-hero-content {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -5037,7 +5024,7 @@ h2 {
   to   { opacity: 1; transform: translateY(0); }
 }
 
-.archive-intro-title {
+.horror-hero-title {
   font-family: Georgia, 'Times New Roman', serif;
   font-size: clamp(2.6rem, 8vw, 5rem);
   font-weight: 700;
@@ -5050,7 +5037,7 @@ h2 {
     0 2px 8px rgba(0,0,0,0.80);
 }
 
-.archive-intro-subtitle {
+.horror-hero-subtitle {
   font-family: Georgia, serif;
   font-size: clamp(0.88rem, 2.2vw, 1.1rem);
   font-style: italic;
@@ -5060,7 +5047,7 @@ h2 {
   text-shadow: 0 1px 6px rgba(0,0,0,0.90);
 }
 
-.archive-intro-text {
+.horror-hero-text {
   font-family: Georgia, serif;
   font-size: clamp(0.72rem, 1.6vw, 0.85rem);
   color: rgba(200, 185, 170, 0.45);
@@ -5070,18 +5057,20 @@ h2 {
   text-shadow: 0 1px 4px rgba(0,0,0,0.90);
 }
 
-.archive-intro-actions {
+.horror-hero-actions {
   display: flex;
   gap: 14px;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.archive-intro-primary {
+.horror-hero-primary {
   font-family: ui-monospace, 'Courier New', monospace;
   font-size: 0.68rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
   padding: 12px 32px;
   background: rgba(140, 10, 10, 0.25);
   border: 1px solid rgba(200, 30, 30, 0.45);
@@ -5090,17 +5079,19 @@ h2 {
   border-radius: 2px;
   transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
-.archive-intro-primary:hover {
+.horror-hero-primary:hover {
   background: rgba(160, 15, 15, 0.40);
   border-color: rgba(220, 50, 50, 0.70);
   color: #EBE6DD;
 }
 
-.archive-intro-secondary {
+.horror-hero-secondary {
   font-family: ui-monospace, 'Courier New', monospace;
   font-size: 0.62rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
   padding: 12px 24px;
   background: transparent;
   border: 1px solid rgba(248, 240, 224, 0.12);
@@ -5109,7 +5100,7 @@ h2 {
   border-radius: 2px;
   transition: border-color 0.2s ease, color 0.2s ease;
 }
-.archive-intro-secondary:hover {
+.horror-hero-secondary:hover {
   border-color: rgba(248, 240, 224, 0.28);
   color: rgba(200, 189, 174, 0.65);
 }
@@ -5117,16 +5108,16 @@ h2 {
 /* ── Mobile ──────────────────────────────────────────────────── */
 
 @media (max-width: 500px) {
-  .archive-intro-eye { width: 34px; height: 16px; filter: blur(4.2px) saturate(1.35); }
-  .archive-intro-eye--left  { left: 38.4%; top: 25.7%; transform: translate(-50%, -50%) rotate(-2deg); }
-  .archive-intro-eye--right { left: 60.4%; top: 25.7%; transform: translate(-50%, -50%) rotate(2deg); }
-  .archive-intro-actions {
+  .horror-hero-eye { width: 34px; height: 16px; filter: blur(4.2px) saturate(1.35); }
+  .horror-hero-eye--left  { left: 38.4%; top: 25.7%; transform: translate(-50%, -50%) rotate(-2deg); }
+  .horror-hero-eye--right { left: 60.4%; top: 25.7%; transform: translate(-50%, -50%) rotate(2deg); }
+  .horror-hero-actions {
     flex-direction: column;
     align-items: center;
     gap: 10px;
   }
-  .archive-intro-primary,
-  .archive-intro-secondary {
+  .horror-hero-primary,
+  .horror-hero-secondary {
     width: 100%;
     max-width: 280px;
     text-align: center;
@@ -5136,16 +5127,15 @@ h2 {
 /* ── Reduced motion ──────────────────────────────────────────── */
 
 @media (prefers-reduced-motion: reduce) {
-  .archive-intro,
-  .archive-intro--leaving,
-  .archive-intro-bg,
-  .archive-intro-fog,
-  .archive-intro-grain,
-  .archive-intro-eye,
-  .archive-intro-content {
+  .horror-hero,
+  .horror-hero-bg,
+  .horror-hero-fog,
+  .horror-hero-grain,
+  .horror-hero-eye,
+  .horror-hero-content {
     animation: none !important;
   }
-  .archive-intro-face {
+  .horror-hero-face {
     filter: brightness(0.50) contrast(1.10) saturate(0.7);
   }
 }

@@ -1,64 +1,44 @@
 import { useState, useEffect, useRef } from 'react'
 import './App.css'
 
-function ArchiveIntro({ onEnter }) {
-  const [leaving, setLeaving] = useState(false)
+function HorrorHero() {
   const [ready, setReady] = useState(false)
 
   useEffect(() => {
-    const t = setTimeout(() => setReady(true), 800)
+    const t = setTimeout(() => setReady(true), 600)
     return () => clearTimeout(t)
   }, [])
 
-  function dismiss() {
-    setLeaving(true)
-    setTimeout(onEnter, 700)
-  }
-
   return (
-    <div
-      className={`archive-intro${leaving ? ' archive-intro--leaving' : ''}`}
-      role="dialog"
-      aria-label="Abertura do Arquivo Morto"
-      aria-modal="true"
-    >
-      {/* Creature background */}
-      <div className="archive-intro-bg" aria-hidden="true">
+    <section className="horror-hero" aria-label="Abertura do Arquivo Morto">
+      <div className="horror-hero-bg" aria-hidden="true">
         <img
-          className="archive-intro-face"
+          className="horror-hero-face"
           src="/assets/cinema/capa-arquivo.png"
           alt=""
           aria-hidden="true"
         />
-        <div className="archive-intro-eyes">
-          <div className="archive-intro-eye archive-intro-eye--left" />
-          <div className="archive-intro-eye archive-intro-eye--right" />
+        <div className="horror-hero-eyes">
+          <div className="horror-hero-eye horror-hero-eye--left" />
+          <div className="horror-hero-eye horror-hero-eye--right" />
         </div>
       </div>
-
-      {/* Atmosphere */}
-      <div className="archive-intro-fog" aria-hidden="true" />
-      <div className="archive-intro-fog archive-intro-fog--b" aria-hidden="true" />
-      <div className="archive-intro-grain" aria-hidden="true" />
-      <div className="archive-intro-vignette" aria-hidden="true" />
-
-      {/* Content */}
+      <div className="horror-hero-fog" aria-hidden="true" />
+      <div className="horror-hero-fog horror-hero-fog--b" aria-hidden="true" />
+      <div className="horror-hero-grain" aria-hidden="true" />
+      <div className="horror-hero-vignette" aria-hidden="true" />
       {ready && (
-        <div className="archive-intro-content">
-          <h1 className="archive-intro-title">ARQUIVO<br />MORTO</h1>
-          <p className="archive-intro-subtitle">A morte está olhando de volta.</p>
-          <p className="archive-intro-text">O dossiê foi aberto. Algo dentro dele ainda respira.</p>
-          <div className="archive-intro-actions">
-            <button className="archive-intro-primary" onClick={dismiss} autoFocus>
-              Abrir o Dossiê
-            </button>
-            <button className="archive-intro-secondary" onClick={dismiss}>
-              Pular introdução
-            </button>
+        <div className="horror-hero-content">
+          <h1 className="horror-hero-title">ARQUIVO<br />MORTO</h1>
+          <p className="horror-hero-subtitle">A morte está olhando de volta.</p>
+          <p className="horror-hero-text">O dossiê foi aberto. Algo dentro dele ainda respira.</p>
+          <div className="horror-hero-actions">
+            <a className="horror-hero-primary" href="#destaque">Abrir o Dossiê</a>
+            <a className="horror-hero-secondary" href="#dossies">Explorar o Arquivo</a>
           </div>
         </div>
       )}
-    </div>
+    </section>
   )
 }
 
@@ -741,18 +721,9 @@ function ArchiveVisual({ type = 'medical-file', label, code, size = 'md' }) {
 
 function App() {
   const [mode, setMode] = useState('arquivo')
-  const [introSeen, setIntroSeen] = useState(
-    () => sessionStorage.getItem('archive-intro-seen') === '1'
-  )
-
-  function handleIntroEnter() {
-    sessionStorage.setItem('archive-intro-seen', '1')
-    setIntroSeen(true)
-  }
 
   return (
     <div className={`root${mode === 'terminal' ? ' mode-terminal' : ''}`}>
-      {!introSeen && <ArchiveIntro onEnter={handleIntroEnter} />}
       <div className="noise-overlay" aria-hidden="true" />
       <div className="scanlines" aria-hidden="true" />
 
@@ -790,6 +761,8 @@ function App() {
       </nav>
 
       <main className="page">
+
+        <HorrorHero />
 
         {/* HERO */}
         <header className="hero">
