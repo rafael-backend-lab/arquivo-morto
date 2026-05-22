@@ -1101,12 +1101,18 @@ h2 {
 }
 
 .section-label {
-  color: #b89a66;
-  text-transform: uppercase;
-  letter-spacing: 0.22em;
-  font-size: 0.73rem;
+  display: inline-block;
+  font-family: ui-monospace, 'Courier New', monospace;
+  font-size: 0.62rem;
   font-weight: 700;
-  margin: 0 0 10px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--chem-green);
+  padding: 4px 10px;
+  border: 1px solid rgba(29, 138, 72, 0.28);
+  border-radius: 3px;
+  background: rgba(29, 138, 72, 0.06);
+  margin: 0 0 12px;
 }
 
 .section-header h3 {
@@ -1313,10 +1319,8 @@ h2 {
   display: grid;
   grid-template-columns: 116px 1fr;
   align-items: start;
-  margin-bottom: 38px;
   position: relative;
 }
-.timeline-event:last-child { margin-bottom: 0; }
 
 .timeline-year {
   display: flex;
@@ -1328,31 +1332,50 @@ h2 {
 
 .timeline-year span {
   font-family: ui-monospace, 'Courier New', monospace;
-  font-size: 0.84rem;
+  font-size: 0.80rem;
   font-weight: 700;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   color: #b89a66;
+  background: rgba(184, 154, 102, 0.09);
+  border: 1px solid rgba(184, 154, 102, 0.20);
+  border-radius: 3px;
+  padding: 3px 8px;
+  display: inline-block;
 }
 
 .timeline-dot {
-  width: 9px;
-  height: 9px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   background: #8d1f2c;
-  box-shadow: 0 0 14px rgba(141, 31, 44, 0.80), 0 0 28px rgba(141, 31, 44, 0.28);
+  border: 1px solid rgba(200, 75, 90, 0.45);
+  box-shadow: 0 0 12px rgba(141, 31, 44, 0.90), 0 0 24px rgba(141, 31, 44, 0.32);
   flex-shrink: 0;
-  margin-right: -4px;
+  margin-right: -5px;
   z-index: 1;
   position: relative;
+}
+
+.timeline-event {
+  border-bottom: 1px solid rgba(248, 240, 224, 0.055);
+  padding-bottom: 26px;
+  margin-bottom: 26px;
+  transition: background 0.18s ease;
+  border-radius: 3px;
+}
+.timeline-event:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .timeline-desc {
   margin: 0;
   color: var(--text);
-  font-size: 0.97rem;
-  line-height: 1.80;
+  font-size: 0.96rem;
+  line-height: 1.82;
   padding-left: 26px;
-  padding-top: 1px;
+  padding-top: 3px;
 }
 
 /* ─── GABINETE ──────────────────────────────────────────────── */
@@ -4087,4 +4110,145 @@ h2 {
   .soviet-dossier-note {
     padding: 0.85rem 0.9rem;
   }
+}
+
+/* ─── UX POLISH — mobile section rhythm & visual refinements ─── */
+
+/* Reduce vertical section rhythm on mobile */
+@media (max-width: 640px) {
+  .section,
+  .humanity-section,
+  .occult-section,
+  .body-study-section,
+  .forensic-section,
+  .modern-death-section,
+  .featured-dossier,
+  .classification,
+  .curator-note {
+    margin-top: 40px !important;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 32px 20px 36px;
+    border-radius: 12px;
+  }
+
+  .archive-meta {
+    gap: 6px;
+    margin-bottom: 20px;
+  }
+
+  .meta-tag {
+    font-size: 0.62rem;
+    padding: 3px 8px;
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 12px 18px;
+  }
+
+  .lead {
+    font-size: 1rem;
+    line-height: 1.78;
+    margin-bottom: 24px;
+  }
+
+  .section-header h3 {
+    font-size: clamp(1.3rem, 5vw, 1.9rem);
+  }
+
+  /* Timeline: tighter on small screens */
+  .timeline::before {
+    left: 68px;
+  }
+  .timeline-event {
+    grid-template-columns: 68px 1fr;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+  .timeline-year {
+    gap: 10px;
+  }
+  .timeline-desc {
+    padding-left: 18px;
+  }
+
+  /* Featured dossier */
+  .featured-article {
+    padding: 20px 16px;
+  }
+  .featured-blocks {
+    grid-template-columns: 1fr;
+  }
+  .featured-title {
+    font-size: clamp(1.3rem, 5vw, 1.8rem);
+  }
+
+  /* Manifesto */
+  .manifesto {
+    padding: 24px 18px;
+  }
+  .manifesto-text p {
+    font-size: 0.97rem;
+  }
+
+  /* Bioethics note */
+  .bioethics-note {
+    padding: 20px 16px;
+  }
+}
+
+/* Featured dossier: case-file divider below meta */
+.featured-meta {
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(248, 240, 224, 0.07);
+  margin-bottom: 20px;
+}
+
+/* Timeline: contained archive register look — horizontal padding is 0 to preserve dot/line alignment */
+.timeline {
+  border: 1px solid rgba(248, 240, 224, 0.07);
+  border-radius: 6px;
+  padding: 24px 0;
+  background: rgba(8, 8, 8, 0.55);
+}
+
+/* Cabinet: tighter on very small screens */
+@media (max-width: 480px) {
+  .cabinet-item {
+    padding: 18px;
+  }
+}
+
+/* Classification card: subtle bottom line accent */
+.clf-card {
+  position: relative;
+  overflow: hidden;
+}
+.clf-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(184, 154, 102, 0.18), transparent);
+}
+
+/* Card head rows: wrap gracefully on narrow viewports */
+.history-card-head,
+.occult-card-head,
+.body-study-card-head,
+.forensic-card-head,
+.medical-card-head {
+  flex-wrap: wrap;
+  row-gap: 6px;
 }
