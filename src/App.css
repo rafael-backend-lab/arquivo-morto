@@ -317,17 +317,18 @@ h2 {
   max-width: 100%;
   margin-top: 10px;
   font-family: ui-monospace, 'Courier New', monospace;
-  font-size: 0.70rem;
-  letter-spacing: 0.11em;
+  font-size: 0.66rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(245, 236, 218, 0.92);
-  line-height: 1.55;
+  color: rgba(218, 211, 199, 0.9);
+  line-height: 1.5;
   opacity: 1;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.98);
-  padding: 9px 12px;
-  background: rgba(3, 3, 3, 0.82);
-  border: 1px solid rgba(188, 137, 88, 0.24);
-  border-radius: 8px;
+  text-shadow: 0 1px 9px rgba(0, 0, 0, 0.92);
+  padding: 8px 10px;
+  background: rgba(6, 6, 6, 0.78);
+  border: 1px solid rgba(150, 140, 124, 0.22);
+  border-left: 3px solid rgba(170, 158, 136, 0.34);
+  border-radius: 7px;
 }
 
 /* Anatomy visual board — editorial composition before body-study grid */
@@ -377,17 +378,18 @@ h2 {
   max-width: 100%;
   margin-top: 10px;
   font-family: ui-monospace, 'Courier New', monospace;
-  font-size: 0.70rem;
-  letter-spacing: 0.11em;
+  font-size: 0.66rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(245, 236, 218, 0.92);
-  line-height: 1.55;
+  color: rgba(218, 211, 199, 0.9);
+  line-height: 1.5;
   opacity: 1;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.98);
-  padding: 9px 12px;
-  background: rgba(3, 3, 3, 0.82);
-  border: 1px solid rgba(188, 137, 88, 0.24);
-  border-radius: 8px;
+  text-shadow: 0 1px 9px rgba(0, 0, 0, 0.92);
+  padding: 8px 10px;
+  background: rgba(6, 6, 6, 0.78);
+  border: 1px solid rgba(150, 140, 124, 0.22);
+  border-left: 3px solid rgba(170, 158, 136, 0.34);
+  border-radius: 7px;
 }
 
 /* Literature strip — Frankenstein + Mary Shelley, 2-col, after timeline */
@@ -514,14 +516,21 @@ h2 {
 }
 
 .cinema-dossier-caption {
+  display: inline-block;
   margin: 8px 0 0;
-  color: rgba(210, 175, 118, 0.96);
+  color: rgba(218, 211, 199, 0.9);
   font-family: ui-monospace, 'Courier New', monospace;
-  font-size: 0.64rem;
-  letter-spacing: 0.08em;
+  font-size: 0.66rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  line-height: 1.55;
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.95);
+  line-height: 1.5;
+  text-shadow: 0 1px 9px rgba(0, 0, 0, 0.92);
+  padding: 8px 10px;
+  background: rgba(6, 6, 6, 0.78);
+  border: 1px solid rgba(150, 140, 124, 0.22);
+  border-left: 3px solid rgba(170, 158, 136, 0.34);
+  border-radius: 7px;
+  max-width: 100%;
 }
 
 /* ─── Cinema image frame ────────────────────────────────────── */
@@ -702,26 +711,28 @@ h2 {
   flex-direction: column;
   gap: 4px;
   margin-top: 10px;
-  padding: 9px 12px;
-  background: rgba(3, 3, 3, 0.82);
-  border: 1px solid rgba(188, 137, 88, 0.24);
-  border-radius: 8px;
+  padding: 8px 10px;
+  background: rgba(6, 6, 6, 0.78);
+  border: 1px solid rgba(150, 140, 124, 0.22);
+  border-left: 3px solid rgba(170, 158, 136, 0.34);
+  border-radius: 7px;
 }
 
 .occult-visual-caption strong {
-  color: rgba(215, 168, 79, 0.96);
-  font-size: 0.74rem;
+  color: rgba(232, 224, 209, 0.94);
+  font-size: 0.66rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   font-family: ui-monospace, 'Courier New', monospace;
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.95);
+  text-shadow: 0 1px 9px rgba(0, 0, 0, 0.92);
 }
 
 .occult-visual-caption span {
-  color: rgba(242, 231, 211, 0.86);
-  font-size: 0.80rem;
-  line-height: 1.55;
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.92);
+  color: rgba(188, 181, 169, 0.84);
+  font-size: 0.66rem;
+  line-height: 1.5;
+  letter-spacing: 0.08em;
+  text-shadow: 0 1px 9px rgba(0, 0, 0, 0.92);
 }
 
 @media (max-width: 960px) {
@@ -3222,11 +3233,12 @@ h2 {
 .brukhonenko-portrait figcaption {
   margin-top: 0.75rem;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  font-size: 0.68rem;
+  font-size: 0.66rem;
   line-height: 1.5;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(235, 230, 221, 0.52);
+  color: rgba(218, 211, 199, 0.86);
+  text-shadow: 0 1px 9px rgba(0, 0, 0, 0.92);
 }
 
 @media (max-width: 800px) {
@@ -3308,11 +3320,12 @@ h2 {
 .cornish-caption {
   margin-top: 0.75rem;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  font-size: 0.68rem;
+  font-size: 0.66rem;
   line-height: 1.5;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(235, 230, 221, 0.52);
+  color: rgba(218, 211, 199, 0.86);
+  text-shadow: 0 1px 9px rgba(0, 0, 0, 0.92);
 }
 
 .cornish-experiment-board {
@@ -3495,11 +3508,12 @@ h2 {
 .cornish-real-experiment figcaption {
   margin-top: 0.75rem;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  font-size: 0.68rem;
+  font-size: 0.66rem;
   line-height: 1.5;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(235, 230, 221, 0.52);
+  color: rgba(218, 211, 199, 0.86);
+  text-shadow: 0 1px 9px rgba(0, 0, 0, 0.92);
 }
 
 .cornish-real-experiment {
@@ -3599,11 +3613,12 @@ h2 {
 .cornish-gallery-card figcaption {
   margin-top: 0.75rem;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  font-size: 0.68rem;
+  font-size: 0.66rem;
   line-height: 1.5;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(235, 230, 221, 0.52);
+  color: rgba(218, 211, 199, 0.86);
+  text-shadow: 0 1px 9px rgba(0, 0, 0, 0.92);
 }
 
 @media (max-width: 900px) {
@@ -3738,11 +3753,12 @@ h2 {
 .cornish-lead-photo figcaption {
   margin-top: 0.75rem;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  font-size: 0.68rem;
+  font-size: 0.66rem;
   line-height: 1.5;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(235, 230, 221, 0.52);
+  color: rgba(218, 211, 199, 0.86);
+  text-shadow: 0 1px 9px rgba(0, 0, 0, 0.92);
 }
 
 @media (max-width: 1000px) {
@@ -3800,11 +3816,12 @@ h2 {
 .cornish-lead-photo figcaption {
   margin-top: 0.75rem;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  font-size: 0.68rem;
+  font-size: 0.66rem;
   line-height: 1.5;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(235, 230, 221, 0.52);
+  color: rgba(218, 211, 199, 0.86);
+  text-shadow: 0 1px 9px rgba(0, 0, 0, 0.92);
 }
 
 .cornish-gallery-compact {
@@ -3957,11 +3974,12 @@ h2 {
   padding: 0.15rem 0.05rem 0 !important;
   min-height: auto !important;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
-  font-size: 0.72rem !important;
-  line-height: 1.65 !important;
-  letter-spacing: 0.1em !important;
+  font-size: 0.66rem !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0.12em !important;
   text-transform: uppercase !important;
-  color: rgba(235, 230, 221, 0.58) !important;
+  color: rgba(218, 211, 199, 0.86) !important;
+  text-shadow: 0 1px 9px rgba(0, 0, 0, 0.92) !important;
 }
 
 @media (max-width: 900px) {
@@ -4006,9 +4024,14 @@ h2 {
 
 .cornish-gallery-two .cornish-gallery-card figcaption {
   margin-top: 0.8rem !important;
-  font-size: 0.72rem !important;
-  line-height: 1.65 !important;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+  font-size: 0.66rem !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
   min-height: auto !important;
+  color: rgba(218, 211, 199, 0.86) !important;
+  text-shadow: 0 1px 9px rgba(0, 0, 0, 0.92) !important;
 }
 
 @media (max-width: 900px) {
@@ -4212,11 +4235,12 @@ h2 {
 .brukhonenko-gallery-card figcaption {
   margin-top: 0.8rem;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  font-size: 0.7rem;
-  line-height: 1.6;
-  letter-spacing: 0.1em;
+  font-size: 0.66rem;
+  line-height: 1.5;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(235, 230, 221, 0.58);
+  color: rgba(218, 211, 199, 0.86);
+  text-shadow: 0 1px 9px rgba(0, 0, 0, 0.92);
 }
 
 @media (max-width: 1000px) {
@@ -4366,11 +4390,12 @@ h2 {
 .brukhonenko-gallery-strong figcaption {
   margin-top: 0.8rem !important;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
-  font-size: 0.72rem !important;
-  line-height: 1.65 !important;
-  letter-spacing: 0.1em !important;
+  font-size: 0.66rem !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0.12em !important;
   text-transform: uppercase !important;
-  color: rgba(235, 230, 221, 0.58) !important;
+  color: rgba(218, 211, 199, 0.86) !important;
+  text-shadow: 0 1px 9px rgba(0, 0, 0, 0.92) !important;
 }
 
 .brukhonenko-film-card {
@@ -4457,11 +4482,12 @@ h2 {
 
 .brukhonenko-flow-image figcaption {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  font-size: 0.7rem;
-  line-height: 1.6;
-  letter-spacing: 0.1em;
+  font-size: 0.66rem;
+  line-height: 1.5;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(235, 230, 221, 0.58);
+  color: rgba(218, 211, 199, 0.86);
+  text-shadow: 0 1px 9px rgba(0, 0, 0, 0.92);
 }
 
 .brukhonenko-flow-copy {
@@ -4603,13 +4629,14 @@ h2 {
 .aldini-visual-card figcaption {
   margin-top: 0.85rem;
   padding-top: 0.75rem;
-  border-top: 1px solid rgba(235, 230, 221, 0.08);
+  border-top: 1px solid rgba(150, 140, 124, 0.18);
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  font-size: 0.7rem;
-  line-height: 1.65;
-  letter-spacing: 0.1em;
+  font-size: 0.66rem;
+  line-height: 1.5;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(235, 230, 221, 0.6);
+  color: rgba(218, 211, 199, 0.86);
+  text-shadow: 0 1px 9px rgba(0, 0, 0, 0.92);
 }
 
 @media (max-width: 900px) {
@@ -4875,16 +4902,16 @@ h2 {
 
 @media (max-width: 600px) {
   .contextual-figure-caption,
-  .anatomy-visual-caption {
-    font-size: 0.66rem;
-    padding: 8px 10px;
-    line-height: 1.45;
-  }
+  .anatomy-visual-caption,
+  .cinema-dossier-caption,
   .occult-visual-caption {
-    padding: 8px 10px;
+    font-size: 0.62rem;
+    padding: 7px 8px;
+    line-height: 1.45;
+    letter-spacing: 0.08em;
   }
   .occult-visual-caption span {
-    font-size: 0.76rem;
+    font-size: 0.62rem;
   }
 }
 
@@ -5040,7 +5067,6 @@ h2 {
 }
 
 /* ─── CAPTION LEGIBILITY OVERRIDE ───────────────────────────── */
-/* Force readable solid labels on all image captions             */
 
 .contextual-figure-caption,
 .anatomy-visual-caption,
@@ -5048,20 +5074,20 @@ h2 {
 .cinema-dossier-caption,
 .visual-code,
 .visual-label {
-  color: #efe3c8 !important;
+  color: rgba(218, 211, 199, 0.9) !important;
   opacity: 1 !important;
-  background: rgba(2, 2, 2, 0.92) !important;
-  border: 1px solid rgba(190, 145, 92, 0.36) !important;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.50) !important;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 1) !important;
-  padding: 8px 12px !important;
-  border-radius: 6px !important;
+  background: rgba(6, 6, 6, 0.78) !important;
+  border: 1px solid rgba(150, 140, 124, 0.22) !important;
+  border-left: 3px solid rgba(170, 158, 136, 0.34) !important;
+  text-shadow: 0 1px 9px rgba(0, 0, 0, 0.92) !important;
+  padding: 8px 10px !important;
+  border-radius: 7px !important;
   display: inline-block !important;
-  max-width: max-content !important;
+  max-width: 100% !important;
   width: auto !important;
   line-height: 1.5 !important;
-  font-size: 0.70rem !important;
-  letter-spacing: 0.08em !important;
+  font-size: 0.66rem !important;
+  letter-spacing: 0.12em !important;
   margin-top: 8px !important;
   position: relative !important;
   z-index: 3 !important;
@@ -5073,31 +5099,30 @@ h2 {
   gap: 4px !important;
 }
 
-.occult-visual-caption strong,
-.occult-visual-caption span {
-  color: #efe3c8 !important;
-  opacity: 1 !important;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 1) !important;
-}
-
 .occult-visual-caption strong {
-  font-size: 0.74rem !important;
+  color: rgba(232, 224, 209, 0.94) !important;
+  font-size: 0.66rem !important;
+  text-shadow: 0 1px 9px rgba(0, 0, 0, 0.92) !important;
 }
 
 .occult-visual-caption span {
-  font-size: 0.78rem !important;
-  line-height: 1.55 !important;
+  color: rgba(188, 181, 169, 0.84) !important;
+  font-size: 0.66rem !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0.08em !important;
+  text-shadow: 0 1px 9px rgba(0, 0, 0, 0.92) !important;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 600px) {
   .contextual-figure-caption,
   .anatomy-visual-caption,
   .occult-visual-caption,
   .cinema-dossier-caption,
   .visual-code,
   .visual-label {
-    font-size: 0.66rem !important;
+    font-size: 0.62rem !important;
     line-height: 1.45 !important;
-    padding: 8px 10px !important;
+    letter-spacing: 0.08em !important;
+    padding: 7px 8px !important;
   }
 }
