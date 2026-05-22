@@ -390,6 +390,143 @@ h2 {
   padding: 10px;
 }
 
+/* ─── CINEMA E LITERATURA CONTEMPORÂNEA ────────────────────── */
+
+.cinema-section {
+  margin-top: 56px;
+}
+
+.cinema-subtitle {
+  max-width: 860px;
+  margin: 16px 0 0;
+  color: #d4c5aa;
+  font-size: clamp(1rem, 2vw, 1.18rem);
+  line-height: 1.76;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+}
+
+.cinema-board {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.cinema-feature,
+.cinema-card {
+  min-width: 0;
+  border: 1px solid rgba(248, 240, 224, 0.12);
+  border-radius: 6px;
+  background:
+    linear-gradient(160deg, rgba(12, 11, 12, 0.97) 0%, rgba(58, 15, 20, 0.18) 50%, rgba(8, 8, 8, 0.98) 100%);
+  box-shadow:
+    inset 0 0 0 1px rgba(248, 240, 224, 0.02),
+    0 20px 58px rgba(0, 0, 0, 0.30);
+  overflow: hidden;
+}
+
+.cinema-feature {
+  padding: 22px;
+}
+
+.cinema-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  min-width: 0;
+}
+
+.cinema-card {
+  padding: 18px;
+}
+
+.cinema-image-frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid rgba(248, 240, 224, 0.10);
+  background:
+    radial-gradient(circle at top, rgba(58, 15, 20, 0.18), transparent 48%),
+    linear-gradient(180deg, rgba(8, 8, 8, 0.98), rgba(12, 12, 12, 0.92));
+}
+
+.cinema-image-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 520px;
+  object-fit: contain;
+  filter: grayscale(0.20) sepia(0.12) contrast(1.04);
+}
+
+.cinema-card .cinema-image-frame img {
+  max-height: 220px;
+}
+
+.cinema-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.cinema-meta span {
+  font-family: ui-monospace, 'Courier New', monospace;
+  font-size: 0.60rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #b89a66;
+  padding: 5px 8px;
+  border: 1px solid rgba(184, 154, 102, 0.22);
+  border-radius: 3px;
+  background: rgba(184, 154, 102, 0.08);
+}
+
+.cinema-card-title {
+  margin: 16px 0 10px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.12rem, 2vw, 1.58rem);
+  line-height: 1.18;
+  color: var(--bone);
+}
+
+.cinema-card-text {
+  margin: 0;
+  color: var(--text);
+  font-size: 0.92rem;
+  line-height: 1.82;
+}
+
+@media (max-width: 1000px) {
+  .cinema-board {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .cinema-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cinema-feature,
+  .cinema-card {
+    padding: 16px;
+  }
+
+  .cinema-image-frame {
+    padding: 10px;
+  }
+
+  .cinema-image-frame img,
+  .cinema-card .cinema-image-frame img {
+    max-height: none;
+  }
+}
+
 /* ─── CAPÍTULO II — OCCULT VISUAL BOARD ─────────────────────── */
 
 .occult-visual-board {

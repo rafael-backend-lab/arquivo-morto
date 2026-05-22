@@ -467,6 +467,52 @@ const selectedDossiers = [
   },
 ]
 
+const cinemaLegacy = [
+  {
+    title: 'Frankenstein (1910)',
+    image: '/assets/cinema/frankenstein-1910-poster.jpg',
+    type: 'CURTA-METRAGEM',
+    year: '1910',
+    direction: 'J. Searle Dawley',
+    text: 'Primeira adaptação conhecida de Frankenstein para o cinema, ainda ligada ao teatro, à alquimia visual e ao assombro primitivo da imagem em movimento.',
+  },
+  {
+    title: 'Frankenstein (1931)',
+    image: '/assets/cinema/frankenstein-1931-poster.jpg',
+    type: 'CINEMA CLÁSSICO',
+    year: '1931',
+    direction: 'James Whale',
+    text: 'O filme da Universal fixa no imaginário popular o monstro de Frankenstein como ícone visual: eletricidade, laboratório, corpo costurado e tragédia monstruosa.',
+  },
+  {
+    title: 'A criatura e a inocência',
+    image: '/assets/cinema/frankenstein-1931-karloff-maria.jpg',
+    type: 'ÍCONE VISUAL',
+    year: '1931',
+    direction: 'James Whale',
+    text: 'A cena entre a criatura e Maria reforça a ambiguidade central do mito: o monstro não nasce maligno, mas deslocado, rejeitado e incapaz de compreender a violência do mundo.',
+  },
+  {
+    title: 'Night of the Living Dead',
+    image: '/assets/cinema/night-of-the-living-dead-1968.jpg',
+    type: 'ZUMBI MODERNO',
+    year: '1968',
+    direction: 'George A. Romero',
+    text: 'Romero desloca o morto-vivo do folclore para o colapso social moderno. O cadáver que retorna deixa de ser milagre ou experimento isolado e vira contágio coletivo, cerco e crise civilizatória.',
+  },
+  {
+    title: 'Dawn of the Dead',
+    image: '/assets/cinema/dawn-of-the-dead-1978-logo.png',
+    type: 'CULTURA POP',
+    year: '1978',
+    direction: 'George A. Romero',
+    text: 'O shopping center de Dawn of the Dead transforma os mortos-vivos em crítica social: consumo, automatismo, multidão e corpos que continuam repetindo hábitos depois da morte.',
+  },
+]
+
+const cinemaFeature = cinemaLegacy.find((entry) => entry.title === 'Frankenstein (1931)')
+const cinemaGridItems = cinemaLegacy.filter((entry) => entry.title !== 'Frankenstein (1931)')
+
 function ArchiveVisual({ type = 'medical-file', label, code, size = 'md' }) {
   return (
     <div className={`archive-visual av-${size}`} aria-hidden="true">
@@ -498,6 +544,7 @@ function App() {
             <a href="#dossies" className="nav-link">Arquivo de casos</a>
             <a href="#artigos" className="nav-link">Artigos</a>
             <a href="#linha" className="nav-link">Linha do Tempo</a>
+            <a href="#cinema" className="nav-link">Cinema</a>
             <a href="#gabinete" className="nav-link">Gabinete</a>
           </div>
           <button
@@ -1444,6 +1491,51 @@ function App() {
           </figure>
         </div>
 
+        {/* CINEMA E LITERATURA CONTEMPORÂNEA */}
+        <section id="cinema" className="section cinema-section" aria-labelledby="cinema-heading">
+          <div className="section-header">
+            <p className="section-label">Capítulo VI</p>
+            <h3 id="cinema-heading">Do gótico ao horror contemporâneo</h3>
+            <p className="cinema-subtitle">
+              De Frankenstein ao cinema de mortos-vivos, a reanimação deixou o laboratório literário e entrou na cultura pop: monstros trágicos, corpos reconstruídos, zumbis modernos e a ciência como pesadelo visual.
+            </p>
+          </div>
+
+          <div className="cinema-board">
+            {cinemaFeature && (
+              <article className="cinema-feature">
+                <div className="cinema-image-frame">
+                  <img src={cinemaFeature.image} alt={cinemaFeature.title} loading="lazy" />
+                </div>
+                <div className="cinema-meta">
+                  <span>{cinemaFeature.type}</span>
+                  <span>{cinemaFeature.year}</span>
+                  <span>{cinemaFeature.direction}</span>
+                </div>
+                <h4 className="cinema-card-title">{cinemaFeature.title}</h4>
+                <p className="cinema-card-text">{cinemaFeature.text}</p>
+              </article>
+            )}
+
+            <div className="cinema-grid">
+              {cinemaGridItems.map((entry) => (
+                <article className="cinema-card" key={entry.title}>
+                  <div className="cinema-image-frame">
+                    <img src={entry.image} alt={entry.title} loading="lazy" />
+                  </div>
+                  <div className="cinema-meta">
+                    <span>{entry.type}</span>
+                    <span>{entry.year}</span>
+                    <span>{entry.direction}</span>
+                  </div>
+                  <h4 className="cinema-card-title">{entry.title}</h4>
+                  <p className="cinema-card-text">{entry.text}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* GABINETE */}
         <section id="gabinete" className="section">
           <div className="section-header">
@@ -1502,6 +1594,7 @@ function App() {
                 <li><a href="#dossies" className="footer-link">Arquivo de casos</a></li>
                 <li><a href="#artigos" className="footer-link">Artigos</a></li>
                 <li><a href="#linha" className="footer-link">Linha do Tempo</a></li>
+                <li><a href="#cinema" className="footer-link">Cinema</a></li>
                 <li><a href="#gabinete" className="footer-link">Gabinete de Anatomia</a></li>
               </ul>
             </div>

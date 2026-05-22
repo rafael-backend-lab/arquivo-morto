@@ -1,6 +1,6 @@
 # public/assets/cinema
 
-Imagens usadas na futura seção de cinema/literatura contemporânea do Arquivo Morto.
+Imagens usadas na secao editorial ativa de cinema/literatura contemporanea do Arquivo Morto.
 
 ## Baixadas automaticamente de fontes abertas/verificáveis
 
@@ -9,6 +9,10 @@ Imagens usadas na futura seção de cinema/literatura contemporânea do Arquivo 
 - frankenstein-1910-poster.jpg
 - night-of-the-living-dead-1968.jpg
 - dawn-of-the-dead-1978-logo.png
+
+## Em uso no site
+
+- Do gotico ao horror contemporaneo
 
 ## Slots manuais
 
