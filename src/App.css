@@ -4834,308 +4834,36 @@ h2 {
   row-gap: 6px;
 }
 
-/* ─── HORROR ARCHIVE INTRO ──────────────────────────────────── */
+/* ─── SITE HAUNTING BACKGROUND ─────────────────────────────── */
 
-.horror-hero {
-  position: relative;
-  width: 100%;
-  min-height: 100svh;
-  overflow: hidden;
-  background: #000;
-}
-
-/* ── Background creature ─────────────────────────────────────── */
-
-.horror-hero-bg {
+.site-haunting-bg {
   position: absolute;
   inset: 0;
-  animation: archiveBreath 11s ease-in-out infinite;
+  z-index: 0;
+  pointer-events: none;
+  background-image: url("/assets/cinema/capa-arquivo.png");
+  background-size: cover;
+  background-position: center top;
+  opacity: 0.28;
+  filter: brightness(0.40) contrast(1.12) saturate(0.72);
+  animation: hauntingBreath 11s ease-in-out infinite;
   transform-origin: center 40%;
 }
-@keyframes archiveBreath {
+
+@keyframes hauntingBreath {
   0%, 100% {
     transform: scale(1.025) translate3d(0, 0, 0);
   }
   35% {
-    transform: scale(1.06) translate3d(-0.35%, 0.25%, 0);
+    transform: scale(1.055) translate3d(-0.3%, 0.2%, 0);
   }
   70% {
-    transform: scale(1.045) translate3d(0.25%, -0.18%, 0);
+    transform: scale(1.04) translate3d(0.2%, -0.15%, 0);
   }
 }
-
-.horror-hero-face {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 20%;
-  display: block;
-  filter: brightness(0.55) contrast(1.15) saturate(0.8);
-}
-
-/* ── CSS eye glows ───────────────────────────────────────────── */
-
-.horror-hero-eyes {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-}
-
-.horror-hero-eye {
-  position: absolute;
-  width: 46px;
-  height: 21px;
-  border-radius: 55% 45% 50% 50%;
-  background:
-    radial-gradient(ellipse at 50% 52%,
-      rgba(255, 72, 50, 0.58) 0%,
-      rgba(228, 24, 16, 0.46) 30%,
-      rgba(150, 0,  0,  0.25) 55%,
-      rgba(70,  0,  0,  0.10) 74%,
-      transparent 100%);
-  border: 0;
-  outline: 0;
-  opacity: 0.82;
-  filter: blur(4.8px) saturate(1.4);
-  mix-blend-mode: screen;
-  box-shadow:
-    0 0 22px rgba(255, 34, 22, 0.38),
-    0 0 54px rgba(180, 0,  0,  0.28),
-    0 0 92px rgba(100, 0,  0,  0.18);
-  animation: archiveEyePulse 8s ease-in-out infinite;
-}
-.horror-hero-eye--left {
-  left: 39.9%;
-  top: 25.9%;
-  transform: translate(-50%, -50%) rotate(-2deg);
-}
-.horror-hero-eye--right {
-  left: 58.9%;
-  top: 25.9%;
-  transform: translate(-50%, -50%) rotate(2deg);
-}
-
-@keyframes archiveEyePulse {
-  0%, 100% {
-    opacity: 0.58;
-    filter: blur(5.8px) saturate(1.18);
-    box-shadow:
-      0 0 18px rgba(255, 34, 22, 0.24),
-      0 0 48px rgba(180, 0,  0,  0.18),
-      0 0 86px rgba(100, 0,  0,  0.12);
-  }
-  42% {
-    opacity: 0.86;
-    filter: blur(4.8px) saturate(1.45);
-    box-shadow:
-      0 0 26px rgba(255, 48, 32, 0.42),
-      0 0 68px rgba(210, 0,  0,  0.32),
-      0 0 112px rgba(120, 0,  0,  0.20);
-  }
-  62% {
-    opacity: 0.96;
-    filter: blur(4.4px) saturate(1.65);
-    box-shadow:
-      0 0 30px rgba(255, 54, 38, 0.50),
-      0 0 78px rgba(220, 0,  0,  0.38),
-      0 0 128px rgba(140, 0,  0,  0.24);
-  }
-  82% {
-    opacity: 0.70;
-    filter: blur(5.6px) saturate(1.25);
-    box-shadow:
-      0 0 21px rgba(255, 34, 22, 0.30),
-      0 0 56px rgba(180, 0,  0,  0.22),
-      0 0 96px rgba(100, 0,  0,  0.15);
-  }
-}
-
-/* ── Vignette — very heavy ───────────────────────────────────── */
-
-.horror-hero-vignette {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background:
-    radial-gradient(ellipse 80% 70% at 50% 40%, transparent 25%, rgba(0,0,0,0.72) 65%, rgba(0,0,0,0.97) 100%),
-    linear-gradient(to bottom, rgba(0,0,0,0.65) 0%, transparent 20%, transparent 65%, rgba(0,0,0,0.90) 100%);
-}
-
-/* ── Fog layers ──────────────────────────────────────────────── */
-
-.horror-hero-fog {
-  position: absolute;
-  inset: -20%;
-  pointer-events: none;
-  opacity: 0.22;
-  background:
-    radial-gradient(ellipse 60% 40% at 30% 60%, rgba(8,4,2,0.90) 0%, transparent 70%),
-    radial-gradient(ellipse 50% 35% at 75% 30%, rgba(6,2,1,0.85) 0%, transparent 65%);
-  animation: archiveFogDrift 28s ease-in-out infinite;
-}
-.horror-hero-fog--b {
-  opacity: 0.16;
-  animation: archiveFogDrift 36s ease-in-out infinite reverse;
-  animation-delay: -7s;
-}
-@keyframes archiveFogDrift {
-  0%   { transform: translate(0,   0)   scale(1.00); }
-  33%  { transform: translate(3%,  2%)  scale(1.04); }
-  66%  { transform: translate(-2%, 3%)  scale(0.97); }
-  100% { transform: translate(0,   0)   scale(1.00); }
-}
-
-/* ── Grain ───────────────────────────────────────────────────── */
-
-.horror-hero-grain {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  opacity: 0.055;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='320'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='320' height='320' filter='url(%23g)'/%3E%3C/svg%3E");
-  background-size: 320px 320px;
-  animation: archiveGrain 0.18s steps(1) infinite;
-}
-@keyframes archiveGrain {
-  0%  { background-position:   0px   0px; }
-  20% { background-position: -80px  40px; }
-  40% { background-position:  60px -30px; }
-  60% { background-position: -40px  70px; }
-  80% { background-position:  30px -60px; }
-}
-
-/* ── Content overlay ─────────────────────────────────────────── */
-
-.horror-hero-content {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 0 clamp(20px, 6vw, 80px) clamp(32px, 6vh, 70px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  background: linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.50) 55%, transparent 100%);
-  animation: archiveContentIn 0.8s ease both;
-}
-@keyframes archiveContentIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-.horror-hero-title {
-  font-family: Georgia, 'Times New Roman', serif;
-  font-size: clamp(2.6rem, 8vw, 5rem);
-  font-weight: 700;
-  line-height: 1.0;
-  letter-spacing: 0.12em;
-  color: #EBE6DD;
-  margin: 0 0 12px;
-  text-shadow:
-    0 0 30px rgba(180, 0, 0, 0.40),
-    0 2px 8px rgba(0,0,0,0.80);
-}
-
-.horror-hero-subtitle {
-  font-family: Georgia, serif;
-  font-size: clamp(0.88rem, 2.2vw, 1.1rem);
-  font-style: italic;
-  color: rgba(235, 210, 190, 0.75);
-  margin: 0 0 10px;
-  letter-spacing: 0.04em;
-  text-shadow: 0 1px 6px rgba(0,0,0,0.90);
-}
-
-.horror-hero-text {
-  font-family: Georgia, serif;
-  font-size: clamp(0.72rem, 1.6vw, 0.85rem);
-  color: rgba(200, 185, 170, 0.45);
-  margin: 0 0 28px;
-  max-width: 420px;
-  line-height: 1.6;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.90);
-}
-
-.horror-hero-actions {
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.horror-hero-primary {
-  font-family: ui-monospace, 'Courier New', monospace;
-  font-size: 0.68rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  text-decoration: none;
-  display: inline-block;
-  padding: 12px 32px;
-  background: rgba(140, 10, 10, 0.25);
-  border: 1px solid rgba(200, 30, 30, 0.45);
-  color: rgba(240, 225, 215, 0.92);
-  cursor: pointer;
-  border-radius: 2px;
-  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
-}
-.horror-hero-primary:hover {
-  background: rgba(160, 15, 15, 0.40);
-  border-color: rgba(220, 50, 50, 0.70);
-  color: #EBE6DD;
-}
-
-.horror-hero-secondary {
-  font-family: ui-monospace, 'Courier New', monospace;
-  font-size: 0.62rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  text-decoration: none;
-  display: inline-block;
-  padding: 12px 24px;
-  background: transparent;
-  border: 1px solid rgba(248, 240, 224, 0.12);
-  color: rgba(200, 189, 174, 0.35);
-  cursor: pointer;
-  border-radius: 2px;
-  transition: border-color 0.2s ease, color 0.2s ease;
-}
-.horror-hero-secondary:hover {
-  border-color: rgba(248, 240, 224, 0.28);
-  color: rgba(200, 189, 174, 0.65);
-}
-
-/* ── Mobile ──────────────────────────────────────────────────── */
-
-@media (max-width: 500px) {
-  .horror-hero-eye { width: 34px; height: 16px; filter: blur(4.2px) saturate(1.35); }
-  .horror-hero-eye--left  { left: 38.4%; top: 25.7%; transform: translate(-50%, -50%) rotate(-2deg); }
-  .horror-hero-eye--right { left: 60.4%; top: 25.7%; transform: translate(-50%, -50%) rotate(2deg); }
-  .horror-hero-actions {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-  .horror-hero-primary,
-  .horror-hero-secondary {
-    width: 100%;
-    max-width: 280px;
-    text-align: center;
-  }
-}
-
-/* ── Reduced motion ──────────────────────────────────────────── */
 
 @media (prefers-reduced-motion: reduce) {
-  .horror-hero,
-  .horror-hero-bg,
-  .horror-hero-fog,
-  .horror-hero-grain,
-  .horror-hero-eye,
-  .horror-hero-content {
+  .site-haunting-bg {
     animation: none !important;
-  }
-  .horror-hero-face {
-    filter: brightness(0.50) contrast(1.10) saturate(0.7);
   }
 }

@@ -1,46 +1,5 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState } from 'react'
 import './App.css'
-
-function HorrorHero() {
-  const [ready, setReady] = useState(false)
-
-  useEffect(() => {
-    const t = setTimeout(() => setReady(true), 600)
-    return () => clearTimeout(t)
-  }, [])
-
-  return (
-    <section className="horror-hero" aria-label="Abertura do Arquivo Morto">
-      <div className="horror-hero-bg" aria-hidden="true">
-        <img
-          className="horror-hero-face"
-          src="/assets/cinema/capa-arquivo.png"
-          alt=""
-          aria-hidden="true"
-        />
-        <div className="horror-hero-eyes">
-          <div className="horror-hero-eye horror-hero-eye--left" />
-          <div className="horror-hero-eye horror-hero-eye--right" />
-        </div>
-      </div>
-      <div className="horror-hero-fog" aria-hidden="true" />
-      <div className="horror-hero-fog horror-hero-fog--b" aria-hidden="true" />
-      <div className="horror-hero-grain" aria-hidden="true" />
-      <div className="horror-hero-vignette" aria-hidden="true" />
-      {ready && (
-        <div className="horror-hero-content">
-          <h1 className="horror-hero-title">ARQUIVO<br />MORTO</h1>
-          <p className="horror-hero-subtitle">A morte está olhando de volta.</p>
-          <p className="horror-hero-text">O dossiê foi aberto. Algo dentro dele ainda respira.</p>
-          <div className="horror-hero-actions">
-            <a className="horror-hero-primary" href="#destaque">Abrir o Dossiê</a>
-            <a className="horror-hero-secondary" href="#dossies">Explorar o Arquivo</a>
-          </div>
-        </div>
-      )}
-    </section>
-  )
-}
 
 const articles = [
   {
@@ -762,10 +721,9 @@ function App() {
 
       <main className="page">
 
-        <HorrorHero />
-
         {/* HERO */}
         <header className="hero">
+          <div className="site-haunting-bg" aria-hidden="true" />
           <div className="hero-overlay" aria-hidden="true" />
           <div className="hero-visual-system" aria-hidden="true">
             <div className="hvs-diagram" />
