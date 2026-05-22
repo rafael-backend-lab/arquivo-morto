@@ -390,6 +390,128 @@ h2 {
   padding: 10px;
 }
 
+/* ─── CAPÍTULO II — OCCULT VISUAL BOARD ─────────────────────── */
+
+.occult-visual-board {
+  margin: 42px 0 48px;
+  padding: 28px;
+  border: 1px solid rgba(114, 214, 164, 0.18);
+  background:
+    linear-gradient(135deg, rgba(58, 15, 20, 0.34), rgba(3, 22, 13, 0.42)),
+    rgba(8, 8, 8, 0.78);
+}
+
+.occult-visual-intro {
+  max-width: 820px;
+  margin-bottom: 24px;
+}
+
+.occult-visual-intro .archive-date {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.occult-visual-intro h4 {
+  margin: 0 0 10px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.4rem, 2.5vw, 2.2rem);
+  color: #f8f0e6;
+  line-height: 1.2;
+}
+
+.occult-visual-intro p {
+  margin: 0;
+  color: rgba(248, 240, 230, 0.78);
+  line-height: 1.75;
+  font-size: clamp(0.9rem, 1.5vw, 1.05rem);
+}
+
+.occult-visual-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.occult-visual-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.occult-visual-card {
+  margin: 0;
+}
+
+.occult-visual-frame {
+  background: rgba(8, 8, 8, 0.72);
+  border: 1px solid rgba(248, 240, 230, 0.10);
+  padding: 10px;
+}
+
+.occult-visual-frame img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: contain;
+  display: block;
+  filter: sepia(0.30) contrast(1.04) brightness(0.93);
+}
+
+.occult-visual-card-large .occult-visual-frame img {
+  max-height: 500px;
+}
+
+.occult-visual-stack .occult-visual-card .occult-visual-frame img {
+  max-height: 150px;
+}
+
+.occult-visual-caption {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 10px;
+}
+
+.occult-visual-caption strong {
+  color: #d7a84f;
+  font-size: 0.74rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-family: ui-monospace, 'Courier New', monospace;
+}
+
+.occult-visual-caption span {
+  color: rgba(248, 240, 230, 0.65);
+  font-size: 0.80rem;
+  line-height: 1.55;
+}
+
+@media (max-width: 960px) {
+  .occult-visual-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .occult-visual-board {
+    padding: 18px;
+    margin: 32px 0 38px;
+  }
+  .occult-visual-grid {
+    grid-template-columns: 1fr;
+  }
+  .occult-visual-stack {
+    gap: 12px;
+  }
+  .occult-visual-frame img,
+  .occult-visual-card-large .occult-visual-frame img,
+  .occult-visual-stack .occult-visual-card .occult-visual-frame img {
+    max-height: none;
+    height: auto;
+  }
+}
+
 /* ─── HUMANIDADE CONTRA A MORTE ─────────────────────────────── */
 
 .humanity-section {

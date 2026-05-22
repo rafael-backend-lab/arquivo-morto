@@ -15,6 +15,10 @@ Todas as imagens utilizadas no site são de domínio público, obtidas via Wikim
 | `vesalius-anatomy.jpg` | *De Humani Corporis Fabrica*, prancha p. 190 | Andreas Vesalius, 1543 — Wikimedia Commons | Domínio público |
 | `anatomy-lesson.jpg` | *A Lição de Anatomia do Dr. Nicolaes Tulp* | Rembrandt van Rijn, 1632 — Wikimedia Commons | Domínio público |
 | `vesalius-skeleton.jpg` | *De Humani Corporis Fabrica*, prancha do esqueleto (p. 174) | Andreas Vesalius, 1543 — Wikimedia Commons | Domínio público |
+| `occult-alchemy-lab.jpg` | *O Alquimista* | Pieter Bruegel, o Velho, séc. XVI — Wikimedia Commons | Domínio público |
+| `occult-john-dee.jpg` | *Retrato de John Dee* | Anônimo, 1527–1608 — Ashmolean Museum / Wikimedia Commons | Domínio público |
+| `occult-golem.jpg` | *O Golem e o Rabino Loew* | Ilustração histórica — Wikimedia Commons | Domínio público |
+| `occult-automaton.jpg` | *O Pato Mecânico de Jacques de Vaucanson* | Gravura, séc. XVIII — Wikimedia Commons | Domínio público |
 
 ---
 
@@ -27,6 +31,10 @@ Todas as imagens utilizadas no site são de domínio público, obtidas via Wikim
 - `vesalius-anatomy.jpg` — https://upload.wikimedia.org/wikipedia/commons/2/23/Vesalius_Fabrica_p190.jpg
 - `anatomy-lesson.jpg` — https://upload.wikimedia.org/wikipedia/commons/4/4d/Rembrandt_-_The_Anatomy_Lesson_of_Dr_Nicolaes_Tulp.jpg
 - `vesalius-skeleton.jpg` — https://upload.wikimedia.org/wikipedia/commons/3/35/Vesalius_Fabrica_p174.jpg
+- `occult-alchemy-lab.jpg` — https://upload.wikimedia.org/wikipedia/commons/2/24/Pieter_Bruegel_d._%C3%84._014.jpg
+- `occult-john-dee.jpg` — https://upload.wikimedia.org/wikipedia/commons/4/40/John_Dee_Ashmolean.jpg
+- `occult-golem.jpg` — https://upload.wikimedia.org/wikipedia/commons/a/a8/Golem_and_Loew.jpg
+- `occult-automaton.jpg` — https://upload.wikimedia.org/wikipedia/commons/9/9a/Vaucanson_duck1.jpg
 
 ---
 

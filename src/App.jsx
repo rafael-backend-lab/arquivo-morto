@@ -631,6 +631,70 @@ function App() {
               Entre o rito e o laboratório, a humanidade tentou falar com os mortos, prolongar a vida e imaginar matéria obedecendo ao espírito.
             </p>
           </div>
+          <section className="occult-visual-board" aria-label="Iconografia de necromancia, alquimia e criação artificial">
+            <div className="occult-visual-intro">
+              <span className="archive-date">ICONOGRAFIA OCULTA</span>
+              <h4>Pranchas visuais do desejo de retorno</h4>
+              <p>Antes da eletricidade médica, o imaginário da reanimação passou por grimórios, laboratórios alquímicos, símbolos herméticos, criaturas de barro e máquinas que imitavam organismos vivos.</p>
+            </div>
+            <div className="occult-visual-grid">
+              <figure className="occult-visual-card occult-visual-card-large">
+                <div className="occult-visual-frame">
+                  <img
+                    src="/assets/archive/occult-alchemy-lab.jpg"
+                    alt="Alquimista em seu laboratório, Pieter Bruegel, séc. XVI"
+                    loading="lazy"
+                  />
+                </div>
+                <figcaption className="occult-visual-caption">
+                  <strong>Alquimia e laboratório</strong>
+                  <span>Pieter Bruegel, séc. XVI — matéria, espírito, transmutação e o sonho de prolongar a vida.</span>
+                </figcaption>
+              </figure>
+              <div className="occult-visual-stack">
+                <figure className="occult-visual-card">
+                  <div className="occult-visual-frame">
+                    <img
+                      src="/assets/archive/occult-john-dee.jpg"
+                      alt="Retrato de John Dee, matemático, astrólogo e mago elisabetano"
+                      loading="lazy"
+                    />
+                  </div>
+                  <figcaption className="occult-visual-caption">
+                    <strong>John Dee</strong>
+                    <span>Matemática, astrologia, cabala e linguagem angélica.</span>
+                  </figcaption>
+                </figure>
+                <figure className="occult-visual-card">
+                  <div className="occult-visual-frame">
+                    <img
+                      src="/assets/archive/occult-golem.jpg"
+                      alt="O Golem e o Rabino Loew, ilustração histórica"
+                      loading="lazy"
+                    />
+                  </div>
+                  <figcaption className="occult-visual-caption">
+                    <strong>Golem</strong>
+                    <span>Matéria obediente, barro, palavra e criação artificial.</span>
+                  </figcaption>
+                </figure>
+                <figure className="occult-visual-card">
+                  <div className="occult-visual-frame">
+                    <img
+                      src="/assets/archive/occult-automaton.jpg"
+                      alt="O Pato Mecânico de Vaucanson, autômato do século XVIII"
+                      loading="lazy"
+                    />
+                  </div>
+                  <figcaption className="occult-visual-caption">
+                    <strong>Autômatos</strong>
+                    <span>O Pato de Vaucanson — máquinas que imitam vida antes da biologia moderna.</span>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </section>
+
           <div className="occult-grid">
             {occultReturnChapter.map((entry) => (
               <article className="occult-card" key={entry.mark}>
