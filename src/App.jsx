@@ -735,8 +735,264 @@ function App() {
           </div>
         </section>
 
-        {/* DOSSIÊ EM DESTAQUE */}
-                <section className="soviet-dossier" aria-labelledby="soviet-dossier-heading">
+        <section id="destaque" className="featured-dossier">
+          <div className="section-header">
+            <p className="section-label">Dossiê fundacional</p>
+            <h3>Aldini-Forster, Londres, 1803</h3>
+          </div>
+          <article className="featured-article">
+            <div className="featured-layout">
+              <div className="featured-content">
+                <div className="featured-meta">
+                  <span className="featured-date archive-date">1803</span>
+                  <span className="featured-location">Londres</span>
+                  <span className="featured-class">DEMONSTRAÇÃO PÚBLICA · OLD BAILEY</span>
+                </div>
+                <h4 className="featured-title">Giovanni Aldini diante do corpo de George Forster</h4>
+                <p className="featured-summary">
+                  Em 17 de janeiro de 1803, o sobrinho de Luigi Galvani levou ao Old Bailey uma demonstração que uniu medicina, curiosidade pública e imaginação sombria em torno do cadáver recém-executado de George Forster.
+                </p>
+                <div className="featured-blocks">
+                  <div className="featured-block">
+                    <span className="featured-block-label">Contexto</span>
+                    <p>
+                      Giovanni Aldini já era conhecido por ampliar os experimentos elétricos ligados ao nome de Galvani. George Forster, executado em Londres, tornou-se o corpo central dessa exibição pública diante de médicos, curiosos e autoridades.
+                    </p>
+                  </div>
+                  <div className="featured-block">
+                    <span className="featured-block-label">O experimento</span>
+                    <p>
+                      No Old Bailey, em 17 de janeiro de 1803, correntes foram aplicadas ao cadáver. Rosto, mandíbula, um olho e membros reagiram com contrações suficientes para chocar a sala, mas não houve reanimação real nem retorno da vida.
+                    </p>
+                  </div>
+                  <div className="featured-block">
+                    <span className="featured-block-label">Por que importa</span>
+                    <p>
+                      O episódio condensou um medo moderno: a possibilidade de a eletricidade fazer o morto parecer ativo outra vez. Sua sombra atravessa Frankenstein, o horror científico posterior e o vocabulário central do Arquivo Morto.
+                    </p>
+                  </div>
+                  <div className="featured-block featured-editorial">
+                    <span className="featured-block-label editorial-tag">Nota editorial</span>
+                    <p>
+                      Forster não voltou à vida. O que permaneceu foi mais perturbador para a cultura: a cena em que o cadáver entrou no teatro da ciência moderna.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <aside className="featured-visual-panel" aria-hidden="true">
+                <span className="fvp-tag">OLD BAILEY / 1803</span>
+                <ArchiveVisual type="galvanic-wave" size="lg" />
+                <span className="fvp-stamp">ELETRICIDADE PÓS-MORTE</span>
+              </aside>
+            </div>
+          </article>
+        </section>
+
+      <section className="section cornish-dossier" aria-labelledby="cornish-dossier-heading">
+        <div className="section-heading">
+          <p className="section-label">Dossiê americano de reanimação experimental</p>
+          <h3 id="cornish-dossier-heading">Robert E. Cornish: Lazarus, a prancha de balanço e a tentativa americana de vencer a morte</h3>
+          <p>
+            Nos anos 1930, Robert E. Cornish levou a obsessão moderna pela ressuscitação para uma forma mecânica, química e brutal:
+            cães clinicamente mortos, uma prancha tipo gangorra, respiração artificial, sangue tratado, adrenalina, heparina e a esperança
+            de que a morte recente ainda pudesse ser empurrada de volta.
+          </p>
+        </div>
+
+                <div className="cornish-dossier-lead cornish-lead-split">
+          <div className="cornish-lead-copy">
+            <span className="archive-date">1903–1963</span>
+            <h4>O biólogo que queria interromper a morte</h4>
+            <p>
+              Robert Edwin Cornish foi um biólogo americano, formado muito jovem pela University of California. Ele não vinha do ocultismo,
+              nem de sociedades secretas, nem da literatura gótica. Seu território era outro: laboratório, fisiologia, circulação, química
+              e uma pergunta quase intolerável para a medicina moderna — se a morte fosse recente, haveria ainda uma janela técnica para desfazê-la?
+            </p>
+            <p>
+              Em 1932, Cornish passou a perseguir a ideia de restaurar vida em corpos recém-mortos. Primeiro tentou imaginar aplicação em vítimas
+              humanas de morte súbita, afogamento ou eletrocussão. Sem êxito, deslocou a pesquisa para cães, onde podia controlar tempo, causa da
+              morte e tentativa de retorno. A série recebeu um nome bíblico e deliberadamente provocador: Lazarus.
+            </p>
+          </div>
+
+          <figure className="cornish-lead-photo">
+            <img
+              src="https://static.wixstatic.com/media/d5cc5f_9cbe05858d1c479a8ec9624b6dd0c764~mv2.webp/v1/fill/w_600,h_514,al_c,q_80,enc_avif,quality_auto/d5cc5f_9cbe05858d1c479a8ec9624b6dd0c764~mv2.webp"
+              alt="Demonstração em prancha de teste ligada aos experimentos de Robert E. Cornish"
+              loading="lazy"
+            />
+            <figcaption>
+              Experimento Lazarus · prancha de teste · anos 1930
+            </figcaption>
+          </figure>
+        </div>
+
+<div className="cornish-image-gallery cornish-gallery-two" aria-label="Galeria documental de Robert E. Cornish">
+          <figure className="cornish-gallery-card">
+            <img
+              src="https://static.wixstatic.com/media/d5cc5f_ba83559514e546cc8d3c4327f211165c~mv2.jpg/v1/fill/w_639,h_492,al_c,q_80,enc_avif,quality_auto/d5cc5f_ba83559514e546cc8d3c4327f211165c~mv2.jpg"
+              alt="Robert E. Cornish em laboratório com cão Lazarus"
+              loading="lazy"
+            />
+            <figcaption>
+              Cornish em laboratório com cão Lazarus. O pesquisador aparece diante do corpo animal usado como fronteira entre circulação forçada, técnica experimental e espetáculo científico.
+            </figcaption>
+          </figure>
+
+          <figure className="cornish-gallery-card">
+            <img
+              src="https://static.wixstatic.com/media/d5cc5f_167d7cc8f0054f32a4245dc11aff5086~mv2.jpg/v1/fill/w_639,h_488,al_c,q_80,enc_avif,quality_auto/d5cc5f_167d7cc8f0054f32a4245dc11aff5086~mv2.jpg"
+              alt="Procedimento experimental de Robert E. Cornish com cão"
+              loading="lazy"
+            />
+            <figcaption>
+              Procedimento Lazarus: respiração artificial, intervenção química e suporte circulatório rudimentar. A imagem aproxima medicina experimental e horror documental.
+            </figcaption>
+          </figure>
+        </div>
+        <section className="cornish-video-panel cornish-video-embed" aria-label="Vídeo documental sobre Robert E. Cornish">
+          <div className="cornish-video-copy">
+            <span className="archive-date">1934 / arquivo audiovisual</span>
+            <h4>O experimento em movimento</h4>
+            <p>
+              O registro audiovisual ajuda a entender por que Cornish entrou para o imaginário da reanimação moderna.
+              A prancha, os assistentes, o animal, os tubos e a encenação científica mostram a passagem do laboratório para o espetáculo público.
+              Este vídeo é apresentado como documento histórico e cultural, não como validação médica do procedimento.
+            </p>
+          </div>
+
+          <div className="cornish-video-frame">
+            <iframe
+              src="https://www.youtube.com/embed/YnRoO4u6gJQ"
+              title="Doctor Cornish's Resurrection Experiment 1934"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </section>
+
+<div className="cornish-dossier-grid">
+          <article className="cornish-dossier-panel">
+            <span className="archive-date">1932–1933</span>
+            <h4>A hipótese da janela curta</h4>
+            <p>
+              A ideia central de Cornish era que a morte não seria um instante único, mas uma transição. Se o coração e a respiração paravam,
+              talvez ainda existisse um intervalo antes que cérebro, tecidos e órgãos sofressem dano irreversível. Nesse intervalo, ele imaginava
+              ser possível forçar o corpo a circular novamente.
+            </p>
+            <p>
+              Essa hipótese torna Cornish diferente dos galvanistas antigos. Aldini fazia o cadáver se mover. Cornish queria algo mais ambicioso:
+              restaurar circulação, oxigenação e função orgânica suficiente para produzir sobrevivência, ainda que danificada.
+            </p>
+          </article>
+
+          <article className="cornish-dossier-panel">
+            <span className="archive-date">teeterboard</span>
+            <h4>A prancha que balançava o morto</h4>
+            <p>
+              O instrumento mais famoso era a <em>teeterboard</em>, uma prancha tipo gangorra. O animal morto era colocado sobre ela e balançado
+              de um lado para o outro. O objetivo era usar a gravidade e o movimento para ajudar o sangue a circular quando o coração já não fazia
+              esse trabalho.
+            </p>
+            <p>
+              A cena parece saída de um filme de horror científico: corpo recente, madeira rangendo, tubos, solução entrando na veia, assistentes
+              massageando o animal e Cornish tentando substituir, por força externa, o movimento interno da vida.
+            </p>
+          </article>
+
+          <article className="cornish-dossier-panel">
+            <span className="archive-date">procedimento</span>
+            <h4>Química, ar e circulação forçada</h4>
+            <p>
+              O método combinava várias tentativas ao mesmo tempo. Cornish usava respiração artificial, massagem corporal, balanço mecânico, solução
+              salina oxigenada, epinefrina/adrenalina como estimulante cardíaco, heparina como anticoagulante e sangue canino tratado para reduzir
+              coagulação.
+            </p>
+            <p>
+              A lógica era clara: impedir que o sangue coagulado bloqueasse a circulação, estimular o coração, empurrar oxigênio de volta ao sistema
+              e usar a prancha para substituir, de modo rudimentar, aquilo que hoje associamos a suporte circulatório e ressuscitação avançada.
+            </p>
+          </article>
+
+          <article className="cornish-dossier-panel">
+            <span className="archive-date">1934–1935</span>
+            <h4>Os cães Lazarus</h4>
+            <p>
+              Os cães receberam nomes como Lazarus I, II, IV e V. Os casos mais citados envolvem animais asfixiados, declarados clinicamente mortos
+              e depois submetidos ao procedimento. O corpo era colocado na prancha, recebia respiração artificial e substâncias para tentar restaurar
+              circulação e resposta cardíaca.
+            </p>
+            <p>
+              O retorno não era triunfo limpo. Os relatos mais conhecidos falam de sobrevivência parcial, com animais vivos, mas severamente
+              comprometidos. Lazarus IV e Lazarus V aparecem como os casos mais marcantes, associados a sequelas graves, dano neurológico e recuperação
+              incompleta.
+            </p>
+          </article>
+
+          <article className="cornish-dossier-panel">
+            <span className="archive-date">Life Returns</span>
+            <h4>Quando o laboratório virou cinema</h4>
+            <p>
+              Cornish não ficou restrito ao laboratório. Seu trabalho foi filmado e incorporado ao longa <em>Life Returns</em>, produção dos anos 1930
+              sobre um médico convencido de que os mortos poderiam voltar. A presença de filmagens reais aproximou o caso da cultura popular e transformou
+              a experiência em espetáculo.
+            </p>
+            <p>
+              O laboratório de Cornish passou a existir também como imagem pública de transgressão científica: nem só medicina, nem só cinema, nem só horror,
+              mas uma zona onde o público via o corpo morto ser tratado como máquina recuperável.
+            </p>
+          </article>
+
+          <article className="cornish-dossier-panel">
+            <span className="archive-date">San Quentin</span>
+            <h4>O condenado Thomas McMonigle</h4>
+            <p>
+              A história atingiu o ponto mais sombrio quando Thomas McMonigle, condenado à morte em San Quentin, teria oferecido o corpo para que Cornish
+              tentasse ressuscitá-lo após a execução. A proposta foi recusada pelas autoridades da Califórnia.
+            </p>
+            <p>
+              Esse episódio pertence ao coração jurídico do Arquivo Morto: se um executado voltasse, ele ainda seria o mesmo condenado? A pena teria sido
+              cumprida? O Estado poderia executá-lo novamente? A experiência não aconteceu, mas a pergunta é mais assustadora que o próprio experimento.
+            </p>
+          </article>
+
+          <article className="cornish-dossier-panel">
+            <span className="archive-date">bioética</span>
+            <h4>O custo animal do experimento</h4>
+            <p>
+              Hoje, os experimentos de Cornish são inseparáveis de uma leitura bioética. Os cães não são apenas “provas” de uma técnica. Eles são vítimas de
+              uma época em que o limite entre pesquisa, espetáculo e sofrimento animal era tratado de forma muito diferente.
+            </p>
+            <p>
+              O Arquivo Morto não celebra o sofrimento. Ele registra o desconforto: a tentativa de vencer a morte produziu imagens de corpos usados como
+              fronteira, matéria, instrumento e argumento.
+            </p>
+          </article>
+
+          <article className="cornish-dossier-panel">
+            <span className="archive-date">leitura do Arquivo</span>
+            <h4>Por que Cornish importa</h4>
+            <p>
+              Cornish fica entre Aldini e Brukhonenko. Aldini mostrou o cadáver se movendo sob eletricidade. Cornish tentou restaurar circulação e função
+              orgânica com movimento, química e ar. Brukhonenko colocou a máquina no centro do corpo. Os três formam uma linhagem: contração, circulação
+              e suporte artificial.
+            </p>
+            <p>
+              Por isso Cornish não deve ser só nota de rodapé. Ele é uma das figuras mais incômodas da história moderna da reanimação: não provou que a morte
+              podia ser vencida, mas mostrou até onde alguém estava disposto a ir para tentar.
+            </p>
+          </article>
+        </div>
+
+        <div className="cornish-dossier-note">
+          <strong>Nota editorial:</strong> este dossiê trata Robert E. Cornish como figura histórica real da ressuscitação experimental.
+          O texto não apresenta seus resultados como vitória sobre a morte, mas como capítulo decisivo entre fisiologia, espetáculo,
+          cinema, bioética animal e cultura da reanimação.
+        </div>
+      </section>
+
+        <section className="soviet-dossier" aria-labelledby="soviet-dossier-heading">
           <div className="section-heading">
             <p className="section-label">Dossiê histórico-médico</p>
             <h3 id="soviet-dossier-heading">Sergei Brukhonenko: o autojektor, os cães e a máquina entre a vida e a morte</h3>
@@ -770,8 +1026,82 @@ function App() {
               </p>
             </div>
           </div>
+        <section className="brukhonenko-case-flow" aria-label="Sequência documental do caso Brukhonenko">
+<article className="brukhonenko-flow-row reverse">
+            <figure className="brukhonenko-flow-image">
+              <img
+                src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Patent%20autojektor.gif"
+                alt="Desenho técnico do autojektor"
+                loading="lazy"
+              />
+              <figcaption>
+                Autojektor · desenho técnico do aparelho de circulação artificial associado a Brukhonenko.
+              </figcaption>
+            </figure>
+            <div className="brukhonenko-flow-copy">
+              <span className="archive-date archive-date-machine">AUTOJEKTOR · circulação artificial experimental</span>
+              <h4><span className="machine-title">O autojektor</span><small>o corpo como circuito</small></h4>
+              <p>
+                O autojektor funcionava como tentativa primitiva de substituir funções circulatórias: conduzir sangue, manter fluxo e alimentar
+                tecidos com sangue oxigenado. No filme soviético, a máquina aparece como coração externo, uma infraestrutura técnica que
+                transforma organismo em circuito.
+              </p>
+              <p>
+                Essa imagem é importante para o site porque liga Brukhonenko ao tema central do Arquivo Morto: não a ressurreição mística,
+                mas o esforço moderno de empurrar a morte para dentro de um protocolo mecânico.
+              </p>
+            </div>
+          </article>
 
-          <div className="soviet-dossier-grid">
+          <article className="brukhonenko-flow-row dog-head-focus">
+            <figure className="brukhonenko-flow-image strong">
+              <img
+                src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Experiment1940.jpg"
+                alt="Frame do filme Experiments in the Revival of Organisms com cabeça de cão ligada ao autojektor"
+                loading="lazy"
+              />
+              <figcaption>
+                Frame de Experiments in the Revival of Organisms · cabeça de cão ligada ao sistema de circulação artificial.
+              </figcaption>
+            </figure>
+            <div className="brukhonenko-flow-copy">
+              <span className="archive-date">1940 / imagem controversa</span>
+              <h4>A cabeça que respondia</h4>
+              <p>
+                A cena mais famosa do filme mostra uma cabeça de cão isolada ligada ao autojektor. A narração apresenta a cabeça recebendo
+                sangue oxigenado e respondendo a estímulos externos. No filme, ela pisca, reage à luz, move a boca/língua e aparenta responder
+                a sons ou contatos.
+              </p>
+              <p>
+                É exatamente aqui que a curadoria precisa ser cuidadosa: a imagem é forte e historicamente relevante, mas o filme é controverso.
+                O Arquivo Morto não trata a cena como prova limpa de “vida plena”, e sim como documento soviético de propaganda científica,
+                fisiologia experimental, bioética animal e horror visual.
+              </p>
+            </div>
+          </article>
+
+          <section className="brukhonenko-media-panel brukhonenko-video-ordered" aria-label="Vídeo documental sobre Brukhonenko">
+            <div className="brukhonenko-media-copy">
+              <span className="archive-date">filme completo / arquivo audiovisual</span>
+              <h4>Experiments in the Revival of Organisms</h4>
+              <p>
+                O vídeo deve vir depois das imagens explicadas, para o visitante entender o que está vendo antes de assistir.
+                A sequência mostra órgão isolado, pulmão, autojektor, cabeça de cão e a tentativa de reanimar um organismo inteiro.
+              </p>
+            </div>
+            <div className="brukhonenko-video-frame">
+              <iframe
+                src="https://www.youtube.com/embed/KDqh-r8TQgs"
+                title="Experiments in the Revival of Organisms"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </section>
+        </section>
+
+<div className="soviet-dossier-grid">
             <article className="soviet-dossier-panel">
               <span className="archive-date">1920s–1930s</span>
               <h4>O autojektor</h4>
@@ -865,59 +1195,6 @@ function App() {
             da circulação artificial; o filme de 1940, como documento científico-cultural controverso; e os experimentos com cães, como tema
             bioético sensível, sem sensacionalismo e sem afirmar retorno literal da vida.
           </div>
-        </section>
-
-<section id="destaque" className="featured-dossier">
-          <div className="section-header">
-            <p className="section-label">Dossiê em destaque</p>
-            <h3>Aldini-Forster, Londres, 1803</h3>
-          </div>
-          <article className="featured-article">
-            <div className="featured-layout">
-              <div className="featured-content">
-                <div className="featured-meta">
-                  <span className="featured-date archive-date">1803</span>
-                  <span className="featured-location">Londres</span>
-                  <span className="featured-class">DEMONSTRAÇÃO PÚBLICA · OLD BAILEY</span>
-                </div>
-                <h4 className="featured-title">Giovanni Aldini diante do corpo de George Forster</h4>
-                <p className="featured-summary">
-                  Em 17 de janeiro de 1803, o sobrinho de Luigi Galvani levou ao Old Bailey uma demonstração que uniu medicina, curiosidade pública e imaginação sombria em torno do cadáver recém-executado de George Forster.
-                </p>
-                <div className="featured-blocks">
-                  <div className="featured-block">
-                    <span className="featured-block-label">Contexto</span>
-                    <p>
-                      Giovanni Aldini já era conhecido por ampliar os experimentos elétricos ligados ao nome de Galvani. George Forster, executado em Londres, tornou-se o corpo central dessa exibição pública diante de médicos, curiosos e autoridades.
-                    </p>
-                  </div>
-                  <div className="featured-block">
-                    <span className="featured-block-label">O experimento</span>
-                    <p>
-                      No Old Bailey, em 17 de janeiro de 1803, correntes foram aplicadas ao cadáver. Rosto, mandíbula, um olho e membros reagiram com contrações suficientes para chocar a sala, mas não houve reanimação real nem retorno da vida.
-                    </p>
-                  </div>
-                  <div className="featured-block">
-                    <span className="featured-block-label">Por que importa</span>
-                    <p>
-                      O episódio condensou um medo moderno: a possibilidade de a eletricidade fazer o morto parecer ativo outra vez. Sua sombra atravessa Frankenstein, o horror científico posterior e o vocabulário central do Arquivo Morto.
-                    </p>
-                  </div>
-                  <div className="featured-block featured-editorial">
-                    <span className="featured-block-label editorial-tag">Nota editorial</span>
-                    <p>
-                      Forster não voltou à vida. O que permaneceu foi mais perturbador para a cultura: a cena em que o cadáver entrou no teatro da ciência moderna.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <aside className="featured-visual-panel" aria-hidden="true">
-                <span className="fvp-tag">OLD BAILEY / 1803</span>
-                <ArchiveVisual type="galvanic-wave" size="lg" />
-                <span className="fvp-stamp">ELETRICIDADE PÓS-MORTE</span>
-              </aside>
-            </div>
-          </article>
         </section>
 
         {/* ARQUIVO DE CASOS */}
