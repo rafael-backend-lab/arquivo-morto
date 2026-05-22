@@ -1,215 +1,145 @@
 # Arquivo Morto
 
-Projeto editorial sombrio sobre literatura, ciência e horror da reanimação.
+Projeto editorial dark sobre literatura, ciência, medicina histórica e horror da reanimação.
 
-## Conceito
+![Arquivo Morto](public/arquivo-morto-share-v4.jpg)
 
-Arquivo Morto explora a intersecção entre ficção de horror, história da ciência e a obsessão humana com a reanimação dos mortos. Do galvanismo de Giovanni Aldini ao laboratório de Herbert West, da criatura de Frankenstein aos prontuários médicos do século XIX.
+**Site em produção:** [arquivo-morto.netlify.app](https://arquivo-morto.netlify.app)
 
-A proposta mistura:
+---
 
-- Horror cósmico e gótico (Lovecraft, Mary Shelley)
-- Galvanismo e experimentos elétricos com cadáveres (séculos XVIII–XIX)
-- História da medicina, anatomia e vitalismo
-- Cinema cult (Re-Animator, 1985)
-- Imaginário científico fúnebre e documentação de arquivo
+## Sobre o projeto
+
+Arquivo Morto é um site editorial e cultural que cruza história da ciência, literatura gótica, medicina histórica, ocultismo e cinema de horror. O projeto mapeia a obsessão humana com a reanimação dos mortos — de Mary Shelley e o galvanismo do século XVIII até Romero, Re-Animator e Guillermo del Toro.
+
+O tom é documental, frio e sombrio: cada seção trata o material como um arquivo real, com fichas, prontuários, registros e dossiês. A separação entre história documentada, literatura e ficção editorial é explícita em todos os capítulos.
+
+### Principais temas cobertos
+
+- Galvanismo e os experimentos de Giovanni Aldini com cadáveres (1803)
+- Sergei Brukhonenko e o Autojektor soviético (anos 1930–1940)
+- Robert E. Cornish e as tentativas de ressuscitação canina nos EUA
+- Mary Shelley, Frankenstein e o imaginário galvanista
+- Anatomia, vitalismo, ressurrecionistas e medicina do século XIX
+- Necromancia, alquimia, autômatos e ocultismo renascentista
+- Cinema de horror: Frankenstein (1910, 1931, 1994), Re-Animator (1985), Romero, Snyder, del Toro
+- Bioética, morte técnica, criogenia e biotecnologia contemporânea
+
+---
+
+## Seções
+
+| Seção | Conteúdo |
+|---|---|
+| Hero + Manifesto | Abertura editorial com metadados de arquivo |
+| Cap. I — A humanidade contra a morte | Ritos funerários, Egito, Mesopotâmia, folclore, culturas ancestrais |
+| Cap. II — Necromancia, alquimia e o desejo de retorno | Grimórios, John Dee, Golem, alquimia, elixires, autômatos |
+| Cap. III — Do corpo sagrado ao corpo estudado | Relíquias, dissecação, escolas médicas, ressurrecionistas, vitalismo |
+| Cap. IV — Galvanismo, medicina legal e sinais do cadáver | Galvani, Aldini, Ure, espasmo cadavérico, medicina legal |
+| Cap. V — A morte técnica | UTI, transplantes, morte encefálica, criogenia, bioética, luto digital |
+| Dossiê em destaque | Aldini-Forster, Londres, 1803 |
+| Dossiê Cornish | Robert E. Cornish e a prancha de balanço |
+| Dossiê Brukhonenko | Autojektor soviético, cães, cinema científico e bioética |
+| Arquivo de casos | Seis registros editoriais curtos |
+| Artigos | Ensaios sobre body snatchers, vitalismo, body horror, sonic horror |
+| Linha do tempo | 1730–Hoje |
+| Cinema | Frankenstein ao horror contemporâneo — 7 dossiês com imagens |
+| Gabinete de Anatomia | Itens fictícios lacrados e catalogados |
+| Nota de curadoria | Separação explícita entre fato, literatura e ficção editorial |
+
+---
 
 ## Stack
 
-- React 19
-- Vite 8
-- CSS próprio (sem Tailwind, sem frameworks de estilo)
+- **React 19** — componente único com estado mínimo
+- **Vite 8** — build ultrarrápido, CSS importado diretamente
+- **CSS autoral** — sem Tailwind, sem frameworks de estilo; design system dark editorial completo
+- **Netlify** — deploy estático, headers customizados em `public/_headers`
 
-## Como rodar
+Sem dependências externas além de React. Sem bibliotecas de animação, sem preprocessadores CSS.
+
+---
+
+## Rodar localmente
 
 ```bash
 npm install
 npm run dev
 ```
 
-Acesse: `http://localhost:5173`
+Abre em `http://localhost:5173`
 
-## Local Preview
-
-O VS Code Simple Browser não é obrigatório. Use o fluxo abaixo pelo terminal:
+### Scripts disponíveis
 
 | Comando | O que faz |
 |---|---|
-| `npm run dev:local` | Sobe Vite em `127.0.0.1:5173` (porta fixa) |
-| `npm run open` | Abre `http://127.0.0.1:5173/` no navegador padrão |
-| `npm run dev:open` | Sobe Vite + aguarda a porta + abre o navegador automaticamente |
-| `npm run build` | Gera build de produção em `dist/` |
+| `npm run dev` | Servidor de desenvolvimento padrão |
+| `npm run dev:local` | Servidor fixo em `127.0.0.1:5173` |
+| `npm run dev:open` | Sobe Vite e abre o navegador automaticamente |
+| `npm run build` | Build de produção em `dist/` |
+| `npm run preview` | Preview do build em `127.0.0.1:4173` |
 
-**Fluxo recomendado:**
+---
 
-```bash
-# opção 1 — automático
-npm run dev:open
-
-# opção 2 — manual
-npm run dev:local
-# em outro terminal ou aba:
-npm run open
-```
-
-> Se preferir, use a aba **Ports** do VS Code para reencaminhar a porta 5173 e abrir no browser integrado.
-
-## Build
+## Build e deploy
 
 ```bash
 npm run build
 npm run preview
 ```
 
-## Mobile polish e social preview
+Para deploy: qualquer host estático serve. O projeto usa Netlify com deploy via CLI ou arrastar `dist/`.
 
-- Hero e títulos responsivos com `clamp()` calibrado para telas de 390px
-- Grids colapsam para uma coluna em ≤ 640px (incluindo Cornish e Brukhonenko)
-- Meta tags Open Graph e Twitter Card configuradas em `index.html`
-- Imagem OG em `public/og-arquivo-morto.svg` (1200×630)
-- Link público: https://arquivo-morto.netlify.app
-
-## Preview público sem Vercel
-
-Para gerar um link temporário compartilhável com qualquer pessoa, use o fluxo via Cloudflare Tunnel:
-
-```bash
-npm run public:preview
-```
-
-O script:
-1. Roda `npm run build` automaticamente
-2. Instala `cloudflared` via Homebrew se não estiver disponível
-3. Sobe o servidor de preview local em `http://127.0.0.1:4173`
-4. Abre um túnel Cloudflare e exibe a URL pública no formato `https://xxxx.trycloudflare.com`
-
-**Como usar:**
-- Copie a URL `trycloudflare.com` que aparece no terminal
-- Envie para qualquer pessoa avaliar o site no navegador
-- Mantenha o terminal aberto — o link fica ativo enquanto o processo estiver rodando
-- Feche o terminal ou pressione `Ctrl+C` para encerrar
-
-> Para uma URL permanente, use Netlify (arrastar a pasta `dist/`) ou Cloudflare Pages.
+---
 
 ## Estrutura
 
 ```
 src/
-  App.jsx          componente principal com todas as seções
-  App.css          design system dark editorial completo
-  index.css        base global mínima
+  App.jsx        componente principal — todas as seções e dados editoriais
+  App.css        design system dark completo (~4800 linhas)
+  index.css      reset global mínimo
+
 public/
+  assets/
+    archive/     imagens históricas (domínio público, Wikimedia Commons)
+    cinema/      imagens curatoriais de cinema
   favicon.svg
+  robots.txt
+  sitemap.xml
+
 docs/
-  editorial-direction.md   direção de arte e conteúdo
+  image-credits.md     créditos e URLs originais de todas as imagens
+  editorial-direction.md
+
+reports/
+  screenshots/         screenshots de validação
 ```
 
-## Seções
+---
 
-1. **Hero** — cinematográfico, com metadados de arquivo falsos
-2. **Manifesto** — texto frio e poético sobre morte e ciência
-3. **A humanidade contra a morte** — seis fichas históricas sobre ritos, mitos e culturas funerárias
-4. **Necromancia, alquimia e o desejo de retorno** — seis fichas sobre ocultismo, matéria animada e longevidade
-5. **Do corpo sagrado ao corpo estudado** — seis fichas sobre anatomia, vitalismo, ensino médico e corpo como prova
-6. **Galvanismo, medicina legal e sinais do cadáver** — oito fichas sobre eletricidade animal, sinais pós-morte e olhar pericial
-7. **A morte técnica: medicina, corpo e fronteiras atuais** — oito fichas sobre emergência, bioética, transplantes, biotecnologia e luto digital
-8. **Dossiê em destaque** — Aldini-Forster, Londres, 1803, como peça principal do arquivo
-9. **Arquivo de casos** — seis registros curtos para orientar a navegação entre ciência, literatura e ficção editorial
-10. **Artigos** — cinco ensaios e investigações temáticas
-11. **Linha do tempo** — de 1730 até hoje
-12. **Gabinete de Anatomia** — itens fictícios lacrados e catalogados
-13. **Nota de curadoria** — fechamento editorial sobre fato, literatura e ficção
-14. **Footer** — identificação editorial
+## SEO e publicação
 
-## V8 — Capítulo III: Do corpo sagrado ao corpo estudado
+- Open Graph e Twitter Card configurados em `index.html`
+- Imagem social: `public/arquivo-morto-share-v4.jpg` (1200×630)
+- JSON-LD `CreativeWork` com autor, idioma e descrição
+- `robots.txt` e `sitemap.xml` em `public/`
+- URL canônica: `https://arquivo-morto.netlify.app/`
 
-Capítulo intermediário dedicado à passagem do cadáver ritualizado para o cadáver estudado, dissecado, ensinado e lido como documento anatômico.
-
-## V8.1 — Capítulo IV: Galvanismo, medicina legal e sinais do cadáver
-
-Capítulo de transição entre anatomia histórica e medicina moderna, com foco em galvanismo, sinais pós-morte, medo do enterro vivo e consolidação do olhar médico-legal em tom editorial, não instrutivo.
-
-## V9 — A morte técnica: medicina, corpo e fronteiras atuais
-
-Capítulo editorial dedicado à medicina moderna, bioética e tecnologia contemporânea diante do fim. A parte médica usa fontes oficiais e tom editorial, sem orientação médica, sem ensino de procedimento e sem recomendação de tratamento.
-
-## Refinamento de datação editorial
-
-Os cards históricos agora priorizam datas, séculos e períodos reais como metadado visual principal. Códigos internos permanecem apenas como referência secundária de arquivo.
-
-## Editorial cleanup
-
-A estrutura editorial foi enxugada para reduzir repetição entre seções. O dossiê em destaque permanece como peça principal sobre Aldini/Forster, enquanto os antigos blocos de histórias e dossiês foram consolidados em uma única seção de Arquivo de casos.
-
-Revisão editorial do Dossiê em destaque e consolidação do Arquivo de casos.
-
-## V7 — Capítulo II: Necromancia, alquimia e o desejo de retorno
-
-Novo capítulo editorial que liga rito, ocultismo, alquimia, mito de matéria animada e a imaginação pré-científica da criatura artificial.
-
-## V6 — Capítulo I: A humanidade contra a morte
-
-Nova seção editorial histórica com seis fichas sobre morte ritual, memória funerária e culturas antigas diante do fim.
-
-## V5 — Visual archive layer
-
-- **Camada visual de arquivo**: componente `ArchiveVisual` renderiza 6 tipos de ilustração em CSS/SVG inline — `galvanic-wave`, `anatomical-plate`, `medical-file`, `reagent-vial`, `corpse-tag`, `occult-diagram`
-- **Hero**: sistema visual de diagrama técnico em background (`.hero-visual-system`)
-- **Dossiê em Destaque**: painel visual lateral com etiqueta GALVANISMO/1803 e carimbo OBSERVAÇÃO PÓS-MORTE
-- **Histórias e Gabinete**: cada card tem miniatura visual tipada
-- **`public/assets/archive/`**: estrutura preparada para imagens reais de domínio público
-
-## V4 — Editorial expansion
-
-- **Histórias do Arquivo** — 6 fichas editoriais ricas com código, categoria, título, resumo, trecho narrativo e classificação
-- **Nota de curadoria** — seção explicando a separação entre história real, literatura e ficção editorial do projeto
-- Conteúdo classificado explicitamente: história real documentada, literatura, ficção editorial
-- Status `v4.0`
-
-## V3 — Visual polish
-
-- **Selo visual do Arquivo Morto** — carimbo científico em CSS puro no hero (círculo duplo, monograma AM, linhas galvânicas)
-- **Classificação do Arquivo** — 4 blocos de catálogo: Literatura de Reanimação, Galvanismo Histórico, Anatomia Proibida, Horror Científico
-- **Modo Terminal refinado** — botão com estado visual via `data-mode`, brilho verde perceptível no modo padrão, crimson ativo no modo terminal
-- **Footer editorial premium** — frase de fechamento: "Todo arquivo morto ainda respira em alguma página."
-
-## V2 — Refinamento editorial e Modo Terminal
-
-A V2 introduz:
-
-- **Navegação fixa** (`site-header`) com links para todas as seções
-- **Modo Terminal** — botão que alterna o visual para paleta fosfórica verde terminal
-- **Dossiê em destaque** — Aldini-Forster, Londres, 1803, com número de caso, classificação, resumo e nota editorial
-- **Painel técnico lateral no hero** com ARQ-MORTO, frequência 17Hz, reagente HW-7 e status lacrado
-- **Footer com três colunas** — Arquivo Morto, Categorias, Registro
-
-## Status
-
-`v9.1` — entrega final polida. Build de produção validado. Pronto para preview e deploy público via `npm run build && npm run preview` ou qualquer host estático (Netlify, Vercel, GitHub Pages).
-
-## Indexação para crawlers e IA
-
-Fallback estático inicial adicionado para crawlers/IA que não executam JavaScript.
+---
 
 ## Nota editorial
 
-Projeto cultural e independente. Inspiração temática em H. P. Lovecraft, Mary Shelley e história da ciência do século XIX. Nenhuma cópia de marca, texto ou identidade visual de obras existentes.
+Arquivo Morto é um projeto cultural, artístico e editorial independente.
 
+- Não é material médico, científico ou instrucional.
+- Não ensina procedimento clínico ou experimental de nenhuma natureza.
+- O projeto mistura história real documentada, literatura de domínio público, cinema e ficção editorial própria. Cada camada é identificada explicitamente no conteúdo.
+- Imagens históricas são de domínio público (Wikimedia Commons); créditos completos em [`docs/image-credits.md`](docs/image-credits.md).
+- Imagens de cinema são usadas como material curatorial/editorial do projeto, no contexto de análise cultural.
 
-## Medical history refinement
+---
 
-The modern medical chapter now includes Sergei Brukhonenko and the autojektor as a controversial historical bridge between early circulation support, Soviet scientific cinema and the cultural imagination of reanimation. The topic is treated critically, without presenting propaganda film claims as proven resurrection.
+## Autor
 
-## Brukhonenko card refinement
-
-Brukhonenko agora aparece como card próprio no capítulo médico moderno, não apenas como fonte editorial. O caso é tratado como história controversa da medicina, circulação artificial, cinema científico soviético e bioética experimental.
-
-
-## Cornish dossier expansion
-
-Incluído um novo dossiê sobre Robert E. Cornish e seus experimentos de ressuscitação canina nos anos 1930, com foco em bioética, circulação forçada e o caráter liminar entre ciência e espetáculo.
-
-
-## Expanded Brukhonenko dossier
-
-The project now includes a deeper editorial dossier on Sergei Brukhonenko, the autojektor, the dog experiments, the 1940 Soviet film *Experiments in the Revival of Organisms*, and the boundary between real medical history, propaganda, bioethics and the cultural imagination of reanimation.
+Rafael Rodrigues — [github.com/rafael-backend-lab](https://github.com/rafael-backend-lab)
