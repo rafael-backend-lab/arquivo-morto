@@ -5136,3 +5136,357 @@ h2 {
     overflow-wrap: break-word !important;
   }
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO 1 — BASE VISUAL GLOBAL
+   Criatura presente sem destruir leitura. Seções com proteção.
+═══════════════════════════════════════════════════════════════ */
+
+/* Proteção de texto longo: seções com muito conteúdo ganham
+   fundo suavemente mais escuro para a criatura não sangrar */
+.section,
+.humanity-section,
+.occult-section,
+.body-study-section,
+.forensic-section,
+.modern-death-section {
+  position: relative;
+}
+.section::before,
+.humanity-section::before,
+.occult-section::before,
+.body-study-section::before,
+.forensic-section::before,
+.modern-death-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 7, 7, 0.32);
+  pointer-events: none;
+  z-index: 0;
+}
+.section > *,
+.humanity-section > *,
+.occult-section > *,
+.body-study-section > *,
+.forensic-section > *,
+.modern-death-section > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Mobile: reduzir a criatura um pouco mais atrás de muito texto */
+@media (max-width: 700px) {
+  .global-creature-image { opacity: 0.14 !important; }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO 2 — ARQUIVO VIVO (modo ativo premium)
+   Quando ligado: criatura mais viva, grain mais presente,
+   olhos pulsando mais forte, scanlines mais presentes.
+   Quando desligado: site estático, elegante, limpo.
+═══════════════════════════════════════════════════════════════ */
+
+/* Grain mais presente */
+.root.archive-live .noise-overlay {
+  opacity: 0.062;
+}
+
+/* Scanlines um pouco mais visíveis */
+.root.archive-live .scanlines {
+  opacity: 0.88;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent 0px,
+    transparent 3px,
+    rgba(0, 0, 0, 0.046) 3px,
+    rgba(0, 0, 0, 0.046) 4px
+  );
+}
+
+/* Respiração mais lenta no modo ativo */
+.root.archive-live .global-creature-image {
+  animation-duration: 38s;
+}
+
+/* Olhos pulsam mais devagar e mais intensos */
+.root.archive-live .global-creature-eye {
+  animation-duration: 11s;
+  width: 54px;
+  height: 26px;
+  filter: blur(4px);
+}
+
+/* Botão ativo: borda sangrando levemente */
+.archive-live-toggle.active {
+  animation: toggleBreath 4s ease-in-out infinite;
+}
+@keyframes toggleBreath {
+  0%, 100% { box-shadow: 0 0 10px rgba(180, 20, 20, 0.20), inset 0 0 5px rgba(120, 10, 10, 0.14); }
+  50%       { box-shadow: 0 0 22px rgba(200, 30, 20, 0.38), inset 0 0 10px rgba(150, 12, 12, 0.22); }
+}
+
+/* Vinheta sutil aparece no modo vivo */
+.root.archive-live::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: radial-gradient(ellipse at center, transparent 55%, rgba(4, 2, 3, 0.48) 100%);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO 3 — CARDS & HOVERS
+   Sensação de "evidência sendo analisada".
+═══════════════════════════════════════════════════════════════ */
+
+/* Dossier card — hover como análise */
+.dossier-card:hover {
+  border-color: rgba(248, 240, 224, 0.22) !important;
+  box-shadow:
+    0 24px 64px rgba(0, 0, 0, 0.52),
+    0 0 0 1px rgba(248, 240, 224, 0.06),
+    inset 0 0 32px rgba(58, 15, 20, 0.08) !important;
+}
+.dossier-card:hover .card-title {
+  color: var(--amber);
+  transition: color 0.22s ease;
+}
+.dossier-card:hover .card-status {
+  box-shadow: 0 0 8px currentColor;
+  transition: box-shadow 0.22s ease;
+}
+
+/* Occult card — hover âmbar quente */
+.occult-card:hover {
+  border-color: rgba(184, 154, 102, 0.30) !important;
+  box-shadow:
+    0 26px 68px rgba(0, 0, 0, 0.40),
+    0 0 0 1px rgba(184, 154, 102, 0.08),
+    inset 0 0 40px rgba(58, 15, 20, 0.10) !important;
+}
+.occult-card:hover .occult-card-title {
+  color: #d4b882;
+  transition: color 0.22s ease;
+}
+
+/* Body-study card — hover laboratorial */
+.body-study-card:hover .body-study-title {
+  color: var(--amber);
+  transition: color 0.22s ease;
+}
+.body-study-card:hover .body-study-code {
+  color: rgba(95, 191, 142, 0.95);
+  text-shadow: 0 0 8px rgba(29, 138, 72, 0.40);
+  transition: color 0.22s ease, text-shadow 0.22s ease;
+}
+
+/* Article row — hover com acento lateral */
+.article-row:hover {
+  background: rgba(22, 12, 14, 0.82) !important;
+  box-shadow: inset 3px 0 0 rgba(200, 75, 90, 0.50);
+}
+.article-row:hover .article-period {
+  color: #b89a66;
+  transition: color 0.18s ease;
+}
+
+/* Cabinet card — hover como inspeção de espécime */
+.cabinet-card {
+  border: 1px solid rgba(248, 240, 224, 0.06);
+  border-radius: 4px;
+  transition: background 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+}
+.cabinet-card:hover {
+  background: rgba(16, 10, 12, 0.99) !important;
+  border-color: rgba(248, 240, 224, 0.12) !important;
+  box-shadow: inset 0 0 0 1px rgba(248, 240, 224, 0.04), 0 12px 36px rgba(0,0,0,0.42);
+}
+.cabinet-card:hover .cabinet-type {
+  color: rgba(95, 191, 142, 0.95);
+  text-shadow: 0 0 8px rgba(29, 138, 72, 0.36);
+  transition: color 0.22s ease, text-shadow 0.22s ease;
+}
+.cabinet-card:hover .cabinet-name {
+  color: var(--amber);
+  transition: color 0.22s ease;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO 4 — MICROCLIMA POR SEÇÃO
+   Cada capítulo com assinatura atmosférica própria.
+═══════════════════════════════════════════════════════════════ */
+
+/* OCULTISMO — âmbar antigo, vela, grimório */
+.occult-section .section-label {
+  color: rgba(184, 154, 102, 0.92);
+  border-color: rgba(184, 154, 102, 0.28);
+  background: rgba(184, 154, 102, 0.06);
+}
+.occult-section .section-header h3 {
+  color: #e4d8bc;
+}
+
+/* ANATOMIA / BODY-STUDY — papel médico, frio, clínico */
+.body-study-section .section-label {
+  color: rgba(180, 195, 208, 0.88);
+  border-color: rgba(180, 195, 208, 0.22);
+  background: rgba(180, 195, 208, 0.04);
+}
+.body-study-section .section-header h3 {
+  color: #dde4ea;
+}
+
+/* CINEMA — vermelho sangrado, granulado, pressão */
+.cinema-section .section-label {
+  color: rgba(200, 75, 90, 0.92);
+  border-color: rgba(200, 75, 90, 0.28);
+  background: rgba(200, 75, 90, 0.06);
+}
+
+/* GALVANISMO / HUMANIDADE — verde elétrico, tensão */
+.humanity-section .section-label {
+  color: rgba(29, 138, 72, 0.95);
+  border-color: rgba(29, 138, 72, 0.30);
+  background: rgba(29, 138, 72, 0.07);
+  text-shadow: 0 0 6px rgba(29, 138, 72, 0.28);
+}
+
+/* FORENSE / MORTE MODERNA — frio, clínico-burocrático */
+.forensic-section .section-label,
+.modern-death-section .section-label {
+  color: rgba(160, 174, 186, 0.88);
+  border-color: rgba(160, 174, 186, 0.22);
+  background: rgba(160, 174, 186, 0.04);
+}
+
+/* GABINETE — lacrado, inventário, amarelo de arquivo velho */
+#gabinete .section-label {
+  color: rgba(196, 166, 88, 0.92);
+  border-color: rgba(196, 166, 88, 0.28);
+  background: rgba(196, 166, 88, 0.06);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO 5 — TIMELINE EDITORIAL
+   Ano maior, evento como ficha, hover de luz de vela.
+═══════════════════════════════════════════════════════════════ */
+
+/* Ano: maior, mais dramático */
+.timeline-year span {
+  font-size: clamp(1.1rem, 2.2vw, 1.9rem) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em !important;
+  color: rgba(184, 154, 102, 0.92) !important;
+  background: rgba(184, 154, 102, 0.07) !important;
+  border: 1px solid rgba(184, 154, 102, 0.22) !important;
+  border-radius: 4px !important;
+  padding: 4px 12px !important;
+  font-family: Georgia, serif !important;
+  text-shadow: 0 0 12px rgba(184, 154, 102, 0.22) !important;
+}
+
+/* Evento como ficha: hover com luz de vela */
+.timeline-event {
+  border-radius: 5px;
+  padding-left: 8px;
+  transition: background 0.24s ease, box-shadow 0.24s ease;
+}
+.timeline-event:hover {
+  background: rgba(58, 15, 20, 0.10);
+  box-shadow: inset 3px 0 0 rgba(184, 154, 102, 0.36);
+}
+.timeline-event:hover .timeline-desc {
+  color: #d4c5aa;
+}
+
+/* Dot: maior presença */
+.timeline-dot {
+  width: 12px !important;
+  height: 12px !important;
+  box-shadow:
+    0 0 14px rgba(141, 31, 44, 0.95),
+    0 0 28px rgba(141, 31, 44, 0.40),
+    0 0 48px rgba(141, 31, 44, 0.14) !important;
+}
+
+/* Barra vertical da timeline: mais visível */
+.timeline::before {
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(200, 75, 90, 0.38) 8%,
+    rgba(184, 154, 102, 0.28) 55%,
+    rgba(200, 75, 90, 0.18) 92%,
+    transparent
+  ) !important;
+}
+
+/* Ano-chave (como 1818): destaque adicional */
+.timeline-event:has(.timeline-year span[data-key]) .timeline-year span {
+  color: rgba(225, 185, 95, 0.98) !important;
+  text-shadow: 0 0 18px rgba(200, 155, 60, 0.36) !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCO 6 — GABINETE COMO ITENS EXAMINÁVEIS
+   Cards com status prominente, referência de arquivo,
+   sensação de dossiê lacrado sendo inspecionado.
+═══════════════════════════════════════════════════════════════ */
+
+/* Badge de tipo: mais prominente */
+.cabinet-type {
+  font-size: 0.58rem !important;
+  letter-spacing: 0.18em !important;
+  padding: 2px 7px;
+  border: 1px solid rgba(29, 138, 72, 0.20);
+  border-radius: 2px;
+  background: rgba(29, 138, 72, 0.06);
+}
+
+/* Referência: código de arquivo mais legível */
+.cabinet-ref {
+  font-size: 0.62rem !important;
+  color: rgba(138, 126, 114, 0.82) !important;
+  letter-spacing: 0.16em !important;
+  margin-top: 14px !important;
+  border-top: 1px solid rgba(248, 240, 224, 0.05);
+  padding-top: 10px;
+}
+
+/* Nome do item: levemente maior */
+.cabinet-name {
+  font-size: 1.06rem !important;
+  line-height: 1.18 !important;
+  letter-spacing: 0.01em !important;
+}
+
+/* Descrição do espécime: leitura mais fácil */
+.cabinet-desc {
+  font-size: 0.88rem !important;
+  line-height: 1.76 !important;
+  color: rgba(200, 189, 174, 0.88) !important;
+}
+
+/* Featured card: visual de dossiê principal */
+.cabinet-card--featured {
+  border: 1px solid rgba(184, 154, 102, 0.18) !important;
+  box-shadow: inset 0 0 0 1px rgba(248, 240, 224, 0.03) !important;
+  position: relative;
+  overflow: hidden;
+}
+.cabinet-card--featured::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(184, 154, 102, 0.50), rgba(248, 240, 224, 0.12), rgba(184, 154, 102, 0.20));
+}
+
+/* Grid do gabinete: respiro entre cards */
+.cabinet-grid {
+  gap: 12px !important;
+  margin-top: 32px;
+}
+
