@@ -50,6 +50,7 @@ const timelineEvents = [
   },
   {
     year: '1818',
+    displayYear: '1818 · Shelley',
     desc: 'Mary Shelley publica Frankenstein no auge do imaginário galvanista.',
     image: '/assets/archive/frankenstein-title.jpg',
     imageAlt: 'Página de título da edição original de Frankenstein, 1818',
@@ -57,6 +58,7 @@ const timelineEvents = [
   },
   {
     year: '1818',
+    displayYear: '1818 · Ure',
     desc: 'Andrew Ure aplica correntes ao corpo de Matthew Clydesdale em Glasgow.',
   },
   {
@@ -74,18 +76,36 @@ const timelineEvents = [
 ]
 
 const cabinet = [
-  { ref: 'LÂM-042', displayDate: 'arquivo interno', type: 'ESPÉCIME',    name: 'Lâmina Histológica',    visual: 'anatomical-plate',
-    desc: 'Tecido neural pós-galvanização. Reação desconhecida nos neurônios terminais.' },
-  { ref: 'MAN-019', displayDate: '1803', type: 'DOCUMENTO',   name: 'Manuscrito Aldini',      visual: 'medical-file',
-    desc: 'Notas de campo da sessão de 1803. Três páginas ilegíveis. Tinta ferruginosa.' },
-  { ref: 'REA-007', displayDate: 'registro apócrifo', type: 'SUBSTÂNCIA',  name: 'Reagente HW-7',          visual: 'reagent-vial',
-    desc: 'Composto verde-amarelado. Origem não rastreada. Efeito sobre tecido morto: indeterminado.' },
-  { ref: 'PRO-334', displayDate: 'data lacrada', type: 'REGISTRO',    name: 'Prontuário 334-B',       visual: 'medical-file',
-    desc: 'Cadáver masculino, ~40 anos. Causa mortis: desconhecida. Marcas pós-morte atípicas.' },
-  { ref: 'OSC-002', displayDate: 'arquivo interno', type: 'INSTRUMENTO', name: 'Osciloscópio de Campo',  visual: 'galvanic-wave',
-    desc: 'Registrou atividade elétrica em tecido certificado como morto. Equipamento lacrado após incidente.' },
-  { ref: 'CAD-111', displayDate: 'registro apócrifo', type: 'ESPÉCIME',    name: 'Cadáver Catalogado 111', visual: 'corpse-tag',
-    desc: 'Status: reanimação parcial tentada. Resultado: inconclusivo. Localização atual: desconhecida.' },
+  {
+    ref: 'LÂM-042', displayDate: 'arquivo interno', type: 'ESPÉCIME',
+    name: 'Lâmina Histológica', visual: 'anatomical-plate', size: 'featured',
+    desc: 'Tecido neural pós-galvanização. Reação desconhecida nos neurônios terminais. Amostra mantida sob lacre por comportamento elétrico residual após exposição ao campo galvânico. Análise interrompida por protocolo interno.',
+  },
+  {
+    ref: 'REA-007', displayDate: 'registro apócrifo', type: 'SUBSTÂNCIA',
+    name: 'Reagente HW-7', visual: 'reagent-vial', size: 'wide',
+    desc: 'Composto verde-amarelado. Origem não rastreada. Efeito sobre tecido morto: instável, reversível e potencialmente hostil. Amostra mantida sob selo de quarentena. Acesso restrito ao pessoal autorizado do arquivo.',
+  },
+  {
+    ref: 'CAD-111', displayDate: 'registro apócrifo', type: 'ESPÉCIME',
+    name: 'Cadáver Catalogado 111', visual: 'corpse-tag', size: 'wide',
+    desc: 'Reanimação parcial tentada. Resultado inconclusivo. Localização atual: desconhecida. Registro mantido por obrigação documental. Acesso restrito ao gabinete. Não reabrir sem protocolo 7-B.',
+  },
+  {
+    ref: 'MAN-019', displayDate: '1803', type: 'DOCUMENTO',
+    name: 'Manuscrito Aldini', visual: 'medical-file', size: 'standard',
+    desc: 'Notas de campo atribuídas à sessão de 1803. Três páginas ilegíveis, tinta ferruginosa e marcas de manipulação posterior.',
+  },
+  {
+    ref: 'PRO-334', displayDate: 'data lacrada', type: 'REGISTRO',
+    name: 'Prontuário 334-B', visual: 'medical-file', size: 'standard',
+    desc: 'Cadáver masculino, aproximadamente 40 anos. Causa mortis desconhecida. Marcas pós-morte incompatíveis com rigidez comum.',
+  },
+  {
+    ref: 'OSC-002', displayDate: 'arquivo interno', type: 'INSTRUMENTO',
+    name: 'Osciloscópio de Campo', visual: 'galvanic-wave', size: 'standard',
+    desc: 'Registrou atividade elétrica em tecido certificado como morto. Equipamento lacrado após três leituras impossíveis de reproduzir.',
+  },
 ]
 
 const humanityAgainstDeath = [
@@ -473,12 +493,14 @@ const cinemaEntries = [
     label: 'Cinema primitivo',
     title: 'Frankenstein (1910)',
     year: '1910',
+    layout: 'single',
     intro: 'Primeira adaptação cinematográfica conhecida de Frankenstein. J. Searle Dawley para a Edison Studios transforma o mito em experiência visual primitiva: a criatura aparece como produto de laboratório alquímico, mais visão demoníaca do que monstro trágico moderno. O corpo fabricado deixa o romance de Shelley e ganha forma pública pela primeira vez.',
     images: [
       {
         src: '/assets/cinema/frankenstein-1910-poster.jpg',
         alt: 'Pôster do Frankenstein de 1910, Edison Studios',
         caption: 'Edison Studios, 1910 — o mito no cinema silencioso e nos efeitos primitivos',
+        role: 'hero',
       },
     ],
     meta: ['1910', 'J. Searle Dawley', 'Edison Studios'],
@@ -489,53 +511,50 @@ const cinemaEntries = [
     label: 'Universal Pictures',
     title: 'Frankenstein (1931) — James Whale e Boris Karloff',
     year: '1931',
+    layout: 'feature-duo',
     intro: 'James Whale e a Universal consolidam o ícone visual definitivo: testa marcada, corpo pesado, eletricidade, laboratório e tragédia. Boris Karloff transforma a criatura em símbolo reconhecível mundialmente, mesmo por quem nunca leu Mary Shelley. É aqui que nasce a imagem do horror moderno.',
     images: [
       {
+        src: '/assets/cinema/frankenstein-1931-karloff-maria.jpg',
+        alt: 'Boris Karloff como a criatura e a menina Maria, Frankenstein 1931',
+        caption: 'A criatura e Maria — inocência, brutalidade e rejeição social',
+        role: 'hero',
+      },
+      {
         src: '/assets/cinema/frankenstein-1931-poster.jpg',
         alt: 'Pôster clássico de Frankenstein, Universal Pictures, 1931',
-        caption: 'Universal Pictures, 1931 — o monstro passa a existir como imagem mundial',
-      },
-      {
-        src: '/assets/cinema/frankenstein-1931-monster-scene.jpg',
-        alt: 'Boris Karloff como a criatura de Frankenstein, 1931',
-        caption: 'Boris Karloff — testa marcada, corpo costurado, tragédia sem malícia original',
-      },
-      {
-        src: '/assets/cinema/frankenstein-1931-karloff-maria.jpg',
-        alt: 'A criatura e a menina Maria, Frankenstein 1931',
-        caption: 'A criatura e Maria — inocência, brutalidade e rejeição social em uma cena',
+        caption: 'Universal Pictures, 1931 — pôster clássico, ícone mundial',
+        role: 'support',
       },
     ],
     meta: ['1931', 'James Whale', 'Boris Karloff'],
-    text: 'O filme consolida a imagem popular do monstro: testa marcada, corpo pesado, eletricidade e laboratório. Karloff cria um ícone visual permanente. A cena da criatura com a menina Maria concentra a ambiguidade central do mito: o monstro não entende o mundo, não domina a própria força e se torna ameaça sem nascer moralmente maligno.',
+    text: 'O filme consolida a imagem popular do monstro: testa marcada, corpo pesado, eletricidade e laboratório. Karloff cria um ícone visual permanente. A cena com a menina Maria concentra a ambiguidade central do mito: o monstro não entende o mundo, não domina a própria força e se torna ameaça sem nascer moralmente maligno.',
   },
   {
     id: 'mary-shelley-1994',
     label: 'Gótico romântico',
     title: "Mary Shelley's Frankenstein (1994) — Robert De Niro como criatura",
     year: '1994',
+    layout: 'feature-trio',
     intro: 'Kenneth Branagh tenta devolver Frankenstein ao drama moral do romance: criação, abandono, culpa, revolta e desejo de reconhecimento. A criatura interpretada por Robert De Niro não é apenas monstro visual — é sujeito ferido, consciente e vingativo que cobra do criador a responsabilidade pela vida que recebeu.',
     images: [
       {
-        src: '/assets/cinema/mary-shelley-frankenstein-1994.jpg',
-        alt: "Cena de Mary Shelley's Frankenstein, 1994",
-        caption: 'Kenneth Branagh, 1994 — retorno ao drama moral do romance',
-      },
-      {
         src: '/assets/cinema/Frankenstein-de-Mary-Shelley-10.jpg',
-        alt: 'O corpo reconstruído, Frankenstein 1994',
-        caption: 'Costura, carne, cicatriz — a identidade fragmentada como assinatura do abandono',
+        alt: 'O corpo reconstruído, Frankenstein 1994, Kenneth Branagh',
+        caption: 'Kenneth Branagh, 1994 — costura, carne e cicatriz',
+        role: 'hero',
       },
       {
         src: '/assets/cinema/Frankenstein-de-Mary-Shelley-13.jpg',
-        alt: 'Victor e a criatura, confronto moral, Frankenstein 1994',
+        alt: 'Criador e criatura, confronto moral, Frankenstein 1994',
         caption: 'Criador e criatura — cobrança, espelho e condenação',
+        role: 'support',
       },
       {
         src: '/assets/cinema/Frankenstein-de-Mary-Shelley-20.jpg',
         alt: 'A criatura excluída, Frankenstein 1994',
-        caption: 'Corpo rejeitado, alma em busca de reconhecimento — o horror como exclusão',
+        caption: 'Corpo rejeitado, alma em busca de reconhecimento',
+        role: 'support',
       },
     ],
     meta: ['1994', 'Kenneth Branagh', 'Robert De Niro'],
@@ -546,64 +565,68 @@ const cinemaEntries = [
     label: 'Horror cult',
     title: 'Re-Animator (1985) — Lovecraft, necrotério e ciência profanada',
     year: '1985',
+    layout: 'feature-duo',
     intro: 'Stuart Gordon leva a reanimação para outro território: sai o gótico romântico e entra o horror cult, ácido, viscoso e excessivo. Herbert West não quer compreender a alma — ele quer vencer a morte como procedimento técnico. O reagente verde transforma o laboratório universitário em necrotério de experimentos fracassados.',
     images: [
       {
-        src: '/assets/cinema/Re-Animator.jpg',
-        alt: 'Herbert West e o reagente verde, Re-Animator 1985',
-        caption: 'Herbert West — seringa, reagente verde, necrotério e arrogância científica',
-      },
-      {
         src: '/assets/cinema/reanimator-1985.jpg',
-        alt: 'Re-Animator 1985, Stuart Gordon',
-        caption: 'Stuart Gordon, 1985 — reanimação como violação direta do corpo morto',
+        alt: 'Re-Animator 1985, Stuart Gordon, Herbert West',
+        caption: 'Stuart Gordon, 1985 — seringa, reagente verde e arrogância científica',
+        role: 'hero',
       },
       {
         src: '/assets/cinema/reanimator-1985-creature.jpg',
         alt: 'Cadáver reanimado, Re-Animator 1985',
         caption: 'O reanimado não volta como pessoa restaurada — volta como erro biológico',
+        role: 'support',
       },
     ],
     meta: ['1985', 'Stuart Gordon', 'H.P. Lovecraft'],
-    text: 'O filme transforma o conto de Lovecraft em cinema físico: seringa, reagente verde, cadáver, necrotério e arrogância científica. A reanimação aqui não é milagre nem tragédia nobre; é violação direta do corpo morto. Herbert West é uma inversão moderna de Victor Frankenstein: menos romântico, mais frio, mais técnico e obcecado — ele não sofre pela criação, ele testa, repete, corrige e profana.',
+    text: 'O filme transforma o conto de Lovecraft em cinema físico: seringa, reagente verde, cadáver, necrotério e arrogância científica. A reanimação aqui não é milagre nem tragédia nobre; é violação direta do corpo morto. Herbert West é uma inversão moderna de Victor Frankenstein: menos romântico, mais frio, mais técnico e obcecado — ele testa, repete, corrige e profana.',
   },
   {
     id: 'romero',
     label: 'Mortos-vivos modernos',
-    title: 'George A. Romero — a trilogia social dos zumbis',
+    title: 'George A. Romero — Noite dos Mortos Vivos e o zumbi moderno',
     year: '1968–1985',
-    intro: 'Romero transforma o morto-vivo em linguagem da cultura pop moderna. Seus zumbis não são só monstros: são multidão, colapso social, consumo, guerra civil, medo coletivo e repetição automática dos hábitos humanos depois da morte. Cada filme da trilogia é um diagnóstico cultural diferente.',
+    layout: 'feature-duo',
+    intro: 'Romero funda o zumbi moderno e transforma o morto-vivo em linguagem da cultura pop. Seus zumbis não são só monstros: são multidão, colapso social, cerco doméstico e repetição automática dos hábitos humanos depois da morte. A Noite dos Mortos Vivos cria a gramática que todo o cinema de zumbi posterior vai herdar.',
     images: [
       {
         src: '/assets/cinema/night-of-the-living-dead-1968.jpg',
         alt: 'Night of the Living Dead, George A. Romero, 1968',
         caption: 'Night of the Living Dead, 1968 — cerco doméstico, origem do zumbi moderno',
+        role: 'hero',
       },
       {
-        src: '/assets/cinema/dawn-of-the-dead-1978-zombie.jpg',
-        alt: 'Zumbi no shopping, Dawn of the Dead, George A. Romero, 1978',
-        caption: 'Dawn of the Dead, 1978 — shopping como mausoléu do consumo',
+        src: '/assets/cinema/night-of-the-living-dead-1968-b.webp',
+        alt: 'Cena de Night of the Living Dead, George A. Romero, 1968',
+        caption: 'Os mortos retornam, cercam os vivos e transformam a casa em bunker',
+        role: 'support',
       },
     ],
     meta: ['1968–1985', 'George A. Romero', 'Night · Dawn · Day'],
-    text: 'O primeiro filme funda o zumbi moderno: cadáveres cercam os vivos, a casa vira bunker, e o horror está tanto no cerco quanto na desconfiança entre sobreviventes. Em Dawn of the Dead, o shopping vira mausoléu do consumo — os mortos caminham pelas lojas porque ainda repetem os gestos de quando estavam vivos. A trilogia cresce como comentário social crescente: cerco, consumo, militarização.',
+    text: 'O filme de 1968 funda o zumbi moderno: cadáveres retornam, cercam os vivos e transformam a casa em bunker. O horror está no cerco, mas também na desconfiança entre os sobreviventes. Em Dawn of the Dead (1978), o shopping vira mausoléu do consumo — os mortos caminham pelas lojas porque ainda repetem os gestos de quando estavam vivos. A trilogia cresce como diagnóstico cultural: cerco, consumo, militarização.',
   },
   {
     id: 'snyder-2004',
     label: 'Remake moderno',
     title: 'Madrugada dos Mortos (2004) — Zack Snyder e o zumbi veloz',
     year: '2004',
+    layout: 'feature-duo',
     intro: 'A refilmagem de 2004 pega a base de Romero e acelera tudo: o morto-vivo deixa de ser massa lenta e vira explosão física. É o apocalipse como colapso imediato, urbano e agressivo — o zumbi do século XXI não caminha, ele corre.',
     images: [
       {
-        src: '/assets/cinema/dawn-of-the-dead-2004.jpg',
-        alt: 'Dawn of the Dead 2004, Zack Snyder, zumbis no shopping',
+        src: '/assets/cinema/madrugada-dos-mortos-2004-01.webp',
+        alt: 'Madrugada dos Mortos, Zack Snyder, 2004 — zumbis velozes',
         caption: 'Madrugada dos Mortos, 2004 — colapso instantâneo e zumbi veloz',
+        role: 'hero',
       },
       {
-        src: '/assets/cinema/DawnoftheDead2004.webp',
-        alt: 'Cena de Madrugada dos Mortos, Zack Snyder, 2004',
-        caption: 'Zack Snyder, 2004 — terror de sobrevivência, estética nervosa dos anos 2000',
+        src: '/assets/cinema/madrugada-dos-mortos-2004-02.avif',
+        alt: 'Madrugada dos Mortos, Zack Snyder, 2004 — terror de sobrevivência',
+        caption: 'Zack Snyder, 2004 — diferente do ritmo social e satírico de Romero',
+        role: 'support',
       },
     ],
     meta: ['2004', 'Zack Snyder', 'Remake'],
@@ -614,12 +637,26 @@ const cinemaEntries = [
     label: 'Gótico contemporâneo',
     title: 'Frankenstein — Guillermo del Toro',
     year: '2025',
+    layout: 'feature-trio',
     intro: 'O Frankenstein de Guillermo del Toro pertence à linhagem dos monstros trágicos. Em vez de tratar a criatura apenas como ameaça, a leitura contemporânea recoloca beleza, dor, abandono e humanidade no centro da imagem monstruosa — conversa direta com Shelley, Karloff e De Niro.',
     images: [
       {
-        src: '/assets/cinema/frankenstein-guillermo-del-toro.jpg',
-        alt: 'A criatura no Frankenstein de Guillermo del Toro',
+        src: '/assets/cinema/frankenstein-2025-03.jpg',
+        alt: 'Frankenstein de Guillermo del Toro, 2025 — a criatura em cena',
         caption: 'Guillermo del Toro, 2025 — monstro trágico, melancolia e compaixão',
+        role: 'hero',
+      },
+      {
+        src: '/assets/cinema/frankenstein-2025-01.jpg',
+        alt: 'Frankenstein de Guillermo del Toro, 2025',
+        caption: 'Del Toro, 2025 — beleza e dor no corpo impossível',
+        role: 'support',
+      },
+      {
+        src: '/assets/cinema/frankenstein-2025-02.jpg',
+        alt: 'Frankenstein de Guillermo del Toro, 2025 — criatura e abandono',
+        caption: 'Del Toro, 2025 — o monstro conversa com Shelley, Karloff e De Niro',
+        role: 'support',
       },
     ],
     meta: ['2025', 'Guillermo del Toro', 'Monstro trágico'],
@@ -678,6 +715,7 @@ function App() {
         <a href="#dossies" className="mobile-nav-link">Dossiês</a>
         <a href="#artigos" className="mobile-nav-link">Artigos</a>
         <a href="#linha" className="mobile-nav-link">Timeline</a>
+        <a href="#cinema" className="mobile-nav-link">Cinema</a>
         <a href="#gabinete" className="mobile-nav-link">Gabinete</a>
       </nav>
 
@@ -1516,7 +1554,7 @@ function App() {
             <p className="section-label">Arquivo de casos</p>
             <h3>Seis registros essenciais</h3>
             <p className="selected-dossiers-intro">
-              Seis registros essenciais para navegar pela fronteira entre morte, ciência, literatura e ficção editorial.
+              Uma seleção de casos, arquivos e registros para navegar pela fronteira entre morte, ciência, literatura e ficção editorial.
             </p>
           </div>
           <div className="stories-grid selected-dossiers-grid">
@@ -1568,7 +1606,7 @@ function App() {
             {timelineEvents.map((e, i) => (
               <div className="timeline-event" key={i}>
                 <div className="timeline-year">
-                  <span>{e.year}</span>
+                  <span>{e.displayYear || e.year}</span>
                   <div className="timeline-dot" />
                 </div>
                 <div className="timeline-body">
@@ -1624,9 +1662,9 @@ function App() {
                   <p className="cinema-dossier-intro">{entry.intro}</p>
                 </div>
 
-                <div className={`cinema-dossier-gallery cinema-dossier-gallery--${entry.images.length}`}>
+                <div className={`cinema-dossier-gallery cinema-dossier-layout--${entry.layout}`}>
                   {entry.images.map((img, i) => (
-                    <figure className="cinema-dossier-card" key={i}>
+                    <figure className={`cinema-dossier-card cinema-dossier-card--${img.role}`} key={i}>
                       <div className="cinema-image-frame">
                         <img src={img.src} alt={img.alt} loading="lazy" />
                       </div>
@@ -1654,12 +1692,13 @@ function App() {
         <section id="gabinete" className="section">
           <div className="section-header">
             <p className="section-label">Gabinete de Anatomia</p>
-            <h3>Itens catalogados, lacrados e interditos</h3>
+            <h3>Objetos lacrados, corpos sem retorno e registros interditos</h3>
+            <p className="cabinet-subtitle">Nem todo documento pertence à história pública. Alguns itens permanecem catalogados como evidência, advertência ou ficção apócrifa do próprio arquivo.</p>
           </div>
           <div className="cabinet-grid">
             {cabinet.map((item) => (
-              <div className="cabinet-item" key={item.ref}>
-                <ArchiveVisual type={item.visual} size="sm" />
+              <div className={`cabinet-card cabinet-card--${item.size}`} key={item.ref}>
+                <ArchiveVisual type={item.visual} size={item.size === 'featured' ? 'md' : 'sm'} />
                 <div className="cabinet-top">
                   <span className="archive-date">{item.displayDate}</span>
                   <span className="cabinet-type">{item.type}</span>
