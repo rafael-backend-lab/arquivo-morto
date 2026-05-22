@@ -28,3 +28,6 @@ dist-ssr
 
 # Claude temporary prompts
 claude_*.md
+
+# Unused local Vite/assets leftovers
+src/assets/
