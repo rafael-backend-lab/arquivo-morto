@@ -51,6 +51,9 @@ const timelineEvents = [
   {
     year: '1818',
     desc: 'Mary Shelley publica Frankenstein no auge do imaginário galvanista.',
+    image: '/assets/archive/frankenstein-title.jpg',
+    imageAlt: 'Página de título da edição original de Frankenstein, 1818',
+    imageCaption: 'Frankenstein; or, The Modern Prometheus · 1ª edição, 1818',
   },
   {
     year: '1818',
@@ -507,6 +510,15 @@ function App() {
           </button>
         </nav>
       </header>
+
+      {/* MOBILE BOTTOM NAV — visível apenas em ≤720px */}
+      <nav className="mobile-nav-bar" aria-label="Navegação rápida">
+        <a href="#destaque" className="mobile-nav-link">Destaque</a>
+        <a href="#dossies" className="mobile-nav-link">Dossiês</a>
+        <a href="#artigos" className="mobile-nav-link">Artigos</a>
+        <a href="#linha" className="mobile-nav-link">Timeline</a>
+        <a href="#gabinete" className="mobile-nav-link">Gabinete</a>
+      </nav>
 
       <main className="page">
 
@@ -1146,8 +1158,8 @@ function App() {
           <div className="soviet-dossier-lead with-portrait">
             <figure className="brukhonenko-portrait">
               <img
-                src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Sergei_Brukhonenko.png"
-                alt="Retrato de Sergei Brukhonenko em 1942"
+                src="/assets/archive/brukhonenko-portrait.jpg"
+                alt="Retrato de Sergei Brukhonenko, fisiologista soviético"
                 loading="lazy"
               />
               <figcaption>
@@ -1170,8 +1182,8 @@ function App() {
 <article className="brukhonenko-flow-row reverse">
             <figure className="brukhonenko-flow-image">
               <img
-                src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Patent%20autojektor.gif"
-                alt="Desenho técnico do autojektor"
+                src="/assets/archive/brukhonenko-autojektor.jpg"
+                alt="Desenho técnico do autojektor de Brukhonenko"
                 loading="lazy"
               />
               <figcaption>
@@ -1196,8 +1208,8 @@ function App() {
           <article className="brukhonenko-flow-row dog-head-focus">
             <figure className="brukhonenko-flow-image strong">
               <img
-                src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Experiment1940.jpg"
-                alt="Frame do filme Experiments in the Revival of Organisms com cabeça de cão ligada ao autojektor"
+                src="/assets/archive/brukhonenko-experiment.jpg"
+                alt="Frame de Experiments in the Revival of Organisms, 1940 — cabeça de cão ligada ao sistema de circulação artificial"
                 loading="lazy"
               />
               <figcaption>
@@ -1398,26 +1410,26 @@ function App() {
                   <span>{e.year}</span>
                   <div className="timeline-dot" />
                 </div>
-                <p className="timeline-desc">{e.desc}</p>
+                <div className="timeline-body">
+                  <p className="timeline-desc">{e.desc}</p>
+                  {e.image && (
+                    <figure className="timeline-figure">
+                      <div className="contextual-figure-frame">
+                        <img src={e.image} alt={e.imageAlt} loading="lazy" />
+                      </div>
+                      {e.imageCaption && (
+                        <figcaption className="contextual-figure-caption">{e.imageCaption}</figcaption>
+                      )}
+                    </figure>
+                  )}
+                </div>
               </div>
             ))}
           </div>
         </section>
 
-        {/* ICONOGRAFIA LITERÁRIA */}
-        <div className="literature-visual-strip" aria-label="Documentos visuais — Mary Shelley e Frankenstein">
-          <figure>
-            <div className="contextual-figure-frame">
-              <img
-                src="/assets/archive/frankenstein-title.jpg"
-                alt="Página de título da edição original de Frankenstein, Mary Shelley, 1818"
-                loading="lazy"
-              />
-            </div>
-            <figcaption className="contextual-figure-caption">
-              Frankenstein; or, The Modern Prometheus · Mary Shelley, 1818 — Wikimedia Commons / Domínio público
-            </figcaption>
-          </figure>
+        {/* ICONOGRAFIA LITERÁRIA — Mary Shelley, após timeline */}
+        <div className="literature-visual-strip" aria-label="Retrato de Mary Wollstonecraft Shelley">
           <figure>
             <div className="contextual-figure-frame">
               <img
