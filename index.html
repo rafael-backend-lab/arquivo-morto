@@ -26,9 +26,49 @@
     <meta name="twitter:title" content="Arquivo Morto" />
     <meta name="twitter:description" content="Literatura, ciência e horror da reanimação. Dossiês históricos sobre galvanismo, Aldini, Brukhonenko, Cornish e o imaginário científico do horror." />
     <meta name="twitter:image" content="https://arquivo-morto.netlify.app/arquivo-morto-share-v4.jpg" />
+    <style>
+      .static-fallback {
+        background: #080808;
+        color: #F8F0E0;
+        font-family: Georgia, serif;
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 3rem 1.5rem;
+        line-height: 1.7;
+      }
+      .static-fallback h1 {
+        font-size: 2.5rem;
+        color: #F8F0E0;
+        margin-bottom: 0.5rem;
+      }
+      .static-fallback h2 {
+        font-size: 1.2rem;
+        color: #1D8A48;
+        margin-top: 2rem;
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+      .static-fallback p {
+        color: #c8bfb0;
+        margin-bottom: 0.75rem;
+      }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"><main class="static-fallback" aria-label="Arquivo Morto">
+      <h1>Arquivo Morto</h1>
+      <p>Literatura, ciência e horror da reanimação.</p>
+      <p>Projeto editorial sobre os limites entre corpo, experimento, mito e laboratório.</p>
+      <section>
+        <h2>Dossiês históricos</h2>
+        <p>Galvanismo, Giovanni Aldini, George Forster, Sergei Brukhonenko, Robert E. Cornish, Frankenstein, Herbert West e o imaginário científico do horror.</p>
+      </section>
+      <section>
+        <h2>Capítulos</h2>
+        <p>A humanidade contra a morte; necromancia, alquimia e desejo de retorno; corpo estudado; galvanismo e medicina legal; morte técnica, bioética e reanimação experimental.</p>
+      </section>
+    </main></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

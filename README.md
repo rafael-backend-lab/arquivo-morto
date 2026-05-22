@@ -187,6 +187,10 @@ A V2 introduz:
 
 `v9.1` — entrega final polida. Build de produção validado. Pronto para preview e deploy público via `npm run build && npm run preview` ou qualquer host estático (Netlify, Vercel, GitHub Pages).
 
+## Indexação para crawlers e IA
+
+Fallback estático inicial adicionado para crawlers/IA que não executam JavaScript.
+
 ## Nota editorial
 
 Projeto cultural e independente. Inspiração temática em H. P. Lovecraft, Mary Shelley e história da ciência do século XIX. Nenhuma cópia de marca, texto ou identidade visual de obras existentes.
