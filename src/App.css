@@ -2654,14 +2654,20 @@ h2 {
     display: none !important;
   }
 
-  /* ── root::before wallpaper — criatura mais viva no mobile ─── */
+  /* ── root::before wallpaper — uma única criatura no mobile ─── */
   .root::before {
     background:
-      linear-gradient(180deg, rgba(0,0,0,0.20), rgba(0,0,0,0.58)),
-      radial-gradient(circle at 50% 16%, rgba(150, 0, 0, 0.20), transparent 48%),
-      url("/arquivo-morto/assets/cinema/capa-arquivo.png") center top / 185vw auto repeat-y;
-    opacity: 0.42;
-    filter: brightness(0.82) contrast(1.18) saturate(1.02);
+      linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.54)),
+      radial-gradient(circle at 50% 44%, rgba(130, 0, 0, 0.18), transparent 52%),
+      url("/arquivo-morto/assets/cinema/capa-arquivo.png") center 36% / cover no-repeat;
+    opacity: 0.46;
+    filter: brightness(0.84) contrast(1.16) saturate(1.00);
+  }
+  /* suprimir as instâncias localizadas nas seções — evita repetição */
+  #dossies::before,
+  #gabinete::before,
+  .footer::before {
+    opacity: 0;
   }
   .manifesto { padding: 32px 24px; }
   .history-grid  { grid-template-columns: 1fr; }
