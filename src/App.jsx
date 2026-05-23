@@ -52,7 +52,7 @@ const timelineEvents = [
     year: '1818',
     displayYear: '1818 · Shelley',
     desc: 'Mary Shelley publica Frankenstein no auge do imaginário galvanista.',
-    image: '/assets/archive/frankenstein-title.jpg',
+    image: '/arquivo-morto/assets/archive/frankenstein-title.jpg',
     imageAlt: 'Página de título da edição original de Frankenstein, 1818',
     imageCaption: 'Frankenstein; or, The Modern Prometheus · 1ª edição, 1818',
   },
@@ -497,7 +497,7 @@ const cinemaEntries = [
     intro: 'Primeira adaptação cinematográfica conhecida de Frankenstein. J. Searle Dawley para a Edison Studios transforma o mito em experiência visual primitiva: a criatura aparece como produto de laboratório alquímico, mais visão demoníaca do que monstro trágico moderno. O corpo fabricado deixa o romance de Shelley e ganha forma pública pela primeira vez.',
     images: [
       {
-        src: '/assets/cinema/frankenstein-1910-poster.jpg',
+        src: '/arquivo-morto/assets/cinema/frankenstein-1910-poster.jpg',
         alt: 'Pôster do Frankenstein de 1910, Edison Studios',
         caption: 'Edison Studios, 1910 — o mito no cinema silencioso e nos efeitos primitivos',
         role: 'hero',
@@ -515,13 +515,13 @@ const cinemaEntries = [
     intro: 'James Whale e a Universal consolidam o ícone visual definitivo: testa marcada, corpo pesado, eletricidade, laboratório e tragédia. Boris Karloff transforma a criatura em símbolo reconhecível mundialmente, mesmo por quem nunca leu Mary Shelley. É aqui que nasce a imagem do horror moderno.',
     images: [
       {
-        src: '/assets/cinema/frankenstein-1931-karloff-maria.jpg',
+        src: '/arquivo-morto/assets/cinema/frankenstein-1931-karloff-maria.jpg',
         alt: 'Boris Karloff como a criatura e a menina Maria, Frankenstein 1931',
         caption: 'A criatura e Maria — inocência, brutalidade e rejeição social',
         role: 'hero',
       },
       {
-        src: '/assets/cinema/frankenstein-1931-poster.jpg',
+        src: '/arquivo-morto/assets/cinema/frankenstein-1931-poster.jpg',
         alt: 'Pôster clássico de Frankenstein, Universal Pictures, 1931',
         caption: 'Universal Pictures, 1931 — pôster clássico, ícone mundial',
         role: 'support',
@@ -539,19 +539,19 @@ const cinemaEntries = [
     intro: 'Kenneth Branagh tenta devolver Frankenstein ao drama moral do romance: criação, abandono, culpa, revolta e desejo de reconhecimento. A criatura interpretada por Robert De Niro não é apenas monstro visual — é sujeito ferido, consciente e vingativo que cobra do criador a responsabilidade pela vida que recebeu.',
     images: [
       {
-        src: '/assets/cinema/Frankenstein-de-Mary-Shelley-10.jpg',
+        src: '/arquivo-morto/assets/cinema/Frankenstein-de-Mary-Shelley-10.jpg',
         alt: 'O corpo reconstruído, Frankenstein 1994, Kenneth Branagh',
         caption: 'Kenneth Branagh, 1994 — costura, carne e cicatriz',
         role: 'hero',
       },
       {
-        src: '/assets/cinema/Frankenstein-de-Mary-Shelley-13.jpg',
+        src: '/arquivo-morto/assets/cinema/Frankenstein-de-Mary-Shelley-13.jpg',
         alt: 'Criador e criatura, confronto moral, Frankenstein 1994',
         caption: 'Criador e criatura — cobrança, espelho e condenação',
         role: 'support',
       },
       {
-        src: '/assets/cinema/Frankenstein-de-Mary-Shelley-20.jpg',
+        src: '/arquivo-morto/assets/cinema/Frankenstein-de-Mary-Shelley-20.jpg',
         alt: 'A criatura excluída, Frankenstein 1994',
         caption: 'Corpo rejeitado, alma em busca de reconhecimento',
         role: 'support',
@@ -569,13 +569,13 @@ const cinemaEntries = [
     intro: 'Stuart Gordon leva a reanimação para outro território: sai o gótico romântico e entra o horror cult, ácido, viscoso e excessivo. Herbert West não quer compreender a alma — ele quer vencer a morte como procedimento técnico. O reagente verde transforma o laboratório universitário em necrotério de experimentos fracassados.',
     images: [
       {
-        src: '/assets/cinema/reanimator-1985.jpg',
+        src: '/arquivo-morto/assets/cinema/reanimator-1985.jpg',
         alt: 'Re-Animator 1985, Stuart Gordon, Herbert West',
         caption: 'Stuart Gordon, 1985 — seringa, reagente verde e arrogância científica',
         role: 'hero',
       },
       {
-        src: '/assets/cinema/reanimator-1985-creature.jpg',
+        src: '/arquivo-morto/assets/cinema/reanimator-1985-creature.jpg',
         alt: 'Cadáver reanimado, Re-Animator 1985',
         caption: 'O reanimado não volta como pessoa restaurada — volta como erro biológico',
         role: 'support',
@@ -593,13 +593,13 @@ const cinemaEntries = [
     intro: 'Romero funda o zumbi moderno e transforma o morto-vivo em linguagem da cultura pop. Seus zumbis não são só monstros: são multidão, colapso social, cerco doméstico e repetição automática dos hábitos humanos depois da morte. A Noite dos Mortos Vivos cria a gramática que todo o cinema de zumbi posterior vai herdar.',
     images: [
       {
-        src: '/assets/cinema/night-of-the-living-dead-1968.jpg',
+        src: '/arquivo-morto/assets/cinema/night-of-the-living-dead-1968.jpg',
         alt: 'Night of the Living Dead, George A. Romero, 1968',
         caption: 'Night of the Living Dead, 1968 — cerco doméstico, origem do zumbi moderno',
         role: 'hero',
       },
       {
-        src: '/assets/cinema/night-of-the-living-dead-1968-b.webp',
+        src: '/arquivo-morto/assets/cinema/night-of-the-living-dead-1968-b.webp',
         alt: 'Cena de Night of the Living Dead, George A. Romero, 1968',
         caption: 'Os mortos retornam, cercam os vivos e transformam a casa em bunker',
         role: 'support',
@@ -617,13 +617,13 @@ const cinemaEntries = [
     intro: 'A refilmagem de 2004 pega a base de Romero e acelera tudo: o morto-vivo deixa de ser massa lenta e vira explosão física. É o apocalipse como colapso imediato, urbano e agressivo — o zumbi do século XXI não caminha, ele corre.',
     images: [
       {
-        src: '/assets/cinema/madrugada-dos-mortos-2004-01.webp',
+        src: '/arquivo-morto/assets/cinema/madrugada-dos-mortos-2004-01.webp',
         alt: 'Madrugada dos Mortos, Zack Snyder, 2004 — zumbis velozes',
         caption: 'Madrugada dos Mortos, 2004 — colapso instantâneo e zumbi veloz',
         role: 'hero',
       },
       {
-        src: '/assets/cinema/madrugada-dos-mortos-2004-02.avif',
+        src: '/arquivo-morto/assets/cinema/madrugada-dos-mortos-2004-02.avif',
         alt: 'Madrugada dos Mortos, Zack Snyder, 2004 — terror de sobrevivência',
         caption: 'Zack Snyder, 2004 — diferente do ritmo social e satírico de Romero',
         role: 'support',
@@ -641,19 +641,19 @@ const cinemaEntries = [
     intro: 'O Frankenstein de Guillermo del Toro pertence à linhagem dos monstros trágicos. Em vez de tratar a criatura apenas como ameaça, a leitura contemporânea recoloca beleza, dor, abandono e humanidade no centro da imagem monstruosa — conversa direta com Shelley, Karloff e De Niro.',
     images: [
       {
-        src: '/assets/cinema/frankenstein-2025-03.jpg',
+        src: '/arquivo-morto/assets/cinema/frankenstein-2025-03.jpg',
         alt: 'Frankenstein de Guillermo del Toro, 2025 — a criatura em cena',
         caption: 'Guillermo del Toro, 2025 — monstro trágico, melancolia e compaixão',
         role: 'hero',
       },
       {
-        src: '/assets/cinema/frankenstein-2025-01.jpg',
+        src: '/arquivo-morto/assets/cinema/frankenstein-2025-01.jpg',
         alt: 'Frankenstein de Guillermo del Toro, 2025',
         caption: 'Del Toro, 2025 — beleza e dor no corpo impossível',
         role: 'support',
       },
       {
-        src: '/assets/cinema/frankenstein-2025-02.jpg',
+        src: '/arquivo-morto/assets/cinema/frankenstein-2025-02.jpg',
         alt: 'Frankenstein de Guillermo del Toro, 2025 — criatura e abandono',
         caption: 'Del Toro, 2025 — o monstro conversa com Shelley, Karloff e De Niro',
         role: 'support',
@@ -823,7 +823,7 @@ function App() {
               <figure className="occult-visual-card occult-visual-card-large">
                 <div className="occult-visual-frame">
                   <img
-                    src="/assets/archive/occult-alchemy-lab.jpg"
+                    src="/arquivo-morto/assets/archive/occult-alchemy-lab.jpg"
                     alt="Alquimista em seu laboratório, Pieter Bruegel, séc. XVI"
                     loading="lazy"
                   />
@@ -837,7 +837,7 @@ function App() {
                 <figure className="occult-visual-card">
                   <div className="occult-visual-frame">
                     <img
-                      src="/assets/archive/occult-john-dee.jpg"
+                      src="/arquivo-morto/assets/archive/occult-john-dee.jpg"
                       alt="Retrato de John Dee, matemático, astrólogo e mago elisabetano"
                       loading="lazy"
                     />
@@ -850,7 +850,7 @@ function App() {
                 <figure className="occult-visual-card">
                   <div className="occult-visual-frame">
                     <img
-                      src="/assets/archive/occult-golem.jpg"
+                      src="/arquivo-morto/assets/archive/occult-golem.jpg"
                       alt="O Golem e o Rabino Loew, ilustração histórica"
                       loading="lazy"
                     />
@@ -863,7 +863,7 @@ function App() {
                 <figure className="occult-visual-card">
                   <div className="occult-visual-frame">
                     <img
-                      src="/assets/archive/occult-automaton.jpg"
+                      src="/arquivo-morto/assets/archive/occult-automaton.jpg"
                       alt="O Pato Mecânico de Vaucanson, autômato do século XVIII"
                       loading="lazy"
                     />
@@ -906,7 +906,7 @@ function App() {
             <figure className="anatomy-visual-main">
               <div className="anatomy-visual-frame">
                 <img
-                  src="/assets/archive/anatomy-lesson.jpg"
+                  src="/arquivo-morto/assets/archive/anatomy-lesson.jpg"
                   alt="A Lição de Anatomia do Dr. Nicolaes Tulp, Rembrandt van Rijn, 1632"
                   loading="lazy"
                 />
@@ -919,7 +919,7 @@ function App() {
               <figure className="anatomy-visual-card">
                 <div className="anatomy-visual-frame">
                   <img
-                    src="/assets/archive/vesalius-anatomy.jpg"
+                    src="/arquivo-morto/assets/archive/vesalius-anatomy.jpg"
                     alt="Prancha anatômica de De Humani Corporis Fabrica, Andreas Vesalius, 1543"
                     loading="lazy"
                   />
@@ -931,7 +931,7 @@ function App() {
               <figure className="anatomy-visual-card">
                 <div className="anatomy-visual-frame">
                   <img
-                    src="/assets/archive/vesalius-skeleton.jpg"
+                    src="/arquivo-morto/assets/archive/vesalius-skeleton.jpg"
                     alt="Prancha do esqueleto de De Humani Corporis Fabrica, Andreas Vesalius, 1543"
                     loading="lazy"
                   />
@@ -1042,7 +1042,7 @@ function App() {
         <div className="aldini-visual-gallery" aria-label="Imagens históricas de Giovanni Aldini e galvanismo">
           <figure className="aldini-visual-card aldini-visual-main">
             <img
-              src="/assets/archive/galvanism-corpse.jpg"
+              src="/arquivo-morto/assets/archive/galvanism-corpse.jpg"
               alt="Gravura histórica de um cadáver galvanizado, séc. XIX"
               loading="lazy"
             />
@@ -1053,7 +1053,7 @@ function App() {
 
           <figure className="aldini-visual-card">
             <img
-              src="/assets/archive/aldini-portrait.jpg"
+              src="/arquivo-morto/assets/archive/aldini-portrait.jpg"
               alt="Retrato histórico de Giovanni Aldini, físico italiano"
               loading="lazy"
             />
@@ -1328,7 +1328,7 @@ function App() {
           <div className="soviet-dossier-lead with-portrait">
             <figure className="brukhonenko-portrait">
               <img
-                src="/assets/archive/brukhonenko-portrait.jpg"
+                src="/arquivo-morto/assets/archive/brukhonenko-portrait.jpg"
                 alt="Retrato de Sergei Brukhonenko, fisiologista soviético"
                 loading="lazy"
               />
@@ -1352,7 +1352,7 @@ function App() {
 <article className="brukhonenko-flow-row reverse">
             <figure className="brukhonenko-flow-image">
               <img
-                src="/assets/archive/brukhonenko-autojektor.jpg"
+                src="/arquivo-morto/assets/archive/brukhonenko-autojektor.jpg"
                 alt="Desenho técnico do autojektor de Brukhonenko"
                 loading="lazy"
               />
@@ -1378,7 +1378,7 @@ function App() {
           <article className="brukhonenko-flow-row dog-head-focus">
             <figure className="brukhonenko-flow-image strong">
               <img
-                src="/assets/archive/brukhonenko-experiment.jpg"
+                src="/arquivo-morto/assets/archive/brukhonenko-experiment.jpg"
                 alt="Frame de Experiments in the Revival of Organisms, 1940 — cabeça de cão ligada ao sistema de circulação artificial"
                 loading="lazy"
               />
@@ -1603,7 +1603,7 @@ function App() {
           <figure>
             <div className="contextual-figure-frame">
               <img
-                src="/assets/archive/mary-shelley.jpg"
+                src="/arquivo-morto/assets/archive/mary-shelley.jpg"
                 alt="Retrato de Mary Wollstonecraft Shelley por Richard Rothwell, c. 1840"
                 loading="lazy"
               />

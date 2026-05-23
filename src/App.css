@@ -72,7 +72,7 @@
   background:
     linear-gradient(180deg, rgba(0,0,0,0.28), rgba(0,0,0,0.66)),
     radial-gradient(circle at 50% 20%, rgba(120, 0, 0, 0.16), transparent 48%),
-    url("/assets/cinema/capa-arquivo.png") center 10% / min(1500px, 140vw) auto repeat-y;
+    url("/arquivo-morto/assets/cinema/capa-arquivo.png") center 10% / min(1500px, 140vw) auto repeat-y;
   opacity: 0.34;
   filter: brightness(0.72) contrast(1.10) saturate(0.92);
   transform: translateZ(0);
@@ -107,7 +107,7 @@
   position: absolute;
   inset: -40px 0;
   pointer-events: none;
-  background: url("/assets/cinema/capa-arquivo.png") center top / min(900px, 120vw) auto no-repeat;
+  background: url("/arquivo-morto/assets/cinema/capa-arquivo.png") center top / min(900px, 120vw) auto no-repeat;
   opacity: 0.12;
   filter: brightness(0.55) contrast(1.10) saturate(0.75);
   z-index: 0;
@@ -175,7 +175,7 @@
   inset: 0;
   pointer-events: none;
   z-index: 0;
-  background: url("/assets/cinema/image.arquivo.png") center center / cover no-repeat;
+  background: url("/arquivo-morto/assets/cinema/image.arquivo.png") center center / cover no-repeat;
   opacity: 1;
   filter: brightness(1.08) contrast(1.08) saturate(1.08);
 }
@@ -2592,7 +2592,7 @@ h2 {
 
 @media (max-width: 720px) {
   .hero::before {
-    background: url("/assets/cinema/image.arquivo.png") center top / cover no-repeat;
+    background: url("/arquivo-morto/assets/cinema/image.arquivo.png") center top / cover no-repeat;
     background-color: #050505;
     opacity: 1;
     filter: brightness(1.06) contrast(1.06) saturate(1.04);
@@ -2601,7 +2601,7 @@ h2 {
     background:
       linear-gradient(180deg, rgba(0,0,0,0.34), rgba(0,0,0,0.72)),
       radial-gradient(circle at 50% 18%, rgba(120, 0, 0, 0.14), transparent 48%),
-      url("/assets/cinema/capa-arquivo.png") center top / 170vw auto repeat-y;
+      url("/arquivo-morto/assets/cinema/capa-arquivo.png") center top / 170vw auto repeat-y;
     opacity: 0.28;
   }
   .hero {
