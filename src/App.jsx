@@ -749,27 +749,11 @@ function App() {
           </div>
           <div className="hero-layout">
             <div className="hero-content">
-              <div className="archive-meta">
-                <span className="meta-tag">ARQ-001</span>
-                <span className="meta-sep">·</span>
-                <span className="meta-tag status-lacrado">STATUS: LACRADO</span>
-                <span className="meta-sep">·</span>
-                <span className="meta-tag">VOLTAGEM: 120V DC</span>
-                <span className="meta-sep">·</span>
-                <span className="meta-tag">DATA: 1803–∞</span>
-              </div>
-              <p className="eyebrow">Dossiês proibidos sobre morte, ciência e ficção</p>
-              <h1>Arquivo<br />Morto</h1>
-              <h2>Literatura, ciência e horror da reanimação</h2>
-              <p className="lead">
-                Um projeto editorial sombrio sobre os limites entre corpo, experimento,
-                mito e laboratório. De Frankenstein a Herbert West, do galvanismo ao
-                imaginário científico do horror.
+              <h1 className="sr-only">Arquivo Morto</h1>
+              <h2 className="sr-only">Literatura, ciência e horror da reanimação</h2>
+              <p className="hero-description">
+                Um arquivo editorial sobre a obsessão humana de vencer a morte — do mito antigo ao galvanismo, da anatomia pública a Frankenstein, dos laboratórios soviéticos ao horror contemporâneo.
               </p>
-              <div className="actions">
-                <a href="#destaque" className="btn btn-primary">Abrir arquivo</a>
-                <a href="#linha" className="btn btn-secondary">Linha do tempo</a>
-              </div>
             </div>
 
             {/* PAINEL TÉCNICO LATERAL */}
