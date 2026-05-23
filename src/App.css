@@ -2592,7 +2592,7 @@ h2 {
 
 @media (max-width: 720px) {
   .hero::before {
-    background: url("/arquivo-morto/assets/cinema/image.arquivo.png") center top / cover no-repeat;
+    background: url("/arquivo-morto/assets/cinema/image.arquivo.png") center top / contain no-repeat;
     background-color: #050505;
     opacity: 1;
     filter: brightness(1.06) contrast(1.06) saturate(1.04);
@@ -2605,22 +2605,27 @@ h2 {
     opacity: 0.28;
   }
   .hero {
-    padding: 38px 26px;
-    min-height: 76vh;
+    padding: 0;
+    min-height: 82vh;
     border-radius: 16px;
   }
   .hero-content {
-    padding: 0 20px 34px;
+    min-height: 82vh;
     align-items: flex-end;
+    justify-content: center;
+    padding: 0 18px 22px;
   }
   .hero-editorial-note {
     max-width: 92vw;
-    font-size: 0.98rem;
-    line-height: 1.55;
+    font-size: 0.78rem;
+    line-height: 1.42;
+    letter-spacing: 0.01em;
+    color: rgba(248, 242, 231, 0.84);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
   }
   .hero-editorial-note::before {
-    inset: -16px -18px;
-    background: radial-gradient(ellipse at center, rgba(0,0,0,0.52), transparent 72%);
+    inset: -10px -14px;
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0.62), transparent 76%);
   }
   .hero-technical-panel,
   .hero-actions {
@@ -2678,6 +2683,14 @@ h2 {
   .classification-grid { grid-template-columns: repeat(2, 1fr); }
   /* compensate for bottom nav bar height */
   .page { padding-bottom: 60px; }
+}
+
+@media (max-width: 420px) {
+  .hero-editorial-note {
+    font-size: 0.72rem;
+    line-height: 1.35;
+    max-width: 88vw;
+  }
 }
 
 /* ─── MOBILE BOTTOM NAV BAR ─────────────────────────────────── */
