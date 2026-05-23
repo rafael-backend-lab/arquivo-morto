@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://arquivo-morto.netlify.app/sitemap.xml
+Sitemap: https://rafael-backend-lab.github.io/arquivo-morto/sitemap.xml
