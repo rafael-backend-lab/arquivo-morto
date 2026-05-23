@@ -751,34 +751,10 @@ function App() {
             <div className="hero-content">
               <h1 className="sr-only">Arquivo Morto</h1>
               <h2 className="sr-only">Literatura, ciência e horror da reanimação</h2>
-              <p className="hero-description">
+              <p className="hero-editorial-note">
                 Um arquivo editorial sobre a obsessão humana de vencer a morte — do mito antigo ao galvanismo, da anatomia pública a Frankenstein, dos laboratórios soviéticos ao horror contemporâneo.
               </p>
             </div>
-
-            {/* PAINEL TÉCNICO LATERAL */}
-            <aside className="hero-technical-panel" aria-label="Painel técnico de arquivo">
-              <div className="panel-id">ARQ-MORTO</div>
-              <div className="panel-section">DOSSIÊ CENTRAL</div>
-              <ul className="panel-data">
-                <li>
-                  <span className="panel-key">Frequência</span>
-                  <span className="panel-val">17Hz</span>
-                </li>
-                <li>
-                  <span className="panel-key">Reagente</span>
-                  <span className="panel-val">HW-7</span>
-                </li>
-                <li>
-                  <span className="panel-key">Status</span>
-                  <span className="panel-val panel-val-alert">lacrado</span>
-                </li>
-                <li>
-                  <span className="panel-key">Registro</span>
-                  <span className="panel-val">necrociência editorial</span>
-                </li>
-              </ul>
-            </aside>
           </div>
         </header>
 
