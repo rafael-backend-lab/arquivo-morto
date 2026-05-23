@@ -60,9 +60,45 @@
 /* ─── CREATURE ATMOSPHERE ─────────────────────────────────────── */
 /* Imagem de fundo fixa, atrás do conteúdo mas acima do gradiente
    base do .root. Aparece como assombração — nunca como banner. */
+/* ─── CREATURE: GLOBAL WALLPAPER ─────────────────────────────── */
+/* Presença contínua ao longo do scroll — repeat-y mantém
+   a criatura visível em toda a extensão vertical do site. */
+.root::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,0.28), rgba(0,0,0,0.66)),
+    radial-gradient(circle at 50% 20%, rgba(120, 0, 0, 0.16), transparent 48%),
+    url("/assets/cinema/capa-arquivo.png") center 10% / min(1500px, 140vw) auto repeat-y;
+  opacity: 0.34;
+  filter: brightness(0.72) contrast(1.10) saturate(0.92);
+  transform: translateZ(0);
+}
+
+/* vinheta que protege leitura sem apagar o wallpaper */
+.root::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 50% 20%, transparent 0%, rgba(0,0,0,0.18) 44%, rgba(0,0,0,0.58) 86%),
+    linear-gradient(90deg, rgba(0,0,0,0.54), transparent 34%, transparent 66%, rgba(0,0,0,0.54));
+}
+
+/* Arquivo Vivo: wallpaper ligeiramente mais vivo */
+.root.archive-live::before {
+  opacity: 0.44;
+  filter: brightness(0.78) contrast(1.14) saturate(0.98);
+}
+
 /* ─── CREATURE: LOCALIZED SECTION PRESENCE ──────────────────── */
 /* Criatura aparece como assombração em seções específicas,
-   não como fundo global. Cada ponto tem opacidade mínima. */
+   complementando o wallpaper global. */
 
 #dossies::before,
 #gabinete::before,
@@ -126,8 +162,7 @@
   83%        { opacity: 1;     }
 }
 
-/* corner bracket marks */
-.hero::before,
+/* corner bracket — bottom-right only */
 .hero::after {
   content: '';
   position: absolute;
@@ -135,26 +170,40 @@
   height: 30px;
   border-style: solid;
   border-color: rgba(248, 240, 224, 0.25);
-}
-.hero::before {
-  top: 22px; left: 22px;
-  border-width: 1px 0 0 1px;
-}
-.hero::after {
   bottom: 22px; right: 22px;
   border-width: 0 1px 1px 0;
+  z-index: 2;
+  pointer-events: none;
 }
 
+/* creature — hero background layer */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    linear-gradient(90deg, rgba(0,0,0,0.58) 0%, rgba(0,0,0,0.26) 42%, rgba(0,0,0,0.70) 100%),
+    radial-gradient(circle at 52% 24%, rgba(130, 0, 0, 0.22), transparent 42%),
+    url("/assets/cinema/capa-arquivo.png") center 8% / cover no-repeat;
+  opacity: 0.82;
+  filter: brightness(0.82) contrast(1.16) saturate(1.05);
+}
+
+/* hero children above creature layer */
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* readability gradient on text side — no creature here */
 .hero-overlay {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(8,8,8,0.86) 0%, rgba(8,8,8,0.10) 100%),
-    radial-gradient(circle at 52% 22%, rgba(120, 0, 0, 0.18), transparent 40%),
-    repeating-linear-gradient(0deg, rgba(255,255,255,0.016) 0 1px, transparent 1px 4px),
-    url("/assets/cinema/capa-arquivo.png") center 10% / cover no-repeat;
-  opacity: 0.72;
-  filter: brightness(0.72) contrast(1.12) saturate(0.88);
+    linear-gradient(90deg, rgba(8,8,8,0.64) 0%, rgba(8,8,8,0.04) 100%),
+    repeating-linear-gradient(0deg, rgba(255,255,255,0.016) 0 1px, transparent 1px 4px);
   pointer-events: none;
 }
 
@@ -2507,13 +2556,20 @@ h2 {
 }
 
 @media (max-width: 720px) {
-  .hero-overlay {
+  .hero::before {
     background:
-      linear-gradient(180deg, rgba(8,8,8,0.54) 0%, rgba(8,8,8,0.76) 100%),
-      radial-gradient(circle at 50% 18%, rgba(120,0,0,0.18), transparent 45%),
+      linear-gradient(180deg, rgba(0,0,0,0.46), rgba(0,0,0,0.78)),
+      radial-gradient(circle at 50% 18%, rgba(120,0,0,0.20), transparent 48%),
       url("/assets/cinema/capa-arquivo.png") center top / 170vw auto no-repeat;
     opacity: 0.78;
-    filter: brightness(0.68) contrast(1.12) saturate(0.85);
+    filter: brightness(0.78) contrast(1.14) saturate(1.0);
+  }
+  .root::before {
+    background:
+      linear-gradient(180deg, rgba(0,0,0,0.34), rgba(0,0,0,0.72)),
+      radial-gradient(circle at 50% 18%, rgba(120, 0, 0, 0.14), transparent 48%),
+      url("/assets/cinema/capa-arquivo.png") center top / 170vw auto repeat-y;
+    opacity: 0.28;
   }
   .hero {
     padding: 38px 26px;
@@ -5108,7 +5164,7 @@ h2 {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(8, 7, 7, 0.08);
+  background: rgba(8, 7, 7, 0.06);
   pointer-events: none;
   z-index: 0;
 }
@@ -5478,7 +5534,7 @@ h2 {
 .brukhonenko-gallery-card,
 .brukhonenko-film-card,
 .aldini-visual-card {
-  background: rgba(8, 7, 7, 0.64) !important;
+  background: rgba(8, 7, 7, 0.58) !important;
   border: 1px solid rgba(238, 226, 205, 0.075) !important;
   box-shadow: 0 18px 42px rgba(0, 0, 0, 0.22) !important;
   backdrop-filter: blur(1.5px);
@@ -5569,7 +5625,7 @@ h2 {
   .brukhonenko-gallery-card,
   .brukhonenko-film-card,
   .aldini-visual-card {
-    background: rgba(8, 7, 7, 0.70) !important;
+    background: rgba(8, 7, 7, 0.66) !important;
     box-shadow: 0 14px 32px rgba(0, 0, 0, 0.22) !important;
   }
 }
