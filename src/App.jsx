@@ -439,6 +439,13 @@ const selectedDossiers = [
     title: 'Aldini e George Forster',
     summary: 'Caso fundador do arquivo: eletricidade aplicada ao corpo recém-executado em Londres.',
     visual: 'galvanic-wave',
+    subject: 'George Forster',
+    condition: 'Executado por enforcamento',
+    procedure: 'Corrente galvânica em face e tórax',
+    outcome: 'Movimentação facial e reflexos nos membros',
+    risk: 'Acesso restrito',
+    stamp: 'NÃO REPETIR O PROCEDIMENTO',
+    marginalia: 'A morte foi declarada às 02h17. O movimento começou às 02h43.',
   },
   {
     registry: 'DOS-002',
@@ -448,6 +455,13 @@ const selectedDossiers = [
     title: 'Andrew Ure e Matthew Clydesdale',
     summary: 'Demonstração escocesa que intensificou o imaginário público da reanimação.',
     visual: 'galvanic-wave',
+    subject: 'Matthew Clydesdale',
+    condition: 'Cadáver recém-dissecado',
+    procedure: 'Estimulação elétrica muscular',
+    outcome: 'Espasmo violento e expressão facial alterada',
+    risk: 'Relatório incompleto',
+    stamp: 'MATERIAL DECOMPOSTO',
+    marginalia: 'O coração permaneceu imóvel. As mãos, não.',
   },
   {
     registry: 'DOS-006',
@@ -457,6 +471,13 @@ const selectedDossiers = [
     title: 'Mary Shelley e Frankenstein',
     summary: 'A literatura transforma o debate científico em mito moderno.',
     visual: 'medical-file',
+    subject: 'Criatura sem nome',
+    condition: 'Corpo fabricado e abandonado',
+    procedure: 'Assemblagem e animação especulativa',
+    outcome: 'Mito fundador do horror científico',
+    risk: 'Documento parcial',
+    stamp: 'RESULTADO INCONCLUSIVO',
+    marginalia: 'Certos documentos foram arquivados para que ninguém os encontrasse.',
   },
   {
     registry: 'DOS-003',
@@ -466,6 +487,13 @@ const selectedDossiers = [
     title: 'Herbert West, reanimador',
     summary: 'Lovecraft desloca a reanimação para a obsessão química e o horror do laboratório.',
     visual: 'reagent-vial',
+    subject: 'Pacientes não homologados',
+    condition: 'Inatividade biológica recente',
+    procedure: 'Reagente experimental HW-7',
+    outcome: 'Retorno hostil e instável',
+    risk: 'Procedimento vetado',
+    stamp: 'ACESSO RESTRITO',
+    marginalia: 'O experimento foi encerrado. O paciente não.',
   },
   {
     registry: 'HIS-005',
@@ -475,6 +503,13 @@ const selectedDossiers = [
     title: 'Ressurrecionistas',
     summary: 'Mercado clandestino de cadáveres abastece escolas médicas.',
     visual: 'corpse-tag',
+    subject: 'Corpos sem tutela',
+    condition: 'Violação de sepulturas',
+    procedure: 'Remoção e revenda para anfiteatros',
+    outcome: 'Normalização clandestina do cadáver como insumo',
+    risk: 'Arquivo sensível',
+    stamp: 'RELATÓRIO CORROMPIDO',
+    marginalia: 'Nenhum dos presentes soube explicar por que o cadáver abriu os olhos.',
   },
   {
     registry: 'PRO-334-B',
@@ -484,6 +519,13 @@ const selectedDossiers = [
     title: 'Prontuário 334-B',
     summary: 'Ficção editorial própria do Arquivo Morto.',
     visual: 'medical-file',
+    subject: 'Indivíduo não identificado',
+    condition: 'Morte documentada sem encerramento observável',
+    procedure: 'Reabertura de prontuário interditado',
+    outcome: 'Paciente reclassificado como pendente',
+    risk: 'Nível vermelho',
+    stamp: 'NÃO ABRIR SEM TESTEMUNHAS',
+    marginalia: 'O prontuário foi encerrado. A vigília, não.',
   },
 ]
 
@@ -749,11 +791,27 @@ function App() {
           </div>
           <div className="hero-layout">
             <div className="hero-content">
-              <h1 className="sr-only">Arquivo Morto</h1>
-              <h2 className="sr-only">Literatura, ciência e horror da reanimação</h2>
+              <div className="archive-meta hero-meta">
+                <span className="meta-tag">REGISTRO Nº 000-13</span>
+                <span className="meta-sep" aria-hidden="true">/</span>
+                <span className="meta-tag status-lacrado">ACESSO RESTRITO</span>
+                <span className="meta-sep" aria-hidden="true">/</span>
+                <span className="meta-tag">SEÇÃO NECROCIÊNCIA</span>
+              </div>
+              <p className="hero-kicker">Material biologicamente inativo. Presumivelmente.</p>
+              <h1 className="hero-title">Arquivo Morto</h1>
+              <h2 className="hero-subtitle">Este arquivo reúne tentativas documentadas de impedir que os mortos permaneçam mortos.</h2>
               <p className="hero-editorial-note">
-                Um arquivo editorial sobre a obsessão humana de vencer a morte — do mito antigo ao galvanismo, da anatomia pública a Frankenstein, dos laboratórios soviéticos ao horror contemporâneo.
+                Entre prontuários, galvanismo, anatomia pública e ficção científica fúnebre, o arquivo trata cada caso como prova, ruína e aviso institucional.
               </p>
+              <div className="hero-actions actions">
+                <a href="#destaque" className="btn btn-primary">Abrir dossiê central</a>
+                <a href="#dossies" className="btn btn-secondary">Consultar registros</a>
+              </div>
+              <div className="hero-marginalia" aria-label="Observação marginal do arquivo">
+                <span className="hero-marginalia-label">Observação marginal</span>
+                <span className="hero-marginalia-text">Os registros divergem quanto ao momento exato em que o corpo parou.</span>
+              </div>
             </div>
           </div>
         </header>
@@ -1532,14 +1590,35 @@ function App() {
             {selectedDossiers.map((entry) => (
               <article className={`story-card selected-dossier-card story-type-${entry.type}`} key={entry.registry}>
                 <ArchiveVisual type={entry.visual} size="sm" />
+                <span className="selected-dossier-stamp">{entry.stamp}</span>
                 <div className="story-header">
                   <span className="story-period archive-date">{entry.displayDate}</span>
                 </div>
                 <span className="story-category">{entry.category}</span>
                 <h4 className="story-title">{entry.title}</h4>
                 <p className="story-summary selected-dossier-summary">{entry.summary}</p>
+                <dl className="selected-dossier-records">
+                  <div>
+                    <dt>Indivíduo</dt>
+                    <dd>{entry.subject}</dd>
+                  </div>
+                  <div>
+                    <dt>Condição</dt>
+                    <dd>{entry.condition}</dd>
+                  </div>
+                  <div>
+                    <dt>Procedimento</dt>
+                    <dd>{entry.procedure}</dd>
+                  </div>
+                  <div>
+                    <dt>Resultado</dt>
+                    <dd>{entry.outcome}</dd>
+                  </div>
+                </dl>
+                <p className="selected-dossier-marginalia">{entry.marginalia}</p>
                 <div className="story-foot">
                   <span className="selected-dossier-ref">{entry.registry}</span>
+                  <span className="story-classification">{entry.risk}</span>
                 </div>
               </article>
             ))}
