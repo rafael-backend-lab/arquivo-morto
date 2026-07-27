@@ -838,7 +838,7 @@ function App() {
           <div className="nav-links">
             <a href="#destaque" className="nav-link">Início</a>
             <a href="#dossies" className="nav-link">Dossiês</a>
-            <a href="#linha" className="nav-link">Linha do Tempo</a>
+            <a href="#linha-do-tempo" className="nav-link">Linha do Tempo</a>
             <a href="#cinema" className="nav-link">Cinema</a>
             <a href="#sobre" className="nav-link">Sobre</a>
           </div>
@@ -867,7 +867,7 @@ function App() {
       <nav className="mobile-nav-bar" aria-label="Navegação rápida">
         <a href="#destaque" className="mobile-nav-link">Início</a>
         <a href="#dossies" className="mobile-nav-link">Dossiês</a>
-        <a href="#linha" className="mobile-nav-link">Linha</a>
+        <a href="#linha-do-tempo" className="mobile-nav-link">Linha</a>
         <a href="#cinema" className="mobile-nav-link">Cinema</a>
         <a href="#sobre" className="mobile-nav-link">Sobre</a>
       </nav>
@@ -875,33 +875,32 @@ function App() {
       <main className="page">
 
         {/* HERO */}
-        <header className="hero">
-          <div className="hero-overlay" aria-hidden="true" />
-          <div className="hero-layout">
-            <div className="hero-content">
-              <div className="archive-meta hero-meta">
-                <span className="meta-tag">Fundado em 1803</span>
-                <span className="meta-sep" aria-hidden="true">/</span>
-                <span className="meta-tag status-lacrado">Classificação restrita</span>
-                <span className="meta-sep" aria-hidden="true">/</span>
-                <span className="meta-tag">Registro central</span>
-              </div>
-              <p className="hero-kicker">Instituto de Registros Pós-Morte</p>
-              <h1 className="hero-title">Arquivo Morto</h1>
-              <h2 className="hero-subtitle">Literatura, ciência e documentos sobre os limites entre corpo, experiência, morte e reanimação.</h2>
-              <p className="hero-summary">
+        <section className="amHero" id="destaque">
+          <div className="amHeroInner">
+            <div className="amHeroContent">
+              <p className="amHeroEyebrow">
+                Instituto de Registros Pós-Morte
+              </p>
+              <h1 className="amHeroTitle">
+                Arquivo<br />Morto
+              </h1>
+              <p className="amHeroSubtitle">
+                Literatura, ciência e documentos sobre os limites entre morte e reanimação.
+              </p>
+              <p className="amHeroDescription">
                 Este arquivo reúne casos históricos, obras, experimentos e registros classificados relacionados ao que permanece depois do óbito.
               </p>
-              <p className="hero-editorial-note">
-                Setor de documentação, ciência, literatura e ocorrências pós-morte.
-              </p>
-              <div className="hero-actions actions">
-                <a href="#dossies" className="btn btn-primary">Acessar dossiês</a>
-                <a href="#linha" className="btn btn-secondary">Linha do tempo</a>
+              <div className="amHeroActions">
+                <a href="#dossies" className="amButton amButtonPrimary">
+                  Acessar dossiês
+                </a>
+                <a href="#linha-do-tempo" className="amButton amButtonSecondary">
+                  Linha do tempo
+                </a>
               </div>
             </div>
           </div>
-        </header>
+        </section>
 
         <section className="registry-panel-section" aria-labelledby="registro-central-heading">
           <div className="registry-panel-shell">
@@ -1772,7 +1771,7 @@ function App() {
         </section>
 
         {/* TIMELINE */}
-        <section id="linha" className="section">
+        <section id="linha-do-tempo" className="section">
           <div className="section-header">
             <p className="section-label">Linha do tempo</p>
             <h3>Do cadáver literário ao laboratório moderno</h3>

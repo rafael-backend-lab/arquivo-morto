@@ -6224,144 +6224,94 @@ h2 {
   padding: 6px 10px !important;
 }
 
-.hero {
-  min-height: auto !important;
-  padding: 0 !important;
-  border-radius: 18px !important;
-  border-color: rgba(192, 180, 154, 0.14) !important;
-  background:
-    linear-gradient(180deg, rgba(10, 12, 12, 0.88), rgba(10, 12, 12, 0.82)),
-    radial-gradient(circle at 76% 18%, rgba(92, 36, 40, 0.14), transparent 24%),
-    linear-gradient(135deg, rgba(60, 70, 64, 0.08), transparent 46%) !important;
-  box-shadow:
-    inset 0 0 0 1px rgba(255, 255, 255, 0.02),
-    0 34px 90px rgba(0, 0, 0, 0.42) !important;
-  animation: none !important;
+.amHero {
+  min-height: calc(100vh - 72px);
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 96px 24px 80px;
 }
 
-.hero::before {
-  opacity: 0.2 !important;
-  filter: grayscale(0.4) sepia(0.08) brightness(0.52) contrast(1.1) !important;
+.amHeroInner {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
 }
 
-.hero::after {
-  inset: 20px !important;
-  border-color: rgba(192, 180, 154, 0.1) !important;
-  box-shadow: none !important;
+.amHeroContent {
+  max-width: 760px;
 }
 
-.hero-overlay {
-  background:
-    linear-gradient(90deg, rgba(10, 12, 12, 0.9) 0%, rgba(10, 12, 12, 0.42) 44%, rgba(10, 12, 12, 0.76) 100%),
-    linear-gradient(180deg, rgba(10, 12, 12, 0.16), rgba(10, 12, 12, 0.52)) !important;
+.amHeroEyebrow {
+  margin: 0 0 24px;
+  font-family: ui-monospace, 'Courier New', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: rgba(183, 173, 144, 0.76);
 }
 
-.hero-visual-system,
-.archive-seal {
-  display: none !important;
+.amHeroTitle {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(4.5rem, 10vw, 8.5rem);
+  line-height: 0.82;
+  letter-spacing: -0.055em;
+  max-width: 800px;
+  color: var(--dirty-white);
+  text-transform: uppercase;
 }
 
-.hero-layout {
-  max-width: 1180px !important;
-  margin: 0 auto !important;
-  padding: 120px 48px 80px !important;
-  display: grid !important;
-  grid-template-columns: minmax(0, 1fr) !important;
-  gap: 0 !important;
-  align-items: start !important;
+.amHeroSubtitle {
+  max-width: 680px;
+  margin: 40px 0 0;
+  font-size: clamp(1.45rem, 2.4vw, 2.25rem);
+  line-height: 1.25;
+  color: rgba(219, 212, 197, 0.92);
 }
 
-.hero-content {
-  max-width: 760px !important;
-  padding: 0 !important;
-  border: 0 !important;
-  background: transparent !important;
-  box-shadow: none !important;
+.amHeroDescription {
+  max-width: 620px;
+  margin: 24px 0 0;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: rgba(193, 185, 169, 0.82);
 }
 
-.hero-meta {
-  margin-bottom: 16px !important;
+.amHeroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 36px;
 }
 
-.meta-tag {
-  padding: 5px 9px !important;
-  font-size: 0.62rem !important;
+.amButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 24px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  text-decoration: none;
+  font-family: ui-monospace, 'Courier New', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease;
 }
 
-.hero-kicker {
-  margin-bottom: 12px !important;
-  font-size: 0.72rem !important;
-  letter-spacing: 0.22em !important;
+.amButtonPrimary {
+  background: rgba(82, 29, 27, 0.64);
+  border-color: rgba(128, 58, 60, 0.38);
+  color: rgba(235, 225, 212, 0.96);
 }
 
-.hero-title {
-  max-width: 11ch !important;
-  margin: 0 0 16px !important;
-  font-size: clamp(3.2rem, 6.4vw, 5.4rem) !important;
-  line-height: 0.96 !important;
-  letter-spacing: -0.05em !important;
-}
-
-.hero-subtitle {
-  max-width: 34ch !important;
-  margin-bottom: 18px !important;
-  font-size: clamp(1.16rem, 1.9vw, 1.46rem) !important;
-  line-height: 1.44 !important;
-  font-style: normal !important;
-}
-
-.hero-summary {
-  max-width: 58ch;
-  margin: 0 0 16px;
-  color: rgba(214, 207, 191, 0.78);
-  font-size: 1rem;
-  line-height: 1.78;
-}
-
-.hero-ledger,
-.hero-warning-board,
-.hero-marginalia {
-  display: none !important;
-}
-
-.hero-editorial-note {
-  max-width: 54ch !important;
-  margin: 0 0 26px !important;
-  color: rgba(176, 168, 151, 0.82) !important;
-  font-size: 0.92rem !important;
-  line-height: 1.72 !important;
-  font-style: normal !important;
-}
-
-.hero-actions {
-  display: flex !important;
-  gap: 10px !important;
-  align-items: center !important;
-  flex-wrap: wrap !important;
-}
-
-.btn {
-  padding: 12px 18px !important;
-  font-size: 0.72rem !important;
-  letter-spacing: 0.14em !important;
-}
-
-.btn-primary {
-  background: rgba(82, 29, 27, 0.64) !important;
-  border-color: rgba(128, 58, 60, 0.38) !important;
-}
-
-.btn-secondary {
-  background: rgba(26, 34, 31, 0.88) !important;
-  border-color: rgba(118, 124, 114, 0.24) !important;
-}
-
-.hero-technical-panel,
-.hero-panel-kicker,
-.hero-panel-title,
-.hero-panel-grid,
-.hero-panel-note {
-  display: none !important;
+.amButtonSecondary {
+  background: rgba(26, 34, 31, 0.88);
+  border-color: rgba(118, 124, 114, 0.24);
+  color: rgba(221, 213, 198, 0.9);
 }
 
 .registry-panel-section {
@@ -6614,14 +6564,13 @@ h2 {
 }
 
 @media (max-width: 960px) {
-  .hero-layout {
-    grid-template-columns: 1fr !important;
-    gap: 0 !important;
-    padding: 88px 32px 56px !important;
+  .amHero {
+    min-height: auto;
+    padding: 96px 32px 64px;
   }
 
-  .hero-content {
-    max-width: 100% !important;
+  .amHeroContent {
+    max-width: 100%;
   }
 
   .registry-panel-section {
@@ -6653,36 +6602,25 @@ h2 {
   }
 
   .header-actions {
-    margin-left: auto;
+    display: none !important;
   }
 
-  .hero {
-    border-radius: 12px !important;
+  .amHero {
+    min-height: auto;
+    padding: 96px 20px 64px;
   }
 
-  .hero-layout {
-    padding: 72px 18px 40px !important;
-    gap: 0 !important;
+  .amHeroTitle {
+    font-size: clamp(3.2rem, 17vw, 4.8rem);
+    max-width: none;
   }
 
-  .hero-title {
-    font-size: clamp(2.4rem, 13vw, 3.6rem) !important;
-    max-width: none !important;
+  .amHeroActions {
+    flex-direction: column;
   }
 
-  .hero-subtitle,
-  .hero-summary,
-  .hero-editorial-note {
-    max-width: 100% !important;
-  }
-
-  .hero-actions {
-    flex-direction: column !important;
-  }
-
-  .hero-actions .btn {
+  .amButton {
     width: 100%;
-    justify-content: center;
   }
 
   .registry-panel-section {
@@ -6720,13 +6658,12 @@ h2 {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero,
-  .hero::before,
-  .hero::after,
+  .amButton,
   .selected-dossier-card,
   .cinema-dossier,
   .nav-link,
-  .btn {
+  .archive-live-toggle,
+  .mode-toggle {
     animation: none !important;
     transition: none !important;
   }
