@@ -1,6 +1,13 @@
 import { useState } from 'react'
 import './App.css'
 
+const assetPath = (path) => {
+  const normalized = path.replace(/^\/?(arquivo-morto\/)?/, '')
+  const base = import.meta.env.BASE_URL || '/'
+
+  return `${base}${normalized}`.replace(/([^:]\/)\/+/g, '$1')
+}
+
 const articles = [
   {
     index: '01',
@@ -433,6 +440,7 @@ const medicalEditorialSources = [
 const selectedDossiers = [
   {
     registry: 'DOS-001',
+    drawer: 'GAVETA 04',
     displayDate: '1803',
     category: 'HISTÓRIA DOCUMENTADA',
     type: 'real',
@@ -441,14 +449,24 @@ const selectedDossiers = [
     visual: 'galvanic-wave',
     subject: 'George Forster',
     condition: 'Executado por enforcamento',
+    cause: 'Asfixia por suspensão cervical',
+    preservation: 'Corpo frio, rigidez parcial, tecido recém-entregue',
     procedure: 'Corrente galvânica em face e tórax',
     outcome: 'Movimentação facial e reflexos nos membros',
+    postMortem: 'Resposta muscular positiva',
+    drawerStatus: 'NÃO ENCERRADO',
     risk: 'Acesso restrito',
     stamp: 'NÃO REPETIR O PROCEDIMENTO',
     marginalia: 'A morte foi declarada às 02h17. O movimento começou às 02h43.',
+    bodyTemp: '18 °C',
+    internalTemp: '4 °C',
+    timeOfDeath: '02:17',
+    movement: '04:46',
+    claimed: 'NÃO RECLAMADO',
   },
   {
     registry: 'DOS-002',
+    drawer: 'GAVETA 05',
     displayDate: '1818',
     category: 'HISTÓRIA DOCUMENTADA',
     type: 'real',
@@ -457,14 +475,24 @@ const selectedDossiers = [
     visual: 'galvanic-wave',
     subject: 'Matthew Clydesdale',
     condition: 'Cadáver recém-dissecado',
+    cause: 'Execução judicial e dissecação subsequente',
+    preservation: 'Integridade irregular, musculatura exposta',
     procedure: 'Estimulação elétrica muscular',
     outcome: 'Espasmo violento e expressão facial alterada',
+    postMortem: 'Atividade ocular e torácica registrada',
+    drawerStatus: 'LACRADA POR DENTRO',
     risk: 'Relatório incompleto',
     stamp: 'MATERIAL DECOMPOSTO',
     marginalia: 'O coração permaneceu imóvel. As mãos, não.',
+    bodyTemp: '17 °C',
+    internalTemp: '4 °C',
+    timeOfDeath: '03:08',
+    movement: '03:41',
+    claimed: 'IDENTIFICAÇÃO NEGADA',
   },
   {
     registry: 'DOS-006',
+    drawer: 'GAVETA 07',
     displayDate: '1818',
     category: 'LITERATURA',
     type: 'literatura',
@@ -473,14 +501,24 @@ const selectedDossiers = [
     visual: 'medical-file',
     subject: 'Criatura sem nome',
     condition: 'Corpo fabricado e abandonado',
+    cause: 'Óbito não aplicável / montagem artificial',
+    preservation: 'Costuras múltiplas, reconstituição incompleta',
     procedure: 'Assemblagem e animação especulativa',
     outcome: 'Mito fundador do horror científico',
+    postMortem: 'Atividade narrativa permanente',
+    drawerStatus: 'IDENTIFICAÇÃO INCONCLUSIVA',
     risk: 'Documento parcial',
     stamp: 'RESULTADO INCONCLUSIVO',
     marginalia: 'Certos documentos foram arquivados para que ninguém os encontrasse.',
+    bodyTemp: '19 °C',
+    internalTemp: '6 °C',
+    timeOfDeath: 'N/A',
+    movement: 'Registro contínuo',
+    claimed: 'CORPO NÃO RECLAMADO',
   },
   {
     registry: 'DOS-003',
+    drawer: 'GAVETA 06',
     displayDate: '1921–1922',
     category: 'LITERATURA DE HORROR',
     type: 'literatura',
@@ -489,14 +527,24 @@ const selectedDossiers = [
     visual: 'reagent-vial',
     subject: 'Pacientes não homologados',
     condition: 'Inatividade biológica recente',
+    cause: 'Óbito variado sob custódia clínica',
+    preservation: 'Múltiplos estados de rigidez e degradação',
     procedure: 'Reagente experimental HW-7',
     outcome: 'Retorno hostil e instável',
+    postMortem: 'Atividade agressiva recorrente',
+    drawerStatus: 'ABERTA SOB QUARENTENA',
     risk: 'Procedimento vetado',
     stamp: 'ACESSO RESTRITO',
     marginalia: 'O experimento foi encerrado. O paciente não.',
+    bodyTemp: '21 °C',
+    internalTemp: '5 °C',
+    timeOfDeath: '04:02',
+    movement: '04:11',
+    claimed: 'SEM RESPONSÁVEL LEGAL',
   },
   {
     registry: 'HIS-005',
+    drawer: 'GAVETA 02',
     displayDate: 'séc. XVIII–XIX',
     category: 'HISTÓRIA SOCIAL',
     type: 'real',
@@ -505,14 +553,24 @@ const selectedDossiers = [
     visual: 'corpse-tag',
     subject: 'Corpos sem tutela',
     condition: 'Violação de sepulturas',
+    cause: 'Exumação clandestina',
+    preservation: 'Conservação desigual, transporte noturno',
     procedure: 'Remoção e revenda para anfiteatros',
     outcome: 'Normalização clandestina do cadáver como insumo',
+    postMortem: 'Deslocamento documental não autorizado',
+    drawerStatus: 'SEM REGISTRO DE ENTRADA',
     risk: 'Arquivo sensível',
     stamp: 'RELATÓRIO CORROMPIDO',
     marginalia: 'Nenhum dos presentes soube explicar por que o cadáver abriu os olhos.',
+    bodyTemp: '12 °C',
+    internalTemp: '7 °C',
+    timeOfDeath: 'Desconhecido',
+    movement: 'Não confirmado',
+    claimed: 'CORPO NÃO RECLAMADO',
   },
   {
     registry: 'PRO-334-B',
+    drawer: 'GAVETA 08',
     displayDate: 'data lacrada',
     category: 'FICÇÃO EDITORIAL DO ARQUIVO MORTO',
     type: 'ficcao',
@@ -521,22 +579,35 @@ const selectedDossiers = [
     visual: 'medical-file',
     subject: 'Indivíduo não identificado',
     condition: 'Morte documentada sem encerramento observável',
+    cause: 'Causa mortis não estabelecida',
+    preservation: 'Lençol fixado, ausência de decomposição compatível',
     procedure: 'Reabertura de prontuário interditado',
     outcome: 'Paciente reclassificado como pendente',
+    postMortem: 'Mudança espontânea de posição',
+    drawerStatus: 'UMA GAVETA PERMANECE ABERTA',
     risk: 'Nível vermelho',
     stamp: 'NÃO ABRIR SEM TESTEMUNHAS',
     marginalia: 'O prontuário foi encerrado. A vigília, não.',
+    bodyTemp: '18 °C',
+    internalTemp: '4 °C',
+    timeOfDeath: '02:17',
+    movement: '04:46',
+    claimed: 'A FAMÍLIA NEGOU A IDENTIFICAÇÃO',
   },
 ]
 
 const cinemaEntries = [
   {
     id: 'frankenstein-1910',
-    label: 'Cinema primitivo',
+    label: 'EVIDÊNCIA RECUPERADA 01',
     title: 'Frankenstein (1910)',
     year: '1910',
     layout: 'single',
     intro: 'Primeira adaptação cinematográfica conhecida de Frankenstein. J. Searle Dawley para a Edison Studios transforma o mito em experiência visual primitiva: a criatura aparece como produto de laboratório alquímico, mais visão demoníaca do que monstro trágico moderno. O corpo fabricado deixa o romance de Shelley e ganha forma pública pela primeira vez.',
+    evidence: 'LAT-1910-01',
+    condition: 'Película ressecada, emulsão estável',
+    origin: 'Edison Studios / cópia de arquivo',
+    contamination: 'Baixa',
     images: [
       {
         src: '/arquivo-morto/assets/cinema/frankenstein-1910-poster.jpg',
@@ -545,16 +616,20 @@ const cinemaEntries = [
         role: 'hero',
       },
     ],
-    meta: ['1910', 'J. Searle Dawley', 'Edison Studios'],
+    meta: ['REGISTRO AUDIOVISUAL', 'CONTEÚDO: criação artificial', 'STATUS: liberado para consulta'],
     text: 'A criatura ainda aparece como visão demoníaca, mais próxima de uma aparição do que do monstro trágico moderno. O cinema silencioso registra o mito antes de ele se tornar ícone visual — a alquimia do laboratório precede a eletricidade da Universal.',
   },
   {
     id: 'frankenstein-1931',
-    label: 'Universal Pictures',
+    label: 'EVIDÊNCIA RECUPERADA 02',
     title: 'Frankenstein (1931) — James Whale e Boris Karloff',
     year: '1931',
     layout: 'feature-duo',
     intro: 'James Whale e a Universal consolidam o ícone visual definitivo: testa marcada, corpo pesado, eletricidade, laboratório e tragédia. Boris Karloff transforma a criatura em símbolo reconhecível mundialmente, mesmo por quem nunca leu Mary Shelley. É aqui que nasce a imagem do horror moderno.',
+    evidence: 'LAT-1931-03',
+    condition: 'Negativo preservado com abrasão lateral',
+    origin: 'Universal Pictures',
+    contamination: 'Moderada',
     images: [
       {
         src: '/arquivo-morto/assets/cinema/frankenstein-1931-karloff-maria.jpg',
@@ -569,16 +644,20 @@ const cinemaEntries = [
         role: 'support',
       },
     ],
-    meta: ['1931', 'James Whale', 'Boris Karloff'],
+    meta: ['REGISTRO AUDIOVISUAL', 'CONTEÚDO: criatura elétrica', 'STATUS: sob custódia'],
     text: 'O filme consolida a imagem popular do monstro: testa marcada, corpo pesado, eletricidade e laboratório. Karloff cria um ícone visual permanente. A cena com a menina Maria concentra a ambiguidade central do mito: o monstro não entende o mundo, não domina a própria força e se torna ameaça sem nascer moralmente maligno.',
   },
   {
     id: 'mary-shelley-1994',
-    label: 'Gótico romântico',
+    label: 'EVIDÊNCIA RECUPERADA 03',
     title: "Mary Shelley's Frankenstein (1994) — Robert De Niro como criatura",
     year: '1994',
     layout: 'feature-trio',
     intro: 'Kenneth Branagh tenta devolver Frankenstein ao drama moral do romance: criação, abandono, culpa, revolta e desejo de reconhecimento. A criatura interpretada por Robert De Niro não é apenas monstro visual — é sujeito ferido, consciente e vingativo que cobra do criador a responsabilidade pela vida que recebeu.',
+    evidence: 'LAT-1994-10',
+    condition: 'Cópia íntegra, manchas de umidade no estojo',
+    origin: 'TriStar / arquivo doméstico',
+    contamination: 'Baixa',
     images: [
       {
         src: '/arquivo-morto/assets/cinema/Frankenstein-de-Mary-Shelley-10.jpg',
@@ -599,16 +678,20 @@ const cinemaEntries = [
         role: 'support',
       },
     ],
-    meta: ['1994', 'Kenneth Branagh', 'Robert De Niro'],
+    meta: ['REGISTRO AUDIOVISUAL', 'CONTEÚDO: costura e abandono', 'STATUS: liberado com ressalvas'],
     text: 'A criatura de De Niro fala, sente, aprende e cobra do criador a responsabilidade pela vida que recebeu. O horror nasce menos do susto e mais da pergunta moral: quem cria um ser abandonado também cria sua dor. O filme acentua a dimensão corporal do mito — costura, carne e cicatriz como assinatura permanente do abandono.',
   },
   {
     id: 'reanimator-1985',
-    label: 'Horror cult',
+    label: 'EVIDÊNCIA RECUPERADA 04',
     title: 'Re-Animator (1985) — Lovecraft, necrotério e ciência profanada',
     year: '1985',
     layout: 'feature-duo',
     intro: 'Stuart Gordon leva a reanimação para outro território: sai o gótico romântico e entra o horror cult, ácido, viscoso e excessivo. Herbert West não quer compreender a alma — ele quer vencer a morte como procedimento técnico. O reagente verde transforma o laboratório universitário em necrotério de experimentos fracassados.',
+    evidence: 'LAT-1985-07',
+    condition: 'Fita contaminada por fungo periférico',
+    origin: 'Registro universitário apócrifo',
+    contamination: 'Alta',
     images: [
       {
         src: '/arquivo-morto/assets/cinema/reanimator-1985.jpg',
@@ -623,16 +706,20 @@ const cinemaEntries = [
         role: 'support',
       },
     ],
-    meta: ['1985', 'Stuart Gordon', 'H.P. Lovecraft'],
+    meta: ['REGISTRO AUDIOVISUAL', 'CONTEÚDO: necrotério e reagente', 'STATUS: contaminação elevada'],
     text: 'O filme transforma o conto de Lovecraft em cinema físico: seringa, reagente verde, cadáver, necrotério e arrogância científica. A reanimação aqui não é milagre nem tragédia nobre; é violação direta do corpo morto. Herbert West é uma inversão moderna de Victor Frankenstein: menos romântico, mais frio, mais técnico e obcecado — ele testa, repete, corrige e profana.',
   },
   {
     id: 'romero',
-    label: 'Mortos-vivos modernos',
+    label: 'EVIDÊNCIA RECUPERADA 05',
     title: 'George A. Romero — Noite dos Mortos Vivos e o zumbi moderno',
     year: '1968–1985',
     layout: 'feature-duo',
     intro: 'Romero funda o zumbi moderno e transforma o morto-vivo em linguagem da cultura pop. Seus zumbis não são só monstros: são multidão, colapso social, cerco doméstico e repetição automática dos hábitos humanos depois da morte. A Noite dos Mortos Vivos cria a gramática que todo o cinema de zumbi posterior vai herdar.',
+    evidence: 'LAT-1968-11',
+    condition: 'Película recondicionada, bordas frágeis',
+    origin: 'Arquivo televisivo recuperado',
+    contamination: 'Moderada',
     images: [
       {
         src: '/arquivo-morto/assets/cinema/night-of-the-living-dead-1968.jpg',
@@ -647,16 +734,20 @@ const cinemaEntries = [
         role: 'support',
       },
     ],
-    meta: ['1968–1985', 'George A. Romero', 'Night · Dawn · Day'],
+    meta: ['REGISTRO AUDIOVISUAL', 'CONTEÚDO: cerco doméstico', 'STATUS: vigilância contínua'],
     text: 'O filme de 1968 funda o zumbi moderno: cadáveres retornam, cercam os vivos e transformam a casa em bunker. O horror está no cerco, mas também na desconfiança entre os sobreviventes. Em Dawn of the Dead (1978), o shopping vira mausoléu do consumo — os mortos caminham pelas lojas porque ainda repetem os gestos de quando estavam vivos. A trilogia cresce como diagnóstico cultural: cerco, consumo, militarização.',
   },
   {
     id: 'snyder-2004',
-    label: 'Remake moderno',
+    label: 'EVIDÊNCIA RECUPERADA 06',
     title: 'Madrugada dos Mortos (2004) — Zack Snyder e o zumbi veloz',
     year: '2004',
     layout: 'feature-duo',
     intro: 'A refilmagem de 2004 pega a base de Romero e acelera tudo: o morto-vivo deixa de ser massa lenta e vira explosão física. É o apocalipse como colapso imediato, urbano e agressivo — o zumbi do século XXI não caminha, ele corre.',
+    evidence: 'LAT-2004-12',
+    condition: 'Mídia íntegra, estojo violado',
+    origin: 'Acervo comercial reaproveitado',
+    contamination: 'Média',
     images: [
       {
         src: '/arquivo-morto/assets/cinema/madrugada-dos-mortos-2004-01.webp',
@@ -671,16 +762,20 @@ const cinemaEntries = [
         role: 'support',
       },
     ],
-    meta: ['2004', 'Zack Snyder', 'Remake'],
+    meta: ['REGISTRO AUDIOVISUAL', 'CONTEÚDO: contágio veloz', 'STATUS: exame aberto'],
     text: 'Snyder transforma o pânico em velocidade. A ameaça não avança como multidão hipnótica; ela corre, invade, rasga e derruba a ordem social em minutos. O remake troca a sátira lenta pelo terror de sobrevivência: fugir, improvisar, desconfiar e sobreviver enquanto o mundo acaba.',
   },
   {
     id: 'del-toro',
-    label: 'Gótico contemporâneo',
+    label: 'EVIDÊNCIA RECUPERADA 07',
     title: 'Frankenstein — Guillermo del Toro',
     year: '2025',
     layout: 'feature-trio',
     intro: 'O Frankenstein de Guillermo del Toro pertence à linhagem dos monstros trágicos. Em vez de tratar a criatura apenas como ameaça, a leitura contemporânea recoloca beleza, dor, abandono e humanidade no centro da imagem monstruosa — conversa direta com Shelley, Karloff e De Niro.',
+    evidence: 'LAT-2025-03',
+    condition: 'Material recente, armazenamento sem danos',
+    origin: 'Registro promocional contemporâneo',
+    contamination: 'Baixa',
     images: [
       {
         src: '/arquivo-morto/assets/cinema/frankenstein-2025-03.jpg',
@@ -701,7 +796,7 @@ const cinemaEntries = [
         role: 'support',
       },
     ],
-    meta: ['2025', 'Guillermo del Toro', 'Monstro trágico'],
+    meta: ['REGISTRO AUDIOVISUAL', 'CONTEÚDO: monstro trágico', 'STATUS: recém-catalogado'],
     text: 'Del Toro sempre se interessou por criaturas marginalizadas, corpos impossíveis e monstros mais humanos do que os homens que os perseguem. Frankenstein encaixa diretamente nessa poética. O novo Frankenstein não precisa substituir as versões anteriores — ele conversa com elas: Shelley, Karloff, De Niro e toda a tradição do corpo fabricado retornam como arquivo vivo.',
   },
 ]
@@ -723,9 +818,16 @@ function ArchiveVisual({ type = 'medical-file', label, code, size = 'md' }) {
 function App() {
   const [mode, setMode] = useState('arquivo')
   const [archiveLive, setArchiveLive] = useState(false)
+  const rootStyle = {
+    '--asset-capa-arquivo': `url("${assetPath('assets/cinema/capa-arquivo.png')}")`,
+    '--asset-hero-arquivo': `url("${assetPath('assets/cinema/image.arquivo.png')}")`,
+  }
 
   return (
-    <div className={`root${mode === 'terminal' ? ' mode-terminal' : ''}${archiveLive ? ' archive-live' : ''}`}>
+    <div
+      className={`root${mode === 'terminal' ? ' mode-terminal' : ''}${archiveLive ? ' archive-live' : ''}`}
+      style={rootStyle}
+    >
       <div className="noise-overlay" aria-hidden="true" />
       <div className="scanlines" aria-hidden="true" />
 
@@ -792,25 +894,47 @@ function App() {
           <div className="hero-layout">
             <div className="hero-content">
               <div className="archive-meta hero-meta">
-                <span className="meta-tag">REGISTRO Nº 000-13</span>
+                <span className="meta-tag">ARQUIVO Nº 000-13</span>
                 <span className="meta-sep" aria-hidden="true">/</span>
-                <span className="meta-tag status-lacrado">ACESSO RESTRITO</span>
+                <span className="meta-tag status-lacrado">ENTRADA AUTORIZADA</span>
                 <span className="meta-sep" aria-hidden="true">/</span>
-                <span className="meta-tag">SEÇÃO NECROCIÊNCIA</span>
+                <span className="meta-tag">DEPARTAMENTO MORTUÁRIO</span>
               </div>
-              <p className="hero-kicker">Material biologicamente inativo. Presumivelmente.</p>
+              <p className="hero-kicker">Departamento de registro e conservação de cadáveres</p>
               <h1 className="hero-title">Arquivo Morto</h1>
-              <h2 className="hero-subtitle">Este arquivo reúne tentativas documentadas de impedir que os mortos permaneçam mortos.</h2>
+              <h2 className="hero-subtitle">Aqui permanecem os corpos que a morte não conseguiu encerrar.</h2>
+              <dl className="hero-ledger">
+                <div>
+                  <dt>Corpos registrados</dt>
+                  <dd>08</dd>
+                </div>
+                <div>
+                  <dt>Corpos identificados</dt>
+                  <dd>05</dd>
+                </div>
+                <div>
+                  <dt>Corpos reclamados</dt>
+                  <dd>00</dd>
+                </div>
+                <div>
+                  <dt>Ocorrências após o óbito</dt>
+                  <dd>07</dd>
+                </div>
+              </dl>
               <p className="hero-editorial-note">
-                Entre prontuários, galvanismo, anatomia pública e ficção científica fúnebre, o arquivo trata cada caso como prova, ruína e aviso institucional.
+                Porta externa da câmara frigorífica: abrir apenas para conferência de óbito, exame técnico ou contenção de atividade pós-morte.
               </p>
+              <div className="hero-warning-board" aria-label="Avisos do necrotério">
+                <span>NÃO TOQUE NAS GAVETAS.</span>
+                <span>NÃO RESPONDA A RUÍDOS VINDOS DO INTERIOR.</span>
+              </div>
               <div className="hero-actions actions">
-                <a href="#destaque" className="btn btn-primary">Abrir dossiê central</a>
-                <a href="#dossies" className="btn btn-secondary">Consultar registros</a>
+                <a href="#destaque" className="btn btn-primary">Inspecionar corpo central</a>
+                <a href="#dossies" className="btn btn-secondary">Abrir gavetário</a>
               </div>
               <div className="hero-marginalia" aria-label="Observação marginal do arquivo">
-                <span className="hero-marginalia-label">Observação marginal</span>
-                <span className="hero-marginalia-text">Os registros divergem quanto ao momento exato em que o corpo parou.</span>
+                <span className="hero-marginalia-label">Observação de ronda</span>
+                <span className="hero-marginalia-text">A gaveta foi lacrada por dentro. Não há registro de entrada para este corpo.</span>
               </div>
             </div>
           </div>
@@ -880,8 +1004,8 @@ function App() {
             <div className="occult-visual-grid">
               <figure className="occult-visual-card occult-visual-card-large">
                 <div className="occult-visual-frame">
-                  <img
-                    src="/arquivo-morto/assets/archive/occult-alchemy-lab.jpg"
+                    <img
+                    src={assetPath('/arquivo-morto/assets/archive/occult-alchemy-lab.jpg')}
                     alt="Alquimista em seu laboratório, Pieter Bruegel, séc. XVI"
                     loading="lazy"
                   />
@@ -895,7 +1019,7 @@ function App() {
                 <figure className="occult-visual-card">
                   <div className="occult-visual-frame">
                     <img
-                      src="/arquivo-morto/assets/archive/occult-john-dee.jpg"
+                      src={assetPath('/arquivo-morto/assets/archive/occult-john-dee.jpg')}
                       alt="Retrato de John Dee, matemático, astrólogo e mago elisabetano"
                       loading="lazy"
                     />
@@ -908,7 +1032,7 @@ function App() {
                 <figure className="occult-visual-card">
                   <div className="occult-visual-frame">
                     <img
-                      src="/arquivo-morto/assets/archive/occult-golem.jpg"
+                      src={assetPath('/arquivo-morto/assets/archive/occult-golem.jpg')}
                       alt="O Golem e o Rabino Loew, ilustração histórica"
                       loading="lazy"
                     />
@@ -921,7 +1045,7 @@ function App() {
                 <figure className="occult-visual-card">
                   <div className="occult-visual-frame">
                     <img
-                      src="/arquivo-morto/assets/archive/occult-automaton.jpg"
+                      src={assetPath('/arquivo-morto/assets/archive/occult-automaton.jpg')}
                       alt="O Pato Mecânico de Vaucanson, autômato do século XVIII"
                       loading="lazy"
                     />
@@ -964,7 +1088,7 @@ function App() {
             <figure className="anatomy-visual-main">
               <div className="anatomy-visual-frame">
                 <img
-                  src="/arquivo-morto/assets/archive/anatomy-lesson.jpg"
+                  src={assetPath('/arquivo-morto/assets/archive/anatomy-lesson.jpg')}
                   alt="A Lição de Anatomia do Dr. Nicolaes Tulp, Rembrandt van Rijn, 1632"
                   loading="lazy"
                 />
@@ -977,7 +1101,7 @@ function App() {
               <figure className="anatomy-visual-card">
                 <div className="anatomy-visual-frame">
                   <img
-                    src="/arquivo-morto/assets/archive/vesalius-anatomy.jpg"
+                    src={assetPath('/arquivo-morto/assets/archive/vesalius-anatomy.jpg')}
                     alt="Prancha anatômica de De Humani Corporis Fabrica, Andreas Vesalius, 1543"
                     loading="lazy"
                   />
@@ -989,7 +1113,7 @@ function App() {
               <figure className="anatomy-visual-card">
                 <div className="anatomy-visual-frame">
                   <img
-                    src="/arquivo-morto/assets/archive/vesalius-skeleton.jpg"
+                    src={assetPath('/arquivo-morto/assets/archive/vesalius-skeleton.jpg')}
                     alt="Prancha do esqueleto de De Humani Corporis Fabrica, Andreas Vesalius, 1543"
                     loading="lazy"
                   />
@@ -1100,7 +1224,7 @@ function App() {
         <div className="aldini-visual-gallery" aria-label="Imagens históricas de Giovanni Aldini e galvanismo">
           <figure className="aldini-visual-card aldini-visual-main">
             <img
-              src="/arquivo-morto/assets/archive/galvanism-corpse.jpg"
+              src={assetPath('/arquivo-morto/assets/archive/galvanism-corpse.jpg')}
               alt="Gravura histórica de um cadáver galvanizado, séc. XIX"
               loading="lazy"
             />
@@ -1111,7 +1235,7 @@ function App() {
 
           <figure className="aldini-visual-card">
             <img
-              src="/arquivo-morto/assets/archive/aldini-portrait.jpg"
+              src={assetPath('/arquivo-morto/assets/archive/aldini-portrait.jpg')}
               alt="Retrato histórico de Giovanni Aldini, físico italiano"
               loading="lazy"
             />
@@ -1386,7 +1510,7 @@ function App() {
           <div className="soviet-dossier-lead with-portrait">
             <figure className="brukhonenko-portrait">
               <img
-                src="/arquivo-morto/assets/archive/brukhonenko-portrait.jpg"
+                src={assetPath('/arquivo-morto/assets/archive/brukhonenko-portrait.jpg')}
                 alt="Retrato de Sergei Brukhonenko, fisiologista soviético"
                 loading="lazy"
               />
@@ -1410,7 +1534,7 @@ function App() {
 <article className="brukhonenko-flow-row reverse">
             <figure className="brukhonenko-flow-image">
               <img
-                src="/arquivo-morto/assets/archive/brukhonenko-autojektor.jpg"
+                src={assetPath('/arquivo-morto/assets/archive/brukhonenko-autojektor.jpg')}
                 alt="Desenho técnico do autojektor de Brukhonenko"
                 loading="lazy"
               />
@@ -1436,7 +1560,7 @@ function App() {
           <article className="brukhonenko-flow-row dog-head-focus">
             <figure className="brukhonenko-flow-image strong">
               <img
-                src="/arquivo-morto/assets/archive/brukhonenko-experiment.jpg"
+                src={assetPath('/arquivo-morto/assets/archive/brukhonenko-experiment.jpg')}
                 alt="Frame de Experiments in the Revival of Organisms, 1940 — cabeça de cão ligada ao sistema de circulação artificial"
                 loading="lazy"
               />
@@ -1580,18 +1704,33 @@ function App() {
         {/* ARQUIVO DE CASOS */}
         <section id="dossies" className="section">
           <div className="section-header">
-            <p className="section-label">Arquivo de casos</p>
-            <h3>Seis registros essenciais</h3>
+            <p className="section-label">Gavetário mortuário</p>
+            <h3>Seis cadáveres catalogados</h3>
             <p className="selected-dossiers-intro">
-              Uma seleção de casos, arquivos e registros para navegar pela fronteira entre morte, ciência, literatura e ficção editorial.
+              Cada dossiê abaixo é apresentado como uma gaveta frigorífica com campos de óbito, conservação e atividade posterior ao encerramento clínico.
             </p>
           </div>
           <div className="stories-grid selected-dossiers-grid">
             {selectedDossiers.map((entry) => (
               <article className={`story-card selected-dossier-card story-type-${entry.type}`} key={entry.registry}>
+                <div className="drawer-handle" aria-hidden="true">
+                  <span className="drawer-handle-grip" />
+                </div>
+                <div className="drawer-screws" aria-hidden="true">
+                  <span />
+                  <span />
+                  <span />
+                  <span />
+                </div>
+                <div className="drawer-tag" aria-hidden="true">
+                  <span className="drawer-tag-label">Etiqueta</span>
+                  <span className="drawer-tag-value">{entry.registry}</span>
+                </div>
+                <div className="drawer-silhouette" aria-hidden="true" />
                 <ArchiveVisual type={entry.visual} size="sm" />
                 <span className="selected-dossier-stamp">{entry.stamp}</span>
                 <div className="story-header">
+                  <span className="story-period archive-date">{entry.drawer}</span>
                   <span className="story-period archive-date">{entry.displayDate}</span>
                 </div>
                 <span className="story-category">{entry.category}</span>
@@ -1599,7 +1738,7 @@ function App() {
                 <p className="story-summary selected-dossier-summary">{entry.summary}</p>
                 <dl className="selected-dossier-records">
                   <div>
-                    <dt>Indivíduo</dt>
+                    <dt>Identificação</dt>
                     <dd>{entry.subject}</dd>
                   </div>
                   <div>
@@ -1607,17 +1746,51 @@ function App() {
                     <dd>{entry.condition}</dd>
                   </div>
                   <div>
-                    <dt>Procedimento</dt>
+                    <dt>Causa mortis</dt>
+                    <dd>{entry.cause}</dd>
+                  </div>
+                  <div>
+                    <dt>Estado de conservação</dt>
+                    <dd>{entry.preservation}</dd>
+                  </div>
+                  <div>
+                    <dt>Procedimento realizado</dt>
                     <dd>{entry.procedure}</dd>
                   </div>
                   <div>
-                    <dt>Resultado</dt>
+                    <dt>Atividade pós-morte</dt>
+                    <dd>{entry.postMortem}</dd>
+                  </div>
+                  <div>
+                    <dt>Resposta registrada</dt>
                     <dd>{entry.outcome}</dd>
+                  </div>
+                  <div>
+                    <dt>Status da gaveta</dt>
+                    <dd>{entry.drawerStatus}</dd>
+                  </div>
+                </dl>
+                <dl className="selected-dossier-vitals">
+                  <div>
+                    <dt>Horário do óbito</dt>
+                    <dd>{entry.timeOfDeath}</dd>
+                  </div>
+                  <div>
+                    <dt>Temperatura do corpo</dt>
+                    <dd>{entry.bodyTemp}</dd>
+                  </div>
+                  <div>
+                    <dt>Temperatura interna</dt>
+                    <dd>{entry.internalTemp}</dd>
+                  </div>
+                  <div>
+                    <dt>Último movimento</dt>
+                    <dd>{entry.movement}</dd>
                   </div>
                 </dl>
                 <p className="selected-dossier-marginalia">{entry.marginalia}</p>
                 <div className="story-foot">
-                  <span className="selected-dossier-ref">{entry.registry}</span>
+                  <span className="selected-dossier-ref">{entry.claimed}</span>
                   <span className="story-classification">{entry.risk}</span>
                 </div>
               </article>
@@ -1664,7 +1837,7 @@ function App() {
                   {e.image && (
                     <figure className="timeline-figure">
                       <div className="contextual-figure-frame">
-                        <img src={e.image} alt={e.imageAlt} loading="lazy" />
+                        <img src={assetPath(e.image)} alt={e.imageAlt} loading="lazy" />
                       </div>
                       {e.imageCaption && (
                         <figcaption className="contextual-figure-caption">{e.imageCaption}</figcaption>
@@ -1682,7 +1855,7 @@ function App() {
           <figure>
             <div className="contextual-figure-frame">
               <img
-                src="/arquivo-morto/assets/archive/mary-shelley.jpg"
+                src={assetPath('/arquivo-morto/assets/archive/mary-shelley.jpg')}
                 alt="Retrato de Mary Wollstonecraft Shelley por Richard Rothwell, c. 1840"
                 loading="lazy"
               />
@@ -1697,9 +1870,9 @@ function App() {
         <section id="cinema" className="section cinema-section" aria-labelledby="cinema-heading">
           <div className="section-header">
             <p className="section-label">Capítulo VI</p>
-            <h3 id="cinema-heading">Do gótico ao horror contemporâneo</h3>
+            <h3 id="cinema-heading">Registros audiovisuais recuperados</h3>
             <p className="cinema-subtitle">
-              De Mary Shelley ao horror contemporâneo, a reanimação atravessa literatura, cinema clássico, zumbis modernos, horror cult e releituras atuais: monstros trágicos, corpos reconstruídos, mortos-vivos, ciência profanada e cultura pop.
+              Filmes, cópias promocionais e fragmentos de laboratório tratados aqui como evidências encontradas junto aos corpos, prontuários e câmaras de conservação do arquivo.
             </p>
           </div>
 
@@ -1710,13 +1883,31 @@ function App() {
                   <span className="cinema-dossier-label">{entry.label}</span>
                   <h4 className="cinema-dossier-title">{entry.title}</h4>
                   <p className="cinema-dossier-intro">{entry.intro}</p>
+                  <dl className="cinema-evidence-ledger">
+                    <div>
+                      <dt>Número da evidência</dt>
+                      <dd>{entry.evidence}</dd>
+                    </div>
+                    <div>
+                      <dt>Condição da película</dt>
+                      <dd>{entry.condition}</dd>
+                    </div>
+                    <div>
+                      <dt>Origem</dt>
+                      <dd>{entry.origin}</dd>
+                    </div>
+                    <div>
+                      <dt>Status de contaminação</dt>
+                      <dd>{entry.contamination}</dd>
+                    </div>
+                  </dl>
                 </div>
 
                 <div className={`cinema-dossier-gallery cinema-dossier-layout--${entry.layout}`}>
                   {entry.images.map((img, i) => (
                     <figure className={`cinema-dossier-card cinema-dossier-card--${img.role}`} key={i}>
                       <div className="cinema-image-frame">
-                        <img src={img.src} alt={img.alt} loading="lazy" />
+                        <img src={assetPath(img.src)} alt={img.alt} loading="lazy" />
                       </div>
                       {img.caption && (
                         <figcaption className="cinema-dossier-caption">{img.caption}</figcaption>
@@ -1783,37 +1974,15 @@ function App() {
 
         {/* FOOTER — três colunas */}
         <footer className="footer">
-          <div className="footer-grid">
-            <div className="footer-col">
-              <span className="footer-title">Arquivo Morto</span>
-              <p className="footer-desc">
-                Projeto editorial sobre literatura, ciência e horror da reanimação.
-              </p>
-              <p className="footer-desc">Projeto cultural e editorial independente.</p>
-            </div>
-            <div className="footer-col">
-              <span className="footer-col-title">Categorias</span>
-              <ul className="footer-list">
-                <li><a href="#dossies" className="footer-link">Arquivo de casos</a></li>
-                <li><a href="#artigos" className="footer-link">Artigos</a></li>
-                <li><a href="#linha" className="footer-link">Linha do Tempo</a></li>
-                <li><a href="#cinema" className="footer-link">Cinema</a></li>
-                <li><a href="#gabinete" className="footer-link">Gabinete de Anatomia</a></li>
-              </ul>
-            </div>
-            <div className="footer-col">
-              <span className="footer-col-title">Registro</span>
-              <ul className="footer-list footer-registry">
-                <li>ARQ-001 · LACRADO</li>
-                <li>Voltagem: 120V DC</li>
-                <li>Reagente: HW-7</li>
-                <li>Data: 1803–∞</li>
-              </ul>
-            </div>
+          <div className="footer-ledger">
+            <span className="footer-ledger-line">ARQUIVO ENCERRADO ÀS 03:17</span>
+            <span className="footer-ledger-line">CORPOS CONFERIDOS: 08</span>
+            <span className="footer-ledger-line">GAVETAS FECHADAS: 07</span>
+            <span className="footer-ledger-line footer-ledger-line-alert">UMA GAVETA PERMANECE ABERTA.</span>
           </div>
           <div className="footer-bottom">
-            <p className="footer-quote">"Todo arquivo morto ainda respira em alguma página."</p>
-            <span className="footer-ref">ARQ-001 · LACRADO · VOLTAGEM: 120V DC</span>
+            <p className="footer-quote">"O cadáver não estava nesta posição quando a ronda anterior terminou."</p>
+            <span className="footer-ref">SETOR FRIO · CADÁVER NÃO RECLAMADO · FICHA 000-13</span>
           </div>
         </footer>
 
