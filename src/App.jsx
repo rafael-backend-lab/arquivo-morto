@@ -897,50 +897,46 @@ function App() {
               </p>
               <div className="hero-actions actions">
                 <a href="#dossies" className="btn btn-primary">Acessar dossiês</a>
-                <a href="#cinema" className="btn btn-secondary">Consultar arquivo</a>
+                <a href="#linha" className="btn btn-secondary">Linha do tempo</a>
               </div>
             </div>
-            <aside className="hero-technical-panel" aria-label="Painel técnico do instituto">
-              <span className="hero-panel-kicker">ARQ-MORTO</span>
-              <h3 className="hero-panel-title">Registro central</h3>
-              <dl className="hero-panel-grid">
-                <div>
-                  <dt>Setor</dt>
-                  <dd>Pós-morte</dd>
-                </div>
-                <div>
-                  <dt>Classificação</dt>
-                  <dd>Restrito</dd>
-                </div>
-                <div>
-                  <dt>Status</dt>
-                  <dd>Ativo</dd>
-                </div>
-                <div>
-                  <dt>Frequência</dt>
-                  <dd>17 Hz</dd>
-                </div>
-                <div>
-                  <dt>Fundação</dt>
-                  <dd>1803</dd>
-                </div>
-                <div>
-                  <dt>Arquivos indexados</dt>
-                  <dd>08</dd>
-                </div>
-                <div>
-                  <dt>Arquivo</dt>
-                  <dd>000-13</dd>
-                </div>
-                <div>
-                  <dt>Atualização</dt>
-                  <dd>27 JUL 2026</dd>
-                </div>
-              </dl>
-              <p className="hero-panel-note">Instituto de Registros Pós-Morte. Uso interno, consulta editorial e documentação classificada.</p>
-            </aside>
           </div>
         </header>
+
+        <section className="registry-panel-section" aria-labelledby="registro-central-heading">
+          <div className="registry-panel-shell">
+            <div className="registry-panel-header">
+              <span className="registry-panel-kicker">ARQ-MORTO</span>
+              <h3 id="registro-central-heading" className="registry-panel-title">Registro Central</h3>
+            </div>
+            <dl className="registry-panel-grid">
+              <div>
+                <dt>Setor</dt>
+                <dd>Pós-morte</dd>
+              </div>
+              <div>
+                <dt>Classificação</dt>
+                <dd>Restrito</dd>
+              </div>
+              <div>
+                <dt>Status</dt>
+                <dd>Ativo</dd>
+              </div>
+              <div>
+                <dt>Fundação</dt>
+                <dd>1803</dd>
+              </div>
+              <div>
+                <dt>Arquivos indexados</dt>
+                <dd>008</dd>
+              </div>
+              <div>
+                <dt>Última atualização</dt>
+                <dd>27 JUL 2026</dd>
+              </div>
+            </dl>
+          </div>
+        </section>
 
         {/* MANIFESTO */}
         <section className="manifesto">

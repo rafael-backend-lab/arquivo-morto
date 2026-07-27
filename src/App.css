@@ -6266,13 +6266,13 @@ h2 {
   margin: 0 auto !important;
   padding: 120px 48px 80px !important;
   display: grid !important;
-  grid-template-columns: minmax(0, 1fr) 320px !important;
-  gap: 72px !important;
+  grid-template-columns: minmax(0, 1fr) !important;
+  gap: 0 !important;
   align-items: start !important;
 }
 
 .hero-content {
-  max-width: none !important;
+  max-width: 760px !important;
   padding: 0 !important;
   border: 0 !important;
   background: transparent !important;
@@ -6303,7 +6303,7 @@ h2 {
 }
 
 .hero-subtitle {
-  max-width: 30ch !important;
+  max-width: 34ch !important;
   margin-bottom: 18px !important;
   font-size: clamp(1.16rem, 1.9vw, 1.46rem) !important;
   line-height: 1.44 !important;
@@ -6311,7 +6311,7 @@ h2 {
 }
 
 .hero-summary {
-  max-width: 60ch;
+  max-width: 58ch;
   margin: 0 0 16px;
   color: rgba(214, 207, 191, 0.78);
   font-size: 1rem;
@@ -6325,7 +6325,7 @@ h2 {
 }
 
 .hero-editorial-note {
-  max-width: 58ch !important;
+  max-width: 54ch !important;
   margin: 0 0 26px !important;
   color: rgba(176, 168, 151, 0.82) !important;
   font-size: 0.92rem !important;
@@ -6356,70 +6356,94 @@ h2 {
   border-color: rgba(118, 124, 114, 0.24) !important;
 }
 
-.hero-technical-panel {
-  display: block !important;
-  width: 320px !important;
-  padding: 20px 20px 18px !important;
-  border: 1px solid rgba(190, 178, 152, 0.1) !important;
-  border-radius: 10px !important;
-  background:
-    linear-gradient(180deg, rgba(14, 16, 16, 0.76), rgba(14, 16, 16, 0.64)),
-    repeating-linear-gradient(180deg, rgba(255,255,255,0.01) 0, rgba(255,255,255,0.01) 1px, transparent 1px, transparent 28px) !important;
-  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.015), 0 18px 38px rgba(0,0,0,0.18) !important;
+.hero-technical-panel,
+.hero-panel-kicker,
+.hero-panel-title,
+.hero-panel-grid,
+.hero-panel-note {
+  display: none !important;
 }
 
-.hero-panel-kicker {
+.registry-panel-section {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+.registry-panel-shell {
+  margin-top: 4px;
+  border: 1px solid rgba(190, 178, 152, 0.12);
+  border-radius: 10px;
+  background:
+    linear-gradient(180deg, rgba(14, 16, 16, 0.7), rgba(14, 16, 16, 0.58)),
+    repeating-linear-gradient(180deg, rgba(255,255,255,0.01) 0, rgba(255,255,255,0.01) 1px, transparent 1px, transparent 28px);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.015), 0 18px 38px rgba(0,0,0,0.18);
+  overflow: hidden;
+}
+
+.registry-panel-header {
+  padding: 18px 24px 16px;
+  border-bottom: 1px solid rgba(190, 178, 152, 0.08);
+  text-align: center;
+}
+
+.registry-panel-kicker {
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   font-family: ui-monospace, 'Courier New', monospace;
-  font-size: 0.62rem;
+  font-size: 0.6rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: rgba(183, 173, 144, 0.72);
 }
 
-.hero-panel-title {
-  margin: 0 0 16px;
+.registry-panel-title {
+  margin: 0;
   font-family: Georgia, 'Times New Roman', serif;
-  font-size: 1.35rem;
+  font-size: 1.34rem;
   line-height: 1.16;
   color: var(--dirty-white);
 }
 
-.hero-panel-grid {
+.registry-panel-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 10px;
-  margin: 0 0 16px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 28px;
+  margin: 0;
+  padding: 20px 24px;
 }
 
-.hero-panel-grid div {
-  padding-bottom: 8px;
+.registry-panel-grid div {
+  display: grid;
+  grid-template-columns: minmax(120px, 220px) 1fr;
+  align-items: baseline;
+  gap: 12px;
+  padding: 11px 0;
   border-bottom: 1px solid rgba(190, 178, 152, 0.08);
 }
 
-.hero-panel-grid dt {
-  margin: 0 0 4px;
+.registry-panel-grid dt {
+  margin: 0;
   font-family: ui-monospace, 'Courier New', monospace;
   font-size: 0.56rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: rgba(168, 160, 145, 0.68);
+  white-space: nowrap;
 }
 
-.hero-panel-grid dd {
+.registry-panel-grid dt::after {
+  content: "........................";
+  margin-left: 10px;
+  color: rgba(168, 160, 145, 0.34);
+}
+
+.registry-panel-grid dd {
   margin: 0;
   font-family: ui-monospace, 'Courier New', monospace;
   font-size: 0.86rem;
   letter-spacing: 0.06em;
   color: rgba(222, 216, 202, 0.88);
-}
-
-.hero-panel-note {
-  margin: 0;
-  color: rgba(171, 164, 149, 0.74);
-  font-size: 0.8rem;
-  line-height: 1.7;
 }
 
 .manifesto {
@@ -6592,13 +6616,20 @@ h2 {
 @media (max-width: 960px) {
   .hero-layout {
     grid-template-columns: 1fr !important;
-    gap: 24px !important;
+    gap: 0 !important;
     padding: 88px 32px 56px !important;
   }
 
-  .hero-technical-panel {
-    order: 2;
-    width: 100% !important;
+  .hero-content {
+    max-width: 100% !important;
+  }
+
+  .registry-panel-section {
+    padding: 0 32px;
+  }
+
+  .registry-panel-grid {
+    grid-template-columns: 1fr;
   }
 
   .cinema-evidence-ledger {
@@ -6631,7 +6662,7 @@ h2 {
 
   .hero-layout {
     padding: 72px 18px 40px !important;
-    gap: 20px !important;
+    gap: 0 !important;
   }
 
   .hero-title {
@@ -6652,6 +6683,28 @@ h2 {
   .hero-actions .btn {
     width: 100%;
     justify-content: center;
+  }
+
+  .registry-panel-section {
+    padding: 0 18px;
+  }
+
+  .registry-panel-header {
+    padding: 16px 16px 14px;
+  }
+
+  .registry-panel-grid {
+    padding: 14px 16px 18px;
+  }
+
+  .registry-panel-grid div {
+    grid-template-columns: 1fr;
+    gap: 6px;
+    padding: 10px 0;
+  }
+
+  .registry-panel-grid dt::after {
+    display: none;
   }
 
   .selected-dossier-heading,
