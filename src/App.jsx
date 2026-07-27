@@ -836,12 +836,11 @@ function App() {
         <nav className="nav">
           <span className="nav-brand">Arquivo Morto</span>
           <div className="nav-links">
-            <a href="#destaque" className="nav-link">Destaque</a>
-            <a href="#dossies" className="nav-link">Arquivo de casos</a>
-            <a href="#artigos" className="nav-link">Artigos</a>
+            <a href="#destaque" className="nav-link">Início</a>
+            <a href="#dossies" className="nav-link">Dossiês</a>
             <a href="#linha" className="nav-link">Linha do Tempo</a>
             <a href="#cinema" className="nav-link">Cinema</a>
-            <a href="#gabinete" className="nav-link">Gabinete</a>
+            <a href="#sobre" className="nav-link">Sobre</a>
           </div>
           <div className="header-actions">
             <button
@@ -866,12 +865,11 @@ function App() {
 
       {/* MOBILE BOTTOM NAV — visível apenas em ≤720px */}
       <nav className="mobile-nav-bar" aria-label="Navegação rápida">
-        <a href="#destaque" className="mobile-nav-link">Destaque</a>
+        <a href="#destaque" className="mobile-nav-link">Início</a>
         <a href="#dossies" className="mobile-nav-link">Dossiês</a>
-        <a href="#artigos" className="mobile-nav-link">Artigos</a>
-        <a href="#linha" className="mobile-nav-link">Timeline</a>
+        <a href="#linha" className="mobile-nav-link">Linha</a>
         <a href="#cinema" className="mobile-nav-link">Cinema</a>
-        <a href="#gabinete" className="mobile-nav-link">Gabinete</a>
+        <a href="#sobre" className="mobile-nav-link">Sobre</a>
       </nav>
 
       <main className="page">
@@ -879,64 +877,68 @@ function App() {
         {/* HERO */}
         <header className="hero">
           <div className="hero-overlay" aria-hidden="true" />
-          <div className="hero-visual-system" aria-hidden="true">
-            <div className="hvs-diagram" />
-          </div>
-          <div className="archive-seal" aria-hidden="true">
-            <div className="seal-ring" />
-            <div className="seal-core">
-              <span className="seal-monogram">AM</span>
-              <span className="seal-bolt" />
-              <span className="seal-label">Arquivo Morto</span>
-              <span className="seal-year">Est. 1803</span>
-            </div>
-          </div>
           <div className="hero-layout">
             <div className="hero-content">
               <div className="archive-meta hero-meta">
-                <span className="meta-tag">ARQUIVO Nº 000-13</span>
+                <span className="meta-tag">Fundado em 1803</span>
                 <span className="meta-sep" aria-hidden="true">/</span>
-                <span className="meta-tag status-lacrado">ENTRADA AUTORIZADA</span>
+                <span className="meta-tag status-lacrado">Classificação restrita</span>
                 <span className="meta-sep" aria-hidden="true">/</span>
-                <span className="meta-tag">DEPARTAMENTO MORTUÁRIO</span>
+                <span className="meta-tag">Registro central</span>
               </div>
-              <p className="hero-kicker">Departamento de registro e conservação de cadáveres</p>
+              <p className="hero-kicker">Instituto de Registros Pós-Morte</p>
               <h1 className="hero-title">Arquivo Morto</h1>
-              <h2 className="hero-subtitle">Aqui permanecem os corpos que a morte não conseguiu encerrar.</h2>
-              <dl className="hero-ledger">
+              <h2 className="hero-subtitle">Literatura, ciência e documentos sobre os limites entre corpo, experiência, morte e reanimação.</h2>
+              <p className="hero-summary">
+                Este arquivo reúne casos históricos, obras, experimentos e registros classificados relacionados ao que permanece depois do óbito.
+              </p>
+              <p className="hero-editorial-note">
+                Setor de documentação, ciência, literatura e ocorrências pós-morte.
+              </p>
+              <div className="hero-actions actions">
+                <a href="#dossies" className="btn btn-primary">Acessar dossiês</a>
+                <a href="#cinema" className="btn btn-secondary">Consultar arquivo</a>
+              </div>
+            </div>
+            <aside className="hero-technical-panel" aria-label="Painel técnico do instituto">
+              <span className="hero-panel-kicker">ARQ-MORTO</span>
+              <h3 className="hero-panel-title">Registro central</h3>
+              <dl className="hero-panel-grid">
                 <div>
-                  <dt>Corpos registrados</dt>
+                  <dt>Setor</dt>
+                  <dd>Pós-morte</dd>
+                </div>
+                <div>
+                  <dt>Classificação</dt>
+                  <dd>Restrito</dd>
+                </div>
+                <div>
+                  <dt>Status</dt>
+                  <dd>Ativo</dd>
+                </div>
+                <div>
+                  <dt>Frequência</dt>
+                  <dd>17 Hz</dd>
+                </div>
+                <div>
+                  <dt>Fundação</dt>
+                  <dd>1803</dd>
+                </div>
+                <div>
+                  <dt>Arquivos indexados</dt>
                   <dd>08</dd>
                 </div>
                 <div>
-                  <dt>Corpos identificados</dt>
-                  <dd>05</dd>
+                  <dt>Arquivo</dt>
+                  <dd>000-13</dd>
                 </div>
                 <div>
-                  <dt>Corpos reclamados</dt>
-                  <dd>00</dd>
-                </div>
-                <div>
-                  <dt>Ocorrências após o óbito</dt>
-                  <dd>07</dd>
+                  <dt>Atualização</dt>
+                  <dd>27 JUL 2026</dd>
                 </div>
               </dl>
-              <p className="hero-editorial-note">
-                Porta externa da câmara frigorífica: abrir apenas para conferência de óbito, exame técnico ou contenção de atividade pós-morte.
-              </p>
-              <div className="hero-warning-board" aria-label="Avisos do necrotério">
-                <span>NÃO TOQUE NAS GAVETAS.</span>
-                <span>NÃO RESPONDA A RUÍDOS VINDOS DO INTERIOR.</span>
-              </div>
-              <div className="hero-actions actions">
-                <a href="#destaque" className="btn btn-primary">Inspecionar corpo central</a>
-                <a href="#dossies" className="btn btn-secondary">Abrir gavetário</a>
-              </div>
-              <div className="hero-marginalia" aria-label="Observação marginal do arquivo">
-                <span className="hero-marginalia-label">Observação de ronda</span>
-                <span className="hero-marginalia-text">A gaveta foi lacrada por dentro. Não há registro de entrada para este corpo.</span>
-              </div>
-            </div>
+              <p className="hero-panel-note">Instituto de Registros Pós-Morte. Uso interno, consulta editorial e documentação classificada.</p>
+            </aside>
           </div>
         </header>
 
@@ -1704,94 +1706,48 @@ function App() {
         {/* ARQUIVO DE CASOS */}
         <section id="dossies" className="section">
           <div className="section-header">
-            <p className="section-label">Gavetário mortuário</p>
-            <h3>Seis cadáveres catalogados</h3>
+            <p className="section-label">Arquivo de dossiês</p>
+            <h3>Registros institucionais essenciais</h3>
             <p className="selected-dossiers-intro">
-              Cada dossiê abaixo é apresentado como uma gaveta frigorífica com campos de óbito, conservação e atividade posterior ao encerramento clínico.
+              Casos, obras e registros apresentados como fichas técnicas do instituto, com data, classificação, categoria e estado do arquivo.
             </p>
           </div>
           <div className="stories-grid selected-dossiers-grid">
-            {selectedDossiers.map((entry) => (
+            {selectedDossiers.map((entry, index) => (
               <article className={`story-card selected-dossier-card story-type-${entry.type}`} key={entry.registry}>
-                <div className="drawer-handle" aria-hidden="true">
-                  <span className="drawer-handle-grip" />
-                </div>
-                <div className="drawer-screws" aria-hidden="true">
-                  <span />
-                  <span />
-                  <span />
-                  <span />
-                </div>
-                <div className="drawer-tag" aria-hidden="true">
-                  <span className="drawer-tag-label">Etiqueta</span>
-                  <span className="drawer-tag-value">{entry.registry}</span>
-                </div>
-                <div className="drawer-silhouette" aria-hidden="true" />
-                <ArchiveVisual type={entry.visual} size="sm" />
-                <span className="selected-dossier-stamp">{entry.stamp}</span>
                 <div className="story-header">
-                  <span className="story-period archive-date">{entry.drawer}</span>
+                  <span className="selected-dossier-index">Registro {String(index + 1).padStart(3, '0')}</span>
                   <span className="story-period archive-date">{entry.displayDate}</span>
                 </div>
-                <span className="story-category">{entry.category}</span>
-                <h4 className="story-title">{entry.title}</h4>
+                <div className="selected-dossier-heading">
+                  <span className="story-category">{entry.category}</span>
+                  <span className="selected-dossier-status">{entry.risk}</span>
+                </div>
+                <h4 className="story-title">{entry.subject}</h4>
+                <p className="selected-dossier-subtitle">{entry.title}</p>
                 <p className="story-summary selected-dossier-summary">{entry.summary}</p>
-                <dl className="selected-dossier-records">
+                <dl className="selected-dossier-records selected-dossier-records--compact">
                   <div>
-                    <dt>Identificação</dt>
-                    <dd>{entry.subject}</dd>
+                    <dt>Categoria</dt>
+                    <dd>{entry.category}</dd>
                   </div>
                   <div>
-                    <dt>Condição</dt>
-                    <dd>{entry.condition}</dd>
+                    <dt>Data</dt>
+                    <dd>{entry.displayDate}</dd>
                   </div>
                   <div>
-                    <dt>Causa mortis</dt>
-                    <dd>{entry.cause}</dd>
+                    <dt>Classificação</dt>
+                    <dd>{entry.risk}</dd>
                   </div>
                   <div>
-                    <dt>Estado de conservação</dt>
-                    <dd>{entry.preservation}</dd>
-                  </div>
-                  <div>
-                    <dt>Procedimento realizado</dt>
-                    <dd>{entry.procedure}</dd>
-                  </div>
-                  <div>
-                    <dt>Atividade pós-morte</dt>
-                    <dd>{entry.postMortem}</dd>
-                  </div>
-                  <div>
-                    <dt>Resposta registrada</dt>
-                    <dd>{entry.outcome}</dd>
-                  </div>
-                  <div>
-                    <dt>Status da gaveta</dt>
+                    <dt>Status</dt>
                     <dd>{entry.drawerStatus}</dd>
-                  </div>
-                </dl>
-                <dl className="selected-dossier-vitals">
-                  <div>
-                    <dt>Horário do óbito</dt>
-                    <dd>{entry.timeOfDeath}</dd>
-                  </div>
-                  <div>
-                    <dt>Temperatura do corpo</dt>
-                    <dd>{entry.bodyTemp}</dd>
-                  </div>
-                  <div>
-                    <dt>Temperatura interna</dt>
-                    <dd>{entry.internalTemp}</dd>
-                  </div>
-                  <div>
-                    <dt>Último movimento</dt>
-                    <dd>{entry.movement}</dd>
                   </div>
                 </dl>
                 <p className="selected-dossier-marginalia">{entry.marginalia}</p>
                 <div className="story-foot">
-                  <span className="selected-dossier-ref">{entry.claimed}</span>
-                  <span className="story-classification">{entry.risk}</span>
+                  <span className="selected-dossier-ref">{entry.registry}</span>
+                  <span className="story-classification">{entry.stamp}</span>
                 </div>
               </article>
             ))}
@@ -1869,10 +1825,10 @@ function App() {
         {/* CINEMA E LITERATURA CONTEMPORÂNEA */}
         <section id="cinema" className="section cinema-section" aria-labelledby="cinema-heading">
           <div className="section-header">
-            <p className="section-label">Capítulo VI</p>
-            <h3 id="cinema-heading">Registros audiovisuais recuperados</h3>
+            <p className="section-label">Arquivo audiovisual</p>
+            <h3 id="cinema-heading">Arquivo Audiovisual</h3>
             <p className="cinema-subtitle">
-              Filmes, cópias promocionais e fragmentos de laboratório tratados aqui como evidências encontradas junto aos corpos, prontuários e câmaras de conservação do arquivo.
+              Registros cinematográficos relacionados à reanimação, morte e ciência proibida.
             </p>
           </div>
 
@@ -1885,20 +1841,28 @@ function App() {
                   <p className="cinema-dossier-intro">{entry.intro}</p>
                   <dl className="cinema-evidence-ledger">
                     <div>
-                      <dt>Número da evidência</dt>
+                      <dt>Registro</dt>
                       <dd>{entry.evidence}</dd>
                     </div>
                     <div>
-                      <dt>Condição da película</dt>
-                      <dd>{entry.condition}</dd>
+                      <dt>Formato</dt>
+                      <dd>Digitalizado</dd>
                     </div>
                     <div>
                       <dt>Origem</dt>
-                      <dd>{entry.origin}</dd>
+                      <dd>Cinema</dd>
                     </div>
                     <div>
-                      <dt>Status de contaminação</dt>
-                      <dd>{entry.contamination}</dd>
+                      <dt>Classificação</dt>
+                      <dd>Necrociência</dd>
+                    </div>
+                    <div>
+                      <dt>Status</dt>
+                      <dd>Disponível</dd>
+                    </div>
+                    <div>
+                      <dt>Ano</dt>
+                      <dd>{entry.year}</dd>
                     </div>
                   </dl>
                 </div>
@@ -1953,7 +1917,7 @@ function App() {
         </section>
 
         {/* NOTA DE CURADORIA */}
-        <section className="curator-note">
+        <section id="sobre" className="curator-note">
           <div className="curator-inner">
             <div className="curator-head">
               <span className="curator-tag">NOTA DE CURADORIA</span>
@@ -1975,14 +1939,14 @@ function App() {
         {/* FOOTER — três colunas */}
         <footer className="footer">
           <div className="footer-ledger">
-            <span className="footer-ledger-line">ARQUIVO ENCERRADO ÀS 03:17</span>
-            <span className="footer-ledger-line">CORPOS CONFERIDOS: 08</span>
-            <span className="footer-ledger-line">GAVETAS FECHADAS: 07</span>
-            <span className="footer-ledger-line footer-ledger-line-alert">UMA GAVETA PERMANECE ABERTA.</span>
+            <span className="footer-ledger-line">INSTITUTO DE REGISTROS PÓS-MORTE</span>
+            <span className="footer-ledger-line">SETOR DE DOCUMENTAÇÃO, CIÊNCIA, LITERATURA E OCORRÊNCIAS PÓS-MORTE</span>
+            <span className="footer-ledger-line">ARQUIVOS INDEXADOS: 08</span>
+            <span className="footer-ledger-line footer-ledger-line-alert">CLASSIFICAÇÃO GERAL: RESTRITO</span>
           </div>
           <div className="footer-bottom">
-            <p className="footer-quote">"O cadáver não estava nesta posição quando a ronda anterior terminou."</p>
-            <span className="footer-ref">SETOR FRIO · CADÁVER NÃO RECLAMADO · FICHA 000-13</span>
+            <p className="footer-quote">"Este arquivo existe para documentar o que permanece depois do óbito."</p>
+            <span className="footer-ref">ARQ-MORTO · REGISTRO CENTRAL · FUNDADO EM 1803</span>
           </div>
         </footer>
 
