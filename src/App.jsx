@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './App.css'
 
 const assetPath = (path) => {
@@ -79,6 +78,39 @@ const timelineEvents = [
   {
     year: 'Hoje',
     desc: 'IA, criogenia e biotecnologia reabrem perguntas sobre continuidade e identidade.',
+  },
+]
+
+const topHeroChapters = [
+  {
+    number: 'I',
+    title: 'O Chamado',
+    text: 'Da inquietação primitiva à primeira pergunta.',
+    icon: '☼',
+  },
+  {
+    number: 'II',
+    title: 'O Rito e a Matéria',
+    text: 'Grimórios, símbolos e corpos antes da ciência moderna.',
+    icon: '⚚',
+  },
+  {
+    number: 'III',
+    title: 'Da Devoção à Dissecção',
+    text: 'Do respeito funerário ao exame anatômico.',
+    icon: '☿',
+  },
+  {
+    number: 'IV',
+    title: 'O Corpo como Prova',
+    text: 'Entre o documento, o indício e o erro.',
+    icon: '✥',
+  },
+  {
+    number: 'V',
+    title: 'O Limiar Contemporâneo',
+    text: 'Protocolo, bioética e os limites da técnica.',
+    icon: '&',
   },
 ]
 
@@ -816,8 +848,8 @@ function ArchiveVisual({ type = 'medical-file', label, code, size = 'md' }) {
 }
 
 function App() {
-  const [mode, setMode] = useState('arquivo')
-  const [archiveLive, setArchiveLive] = useState(false)
+  const mode = 'arquivo'
+  const archiveLive = false
   const rootStyle = {
     '--asset-capa-arquivo': `url("${assetPath('assets/cinema/capa-arquivo.png')}")`,
     '--asset-hero-arquivo': `url("${assetPath('assets/cinema/image.arquivo.png')}")`,
@@ -835,31 +867,22 @@ function App() {
       {/* SITE HEADER — navegação fixa */}
       <header className="site-header">
         <nav className="nav">
-          <span className="nav-brand">Arquivo Morto</span>
+          <a href="#destaque" className="nav-brand" aria-label="Arquivo Morto">
+            <span>Arquivo</span>
+            <span>Morto</span>
+          </a>
           <div className="nav-links">
-            <a href="#destaque" className="nav-link">Início</a>
-            <a href="#dossies" className="nav-link">Dossiês</a>
+            <a href="#destaque" className="nav-link nav-link-active">Início</a>
+            <a href="#capitulos" className="nav-link">Capítulos</a>
+            <a href="#artigos" className="nav-link">Artigos</a>
             <a href="#linha-do-tempo" className="nav-link">Linha do Tempo</a>
             <a href="#cinema" className="nav-link">Cinema</a>
-            <a href="#sobre" className="nav-link">Sobre</a>
+            <a href="#gabinete" className="nav-link">Gabinete</a>
+            <a href="#sobre" className="nav-link">Nota de Curadoria</a>
           </div>
           <div className="header-actions">
-            <button
-              className={`archive-live-toggle${archiveLive ? ' active' : ''}`}
-              onClick={() => setArchiveLive(v => !v)}
-              aria-pressed={archiveLive}
-              aria-label="Alternar modo Arquivo Vivo"
-            >
-              Arquivo Vivo
-            </button>
-            <button
-              className="mode-toggle"
-              data-mode={mode}
-              onClick={() => setMode(m => m === 'arquivo' ? 'terminal' : 'arquivo')}
-              aria-label="Alternar modo de visualização"
-            >
-              {mode === 'arquivo' ? 'Modo Terminal' : 'Modo Arquivo'}
-            </button>
+            <button className="header-search" aria-label="Pesquisar no arquivo">⌕</button>
+            <a href="#sobre" className="header-institute">Instituto</a>
           </div>
         </nav>
       </header>
@@ -888,21 +911,18 @@ function App() {
                 </h1>
                 <div className="amHeroDivider" aria-hidden="true">
                   <span className="amHeroDividerLine" />
-                  <span className="amHeroDividerSeal">☿</span>
+                  <span className="amHeroDividerSeal">⚚</span>
                   <span className="amHeroDividerLine" />
                 </div>
                 <p className="amHeroSubtitle">
-                  Literatura, ciência e registros sobre atividade residual onde a morte já deveria ter encerrado o corpo.
+                  Literatura, ciência e documentos sobre os limites entre morte e reanimação.
                 </p>
                 <p className="amHeroDescription">
-                  Este arquivo reúne casos históricos, obras, experimentos e prontuários classificados sobre espasmos tardios, retorno motor, presença clínica e ocorrências posteriores ao encerramento oficial do óbito.
-                </p>
-                <p className="amHeroNotice">
-                  Uso restrito. Última movimentação residual registrada às 04h46 no setor frio.
+                  Este arquivo reúne casos históricos, obras, experimentos e registros classificados relacionados ao que permanece depois do óbito.
                 </p>
                 <div className="amHeroActions">
                   <a href="#dossies" className="amButton amButtonPrimary">
-                    Explorar o arquivo
+                    Explorar o arquivo →
                   </a>
                   <a href="#sobre" className="amButton amButtonSecondary">
                     Sobre o instituto
@@ -913,6 +933,22 @@ function App() {
                 <div className="amHeroSkull" />
               </div>
             </div>
+          </div>
+        </section>
+
+        <section className="amEntryStrip" aria-label="Capítulos de entrada">
+          <div className="amEntryGrid">
+            {topHeroChapters.map((entry) => (
+              <article className="amEntryCard" key={entry.number}>
+                <div className="amEntryCardHead">
+                  <span className="amEntryNumber">{entry.number}</span>
+                  <span className="amEntryIcon" aria-hidden="true">{entry.icon}</span>
+                </div>
+                <h3 className="amEntryTitle">{entry.title}</h3>
+                <p className="amEntryText">{entry.text}</p>
+                <span className="amEntryArrow" aria-hidden="true">→</span>
+              </article>
+            ))}
           </div>
         </section>
 
@@ -980,7 +1016,7 @@ function App() {
         </section>
 
         {/* A HUMANIDADE CONTRA A MORTE */}
-        <section className="section humanity-section" aria-labelledby="humanity-heading">
+        <section id="capitulos" className="section humanity-section" aria-labelledby="humanity-heading">
           <div className="section-header">
             <p className="section-label">Capítulo I</p>
             <h3 id="humanity-heading">A humanidade contra a morte</h3>
