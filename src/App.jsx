@@ -86,31 +86,26 @@ const topHeroChapters = [
     number: 'I',
     title: 'O Chamado',
     text: 'Da inquietação primitiva à primeira pergunta.',
-    icon: '☼',
   },
   {
     number: 'II',
     title: 'O Rito e a Matéria',
     text: 'Grimórios, símbolos e corpos antes da ciência moderna.',
-    icon: '⚚',
   },
   {
     number: 'III',
     title: 'Da Devoção à Dissecção',
     text: 'Do respeito funerário ao exame anatômico.',
-    icon: '☿',
   },
   {
     number: 'IV',
     title: 'O Corpo como Prova',
     text: 'Entre o documento, o indício e o erro.',
-    icon: '✥',
   },
   {
     number: 'V',
     title: 'O Limiar Contemporâneo',
     text: 'Protocolo, bioética e os limites da técnica.',
-    icon: '&',
   },
 ]
 
@@ -881,7 +876,9 @@ function App() {
             <a href="#sobre" className="nav-link">Nota de Curadoria</a>
           </div>
           <div className="header-actions">
-            <button className="header-search" aria-label="Pesquisar no arquivo">⌕</button>
+            <button className="header-search" aria-label="Pesquisar no arquivo">
+              <span className="header-search-icon" aria-hidden="true" />
+            </button>
             <a href="#sobre" className="header-institute">Instituto</a>
           </div>
         </nav>
@@ -911,7 +908,9 @@ function App() {
                 </h1>
                 <div className="amHeroDivider" aria-hidden="true">
                   <span className="amHeroDividerLine" />
-                  <span className="amHeroDividerSeal">⚚</span>
+                  <span className="amHeroDividerSeal">
+                    <span className="amHeroDividerSealInner" />
+                  </span>
                   <span className="amHeroDividerLine" />
                 </div>
                 <p className="amHeroSubtitle">
@@ -942,7 +941,9 @@ function App() {
               <article className="amEntryCard" key={entry.number}>
                 <div className="amEntryCardHead">
                   <span className="amEntryNumber">{entry.number}</span>
-                  <span className="amEntryIcon" aria-hidden="true">{entry.icon}</span>
+                  <span className="amEntryIcon" aria-hidden="true">
+                    <span className="amEntryIconInner" />
+                  </span>
                 </div>
                 <h3 className="amEntryTitle">{entry.title}</h3>
                 <p className="amEntryText">{entry.text}</p>
