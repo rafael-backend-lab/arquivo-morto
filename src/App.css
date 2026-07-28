@@ -6230,7 +6230,10 @@ h2 {
   align-items: center;
   position: relative;
   overflow: hidden;
-  padding: 104px 24px 54px;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding: 104px max(28px, calc((100vw - 1460px) / 2 + 36px)) 34px;
   background:
     radial-gradient(circle at 78% 18%, rgba(130, 116, 92, 0.1), transparent 0 30%),
     radial-gradient(circle at 22% 24%, rgba(128, 31, 20, 0.1), transparent 0 26%),
@@ -6261,7 +6264,7 @@ h2 {
 
 .amHeroInner {
   width: 100%;
-  max-width: 1480px;
+  max-width: 100%;
   margin: 0 auto;
   position: relative;
   z-index: 1;
@@ -6269,14 +6272,16 @@ h2 {
 
 .amHeroLayout {
   display: grid;
-  grid-template-columns: minmax(0, 1.08fr) minmax(320px, 560px);
-  gap: 14px;
-  align-items: center;
+  grid-template-columns: minmax(520px, 1fr) minmax(520px, 760px);
+  gap: 8px;
+  align-items: end;
+  max-width: 1520px;
+  margin: 0 auto;
 }
 
 .amHeroContent {
-  max-width: 700px;
-  padding-left: 8px;
+  max-width: 760px;
+  padding-left: 0;
 }
 
 .amHeroEyebrow {
@@ -6291,10 +6296,10 @@ h2 {
 .amHeroTitle {
   margin: 0;
   font-family: Georgia, 'Times New Roman', serif;
-  font-size: clamp(4.2rem, 8.8vw, 7.3rem);
-  line-height: 0.84;
-  letter-spacing: -0.052em;
-  max-width: 680px;
+  font-size: clamp(5.2rem, 9vw, 8.55rem);
+  line-height: 0.83;
+  letter-spacing: -0.058em;
+  max-width: 760px;
   color: #ddd4c7;
   text-shadow: 0 3px 18px rgba(0, 0, 0, 0.38);
   text-transform: uppercase;
@@ -6309,8 +6314,8 @@ h2 {
   display: flex;
   align-items: center;
   gap: 12px;
-  max-width: 560px;
-  margin: 22px 0 20px;
+  max-width: 540px;
+  margin: 20px 0 22px;
 }
 
 .amHeroDividerLine {
@@ -6334,18 +6339,18 @@ h2 {
 }
 
 .amHeroSubtitle {
-  max-width: 620px;
+  max-width: 680px;
   margin: 0;
-  font-size: clamp(1.6rem, 2.5vw, 2.3rem);
-  line-height: 1.34;
+  font-size: clamp(1.9rem, 2.6vw, 3rem);
+  line-height: 1.28;
   color: rgba(224, 214, 196, 0.94);
 }
 
 .amHeroDescription {
-  max-width: 580px;
-  margin: 20px 0 0;
-  font-size: 1.08rem;
-  line-height: 1.78;
+  max-width: 630px;
+  margin: 26px 0 0;
+  font-size: 1.12rem;
+  line-height: 1.72;
   color: rgba(186, 176, 161, 0.82);
 }
 
@@ -6382,25 +6387,24 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
-  margin-top: 34px;
+  margin-top: 30px;
 }
 
 .amHeroVisual {
   position: relative;
-  min-height: 620px;
+  min-height: 730px;
 }
 
 .amHeroSkull {
   position: absolute;
-  inset: 0;
+  inset: -12px 0 -8px 0;
   background-image:
     linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.34)),
     var(--asset-hero-skull);
   background-repeat: no-repeat;
-  background-position: right center;
-  background-size: contain;
-  filter: saturate(0.8) contrast(1.04) brightness(0.86);
-  border-radius: 12px;
+  background-position: right 4px bottom;
+  background-size: min(900px, 100%) auto;
+  filter: saturate(0.82) contrast(1.05) brightness(0.86);
 }
 
 .amHeroVisual::before {
@@ -6408,42 +6412,9 @@ h2 {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 68% 56%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.12) 34%, rgba(0, 0, 0, 0.74) 100%),
-    linear-gradient(90deg, rgba(4, 4, 5, 0.76), rgba(4, 4, 5, 0) 22%);
+    radial-gradient(circle at 72% 54%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.16) 36%, rgba(0, 0, 0, 0.72) 100%),
+    linear-gradient(90deg, rgba(4, 4, 5, 0.92), rgba(4, 4, 5, 0.32) 18%, rgba(4, 4, 5, 0) 36%);
   pointer-events: none;
-}
-
-.amHeroVisualCaption {
-  position: absolute;
-  right: 12px;
-  bottom: 20px;
-  display: grid;
-  gap: 8px;
-  max-width: 220px;
-  padding: 14px 14px 12px;
-  border: 1px solid rgba(146, 43, 30, 0.22);
-  background: rgba(10, 10, 11, 0.76);
-  backdrop-filter: blur(2px);
-}
-
-.amHeroVisualTag,
-.amHeroVisualText {
-  font-family: ui-monospace, 'Courier New', monospace;
-}
-
-.amHeroVisualTag {
-  font-size: 0.58rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: rgba(155, 50, 40, 0.92);
-}
-
-.amHeroVisualText {
-  font-size: 0.7rem;
-  line-height: 1.7;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: rgba(207, 197, 181, 0.72);
 }
 
 .amButton {
@@ -6758,12 +6729,16 @@ h2 {
 @media (max-width: 960px) {
   .amHero {
     min-height: auto;
+    width: auto;
+    margin-left: 0;
+    margin-right: 0;
     padding: 96px 32px 48px;
   }
 
   .amHeroLayout {
     grid-template-columns: 1fr;
     gap: 18px;
+    max-width: none;
   }
 
   .amHeroContent {
@@ -6836,14 +6811,8 @@ h2 {
 
   .amHeroSkull {
     inset: 0;
-    background-position: center;
-  }
-
-  .amHeroVisualCaption {
-    right: 0;
-    bottom: 0;
-    max-width: 190px;
-    padding: 10px 10px 9px;
+    background-position: right center;
+    background-size: cover;
   }
 
   .registry-panel-section {

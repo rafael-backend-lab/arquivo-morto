@@ -911,10 +911,6 @@ function App() {
               </div>
               <div className="amHeroVisual" aria-hidden="true">
                 <div className="amHeroSkull" />
-                <div className="amHeroVisualCaption">
-                  <span className="amHeroVisualTag">Evidência 001</span>
-                  <span className="amHeroVisualText">Crânio catalogado sob custódia do setor frio.</span>
-                </div>
               </div>
             </div>
           </div>
