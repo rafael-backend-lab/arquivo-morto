@@ -14,35 +14,35 @@ const articles = [
     period: 'séc. XVIII–XIX',
     tag: 'ENSAIO',
     title: 'O Roubo de Carne',
-    text: 'A economia dos cadáveres no século XIX: anatomistas, body snatchers e o mercado negro de tecido humano.',
+    text: 'O cadáver deixou de ser apenas corpo enlutado e virou recurso disputado. Anatomistas, body snatchers e escolas médicas formaram uma economia clandestina em que a ciência avançava ao preço do túmulo violado.',
   },
   {
     index: '02',
     period: 'séc. XVIII–XIX',
     tag: 'HISTÓRIA DA CIÊNCIA',
     title: 'A Disputa Vitalista',
-    text: 'Animismo contra mecanicismo. O debate sobre o que separa o vivo do morto atravessa dois séculos de ciência europeia.',
+    text: 'Animismo contra mecanicismo, alma contra engrenagem. O debate sobre o que separa o vivo do morto revela que a ciência moderna nasceu sem acordo sobre o que, afinal, faz um corpo ser alguém.',
   },
   {
     index: '03',
     period: 'séc. XX–XXI',
     tag: 'BODY HORROR',
     title: 'A Carne Fragmentada',
-    text: 'Da peça anatômica ao cinema cult. Como o corpo recortado tornou-se objeto estético, científico e narrativo.',
+    text: 'Da mesa anatômica ao cinema cult, o corpo aberto deixou de ser só prova médica e virou linguagem. Cortar, costurar, recompor e expor a carne tornou-se uma forma de pensar identidade, medo e violação.',
   },
   {
     index: '04',
     period: 'séc. XX–XXI',
     tag: 'SONIC HORROR',
     title: 'Frequência Fúnebre',
-    text: 'Frequências que perturbam. Sons que afetam o organismo sem que a mente saiba. A fronteira entre ruído e colapso.',
+    text: 'Nem todo horror entra pelos olhos. Há frequências, vibrações e ruídos que atingem o corpo antes de serem compreendidos, como se o organismo reconhecesse um perigo que a linguagem ainda não alcançou.',
   },
   {
     index: '05',
     period: 'Idade Média',
     tag: 'HISTÓRIA MEDIEVAL',
     title: 'O Mapa Medieval da Dor',
-    text: 'Cartografias anatômicas medievais onde nervos são rios e órgãos são províncias. O corpo como território desconhecido.',
+    text: 'Nas cartografias anatômicas medievais, nervos parecem rios e órgãos parecem províncias. O corpo surge como território imperfeitamente conhecido, mais próximo de um mapa incompleto do que de uma máquina compreendida.',
   },
 ]
 
@@ -617,7 +617,7 @@ const cinemaEntries = [
       },
     ],
     meta: ['REGISTRO AUDIOVISUAL', 'CONTEÚDO: criação artificial', 'STATUS: liberado para consulta'],
-    text: 'A criatura ainda aparece como visão demoníaca, mais próxima de uma aparição do que do monstro trágico moderno. O cinema silencioso registra o mito antes de ele se tornar ícone visual — a alquimia do laboratório precede a eletricidade da Universal.',
+    text: 'Aqui o mito ainda não virou ícone fixo; ele aparece como aparição instável, quase um erro visual. O filme interessa ao Arquivo Morto porque registra o instante em que Frankenstein sai da página e entra no imaginário público como experiência ótica de laboratório e assombro.',
   },
   {
     id: 'frankenstein-1931',
@@ -645,7 +645,7 @@ const cinemaEntries = [
       },
     ],
     meta: ['REGISTRO AUDIOVISUAL', 'CONTEÚDO: criatura elétrica', 'STATUS: sob custódia'],
-    text: 'O filme consolida a imagem popular do monstro: testa marcada, corpo pesado, eletricidade e laboratório. Karloff cria um ícone visual permanente. A cena com a menina Maria concentra a ambiguidade central do mito: o monstro não entende o mundo, não domina a própria força e se torna ameaça sem nascer moralmente maligno.',
+    text: 'Whale e Karloff transformam Frankenstein em vocabulário visual do horror moderno. A criatura ganha peso, rosto e ritmo próprios, mas o centro do filme continua sendo a ambiguidade: o corpo fabricado não nasce maligno, nasce deslocado, e é esse desencontro entre inocência, força e rejeição que o torna inesquecível.',
   },
   {
     id: 'mary-shelley-1994',
@@ -679,7 +679,7 @@ const cinemaEntries = [
       },
     ],
     meta: ['REGISTRO AUDIOVISUAL', 'CONTEÚDO: costura e abandono', 'STATUS: liberado com ressalvas'],
-    text: 'A criatura de De Niro fala, sente, aprende e cobra do criador a responsabilidade pela vida que recebeu. O horror nasce menos do susto e mais da pergunta moral: quem cria um ser abandonado também cria sua dor. O filme acentua a dimensão corporal do mito — costura, carne e cicatriz como assinatura permanente do abandono.',
+    text: 'A versão de 1994 devolve ao mito uma dor mais consciente. A criatura fala, argumenta e acusa, deslocando o horror do susto para a responsabilidade: criar um corpo e abandoná-lo é também produzir a violência que virá depois. Costura, carne e cicatriz deixam de ser ornamento gótico e viram prova material do abandono.',
   },
   {
     id: 'reanimator-1985',
@@ -707,7 +707,7 @@ const cinemaEntries = [
       },
     ],
     meta: ['REGISTRO AUDIOVISUAL', 'CONTEÚDO: necrotério e reagente', 'STATUS: contaminação elevada'],
-    text: 'O filme transforma o conto de Lovecraft em cinema físico: seringa, reagente verde, cadáver, necrotério e arrogância científica. A reanimação aqui não é milagre nem tragédia nobre; é violação direta do corpo morto. Herbert West é uma inversão moderna de Victor Frankenstein: menos romântico, mais frio, mais técnico e obcecado — ele testa, repete, corrige e profana.',
+    text: 'Re-Animator leva a reanimação para o campo da profanação técnica. Nada aqui é sublime: há seringa, reagente, necrotério e um pesquisador que trata o cadáver como problema operacional. Herbert West interessa ao arquivo porque encarna a versão moderna do transgressor científico: menos trágico, mais funcional, mais disposto a repetir o erro até que ele se mova.',
   },
   {
     id: 'romero',
@@ -735,7 +735,7 @@ const cinemaEntries = [
       },
     ],
     meta: ['REGISTRO AUDIOVISUAL', 'CONTEÚDO: cerco doméstico', 'STATUS: vigilância contínua'],
-    text: 'O filme de 1968 funda o zumbi moderno: cadáveres retornam, cercam os vivos e transformam a casa em bunker. O horror está no cerco, mas também na desconfiança entre os sobreviventes. Em Dawn of the Dead (1978), o shopping vira mausoléu do consumo — os mortos caminham pelas lojas porque ainda repetem os gestos de quando estavam vivos. A trilogia cresce como diagnóstico cultural: cerco, consumo, militarização.',
+    text: 'Romero desloca o morto-vivo do folclore para a crítica social. O cadáver que retorna já não é só ameaça física; é multidão, repetição, colapso de convivência e espelho dos hábitos dos vivos. Por isso sua presença no Arquivo Morto é decisiva: com Romero, a reanimação deixa de ser caso isolado e vira linguagem de crise coletiva.',
   },
   {
     id: 'snyder-2004',
@@ -763,7 +763,7 @@ const cinemaEntries = [
       },
     ],
     meta: ['REGISTRO AUDIOVISUAL', 'CONTEÚDO: contágio veloz', 'STATUS: exame aberto'],
-    text: 'Snyder transforma o pânico em velocidade. A ameaça não avança como multidão hipnótica; ela corre, invade, rasga e derruba a ordem social em minutos. O remake troca a sátira lenta pelo terror de sobrevivência: fugir, improvisar, desconfiar e sobreviver enquanto o mundo acaba.',
+    text: 'O remake de Snyder troca a lentidão espectral por impacto imediato. O morto-vivo já não cerca; ele irrompe. Essa aceleração muda o significado do horror: sai a decomposição social em câmera lenta, entra o colapso instantâneo, urbano e físico de um mundo que perde qualquer margem de resposta.',
   },
   {
     id: 'del-toro',
@@ -797,7 +797,7 @@ const cinemaEntries = [
       },
     ],
     meta: ['REGISTRO AUDIOVISUAL', 'CONTEÚDO: monstro trágico', 'STATUS: recém-catalogado'],
-    text: 'Del Toro sempre se interessou por criaturas marginalizadas, corpos impossíveis e monstros mais humanos do que os homens que os perseguem. Frankenstein encaixa diretamente nessa poética. O novo Frankenstein não precisa substituir as versões anteriores — ele conversa com elas: Shelley, Karloff, De Niro e toda a tradição do corpo fabricado retornam como arquivo vivo.',
+    text: 'Del Toro recoloca Frankenstein no território do monstro trágico e sensível. Em vez de competir com os arquivos anteriores, sua leitura amplia a linhagem: Shelley, Karloff e De Niro reaparecem como ecos de uma mesma pergunta sobre abandono, compaixão e o direito de existir num corpo que o mundo rejeita.',
   },
 ]
 
@@ -821,6 +821,7 @@ function App() {
   const rootStyle = {
     '--asset-capa-arquivo': `url("${assetPath('assets/cinema/capa-arquivo.png')}")`,
     '--asset-hero-arquivo': `url("${assetPath('assets/cinema/image.arquivo.png')}")`,
+    '--asset-hero-skull': `url("${assetPath('assets/archive/hero-skull-terror.png')}")`,
   }
 
   return (
@@ -877,26 +878,43 @@ function App() {
         {/* HERO */}
         <section className="amHero" id="destaque">
           <div className="amHeroInner">
-            <div className="amHeroContent">
-              <p className="amHeroEyebrow">
-                Instituto de Registros Pós-Morte
-              </p>
-              <h1 className="amHeroTitle">
-                Arquivo<br />Morto
-              </h1>
-              <p className="amHeroSubtitle">
-                Literatura, ciência e documentos sobre os limites entre morte e reanimação.
-              </p>
-              <p className="amHeroDescription">
-                Este arquivo reúne casos históricos, obras, experimentos e registros classificados relacionados ao que permanece depois do óbito.
-              </p>
-              <div className="amHeroActions">
-                <a href="#dossies" className="amButton amButtonPrimary">
-                  Acessar dossiês
-                </a>
-                <a href="#linha-do-tempo" className="amButton amButtonSecondary">
-                  Linha do tempo
-                </a>
+            <div className="amHeroLayout">
+              <div className="amHeroContent">
+                <p className="amHeroEyebrow">
+                  Instituto de Registros Pós-Morte
+                </p>
+                <h1 className="amHeroTitle">
+                  Arquivo<br />Morto
+                </h1>
+                <div className="amHeroDivider" aria-hidden="true">
+                  <span className="amHeroDividerLine" />
+                  <span className="amHeroDividerSeal">☿</span>
+                  <span className="amHeroDividerLine" />
+                </div>
+                <p className="amHeroSubtitle">
+                  Literatura, ciência e registros sobre atividade residual onde a morte já deveria ter encerrado o corpo.
+                </p>
+                <p className="amHeroDescription">
+                  Este arquivo reúne casos históricos, obras, experimentos e prontuários classificados sobre espasmos tardios, retorno motor, presença clínica e ocorrências posteriores ao encerramento oficial do óbito.
+                </p>
+                <p className="amHeroNotice">
+                  Uso restrito. Última movimentação residual registrada às 04h46 no setor frio.
+                </p>
+                <div className="amHeroActions">
+                  <a href="#dossies" className="amButton amButtonPrimary">
+                    Explorar o arquivo
+                  </a>
+                  <a href="#sobre" className="amButton amButtonSecondary">
+                    Sobre o instituto
+                  </a>
+                </div>
+              </div>
+              <div className="amHeroVisual" aria-hidden="true">
+                <div className="amHeroSkull" />
+                <div className="amHeroVisualCaption">
+                  <span className="amHeroVisualTag">Evidência 001</span>
+                  <span className="amHeroVisualText">Crânio catalogado sob custódia do setor frio.</span>
+                </div>
               </div>
             </div>
           </div>
@@ -915,11 +933,11 @@ function App() {
               </div>
               <div>
                 <dt>Classificação</dt>
-                <dd>Restrito</dd>
+                <dd>Restrito / pós-óbito</dd>
               </div>
               <div>
                 <dt>Status</dt>
-                <dd>Ativo</dd>
+                <dd>Monitoramento ativo</dd>
               </div>
               <div>
                 <dt>Fundação</dt>
@@ -930,10 +948,13 @@ function App() {
                 <dd>008</dd>
               </div>
               <div>
-                <dt>Última atualização</dt>
-                <dd>27 JUL 2026</dd>
+                <dt>Última ocorrência</dt>
+                <dd>27 JUL 2026 / 04h46</dd>
               </div>
             </dl>
+            <p className="registry-panel-warning">
+              Protocolo 19-C: toda alteração espontânea de posição, temperatura ou resposta muscular deve ser registrada antes do amanhecer.
+            </p>
           </div>
         </section>
 
@@ -946,14 +967,17 @@ function App() {
             </div>
             <blockquote className="manifesto-text">
               <p>
-                Nem todo cadáver permanece em silêncio. Alguns voltam como literatura,
-                outros como hipótese científica. O Arquivo Morto cataloga essa fronteira —
-                quando a ciência tenta vencer a morte e encontra o horror.
+                Nem todo cadáver permanece em silêncio. Alguns retornam como mito,
+                outros como documento, outros apenas como contração interpretada tarde
+                demais. O Arquivo Morto existe para registrar esse instante em que o
+                corpo morto parece voltar a significar mais do que deveria.
               </p>
               <p>
-                Entre Frankenstein e os laboratórios galvânicos, entre Lovecraft e os
-                prontuários médicos do século XIX, existe um território sem nome.
-                Este arquivo existe para mapeá-lo.
+                Entre Frankenstein e os laboratórios galvânicos, entre necrotérios,
+                tribunais, anfiteatros anatômicos e filmes de horror, existe um
+                território onde ciência, medo e imaginação usam a mesma linguagem.
+                Este arquivo foi aberto para mapear esse território sem fingir que ele
+                é seguro.
               </p>
             </blockquote>
           </div>
@@ -965,7 +989,7 @@ function App() {
             <p className="section-label">Capítulo I</p>
             <h3 id="humanity-heading">A humanidade contra a morte</h3>
             <p className="history-subtitle">
-              Antes do laboratório, antes da eletricidade e antes do cinema, já existia a tentativa humana de negociar com o fim.
+              Antes do laboratório, a morte já era problema ritual, político e imaginário. O primeiro impulso humano não foi ressuscitar o corpo, mas impedir que ele desaparecesse sem deixar ordem, memória ou ameaça.
             </p>
           </div>
           <div className="history-grid">
@@ -989,14 +1013,14 @@ function App() {
             <p className="section-label">Capítulo II</p>
             <h3 id="occult-heading">Necromancia, alquimia e o desejo de retorno</h3>
             <p className="occult-subtitle">
-              Entre o rito e o laboratório, a humanidade tentou falar com os mortos, prolongar a vida e imaginar matéria obedecendo ao espírito.
+              Antes da ciência reivindicar o corpo, ritos, grimórios e laboratórios herméticos já tentavam negociar com a matéria, estender a vida e arrancar resposta do que deveria permanecer imóvel.
             </p>
           </div>
           <section className="occult-visual-board" aria-label="Iconografia de necromancia, alquimia e criação artificial">
             <div className="occult-visual-intro">
               <span className="archive-date">ICONOGRAFIA OCULTA</span>
               <h4>Pranchas visuais do desejo de retorno</h4>
-              <p>Antes da eletricidade médica, o imaginário da reanimação passou por grimórios, laboratórios alquímicos, símbolos herméticos, criaturas de barro e máquinas que imitavam organismos vivos.</p>
+              <p>Antes da eletricidade médica, o imaginário da reanimação passou por grimórios, laboratórios alquímicos, criaturas de barro e máquinas imitativas. A volta da vida começou como imagem antes de pretender virar protocolo.</p>
             </div>
             <div className="occult-visual-grid">
               <figure className="occult-visual-card occult-visual-card-large">
@@ -1078,7 +1102,7 @@ function App() {
             <p className="section-label">Capítulo III</p>
             <h3 id="body-study-heading">Do corpo sagrado ao corpo estudado</h3>
             <p className="body-study-subtitle">
-              Quando o cadáver deixou de ser apenas relíquia, pecado ou mistério, tornou-se também matéria de estudo.
+              Quando o cadáver deixou de ser apenas relíquia, pecado ou mistério, passou a ser aberto, classificado e comparado. A ciência do corpo nasce quando o respeito funerário começa a ceder ao exame.
             </p>
           </div>
           <div className="anatomy-visual-board">
@@ -1143,7 +1167,7 @@ function App() {
             <p className="section-label">Capítulo IV</p>
             <h3 id="forensic-heading">Galvanismo, medicina legal e sinais do cadáver</h3>
             <p className="forensic-subtitle">
-              Antes da morte se tornar protocolo hospitalar, ela foi lida no músculo, na pele, no rigor, no gás, no silêncio e nos movimentos que pareciam vida.
+              Antes de a morte se tornar protocolo hospitalar, ela precisou ser decifrada no músculo, na pele e no espasmo. Este capítulo acompanha o momento em que o cadáver deixa de ser só corpo e vira evidência instável.
             </p>
           </div>
           <div className="forensic-grid">
@@ -1168,7 +1192,7 @@ function App() {
             <p className="section-label">Capítulo V</p>
             <h3 id="modern-death-heading">A morte técnica: medicina, corpo e fronteiras atuais</h3>
             <p className="medical-subtitle">
-              Na modernidade, vencer a morte deixou de ser apenas mito ou ritual: tornou-se linguagem de emergência, UTI, transplante, protocolo, bioética e tecnologia.
+              Na modernidade, a luta contra a morte deixou de ser apenas mito ou ritual e passou a falar a língua do protocolo. Emergência, UTI, transplante e bioética deslocam a fronteira do impossível para a pergunta sobre até onde é legítimo empurrá-la.
             </p>
           </div>
 
@@ -1294,9 +1318,9 @@ function App() {
           <p className="section-label">Dossiê americano de reanimação experimental</p>
           <h3 id="cornish-dossier-heading">Robert E. Cornish: Lazarus, a prancha de balanço e a tentativa americana de vencer a morte</h3>
           <p>
-            Nos anos 1930, Robert E. Cornish levou a obsessão moderna pela ressuscitação para uma forma mecânica, química e brutal:
-            cães clinicamente mortos, uma prancha tipo gangorra, respiração artificial, sangue tratado, adrenalina, heparina e a esperança
-            de que a morte recente ainda pudesse ser empurrada de volta.
+            Nos anos 1930, Robert E. Cornish transformou a obsessão moderna pela ressuscitação em procedimento mecânico, químico e brutal:
+            cães clinicamente mortos, uma prancha oscilante, respiração artificial, sangue tratado e a hipótese de que a morte recente
+            talvez ainda pudesse ser forçada a recuar por alguns minutos.
           </p>
         </div>
 
@@ -1305,14 +1329,14 @@ function App() {
             <span className="archive-date">1903–1963</span>
             <h4>O biólogo que queria interromper a morte</h4>
             <p>
-              Robert Edwin Cornish foi um biólogo americano, formado muito jovem pela University of California. Ele não vinha do ocultismo,
-              nem de sociedades secretas, nem da literatura gótica. Seu território era outro: laboratório, fisiologia, circulação, química
-              e uma pergunta quase intolerável para a medicina moderna — se a morte fosse recente, haveria ainda uma janela técnica para desfazê-la?
+              Robert Edwin Cornish foi um biólogo americano formado muito jovem pela University of California. Ele não vinha do ocultismo
+              nem da literatura gótica. Seu campo era mais frio: laboratório, fisiologia, circulação e química, organizados em torno de
+              uma pergunta que a medicina preferia manter na margem: se a morte fosse recente, existiria ainda uma janela técnica para contrariá-la?
             </p>
             <p>
-              Em 1932, Cornish passou a perseguir a ideia de restaurar vida em corpos recém-mortos. Primeiro tentou imaginar aplicação em vítimas
-              humanas de morte súbita, afogamento ou eletrocussão. Sem êxito, deslocou a pesquisa para cães, onde podia controlar tempo, causa da
-              morte e tentativa de retorno. A série recebeu um nome bíblico e deliberadamente provocador: Lazarus.
+              Em 1932, Cornish passou a perseguir a ideia de restaurar vida em corpos recém-mortos. Sem conseguir levar a hipótese ao campo
+              humano, deslocou o experimento para cães, onde podia controlar tempo, causa da morte e tentativa de retorno. A série recebeu
+              um nome bíblico e provocador na medida certa: Lazarus.
             </p>
           </div>
 
@@ -1357,8 +1381,8 @@ function App() {
             <h4>O experimento em movimento</h4>
             <p>
               O registro audiovisual ajuda a entender por que Cornish entrou para o imaginário da reanimação moderna.
-              A prancha, os assistentes, o animal, os tubos e a encenação científica mostram a passagem do laboratório para o espetáculo público.
-              Este vídeo é apresentado como documento histórico e cultural, não como validação médica do procedimento.
+              A prancha, os assistentes, o animal e os tubos transformam o laboratório em palco, e o procedimento em cena pública.
+              Este vídeo aparece aqui como documento histórico e cultural, não como validação médica.
             </p>
           </div>
 
@@ -1378,13 +1402,13 @@ function App() {
             <span className="archive-date">1932–1933</span>
             <h4>A hipótese da janela curta</h4>
             <p>
-              A ideia central de Cornish era que a morte não seria um instante único, mas uma transição. Se o coração e a respiração paravam,
-              talvez ainda existisse um intervalo antes que cérebro, tecidos e órgãos sofressem dano irreversível. Nesse intervalo, ele imaginava
-              ser possível forçar o corpo a circular novamente.
+              A ideia central de Cornish era que a morte não seria um instante único, mas uma transição imperfeita. Se coração e respiração
+              paravam, talvez ainda houvesse um intervalo antes que cérebro, tecidos e órgãos cruzassem o ponto sem retorno. Era nesse intervalo
+              que ele imaginava ser possível obrigar o corpo a circular outra vez.
             </p>
             <p>
-              Essa hipótese torna Cornish diferente dos galvanistas antigos. Aldini fazia o cadáver se mover. Cornish queria algo mais ambicioso:
-              restaurar circulação, oxigenação e função orgânica suficiente para produzir sobrevivência, ainda que danificada.
+              Essa hipótese separa Cornish dos galvanistas antigos. Aldini fazia o cadáver se mover; Cornish queria algo mais ambicioso:
+              restaurar circulação, oxigenação e função orgânica suficiente para arrancar do corpo uma sobrevida, ainda que precária.
             </p>
           </article>
 
@@ -1397,8 +1421,8 @@ function App() {
               esse trabalho.
             </p>
             <p>
-              A cena parece saída de um filme de horror científico: corpo recente, madeira rangendo, tubos, solução entrando na veia, assistentes
-              massageando o animal e Cornish tentando substituir, por força externa, o movimento interno da vida.
+              A cena parece saída de um horror científico documental: corpo recente, madeira rangendo, tubos, solução entrando na veia,
+              assistentes tentando substituir por força externa aquilo que o organismo já não sustentava sozinho.
             </p>
           </article>
 
@@ -1425,9 +1449,9 @@ function App() {
               circulação e resposta cardíaca.
             </p>
             <p>
-              O retorno não era triunfo limpo. Os relatos mais conhecidos falam de sobrevivência parcial, com animais vivos, mas severamente
-              comprometidos. Lazarus IV e Lazarus V aparecem como os casos mais marcantes, associados a sequelas graves, dano neurológico e recuperação
-              incompleta.
+              O retorno não era triunfo, mas resto. Os relatos mais conhecidos falam de sobrevivência parcial, com animais vivos e severamente
+              comprometidos. Lazarus IV e Lazarus V permanecem como os casos mais marcantes, associados a sequelas graves, dano neurológico
+              e recuperação incompleta.
             </p>
           </article>
 
@@ -1436,8 +1460,8 @@ function App() {
             <h4>Quando o laboratório virou cinema</h4>
             <p>
               Cornish não ficou restrito ao laboratório. Seu trabalho foi filmado e incorporado ao longa <em>Life Returns</em>, produção dos anos 1930
-              sobre um médico convencido de que os mortos poderiam voltar. A presença de filmagens reais aproximou o caso da cultura popular e transformou
-              a experiência em espetáculo.
+              sobre um médico convencido de que os mortos poderiam voltar. A presença de filmagens reais empurrou o experimento para a cultura popular
+              e transformou a hipótese médica em espetáculo.
             </p>
             <p>
               O laboratório de Cornish passou a existir também como imagem pública de transgressão científica: nem só medicina, nem só cinema, nem só horror,
@@ -1454,7 +1478,7 @@ function App() {
             </p>
             <p>
               Esse episódio pertence ao coração jurídico do Arquivo Morto: se um executado voltasse, ele ainda seria o mesmo condenado? A pena teria sido
-              cumprida? O Estado poderia executá-lo novamente? A experiência não aconteceu, mas a pergunta é mais assustadora que o próprio experimento.
+              cumprida? O Estado poderia executá-lo novamente? A experiência não ocorreu, mas a pergunta sobreviveu a ela.
             </p>
           </article>
 
@@ -1466,8 +1490,8 @@ function App() {
               uma época em que o limite entre pesquisa, espetáculo e sofrimento animal era tratado de forma muito diferente.
             </p>
             <p>
-              O Arquivo Morto não celebra o sofrimento. Ele registra o desconforto: a tentativa de vencer a morte produziu imagens de corpos usados como
-              fronteira, matéria, instrumento e argumento.
+              O Arquivo Morto não celebra o sofrimento. Ele registra o desconforto histórico: a tentativa de vencer a morte produziu imagens de corpos
+              usados como fronteira, matéria, instrumento e argumento.
             </p>
           </article>
 
@@ -1480,8 +1504,8 @@ function App() {
               e suporte artificial.
             </p>
             <p>
-              Por isso Cornish não deve ser só nota de rodapé. Ele é uma das figuras mais incômodas da história moderna da reanimação: não provou que a morte
-              podia ser vencida, mas mostrou até onde alguém estava disposto a ir para tentar.
+              Por isso Cornish não deve aparecer como nota de rodapé. Ele é uma das figuras mais incômodas da história moderna da reanimação:
+              não provou que a morte podia ser vencida, mas mostrou até onde a modernidade estava disposta a ir para testar essa hipótese.
             </p>
           </article>
         </div>
@@ -1498,8 +1522,8 @@ function App() {
             <p className="section-label">Dossiê histórico-médico</p>
             <h3 id="soviet-dossier-heading">Sergei Brukhonenko: o autojektor, os cães e a máquina entre a vida e a morte</h3>
             <p>
-              Antes de a circulação extracorpórea se tornar linguagem de cirurgia cardíaca, ela apareceu ao mundo como uma cena quase impossível:
-              sangue passando por tubos, órgãos mantidos fora da ordem natural do corpo e animais sustentados por um aparelho que parecia desafiar
+              Antes de a circulação extracorpórea se tornar linguagem de cirurgia cardíaca, ela apareceu ao mundo como cena quase impossível:
+              sangue correndo por tubos, órgãos mantidos fora da ordem natural do corpo e animais sustentados por um aparelho que parecia deslocar
               a fronteira entre morte clínica, reflexo e suporte artificial.
             </p>
           </div>
@@ -1520,10 +1544,10 @@ function App() {
               <span className="archive-date">1890–1960</span>
               <h4>O pesquisador soviético</h4>
               <p>
-                Sergei Sergeevich Brukhonenko foi médico, pesquisador e inventor soviético. Sua importância não está em uma fantasia de
-                “ressuscitar mortos”, mas em algo historicamente mais sério: a tentativa de manter funções vitais por meio de circulação
-                artificial. O Arquivo Morto o trata como figura de fronteira — entre fisiologia experimental, tecnologia médica, propaganda
-                científica e imaginação cultural da reanimação.
+                Sergei Sergeevich Brukhonenko foi médico, pesquisador e inventor soviético. Sua importância não está numa fantasia de
+                “ressuscitar mortos”, mas numa questão historicamente mais dura: até que ponto funções vitais poderiam ser sustentadas por
+                circulação artificial. O Arquivo Morto o trata como figura de fronteira entre fisiologia experimental, tecnologia médica,
+                propaganda científica e imaginação cultural da reanimação.
               </p>
             </div>
           </div>
@@ -1544,11 +1568,11 @@ function App() {
               <h4><span className="machine-title">O autojektor</span><small>o corpo como circuito</small></h4>
               <p>
                 O autojektor funcionava como tentativa primitiva de substituir funções circulatórias: conduzir sangue, manter fluxo e alimentar
-                tecidos com sangue oxigenado. No filme soviético, a máquina aparece como coração externo, uma infraestrutura técnica que
-                transforma organismo em circuito.
+                tecidos com sangue oxigenado. No filme soviético, a máquina aparece como coração externo, uma infraestrutura que transforma
+                o organismo em circuito e a vida em problema de engenharia.
               </p>
               <p>
-                Essa imagem é importante para o site porque liga Brukhonenko ao tema central do Arquivo Morto: não a ressurreição mística,
+                Essa imagem é central para o site porque liga Brukhonenko ao tema do Arquivo Morto: não a ressurreição mística,
                 mas o esforço moderno de empurrar a morte para dentro de um protocolo mecânico.
               </p>
             </div>
@@ -1569,14 +1593,14 @@ function App() {
               <span className="archive-date">1940 / imagem controversa</span>
               <h4>A cabeça que respondia</h4>
               <p>
-                A cena mais famosa do filme mostra uma cabeça de cão isolada ligada ao autojektor. A narração apresenta a cabeça recebendo
-                sangue oxigenado e respondendo a estímulos externos. No filme, ela pisca, reage à luz, move a boca/língua e aparenta responder
-                a sons ou contatos.
+                A cena mais famosa do filme mostra uma cabeça de cão isolada ligada ao autojektor. A narração a apresenta recebendo sangue
+                oxigenado e respondendo a estímulos externos. No filme, ela pisca, reage à luz, move boca e língua e parece devolver sinais
+                mínimos ao mundo.
               </p>
               <p>
                 É exatamente aqui que a curadoria precisa ser cuidadosa: a imagem é forte e historicamente relevante, mas o filme é controverso.
-                O Arquivo Morto não trata a cena como prova limpa de “vida plena”, e sim como documento soviético de propaganda científica,
-                fisiologia experimental, bioética animal e horror visual.
+                O Arquivo Morto não trata a cena como prova limpa de “vida plena”, e sim como documento de propaganda científica, fisiologia
+                experimental, bioética animal e horror visual.
               </p>
             </div>
           </article>
@@ -1586,8 +1610,8 @@ function App() {
               <span className="archive-date">filme completo / arquivo audiovisual</span>
               <h4>Experiments in the Revival of Organisms</h4>
               <p>
-                O vídeo deve vir depois das imagens explicadas, para o visitante entender o que está vendo antes de assistir.
-                A sequência mostra órgão isolado, pulmão, autojektor, cabeça de cão e a tentativa de reanimar um organismo inteiro.
+                O vídeo aparece depois das imagens explicadas para que o visitante entenda o que está vendo antes de assistir.
+                A sequência passa por órgão isolado, pulmão, autojektor, cabeça de cão e a tentativa de reanimar um organismo inteiro.
               </p>
             </div>
             <div className="brukhonenko-video-frame">
@@ -1613,8 +1637,8 @@ function App() {
                 equipamento mecânico.
               </p>
               <p>
-                Para o Arquivo Morto, o autojektor é também um objeto simbólico: a máquina que substitui o ritmo interno do corpo, colocando
-                a vida sob a forma de pressão, tubos, bomba e circulação.
+                Para o Arquivo Morto, o autojektor é também objeto simbólico: a máquina que substitui o ritmo interno do corpo, reduzindo
+                a vida a pressão, tubos, bomba e circulação.
               </p>
             </article>
 
@@ -1628,8 +1652,8 @@ function App() {
               </p>
               <p>
                 O ponto editorial não é transformar sofrimento animal em espetáculo. É mostrar como a modernidade científica, ao tentar dominar
-                a morte, cruzou territórios éticos difíceis: o corpo vivo fragmentado, o reflexo separado da pessoa, o organismo reduzido a
-                função biológica.
+                a morte, cruzou territórios éticos difíceis: o corpo vivo fragmentado, o reflexo separado da pessoa, o organismo reduzido
+                à função biológica.
               </p>
             </article>
 
@@ -1642,7 +1666,7 @@ function App() {
                 sua apresentação ao público científico ocidental e por sua aura de documento impossível.
               </p>
               <p>
-                Esse filme pertence ao Arquivo Morto porque reúne todos os elementos centrais do projeto: laboratório, cadáver, organismo, máquina,
+                Esse filme pertence ao Arquivo Morto porque reúne quase todos os elementos centrais do projeto: laboratório, organismo, máquina,
                 propaganda, medo, fascínio e a promessa perigosa de que a morte poderia ser tecnicamente revertida.
               </p>
             </article>
@@ -1656,9 +1680,9 @@ function App() {
                 parte do material pode ter sido encenada, reorganizada ou apresentada em linguagem de propaganda científica soviética.
               </p>
               <p>
-                A leitura correta é dupla: há pesquisa médica real, mas há também construção de imagem pública. O Arquivo Morto não vende o caso
-                como prova literal de ressurreição; trata-o como um dos momentos em que a ciência moderna pareceu vestir a máscara antiga do
-                necromante.
+                A leitura correta é dupla: há pesquisa médica real, mas também construção de imagem pública. O Arquivo Morto não vende o caso
+                como prova literal de ressurreição; trata-o como um dos momentos em que a ciência moderna pareceu vestir a máscara antiga
+                do necromante.
               </p>
             </article>
 
@@ -1671,8 +1695,8 @@ function App() {
                 experimentos não deve apagar o fato de que a medicina moderna também nasceu de máquinas experimentais, erros, limites e riscos.
               </p>
               <p>
-                No arquivo, ele ocupa o ponto em que a reanimação deixa de ser apenas mito, ritual ou literatura e passa a tocar a engenharia real
-                do corpo.
+                No arquivo, ele ocupa o ponto em que a reanimação deixa de ser apenas mito, ritual ou literatura e passa a tocar a engenharia
+                real do corpo.
               </p>
             </article>
 
@@ -1685,8 +1709,8 @@ function App() {
                 onde termina o organismo e onde começa o aparelho?
               </p>
               <p>
-                Essa é a razão de sua presença aqui. Ele não é apenas nota de rodapé médica; é um capítulo decisivo na história cultural da
-                tentativa humana de vencer a morte por tecnologia.
+                Essa é a razão de sua presença aqui. Ele não é apenas nota de rodapé médica; é um capítulo decisivo na história cultural
+                da tentativa humana de vencer a morte por tecnologia.
               </p>
             </article>
           </div>
@@ -1704,7 +1728,7 @@ function App() {
             <p className="section-label">Arquivo de dossiês</p>
             <h3>Registros institucionais essenciais</h3>
             <p className="selected-dossiers-intro">
-              Casos, obras e registros apresentados como fichas técnicas do instituto, com data, classificação, categoria e estado do arquivo.
+              Casos, obras e registros apresentados como fichas técnicas, relatórios de ocorrência e prontuários interditados por atividade pós-morte.
             </p>
           </div>
           <div className="stories-grid selected-dossiers-grid">
@@ -1727,7 +1751,7 @@ function App() {
                     <dd>{entry.category}</dd>
                   </div>
                   <div>
-                    <dt>Data</dt>
+                    <dt>Janela</dt>
                     <dd>{entry.displayDate}</dd>
                   </div>
                   <div>
@@ -1735,13 +1759,16 @@ function App() {
                     <dd>{entry.risk}</dd>
                   </div>
                   <div>
-                    <dt>Status</dt>
-                    <dd>{entry.drawerStatus}</dd>
+                    <dt>Ocorrência</dt>
+                    <dd>{entry.postMortem}</dd>
                   </div>
                 </dl>
+                <p className="selected-dossier-incident">
+                  <span>Movimento:</span> {entry.movement} <span>•</span> <span>Lacre:</span> {entry.drawerStatus}
+                </p>
                 <p className="selected-dossier-marginalia">{entry.marginalia}</p>
                 <div className="story-foot">
-                  <span className="selected-dossier-ref">{entry.registry}</span>
+                  <span className="selected-dossier-ref">{entry.registry} / {entry.claimed}</span>
                   <span className="story-classification">{entry.stamp}</span>
                 </div>
               </article>
@@ -1754,6 +1781,9 @@ function App() {
           <div className="section-header">
             <p className="section-label">Artigos</p>
             <h3>Ensaios, histórias e investigações</h3>
+            <p className="selected-dossiers-intro">
+              Textos de apoio que ampliam o arquivo: menos verbetes, mais linhas de força para entender por que certos corpos, ideias e imagens continuam voltando.
+            </p>
           </div>
           <div className="articles-list">
             {articles.map((a) => (
@@ -1775,6 +1805,9 @@ function App() {
           <div className="section-header">
             <p className="section-label">Linha do tempo</p>
             <h3>Do cadáver literário ao laboratório moderno</h3>
+            <p className="selected-dossiers-intro">
+              Uma sequência mínima de marcos para mostrar quando o retorno dos mortos deixou de ser só mito, passou pelo experimento e reapareceu como problema técnico, cultural e visual.
+            </p>
           </div>
           <div className="timeline">
             {timelineEvents.map((e, i) => (
@@ -1823,7 +1856,7 @@ function App() {
             <p className="section-label">Arquivo audiovisual</p>
             <h3 id="cinema-heading">Arquivo Audiovisual</h3>
             <p className="cinema-subtitle">
-              Registros cinematográficos relacionados à reanimação, morte e ciência proibida.
+              Filmes e imagens em que o morto fabricado, reanimado ou retornado deixa de ser apenas personagem e passa a organizar o imaginário moderno da ciência proibida.
             </p>
           </div>
 
@@ -1919,13 +1952,13 @@ function App() {
             </div>
             <div className="curator-body">
               <p>
-                O Arquivo Morto combina história documentada da ciência, literatura clássica de domínio público e ficção editorial própria. Cada camada permanece marcada por sua natureza para que o arquivo não confunda fato, mito literário e invenção cultural.
+                O Arquivo Morto combina história documentada da ciência, literatura clássica de domínio público e ficção editorial própria. Cada camada permanece marcada para que o arquivo não confunda prova histórica, mito literário e invenção cultural sob a mesma autoridade.
               </p>
               <p>
-                Os capítulos ampliam contexto; os dossiês selecionados condensam casos; a linha do tempo fixa marcos; o gabinete preserva a atmosfera material do projeto. Quando o mesmo episódio reaparece, ele deve cumprir uma função nova, não repetir o mesmo bloco de texto.
+                Os capítulos ampliam contexto; os dossiês condensam casos; a linha do tempo fixa marcos; o gabinete preserva a materialidade inquieta do projeto. Quando um episódio retorna, ele precisa voltar transformado: como contexto, imagem, sintoma ou interpretação, nunca apenas como repetição.
               </p>
               <p>
-                O objetivo continua sendo cultural, literário e visual: um arquivo imaginário que habita a fronteira entre ciência, horror e documento sem transformar repetição em ruído.
+                O objetivo continua sendo cultural, literário e visual: construir um arquivo imaginário em que ciência, horror e documento dividem o mesmo corredor sem que o leitor perca a distinção entre eles.
               </p>
             </div>
           </div>

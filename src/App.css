@@ -6230,17 +6230,53 @@ h2 {
   align-items: center;
   position: relative;
   overflow: hidden;
-  padding: 96px 24px 80px;
+  padding: 104px 24px 54px;
+  background:
+    radial-gradient(circle at 78% 18%, rgba(130, 116, 92, 0.1), transparent 0 30%),
+    radial-gradient(circle at 22% 24%, rgba(128, 31, 20, 0.1), transparent 0 26%),
+    linear-gradient(180deg, rgba(6, 6, 7, 0.96), rgba(4, 4, 5, 0.98));
+}
+
+.amHero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(5, 5, 6, 0.9) 0%, rgba(5, 5, 6, 0.72) 42%, rgba(5, 5, 6, 0.16) 66%, rgba(5, 5, 6, 0.82) 100%),
+    linear-gradient(180deg, rgba(4, 6, 6, 0.1), rgba(4, 6, 6, 0.42)),
+    repeating-linear-gradient(180deg, rgba(255,255,255,0.01) 0, rgba(255,255,255,0.01) 1px, transparent 1px, transparent 32px);
+  opacity: 1;
+  pointer-events: none;
+}
+
+.amHero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 78% 38%, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.54) 42%, rgba(0, 0, 0, 0.84) 72%),
+    radial-gradient(circle at 12% 18%, rgba(128, 31, 20, 0.12), transparent 22%);
+  pointer-events: none;
 }
 
 .amHeroInner {
   width: 100%;
-  max-width: 1180px;
+  max-width: 1480px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.amHeroLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(420px, 720px);
+  gap: 28px;
+  align-items: end;
 }
 
 .amHeroContent {
   max-width: 760px;
+  padding-left: 16px;
 }
 
 .amHeroEyebrow {
@@ -6255,35 +6291,160 @@ h2 {
 .amHeroTitle {
   margin: 0;
   font-family: Georgia, 'Times New Roman', serif;
-  font-size: clamp(4.5rem, 10vw, 8.5rem);
-  line-height: 0.82;
-  letter-spacing: -0.055em;
+  font-size: clamp(5rem, 10.8vw, 8.9rem);
+  line-height: 0.83;
+  letter-spacing: -0.06em;
   max-width: 800px;
-  color: var(--dirty-white);
+  color: #ddd4c7;
+  text-shadow: 0 3px 18px rgba(0, 0, 0, 0.38);
   text-transform: uppercase;
+  background:
+    linear-gradient(180deg, rgba(244, 238, 226, 0.96), rgba(181, 171, 156, 0.84) 52%, rgba(112, 107, 99, 0.92) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.amHeroDivider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 560px;
+  margin: 22px 0 20px;
+}
+
+.amHeroDividerLine {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(120, 28, 22, 0), rgba(120, 28, 22, 0.72), rgba(120, 28, 22, 0));
+}
+
+.amHeroDividerSeal {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgba(120, 28, 22, 0.46);
+  border-radius: 999px;
+  color: rgba(151, 47, 37, 0.92);
+  font-size: 1rem;
+  line-height: 1;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.04);
 }
 
 .amHeroSubtitle {
   max-width: 680px;
-  margin: 40px 0 0;
-  font-size: clamp(1.45rem, 2.4vw, 2.25rem);
-  line-height: 1.25;
-  color: rgba(219, 212, 197, 0.92);
+  margin: 0;
+  font-size: clamp(1.6rem, 2.5vw, 2.3rem);
+  line-height: 1.34;
+  color: rgba(224, 214, 196, 0.94);
 }
 
 .amHeroDescription {
   max-width: 620px;
-  margin: 24px 0 0;
-  font-size: 1.05rem;
-  line-height: 1.75;
-  color: rgba(193, 185, 169, 0.82);
+  margin: 20px 0 0;
+  font-size: 1.08rem;
+  line-height: 1.78;
+  color: rgba(186, 176, 161, 0.82);
+}
+
+.amHeroNotice {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 22px 0 0;
+  padding: 8px 12px;
+  border: 1px solid rgba(122, 55, 52, 0.22);
+  background: rgba(42, 18, 18, 0.22);
+  font-family: ui-monospace, 'Courier New', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(216, 197, 189, 0.84);
+}
+
+.amHeroNotice::before {
+  content: "!";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border: 1px solid rgba(161, 78, 72, 0.42);
+  border-radius: 999px;
+  color: rgba(224, 195, 183, 0.9);
+  font-size: 0.7rem;
+  line-height: 1;
 }
 
 .amHeroActions {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
-  margin-top: 36px;
+  margin-top: 34px;
+}
+
+.amHeroVisual {
+  position: relative;
+  min-height: 720px;
+}
+
+.amHeroSkull {
+  position: absolute;
+  inset: -30px -40px -24px 0;
+  background-image:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.34)),
+    var(--asset-hero-skull);
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: cover;
+  filter: saturate(0.8) contrast(1.04) brightness(0.86);
+  border-radius: 18px;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02);
+}
+
+.amHeroVisual::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 62% 54%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.16) 32%, rgba(0, 0, 0, 0.78) 100%),
+    linear-gradient(90deg, rgba(4, 4, 5, 0.92), rgba(4, 4, 5, 0) 30%);
+  pointer-events: none;
+}
+
+.amHeroVisualCaption {
+  position: absolute;
+  right: 12px;
+  bottom: 20px;
+  display: grid;
+  gap: 8px;
+  max-width: 220px;
+  padding: 14px 14px 12px;
+  border: 1px solid rgba(146, 43, 30, 0.22);
+  background: rgba(10, 10, 11, 0.76);
+  backdrop-filter: blur(2px);
+}
+
+.amHeroVisualTag,
+.amHeroVisualText {
+  font-family: ui-monospace, 'Courier New', monospace;
+}
+
+.amHeroVisualTag {
+  font-size: 0.58rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(155, 50, 40, 0.92);
+}
+
+.amHeroVisualText {
+  font-size: 0.7rem;
+  line-height: 1.7;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(207, 197, 181, 0.72);
 }
 
 .amButton {
@@ -6396,6 +6557,17 @@ h2 {
   color: rgba(222, 216, 202, 0.88);
 }
 
+.registry-panel-warning {
+  margin: 0;
+  padding: 0 24px 22px;
+  font-family: ui-monospace, 'Courier New', monospace;
+  font-size: 0.66rem;
+  line-height: 1.7;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(202, 186, 178, 0.62);
+}
+
 .manifesto {
   margin-top: 28px !important;
   padding: 38px 42px !important;
@@ -6475,9 +6647,30 @@ h2 {
   font-size: 0.78rem !important;
 }
 
+.selected-dossier-incident {
+  margin: -2px 0 12px !important;
+  padding: 10px 12px !important;
+  border-left: 2px solid rgba(124, 57, 54, 0.4) !important;
+  background: rgba(40, 17, 17, 0.16) !important;
+  font-family: ui-monospace, 'Courier New', monospace !important;
+  font-size: 0.66rem !important;
+  letter-spacing: 0.15em !important;
+  text-transform: uppercase !important;
+  color: rgba(205, 188, 179, 0.8) !important;
+}
+
+.selected-dossier-incident span {
+  color: rgba(170, 159, 143, 0.72);
+}
+
 .selected-dossier-marginalia {
   margin-bottom: 14px !important;
   color: rgba(182, 174, 160, 0.72) !important;
+}
+
+.selected-dossier-ref {
+  max-width: 100%;
+  color: rgba(205, 197, 180, 0.82) !important;
 }
 
 .story-classification {
@@ -6566,11 +6759,22 @@ h2 {
 @media (max-width: 960px) {
   .amHero {
     min-height: auto;
-    padding: 96px 32px 64px;
+    padding: 96px 32px 48px;
+  }
+
+  .amHeroLayout {
+    grid-template-columns: 1fr;
+    gap: 18px;
   }
 
   .amHeroContent {
     max-width: 100%;
+    padding-left: 0;
+  }
+
+  .amHeroVisual {
+    min-height: 520px;
+    order: -1;
   }
 
   .registry-panel-section {
@@ -6607,12 +6811,17 @@ h2 {
 
   .amHero {
     min-height: auto;
-    padding: 96px 20px 64px;
+    padding: 88px 20px 38px;
   }
 
   .amHeroTitle {
-    font-size: clamp(3.2rem, 17vw, 4.8rem);
+    font-size: clamp(3.5rem, 18vw, 5rem);
     max-width: none;
+  }
+
+  .amHeroDivider {
+    max-width: none;
+    margin: 18px 0 16px;
   }
 
   .amHeroActions {
@@ -6621,6 +6830,22 @@ h2 {
 
   .amButton {
     width: 100%;
+  }
+
+  .amHeroVisual {
+    min-height: 360px;
+  }
+
+  .amHeroSkull {
+    inset: 0 -20px 0 0;
+    background-position: 72% center;
+  }
+
+  .amHeroVisualCaption {
+    right: 0;
+    bottom: 0;
+    max-width: 190px;
+    padding: 10px 10px 9px;
   }
 
   .registry-panel-section {
@@ -6633,6 +6858,10 @@ h2 {
 
   .registry-panel-grid {
     padding: 14px 16px 18px;
+  }
+
+  .registry-panel-warning {
+    padding: 0 16px 18px;
   }
 
   .registry-panel-grid div {
