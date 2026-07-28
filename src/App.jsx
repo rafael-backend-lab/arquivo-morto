@@ -84,26 +84,31 @@ const timelineEvents = [
 const topHeroChapters = [
   {
     number: 'I',
+    icon: '☼',
     title: 'O Chamado',
     text: 'Da inquietação primitiva à primeira pergunta.',
   },
   {
     number: 'II',
+    icon: '⚚',
     title: 'O Rito e a Matéria',
     text: 'Grimórios, símbolos e corpos antes da ciência moderna.',
   },
   {
     number: 'III',
+    icon: '☥',
     title: 'Da Devoção à Dissecção',
     text: 'Do respeito funerário ao exame anatômico.',
   },
   {
     number: 'IV',
+    icon: '✥',
     title: 'O Corpo como Prova',
     text: 'Entre o documento, o indício e o erro.',
   },
   {
     number: 'V',
+    icon: '&',
     title: 'O Limiar Contemporâneo',
     text: 'Protocolo, bioética e os limites da técnica.',
   },
@@ -942,7 +947,7 @@ function App() {
                 <div className="amEntryCardHead">
                   <span className="amEntryNumber">{entry.number}</span>
                   <span className="amEntryIcon" aria-hidden="true">
-                    <span className="amEntryIconInner" />
+                    <span className="amEntryIconInner">{entry.icon}</span>
                   </span>
                 </div>
                 <h3 className="amEntryTitle">{entry.title}</h3>
